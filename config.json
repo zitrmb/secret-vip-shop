@@ -1,7 +1,17 @@
 {
   "_hinweis": "Oeffentliche Paddle-Werte (kein Geheimnis). token = Client-side token aus Paddle -> Developer tools -> Authentication. Leer = Kaufen-Knopf zeigt 'Available soon'.",
-  "paddle": {"token": "", "environment": "production"},
+  "paddle": {
+    "token": "live_486ecf40eaea0552346633f226c",
+    "environment": "production"
+  },
   "products": {
-    "SVPEQ4": {"name": "Secret Future EQ 2", "price_eur": 129, "launch_eur": 39, "price_id": "", "discount_id": ""}
-  }
+    "SVPEQ4": {
+      "name": "Secret Future EQ 2",
+      "price_eur": 129,
+      "launch_eur": 39,
+      "price_id": "pri_01m3asnf9p65n69ef4h3ca3wmc",
+      "discount_id": "dsc_01m3asnfmk6cdszpywxjqdn9hw"
+    }
+  },
+  "sale_open": false
 }

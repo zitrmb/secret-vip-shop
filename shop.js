@@ -16,6 +16,8 @@
     all('[data-buy]').forEach(function (b) {
       var p = (cfg.products || {})[b.getAttribute('data-buy')];
       if (!cfg.paddle || !cfg.paddle.token || !p || !p.price_id) return;
+      // Verkauf erst nach "Go Release" offen; ?kauftest=1 fuer den eigenen Test-Kauf
+      if (!cfg.sale_open && !/[?&]kauftest=1\b/.test(location.search)) return;
       var s = document.createElement('script');
       s.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
       s.onload = function () {
