@@ -1,4 +1,11 @@
 {
   "_hinweis": "Schreibt tools/release/release.sh freigeben. Leer = Download-Knoepfe zeigen 'Coming soon'.",
-  "plugins": {}
+  "plugins": {
+    "SVPEQ4": {
+      "name": "Secret Future EQ 2",
+      "version": "2.0.0",
+      "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.0/Secret-Future-EQ-2-2.0.0-Mac.pkg",
+      "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.0/Secret-Future-EQ-2-2.0.0-Windows.zip"
+    }
+  }
 }
