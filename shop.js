@@ -12,26 +12,29 @@
   var root = document.documentElement.getAttribute('data-root') || '';
 
   // ---- Kaufen (Paddle Overlay-Checkout) ----
+  // Paddle.js laedt immer, sobald ein Token da ist: Paddle-Zahlungslinks (?_ptxn=...) landen auf
+  // dieser Seite und oeffnen den Checkout selbst. Nur der Kaufen-Knopf wartet auf "Go Release".
   json(root + 'config.json').then(function (cfg) {
-    all('[data-buy]').forEach(function (b) {
-      var p = (cfg.products || {})[b.getAttribute('data-buy')];
-      if (!cfg.paddle || !cfg.paddle.token || !p || !p.price_id) return;
-      // Verkauf erst nach "Go Release" offen; ?kauftest=1 fuer den eigenen Test-Kauf
-      if (!cfg.sale_open && !/[?&]kauftest=1\b/.test(location.search)) return;
-      var s = document.createElement('script');
-      s.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
-      s.onload = function () {
-        if (cfg.paddle.environment === 'sandbox') Paddle.Environment.set('sandbox');
-        Paddle.Initialize({ token: cfg.paddle.token });
+    if (!cfg.paddle || !cfg.paddle.token) return;
+    var s = document.createElement('script');
+    s.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
+    s.onload = function () {
+      if (cfg.paddle.environment === 'sandbox') Paddle.Environment.set('sandbox');
+      Paddle.Initialize({ token: cfg.paddle.token });
+      all('[data-buy]').forEach(function (b) {
+        var p = (cfg.products || {})[b.getAttribute('data-buy')];
+        if (!p || !p.price_id) return;
+        // Verkauf erst nach "Go Release" offen; ?kauftest=1 fuer den eigenen Test-Kauf
+        if (!cfg.sale_open && !/[?&]kauftest=1\b/.test(location.search)) return;
         b.disabled = false; b.textContent = 'Buy now';
         b.onclick = function () {
           var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark' } };
           if (p.discount_id) o.discountId = p.discount_id;
           Paddle.Checkout.open(o);
         };
-      };
-      document.head.appendChild(s);
-    });
+      });
+    };
+    document.head.appendChild(s);
   }).catch(function () {});
 
   // ---- Downloads ----
