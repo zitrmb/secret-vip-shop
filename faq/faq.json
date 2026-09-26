@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "install-mac", "product": "SVPEQ4", "sources": ["site/download/index.html"],
+      "question": {"de": "Wie installiere ich das Plugin auf dem Mac?", "en": "How do I install the plugin on Mac?"},
+      "answer": {"de": "Lade die Mac-Version auf https://plugins.secret.vip/download/ herunter, öffne die .pkg-Datei und folge den Schritten. Starte danach deine DAW neu oder suche erneut nach Plugins.", "en": "Download the Mac version at https://plugins.secret.vip/download/, open the .pkg file and follow the steps. Then restart your DAW or rescan plugins."},
+      "terms": {"de": ["mac installieren", "installation mac", "plugin auf dem mac"], "en": ["install on mac", "mac installation", "plugin on mac"]}
+    },
+    {
+      "id": "install-windows", "product": "SVPEQ4", "sources": ["site/download/index.html"],
+      "question": {"de": "Wie installiere ich das Plugin unter Windows?", "en": "How do I install the plugin on Windows?"},
+      "answer": {"de": "Lade die Windows-Version auf https://plugins.secret.vip/download/ herunter und entpacke sie. Kopiere VST3\\SecretFutureEQ2.vst3 nach C:\\Program Files\\Common Files\\VST3 und CLAP\\SecretFutureEQ2.clap nach C:\\Program Files\\Common Files\\CLAP. Starte danach deine DAW neu oder suche erneut nach Plugins.", "en": "Download the Windows version at https://plugins.secret.vip/download/ and unzip it. Copy VST3\\SecretFutureEQ2.vst3 to C:\\Program Files\\Common Files\\VST3 and CLAP\\SecretFutureEQ2.clap to C:\\Program Files\\Common Files\\CLAP. Then restart your DAW or rescan plugins."},
+      "terms": {"de": ["windows installieren", "installation windows", "plugin unter windows"], "en": ["install on windows", "windows installation", "plugin on windows"]}
+    },
+    {
+      "id": "activate", "product": "*", "sources": ["site/download/index.html", "site/index.html"],
+      "question": {"de": "Wie aktiviere ich meine Lizenz?", "en": "How do I activate my license?"},
+      "answer": {"de": "Öffne das Plugin, füge den Lizenzschlüssel aus der Kauf-E-Mail ein und klicke auf Activate. Du brauchst kein Konto.", "en": "Open the plugin, paste the license key from your purchase email and click Activate. You do not need an account."},
+      "terms": {"de": ["lizenz aktivieren", "aktivierung", "aktivieren", "schlüssel eingeben"], "en": ["activate my license", "activation", "activate", "paste my key"]}
+    },
+    {
+      "id": "move-computer", "product": "*", "sources": ["site/index.html", "site/eula/index.html"],
+      "question": {"de": "Wie wechsle ich den Rechner?", "en": "How do I move to a new computer?"},
+      "answer": {"de": "Du kannst die Lizenz gleichzeitig auf zwei Rechnern nutzen. Auf dem bisherigen Rechner: Zahnrad → License → Deactivate this computer. Aktiviere sie dann auf dem neuen Rechner mit deinem Schlüssel.", "en": "You can use the license on two computers at the same time. On the old computer: gear icon → License → Deactivate this computer. Then activate it on the new computer with your key."},
+      "terms": {"de": ["rechner wechseln", "neuer rechner", "computer wechseln", "deaktivieren"], "en": ["move to a new computer", "new computer", "change computers", "deactivate"]}
+    },
+    {
+      "id": "update", "product": "*", "sources": ["site/changelog/index.html", "site/eula/index.html", "docs/CONVENTIONS.md"],
+      "question": {"de": "Wo finde ich Updates?", "en": "Where can I find updates?"},
+      "answer": {"de": "Die aktuelle Version findest du auf https://plugins.secret.vip/download/. Änderungen stehen auf https://plugins.secret.vip/changelog/. Updates innerhalb derselben Hauptversion sind kostenlos.", "en": "Find the current version at https://plugins.secret.vip/download/. Changes are listed at https://plugins.secret.vip/changelog/. Updates within the same major version are free."},
+      "terms": {"de": ["updates", "aktuelle version", "neue version"], "en": ["updates", "latest version", "new version"]}
+    },
+    {
+      "id": "refund", "product": "*", "sources": ["site/refund/index.html"],
+      "question": {"de": "Wie bekomme ich eine Erstattung?", "en": "How do I request a refund?"},
+      "answer": {"de": "Bitte beantrage innerhalb von 14 Tagen nach dem Kauf die volle Erstattung. Antworte auf die Paddle-Beleg-E-Mail, nutze den Link darin oder schreibe mit deiner Bestellnummer an support@secret.vip. Paddle erstattet auf das ursprüngliche Zahlungsmittel; danach wird der Lizenzschlüssel deaktiviert.", "en": "Request a full refund within 14 days of purchase. Reply to your Paddle receipt email, use its link, or write to support@secret.vip with your order number. Paddle refunds your original payment method; the license key is then deactivated."},
+      "terms": {"de": ["erstattung", "geld zurück", "rückerstattung"], "en": ["refund", "money back", "return my purchase"]}
+    },
+    {
+      "id": "requirements", "product": "SVPEQ4", "sources": ["site/index.html", "site/download/index.html"],
+      "question": {"de": "Welche Systemanforderungen gelten?", "en": "What are the system requirements?"},
+      "answer": {"de": "Secret Future EQ 2: macOS 12 oder neuer auf Apple Silicon oder Intel (VST3, AU, CLAP) oder Windows 10/11 mit 64 Bit (VST3, CLAP).", "en": "Secret Future EQ 2: macOS 12 or newer on Apple Silicon or Intel (VST3, AU, CLAP), or 64-bit Windows 10/11 (VST3, CLAP)."},
+      "terms": {"de": ["systemanforderungen", "macos version", "windows version", "kompatibel"], "en": ["system requirements", "macos version", "windows version", "compatible"]}
+    },
+    {
+      "id": "common-errors", "product": "*", "sources": ["site/download/index.html", "site/key/index.html"],
+      "question": {"de": "Das Plugin oder die Lizenz-E-Mail fehlt. Was kann ich prüfen?", "en": "The plugin or license email is missing. What can I check?"},
+      "answer": {"de": "Wenn das Plugin in der DAW fehlt, starte die DAW neu oder suche erneut nach Plugins. Fehlt die Lizenz-E-Mail, prüfe den Spam-Ordner. Auf https://plugins.secret.vip/key/ kannst du den Schlüssel erneut an die Kaufadresse senden lassen. Wenn das nicht hilft, schreibe an support@secret.vip.", "en": "If the plugin is missing from your DAW, restart the DAW or rescan plugins. If the license email is missing, check your spam folder. At https://plugins.secret.vip/key/ you can have the key resent to your purchase address. If that does not help, write to support@secret.vip."},
+      "terms": {"de": ["plugin fehlt", "lizenz-email fehlt", "lizenz-e-mail fehlt", "keine e-mail", "fehler"], "en": ["plugin missing", "license email missing", "no email", "error"]}
+    },
+    {
+      "id": "lost-key", "product": "*", "sources": ["site/key/index.html"],
+      "question": {"de": "Ich habe meinen Lizenzschlüssel verloren. Was nun?", "en": "I lost my license key. What now?"},
+      "answer": {"de": "Gib auf https://plugins.secret.vip/key/ deine Kauf-E-Mail-Adresse ein. Der Lizenzschlüssel und die Download-Links werden an diese Adresse erneut gesendet.", "en": "Enter your purchase email address at https://plugins.secret.vip/key/. Your license key and download links will be resent to that address."},
+      "terms": {"de": ["lizenzschlüssel verloren", "schlüssel verloren", "key verloren"], "en": ["lost my license key", "lost my key", "key lost"]}
+    }
+  ]
+}

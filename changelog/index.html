@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What's new – Secret VIP</title><link rel="stylesheet" href="../style.css"></head>
+<body><div class="wrap">
+<nav><a class="brand" href="../">Secret VIP</a><div class="links"><a href="../download/">Download</a><a href="../pricing/">Pricing</a><a href="../faq/">Help / Hilfe</a></div></nav>
+<div class="page"><h1>What's new</h1><p class="lead">Latest changes to your plugins.</p><div id="changes"></div></div>
+<footer>
+  <span>&copy; Secret VIP &ndash; Sebastian Behrendt, Hamburg &middot; Version 2.0 &middot; 2026-09-26</span>
+  <div class="links"><a href="../imprint/">Impressum / Imprint</a><a href="../privacy/">Datenschutz / Privacy</a><a href="../eula/">License (EULA)</a><a href="../refund/">Widerruf / Refunds</a><a href="../third-party/">Third-party notices</a><a href="https://www.paddle.com/legal/checkout-buyer-terms">Terms of sale (Paddle)</a><a href="mailto:support@secret.vip">support@secret.vip</a></div>
+</footer>
+</div>
+<script>
+Promise.all([fetch('../config.json').then(r=>r.json()),fetch('../changelog.json').then(r=>r.json())]).then(([config,log])=>{
+  const root=document.getElementById('changes');
+  Object.entries(config.products||{}).forEach(([id,product])=>{
+    const data=(log.plugins||{})[id]; if(!data)return;
+    const article=document.createElement('article');
+    const title=document.createElement('h2'); title.textContent=(product.name||id)+' '+data.version; article.append(title);
+    [['Neu','New'],['Besser','Improved'],['Behoben','Fixed']].forEach(([key,label])=>{
+      const items=(data.groups||{})[key]||[]; if(!items.length)return;
+      const heading=document.createElement('h3'); heading.textContent=label; article.append(heading);
+      const list=document.createElement('ul'); items.forEach(item=>{const li=document.createElement('li');li.textContent=item;list.append(li)});article.append(list);
+    }); root.append(article);
+  });
+}).catch(()=>{document.getElementById('changes').textContent='Changes will appear here with the next release.'});
+</script>
+</body></html>

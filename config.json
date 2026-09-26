@@ -11,7 +11,8 @@
       "launch_eur": 39,
       "price_id": "pri_01m3asnf9p65n69ef4h3ca3wmc",
       "discount_id": "dsc_01m3asnfmk6cdszpywxjqdn9hw",
-      "license_product": "SFE2"
+      "license_product": "SFE2",
+      "launch_active": true
     }
   },
   "sale_open": true

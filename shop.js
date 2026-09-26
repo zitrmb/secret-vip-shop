@@ -12,29 +12,62 @@
   var root = document.documentElement.getAttribute('data-root') || '';
 
   // ---- Kaufen (Paddle Overlay-Checkout) ----
-  // Paddle.js laedt immer, sobald ein Token da ist: Paddle-Zahlungslinks (?_ptxn=...) landen auf
-  // dieser Seite und oeffnen den Checkout selbst. Nur der Kaufen-Knopf wartet auf "Go Release".
+  // Datenschutz: Paddle.js (setzt das Cookie __cf_bm und laedt ProfitWell) laedt erst beim Klick auf
+  // "Buy now" oder wenn ein Paddle-Zahlungslink (?_ptxn=...) auf dieser Seite landet - nie beim
+  // blossen Seitenaufruf. Nur so stimmt "kein Cookie-Banner" (tools/legal/texts/privacy.*.html).
+  // Nie einen Streichpreis zeigen: der Normalpreis wurde noch nicht verlangt (UWG § 5, PAngV § 11).
   json(root + 'config.json').then(function (cfg) {
+    all('[data-price]').forEach(function (box) {
+      var p = (cfg.products || {})[box.getAttribute('data-price')];
+      if (!p) return;
+      var active = p.launch_active !== false && !!p.discount_id && Number(p.launch_eur) < Number(p.price_eur);
+      $('.now', box).textContent = '€' + (active ? p.launch_eur : p.price_eur);
+      var was = $('.was', box), tag = $('.tag', box);
+      if (was) was.hidden = true;
+      if (tag) tag.hidden = !active;
+    });
+    all('[data-price-label]').forEach(function (el) {
+      var p = (cfg.products || {})[el.getAttribute('data-price-label')];
+      if (p) el.textContent = '€' + (p.launch_active !== false && p.discount_id ? p.launch_eur : p.price_eur);
+    });
     if (!cfg.paddle || !cfg.paddle.token) return;
-    var s = document.createElement('script');
-    s.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
-    s.onload = function () {
-      if (cfg.paddle.environment === 'sandbox') Paddle.Environment.set('sandbox');
-      Paddle.Initialize({ token: cfg.paddle.token });
-      all('[data-buy]').forEach(function (b) {
-        var p = (cfg.products || {})[b.getAttribute('data-buy')];
-        if (!p || !p.price_id) return;
-        // Verkauf erst nach "Go Release" offen; ?kauftest=1 fuer den eigenen Test-Kauf
-        if (!cfg.sale_open && !/[?&]kauftest=1\b/.test(location.search)) return;
-        b.disabled = false; b.textContent = 'Buy now';
-        b.onclick = function () {
-          var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark' } };
-          if (p.discount_id) o.discountId = p.discount_id;
-          Paddle.Checkout.open(o);
-        };
-      });
-    };
-    document.head.appendChild(s);
+    var paddleState = '', waiting = [];
+    function withPaddle(fn) {
+      if (paddleState === 'ready') return fn();
+      waiting.push(fn);
+      if (paddleState) return;
+      paddleState = 'loading';
+      var s = document.createElement('script');
+      s.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
+      s.onload = function () {
+        if (cfg.paddle.environment === 'sandbox') Paddle.Environment.set('sandbox');
+        Paddle.Initialize({ token: cfg.paddle.token });
+        paddleState = 'ready';
+        waiting.splice(0).forEach(function (f) { f(); });
+      };
+      s.onerror = function () { paddleState = ''; waiting = []; };
+      document.head.appendChild(s);
+    }
+    if (/[?&]_ptxn=/.test(location.search)) withPaddle(function () {});
+    all('[data-buy]').forEach(function (b) {
+      var p = (cfg.products || {})[b.getAttribute('data-buy')];
+      if (!p || !p.price_id) return;
+      // Verkauf erst nach "Go Release" offen; ?kauftest=1 fuer den eigenen Test-Kauf
+      if (!cfg.sale_open && !/[?&]kauftest=1\b/.test(location.search)) return;
+      b.disabled = false; b.textContent = 'Buy now';
+      b.onclick = function () {
+        var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark' } };
+        if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
+        var query = new URLSearchParams(location.search);
+        var custom = { product: p.license_product || b.getAttribute('data-buy') };
+        ['utm_source', 'utm_campaign', 'ref'].forEach(function (key) {
+          var value = (query.get(key) || '').trim();
+          if (value) custom[key] = value.slice(0, 120);
+        });
+        o.customData = custom;
+        withPaddle(function () { Paddle.Checkout.open(o); });
+      };
+    });
   }).catch(function () {});
 
   // ---- Downloads ----
