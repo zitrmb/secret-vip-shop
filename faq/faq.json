@@ -54,6 +54,12 @@
       "question": {"de": "Ich habe meinen Lizenzschlüssel verloren. Was nun?", "en": "I lost my license key. What now?"},
       "answer": {"de": "Gib auf https://plugins.secret.vip/key/ deine Kauf-E-Mail-Adresse ein. Der Lizenzschlüssel und die Download-Links werden an diese Adresse erneut gesendet.", "en": "Enter your purchase email address at https://plugins.secret.vip/key/. Your license key and download links will be resent to that address."},
       "terms": {"de": ["lizenzschlüssel verloren", "schlüssel verloren", "key verloren"], "en": ["lost my license key", "lost my key", "key lost"]}
+    },
+    {
+      "id": "hearing-notice", "product": "SVPEQ4", "sources": ["shared/web/svp-hearing-notice.js", "SVPEQ4/dsp/main.dsp"],
+      "question": {"de": "Was bedeutet der Gehör-Hinweis beim ersten Start?", "en": "What does the hearing note on first launch mean?"},
+      "answer": {"de": "Beim ersten Öffnen erinnert Secret Future EQ 2 einmal daran, leise zu starten: EQ-Anhebungen und Sättigung können den Pegel plötzlich stark erhöhen. Sobald der Hinweis angezeigt wird, wird dies gespeichert; danach erscheint er nie wieder. Die Ausgangsgrenze von -0,1 dBFS hält nur sicher, wenn eine Sättigung an ist und der Clip auf \"Post\" steht (ab Werk: Sättigung aus, Clip \"Pre\"). Sie verhindert digitales Übersteuern, schützt aber nicht deine Ohren – stell die Abhörlautstärke immer bewusst ein.", "en": "On first launch Secret Future EQ 2 reminds you once to start quietly: EQ boosts and saturation can raise the level suddenly. The note is saved when it appears and will not appear again. The -0.1 dBFS output ceiling only holds reliably when saturation is on and the clip is set to \"Post\" (default: saturation off, clip \"Pre\"). It prevents digital clipping but does not protect your ears - always set your monitoring level on purpose."},
+      "terms": {"de": ["gehör-hinweis", "gehör", "zu laut", "hörschutz", "lautstärke warnung"], "en": ["hearing note", "hearing", "too loud", "hearing protection", "volume warning"]}
     }
   ]
 }

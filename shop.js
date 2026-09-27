@@ -59,6 +59,9 @@
       });
     } catch (ignored) { /* Storage may be disabled. */ }
     var query = new URLSearchParams(location.search);
+    // Einmalcode gilt fuer jedes Produkt im gemeinsamen Shop; ungueltige Werte werden ignoriert.
+    var discountCode = query.get('code') || '';
+    if (!/^[A-Z0-9]{1,32}$/.test(discountCode)) discountCode = '';
     campaignKeys.forEach(function (key) {
       var value = (query.get(key) || '').trim();
       if (value && /^[A-Za-z0-9._-]{1,80}$/.test(value)) campaign[key] = value;
@@ -73,7 +76,8 @@
       b.disabled = false; b.textContent = 'Buy now';
       b.onclick = function () {
         var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark' } };
-        if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
+        if (discountCode) o.discountCode = discountCode;
+        else if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
         var custom = { product: p.license_product || b.getAttribute('data-buy') };
         campaignKeys.forEach(function (key) { if (campaign[key]) custom[key] = campaign[key]; });
         o.customData = custom;
