@@ -49,6 +49,22 @@
       document.head.appendChild(s);
     }
     if (/[?&]_ptxn=/.test(location.search)) withPaddle(function () {});
+    // Only campaign labels are kept for this browser tab; no visitor identifier or cookie.
+    var campaignKeys = ['utm_source', 'utm_medium', 'utm_content', 'utm_campaign', 'ref'];
+    var campaign = {};
+    try {
+      var saved = JSON.parse(sessionStorage.getItem('svp_campaign') || '{}');
+      campaignKeys.forEach(function (key) {
+        if (typeof saved[key] === 'string' && /^[A-Za-z0-9._-]{1,80}$/.test(saved[key])) campaign[key] = saved[key];
+      });
+    } catch (ignored) { /* Storage may be disabled. */ }
+    var query = new URLSearchParams(location.search);
+    campaignKeys.forEach(function (key) {
+      var value = (query.get(key) || '').trim();
+      if (value && /^[A-Za-z0-9._-]{1,80}$/.test(value)) campaign[key] = value;
+    });
+    try { sessionStorage.setItem('svp_campaign', JSON.stringify(campaign)); }
+    catch (ignored) { /* The checkout still works. */ }
     all('[data-buy]').forEach(function (b) {
       var p = (cfg.products || {})[b.getAttribute('data-buy')];
       if (!p || !p.price_id) return;
@@ -58,12 +74,8 @@
       b.onclick = function () {
         var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark' } };
         if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
-        var query = new URLSearchParams(location.search);
         var custom = { product: p.license_product || b.getAttribute('data-buy') };
-        ['utm_source', 'utm_campaign', 'ref'].forEach(function (key) {
-          var value = (query.get(key) || '').trim();
-          if (value) custom[key] = value.slice(0, 120);
-        });
+        campaignKeys.forEach(function (key) { if (campaign[key]) custom[key] = campaign[key]; });
         o.customData = custom;
         withPaddle(function () { Paddle.Checkout.open(o); });
       };
