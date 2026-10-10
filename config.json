@@ -13,6 +13,28 @@
       "discount_id": "dsc_01m3asnfmk6cdszpywxjqdn9hw",
       "license_product": "SFE2",
       "launch_active": true
+    },
+    "SecretNotes": {
+      "name": "Secret Notes",
+      "price_eur": 0,
+      "kind": "free",
+      "summary": "Keep project notes beside your music in the DAW. A notes.secret.vip account is needed to sync notes.",
+      "formats": "Mac: VST3, AU, CLAP. Windows: VST3, CLAP.",
+      "status": "available",
+      "windows_beta_unsigned": true
+    },
+    "AudioNormaliser": {
+      "name": "Audio Normaliser",
+      "price_eur": 0,
+      "kind": "free",
+      "summary": "Normalise audio files to a consistent level in a desktop app.",
+      "formats": "Mac: desktop app. Windows: installer.",
+      "status": "available",
+      "windows_beta_unsigned": true,
+      "mac_beta_unsigned": true,
+      "release_type": "app",
+      "release_workflow": "build-audio-normaliser.yml",
+      "release_artifact_prefix": "AudioNormaliser"
     }
   },
   "sale_open": true

@@ -64,3 +64,19 @@ footer a:hover{color:var(--text)}
 .legal code{overflow-wrap:anywhere}
 .page li i{display:inline-block;max-width:100%;overflow-wrap:anywhere}
 .legal-box p{overflow-wrap:anywhere}
+
+.free-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:22px 0}
+.free-card{background:var(--bg2);border:0;border-radius:0;padding:18px;min-width:0}
+.free-card h3{margin:0 0 8px;color:var(--muted);font:600 14px var(--body)}
+.free-card p{color:var(--muted);margin:5px 0 15px}
+.free-card .free-value{font:700 40px/1.1 var(--body);color:var(--text);margin:4px 0 9px}
+.free-line{width:100%;height:5px;background:var(--accent);margin:0 0 12px}
+@media(max-width:700px){.free-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.free-card{padding:12px}.free-actions .btn{padding:8px 10px;font-size:14px}}
+.free-actions{display:flex;flex-wrap:wrap;gap:10px}
+.free-actions .btn{padding:10px 16px}
+.free-news{margin-top:48px}
+.free-newsletter-form{display:grid;gap:12px;max-width:500px}
+.free-newsletter-form input[type=email]{background:var(--bg2);border:1px solid var(--line);border-radius:10px;color:var(--text);font:16px var(--body);padding:13px}
+.free-consent{display:block}
+.free-consent input{margin:0 8px 0 0}
+.free-news-note{min-height:24px;color:var(--accent2)}

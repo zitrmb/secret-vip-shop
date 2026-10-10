@@ -6,6 +6,18 @@
       "version": "2.0.1",
       "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.1/Secret-Future-EQ-2-2.0.1-Mac.pkg",
       "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.1/Secret-Future-EQ-2-2.0.1-Windows.zip"
+    },
+    "SecretNotes": {
+      "name": "Secret Notes",
+      "version": "1.0.0",
+      "mac": "files/SecretNotes-1.0.0-Mac.pkg",
+      "win": "files/SecretNotes-1.0.0-Windows.zip"
+    },
+    "AudioNormaliser": {
+      "name": "Audio Normaliser",
+      "version": "1.9.0",
+      "mac": "files/Secret-Audio-Normaliser-1.9.0-Mac.zip",
+      "win": "files/Secret-Audio-Normaliser-1.9.0-Windows.zip"
     }
   }
 }
