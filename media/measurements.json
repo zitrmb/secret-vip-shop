@@ -1,0 +1,752 @@
+[
+  {
+    "file": "site/media/hero-1080.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "288"
+        }
+      ],
+      "format": {
+        "duration": "12.000000",
+        "size": "2051837"
+      }
+    }
+  },
+  {
+    "file": "site/media/hero-1080.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "12.000000",
+        "size": "800785"
+      }
+    }
+  },
+  {
+    "file": "site/media/hero-720.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "288"
+        }
+      ],
+      "format": {
+        "duration": "12.000000",
+        "size": "1087905"
+      }
+    }
+  },
+  {
+    "file": "site/media/hero-720.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "12.000000",
+        "size": "467503"
+      }
+    }
+  },
+  {
+    "product": "hero",
+    "render": {
+      "product": "hero",
+      "engine": "CYCLES",
+      "device": "GPU",
+      "frames_total": 288,
+      "frames_rendered": 288,
+      "fps": 24,
+      "width": 1920,
+      "height": 1080,
+      "samples": 24,
+      "seconds": 2533.3,
+      "loop_seamless_pose_delta": 0.0,
+      "shots": [
+        "all",
+        "clipper",
+        "sfe2",
+        "notes/spectrum"
+      ],
+      "lens_mm": 40,
+      "fstop": 2.8
+    },
+    "encoding_seconds": 116.058,
+    "transfer_seconds": 63.6,
+    "camera_loop_seconds": 12.0
+  },
+  {
+    "file": "site/media/sfe2-1080.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1831289"
+      }
+    }
+  },
+  {
+    "file": "site/media/sfe2-1080.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "598918"
+      }
+    }
+  },
+  {
+    "file": "site/media/sfe2-720.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "969109"
+      }
+    }
+  },
+  {
+    "file": "site/media/sfe2-720.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "381523"
+      }
+    }
+  },
+  {
+    "product": "sfe2",
+    "render": {
+      "product": "sfe2",
+      "engine": "CYCLES",
+      "device": "GPU",
+      "frames_total": 240,
+      "frames_rendered": 240,
+      "fps": 24,
+      "width": 1920,
+      "height": 1080,
+      "samples": 24,
+      "seconds": 2438.3,
+      "loop_seamless_pose_delta": 0.0,
+      "shots": [
+        "wide",
+        "detail-1",
+        "detail-2",
+        "low side"
+      ],
+      "lens_mm": 55,
+      "fstop": 2.2
+    },
+    "encoding_seconds": 180.878,
+    "transfer_seconds": 57.7,
+    "camera_loop_seconds": 10.0
+  },
+  {
+    "file": "site/media/notes-1080.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1679143"
+      }
+    }
+  },
+  {
+    "file": "site/media/notes-1080.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "755371"
+      }
+    }
+  },
+  {
+    "file": "site/media/notes-720.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1167995"
+      }
+    }
+  },
+  {
+    "file": "site/media/notes-720.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "470528"
+      }
+    }
+  },
+  {
+    "product": "notes",
+    "render": {
+      "product": "notes",
+      "engine": "CYCLES",
+      "device": "GPU",
+      "frames_total": 240,
+      "frames_rendered": 240,
+      "fps": 24,
+      "width": 1920,
+      "height": 1080,
+      "samples": 24,
+      "seconds": 3189.2,
+      "loop_seamless_pose_delta": 0.0,
+      "shots": [
+        "wide",
+        "detail-1",
+        "detail-2",
+        "low side"
+      ],
+      "lens_mm": 55,
+      "fstop": 2.2
+    },
+    "encoding_seconds": 64.42,
+    "transfer_seconds": 62.8,
+    "camera_loop_seconds": 10.0
+  },
+  {
+    "file": "site/media/parametric-1080.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1983140"
+      }
+    }
+  },
+  {
+    "file": "site/media/parametric-1080.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "740353"
+      }
+    }
+  },
+  {
+    "file": "site/media/parametric-720.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1048984"
+      }
+    }
+  },
+  {
+    "file": "site/media/parametric-720.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "462857"
+      }
+    }
+  },
+  {
+    "product": "parametric",
+    "render": {
+      "product": "parametric",
+      "engine": "CYCLES",
+      "device": "GPU",
+      "frames_total": 240,
+      "frames_rendered": 240,
+      "fps": 24,
+      "width": 1920,
+      "height": 1080,
+      "samples": 24,
+      "seconds": 2856.0,
+      "loop_seamless_pose_delta": 0.0,
+      "shots": [
+        "wide",
+        "detail-1",
+        "detail-2",
+        "low side"
+      ],
+      "lens_mm": 55,
+      "fstop": 2.2
+    },
+    "encoding_seconds": 80.815,
+    "transfer_seconds": 97.1,
+    "camera_loop_seconds": 10.0
+  },
+  {
+    "file": "site/media/spectrum-1080.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "2422542"
+      }
+    }
+  },
+  {
+    "file": "site/media/spectrum-1080.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1096117"
+      }
+    }
+  },
+  {
+    "file": "site/media/spectrum-720.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1342692"
+      }
+    }
+  },
+  {
+    "file": "site/media/spectrum-720.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "684276"
+      }
+    }
+  },
+  {
+    "product": "spectrum",
+    "render": {
+      "product": "spectrum",
+      "engine": "CYCLES",
+      "device": "GPU",
+      "frames_total": 240,
+      "frames_rendered": 240,
+      "fps": 24,
+      "width": 1920,
+      "height": 1080,
+      "samples": 24,
+      "seconds": 2656.0,
+      "loop_seamless_pose_delta": 0.0,
+      "shots": [
+        "wide",
+        "detail-1",
+        "detail-2",
+        "low side"
+      ],
+      "lens_mm": 55,
+      "fstop": 2.2
+    },
+    "encoding_seconds": 78.61,
+    "transfer_seconds": 126.3,
+    "camera_loop_seconds": 10.0
+  },
+  {
+    "file": "site/media/hero-poster.webp",
+    "bytes": 36676
+  },
+  {
+    "file": "site/media/hero-poster-720.webp",
+    "bytes": 18458
+  },
+  {
+    "file": "site/media/hero-still-1.webp",
+    "bytes": 18122
+  },
+  {
+    "file": "site/media/hero-still-2.webp",
+    "bytes": 15282
+  },
+  {
+    "file": "site/media/hero-still-3.webp",
+    "bytes": 18818
+  },
+  {
+    "file": "site/media/sfe2-poster.webp",
+    "bytes": 35316
+  },
+  {
+    "file": "site/media/sfe2-poster-720.webp",
+    "bytes": 17570
+  },
+  {
+    "file": "site/media/sfe2-still-1.webp",
+    "bytes": 18172
+  },
+  {
+    "file": "site/media/sfe2-still-2.webp",
+    "bytes": 20296
+  },
+  {
+    "file": "site/media/sfe2-still-3.webp",
+    "bytes": 29164
+  },
+  {
+    "file": "site/media/clipper-1080.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1674350"
+      }
+    }
+  },
+  {
+    "file": "site/media/clipper-1080.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "541459"
+      }
+    }
+  },
+  {
+    "file": "site/media/clipper-720.mp4",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "853072"
+      }
+    }
+  },
+  {
+    "file": "site/media/clipper-720.webm",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "av1",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "345788"
+      }
+    }
+  },
+  {
+    "file": "site/media/clipper-poster.webp",
+    "bytes": 31690
+  },
+  {
+    "file": "site/media/clipper-poster-720.webp",
+    "bytes": 15896
+  },
+  {
+    "file": "site/media/clipper-still-1.webp",
+    "bytes": 16304
+  },
+  {
+    "file": "site/media/clipper-still-2.webp",
+    "bytes": 15148
+  },
+  {
+    "file": "site/media/clipper-still-3.webp",
+    "bytes": 24812
+  },
+  {
+    "product": "clipper",
+    "render": {
+      "product": "clipper",
+      "engine": "CYCLES",
+      "device": "GPU",
+      "frames_total": 240,
+      "frames_rendered": 240,
+      "fps": 24,
+      "width": 1920,
+      "height": 1080,
+      "samples": 24,
+      "seconds": 2740.1,
+      "loop_seamless_pose_delta": 0.0,
+      "shots": [
+        "wide",
+        "detail-1",
+        "detail-2",
+        "low side"
+      ],
+      "lens_mm": 55,
+      "fstop": 2.2
+    },
+    "encoding_seconds": 66.924,
+    "transfer_seconds": 69.3,
+    "camera_loop_seconds": 10.0
+  },
+  {
+    "file": "site/media/parametric-poster.webp",
+    "bytes": 40298
+  },
+  {
+    "file": "site/media/parametric-poster-720.webp",
+    "bytes": 18934
+  },
+  {
+    "file": "site/media/parametric-still-1.webp",
+    "bytes": 19576
+  },
+  {
+    "file": "site/media/parametric-still-2.webp",
+    "bytes": 23552
+  },
+  {
+    "file": "site/media/parametric-still-3.webp",
+    "bytes": 35078
+  },
+  {
+    "file": "site/media/notes-poster.webp",
+    "bytes": 29438
+  },
+  {
+    "file": "site/media/notes-poster-720.webp",
+    "bytes": 15142
+  },
+  {
+    "file": "site/media/notes-still-1.webp",
+    "bytes": 31424
+  },
+  {
+    "file": "site/media/notes-still-2.webp",
+    "bytes": 20620
+  },
+  {
+    "file": "site/media/notes-still-3.webp",
+    "bytes": 19974
+  },
+  {
+    "file": "site/media/spectrum-poster.webp",
+    "bytes": 54796
+  },
+  {
+    "file": "site/media/spectrum-poster-720.webp",
+    "bytes": 27736
+  },
+  {
+    "file": "site/media/spectrum-still-1.webp",
+    "bytes": 30454
+  },
+  {
+    "file": "site/media/spectrum-still-2.webp",
+    "bytes": 24206
+  },
+  {
+    "file": "site/media/spectrum-still-3.webp",
+    "bytes": 50714
+  }
+]
