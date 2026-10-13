@@ -11,6 +11,13 @@
   function json(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }); }
   var root = document.documentElement.getAttribute('data-root') || '';
 
+  try {
+    var receipt = sessionStorage.getItem('svp-paid-receipt');
+    if (receipt && new URL(receipt).origin === location.origin && new URL(receipt).pathname.endsWith('/success/')) {
+      sessionStorage.removeItem('svp-paid-receipt'); location.replace(receipt); return;
+    }
+  } catch (_) {}
+
   // ---- Kaufen (Paddle Overlay-Checkout) ----
   // Datenschutz: Paddle.js (setzt das Cookie __cf_bm und laedt ProfitWell) laedt erst beim Klick auf
   // "Buy now" oder wenn ein Paddle-Zahlungslink (?_ptxn=...) auf dieser Seite landet - nie beim
@@ -31,6 +38,31 @@
       if (p) el.textContent = '€' + (p.launch_active !== false && p.discount_id ? p.launch_eur : p.price_eur);
     });
     if (!cfg.paddle || !cfg.paddle.token) return;
+    var purchaseAccess = '', completedUrl = '', navigating = false;
+    var successBase = new URL(root + 'success/', location.href).href;
+    function accessToken() {
+      var bytes = new Uint8Array(32);
+      crypto.getRandomValues(bytes);
+      return Array.from(bytes, function (n) { return n.toString(16).padStart(2, '0'); }).join('');
+    }
+    function purchaseEvent(ev) {
+      var data = ev.data || {};
+      if (ev.name === 'checkout.completed') {
+        var access = (data.custom_data || {}).checkout_access || purchaseAccess;
+        completedUrl = successBase + '#access=' + encodeURIComponent(access) + '&transaction_id=' + encodeURIComponent(data.transaction_id || '');
+        // Persist only this tab's receipt, never license keys. Navigate before close emits checkout.closed.
+        try { sessionStorage.setItem('svp-paid-receipt', completedUrl); } catch (_) {}
+        navigating = true;
+        location.assign(completedUrl);
+        try { Paddle.Checkout.close(); } catch (_) {}
+      } else if (ev.name === 'checkout.closed' && !navigating) {
+        if (completedUrl) location.assign(completedUrl);
+        else if (purchaseAccess) {
+          // Handles a missed completion event: the signed webhook alone can confirm payment.
+          location.assign(successBase + '#access=' + purchaseAccess + '&closed=1');
+        }
+      }
+    }
     var paddleState = '', waiting = [];
     function withPaddle(fn) {
       if (paddleState === 'ready') return fn();
@@ -41,7 +73,7 @@
       s.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
       s.onload = function () {
         if (cfg.paddle.environment === 'sandbox') Paddle.Environment.set('sandbox');
-        Paddle.Initialize({ token: cfg.paddle.token });
+        Paddle.Initialize({ token: cfg.paddle.token, eventCallback: purchaseEvent, checkout: { settings: { successUrl: successBase } } });
         paddleState = 'ready';
         waiting.splice(0).forEach(function (f) { f(); });
       };
@@ -75,10 +107,13 @@
       if (!cfg.sale_open && !/[?&]kauftest=1\b/.test(location.search)) return;
       b.disabled = false; b.textContent = 'Buy now';
       b.onclick = function () {
-        var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark' } };
+        purchaseAccess = accessToken();
+        completedUrl = ''; navigating = false;
+        try { sessionStorage.removeItem('svp-paid-receipt'); } catch (_) {}
+        var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', successUrl: successBase + '#access=' + purchaseAccess } };
         if (discountCode) o.discountCode = discountCode;
         else if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
-        var custom = { product: p.license_product || b.getAttribute('data-buy') };
+        var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess };
         campaignKeys.forEach(function (key) { if (campaign[key]) custom[key] = campaign[key]; });
         o.customData = custom;
         withPaddle(function () { Paddle.Checkout.open(o); });

@@ -5,7 +5,9 @@
       "name": "Secret Future EQ 2",
       "version": "2.0.1",
       "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.1/Secret-Future-EQ-2-2.0.1-Mac.pkg",
-      "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.1/Secret-Future-EQ-2-2.0.1-Windows.zip"
+      "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.1/Secret-Future-EQ-2-2.0.1-Windows.zip",
+      "license_product": "SFE2",
+      "image": "img/sfe2.jpg"
     },
     "SecretNotes": {
       "name": "Secret Notes",
@@ -19,5 +21,10 @@
       "mac": "files/Secret-Audio-Normaliser-1.9.0-Mac.zip",
       "win": "files/Secret-Audio-Normaliser-1.9.0-Windows.zip"
     }
+  },
+  "control_center": {
+    "enabled": false,
+    "mac": "",
+    "bonus_until": "2026-12-31"
   }
 }
