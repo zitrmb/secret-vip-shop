@@ -25,8 +25,8 @@
   },
   "control_center": {
     "enabled": true,
-    "mac": "/files/Secret-Control-Center-1.1.1.dmg",
+    "mac": "/files/Secret-Control-Center-1.2.0.dmg",
     "bonus_until": "2026-12-31",
-    "version": "1.1.1"
+    "version": "1.2.0"
   }
 }
