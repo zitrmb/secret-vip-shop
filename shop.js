@@ -10,6 +10,21 @@
   function all(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
   function json(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }); }
   var root = document.documentElement.getAttribute('data-root') || '';
+  // data-home = start of the page language (site/de/ on German pages): a purchase ends in the language it began in.
+  var home = document.documentElement.getAttribute('data-home') || root;
+  var T = document.documentElement.lang === 'de' ? {
+    check: 'Kauf prüfen', checking: 'Wir prüfen deine Zahlung…', closed: 'Kauf geschlossen – nichts wurde berechnet.',
+    unclear: 'Kauf geschlossen. Falls eine Zahlung durchging, kommt dein Schlüssel per E-Mail.', buy: 'Jetzt kaufen',
+    code: 'Hast du einen Code?', codeLabel: 'Rabattcode', mail: 'Bitte gib die E-Mail-Adresse deines Kaufs ein.', sending: 'Wird gesendet…',
+    sent: 'Erledigt. Falls mit dieser Adresse ein Plugin gekauft wurde, ist der Schlüssel unterwegs. Schau auch im Spam-Ordner nach.',
+    failed: 'Das hat nicht geklappt. Bitte schreib an support@secret.vip – wir helfen sofort.'
+  } : {
+    check: 'Check purchase', checking: 'Checking your payment…', closed: 'Checkout closed – nothing was charged.',
+    unclear: 'Checkout closed. If a payment went through, your key arrives by email.', buy: 'Buy now',
+    code: 'Have a code?', codeLabel: 'Discount code', mail: 'Please enter the email address you used for the purchase.', sending: 'Sending...',
+    sent: 'Done. If this address bought a plugin, the key is on its way. Check your spam folder too.',
+    failed: 'That did not work. Please write to support@secret.vip - we help right away.'
+  };
 
   try {
     var receipt = sessionStorage.getItem('svp-paid-receipt');
@@ -39,7 +54,7 @@
     });
     if (!cfg.paddle || !cfg.paddle.token) return;
     var purchaseAccess = '', completedUrl = '', navigating = false;
-    var successBase = new URL(root + 'success/', location.href).href;
+    var successBase = new URL(home + 'success/', location.href).href;
     function accessToken() {
       var bytes = new Uint8Array(32);
       crypto.getRandomValues(bytes);
@@ -61,7 +76,7 @@
       if (access) {
         var a = document.createElement('a');
         a.href = successBase + '#access=' + encodeURIComponent(access) + '&closed=1';
-        a.textContent = 'Check purchase';
+        a.textContent = T.check;
         n.appendChild(document.createTextNode(' ')); n.appendChild(a);
       }
     }
@@ -74,13 +89,13 @@
     // darum ein paar Sekunden nachfragen. Lieber einmal zu viel auf die Warte-Seite als ein Kauf verloren.
     function confirmClosed(access, transaction, unclear) {
       var run = ++closeRun, tries = unclear ? 6 : 1;
-      note(unclear ? 'Checking your payment…' : 'Checkout closed – nothing was charged.');
+      note(unclear ? T.checking : T.closed);
       (function ask() {
         paidOnServer(access).then(function (paid) {
           if (run !== closeRun || navigating) return;
           if (paid) return goSuccess(access, transaction);
           if (--tries > 0) return setTimeout(ask, 1500);
-          if (unclear) note('Checkout closed. If a payment went through, your key arrives by email.', access);
+          if (unclear) note(T.unclear, access);
         });
       })();
     }
@@ -163,14 +178,14 @@
       if (!p || !p.price_id) return;
       // Verkauf erst nach "Go Release" offen; ?kauftest=1 fuer den eigenen Test-Kauf
       if (!cfg.sale_open && !/[?&]kauftest=1\b/.test(location.search)) return;
-      b.disabled = false; b.textContent = 'Buy now';
+      b.disabled = false; b.textContent = T.buy;
       // Paddle zeigt "Add discount" nur ohne angewendeten Rabatt; der Start-Rabatt belegt den Platz.
       // Darum ein ruhiges Codefeld direkt am Kaufknopf; ein Code ersetzt den Start-Rabatt.
       addBuyStyle();
       var box = b.parentNode, codeRow = document.createElement('div');
       codeRow.className = 'buy-code';
-      codeRow.innerHTML = '<button type="button" class="buy-code-toggle" aria-expanded="false">Have a code?</button>'
-        + '<input type="text" hidden maxlength="32" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Discount code" placeholder="Discount code">';
+      codeRow.innerHTML = '<button type="button" class="buy-code-toggle" aria-expanded="false">' + T.code + '</button>'
+        + '<input type="text" hidden maxlength="32" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="' + T.codeLabel + '" placeholder="' + T.codeLabel + '">';
       var toggle = $('button', codeRow), input = $('input', codeRow), status = document.createElement('p');
       status.className = 'buy-note'; status.setAttribute('role', 'status');
       function showCode() { toggle.hidden = true; toggle.setAttribute('aria-expanded', 'true'); input.hidden = false; }
@@ -212,12 +227,12 @@
   if (f) f.addEventListener('submit', function (ev) {
     ev.preventDefault();
     var note = $('.note'), btn = $('button', f), mail = $('input', f).value.trim();
-    if (mail.indexOf('@') < 1) { note.textContent = 'Please enter the email address you used for the purchase.'; return; }
-    btn.disabled = true; note.textContent = 'Sending...';
+    if (mail.indexOf('@') < 1) { note.textContent = T.mail; return; }
+    btn.disabled = true; note.textContent = T.sending;
     fetch(LICENSE + '/v1/key/resend', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: mail }) })
       .then(function (r) { return r.json(); })
-      .then(function () { note.textContent = 'Done. If this address bought a plugin, the key is on its way. Check your spam folder too.'; })
-      .catch(function () { note.textContent = 'That did not work. Please write to support@secret.vip - we help right away.'; })
+      .then(function () { note.textContent = T.sent; })
+      .catch(function () { note.textContent = T.failed; })
       .then(function () { btn.disabled = false; });
   });
 })();

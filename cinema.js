@@ -23,11 +23,15 @@
     toggle.type = 'button'; toggle.className = 'theme-switch'; toggle.setAttribute('data-theme-toggle', '');
     nav.parentNode.appendChild(toggle);
   }
+  // Words come from the switch itself (data-light, data-dark, data-aria-*: tools/legal/site-chrome.json per page language).
   function paintToggle() {
     if (!toggle) return;
-    var dark = isDark();
-    toggle.innerHTML = (dark ? icons.light : icons.dark) + '<span>' + (dark ? 'Light' : 'Dark') + '</span>';
-    toggle.setAttribute('aria-label', dark ? 'Switch to light appearance' : 'Switch to dark appearance');
+    var dark = isDark(), d = toggle.dataset;
+    var span = document.createElement('span');
+    span.textContent = dark ? (d.light || 'Light') : (d.dark || 'Dark');
+    toggle.innerHTML = dark ? icons.light : icons.dark;
+    toggle.appendChild(span);
+    toggle.setAttribute('aria-label', dark ? (d.ariaLight || 'Switch to light appearance') : (d.ariaDark || 'Switch to dark appearance'));
   }
   if (toggle) {
     toggle.addEventListener('click', function () {
@@ -104,7 +108,8 @@
       paused = !paused;
       films.forEach(function (f) { if (paused) stop(f); else start(f); });
       button.setAttribute('aria-pressed', paused ? 'true' : 'false');
-      button.querySelector('span').textContent = paused ? 'Play film' : 'Pause film';
+      var de = doc.lang === 'de';
+      button.querySelector('span').textContent = paused ? (de ? 'Film abspielen' : 'Play film') : (de ? 'Film anhalten' : 'Pause film');
     });
   }
   reduce.addEventListener && reduce.addEventListener('change', function () {

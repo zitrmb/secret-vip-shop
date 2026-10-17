@@ -30,11 +30,15 @@ nav .links a:hover,nav .links a[aria-current]{color:var(--text)}
 .theme-switch:hover{background:var(--line);border-color:var(--text)}
 .theme-switch:active{background:var(--line2)}
 .theme-switch svg{width:15px;height:15px;flex:none}
+/* Sprache: ein ruhiger Link auf dieselbe Seite in der anderen Sprache (nichts gespeichert, keine Umleitung). */
+nav .nav-tools{display:flex;align-items:center;gap:8px}
+nav .lang-switch{display:inline-flex;align-items:center;justify-content:center;min-height:36px;min-width:44px;padding:0 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font:500 12px var(--sans);letter-spacing:.08em;text-decoration:none}
+nav .lang-switch:hover{color:var(--text);border-color:var(--line2)}
 @media(max-width:820px){
   nav{flex-wrap:nowrap;flex-direction:column;align-items:stretch;gap:6px;padding:16px 0 10px}
   nav .brand{align-self:flex-start}
   nav .links{margin-left:0;gap:0 18px}
-  nav .theme-switch{position:absolute;right:0;top:14px}
+  nav .nav-tools{position:absolute;right:0;top:14px}
 }
 
 /* Typografie */

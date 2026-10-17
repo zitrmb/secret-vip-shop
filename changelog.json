@@ -10,6 +10,14 @@
         "Behoben": [
           "Audio Unit now reports version 2.0.1."
         ]
+      },
+      "groups_de": {
+        "Neu": [
+          "Feedback-Knopf, um einen Fehler zu melden oder eine Funktion zu wünschen."
+        ],
+        "Behoben": [
+          "Die Audio Unit meldet jetzt Version 2.0.1."
+        ]
       }
     }
   }

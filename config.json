@@ -21,7 +21,11 @@
       "summary": "Keep project notes beside your music in the DAW. A notes.secret.vip account is needed to sync notes.",
       "formats": "Mac: VST3, AU, CLAP. Windows: VST3, CLAP.",
       "status": "available",
-      "windows_beta_unsigned": true
+      "windows_beta_unsigned": true,
+      "de": {
+        "summary": "Projektnotizen direkt neben deiner Musik in der DAW. Zum Synchronisieren brauchst du ein Konto bei notes.secret.vip.",
+        "formats": "Mac: VST3, AU, CLAP. Windows: VST3, CLAP."
+      }
     },
     "AudioNormaliser": {
       "name": "Audio Normaliser",
@@ -34,7 +38,11 @@
       "mac_beta_unsigned": true,
       "release_type": "app",
       "release_workflow": "build-audio-normaliser.yml",
-      "release_artifact_prefix": "AudioNormaliser"
+      "release_artifact_prefix": "AudioNormaliser",
+      "de": {
+        "summary": "Bringt Audiodateien in einer Desktop-App auf einen einheitlichen Pegel.",
+        "formats": "Mac: Desktop-App. Windows: Installer."
+      }
     }
   },
   "sale_open": true
