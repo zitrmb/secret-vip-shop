@@ -6,6 +6,8 @@
   var target = document.querySelector('[data-free-products], [data-free-detail]');
   if (!target) return;
   var isDetail = target.hasAttribute('data-free-detail');
+  // download/ lists installers only, prices belong to the shop.
+  var noPrice = target.hasAttribute('data-no-price');
   var selected = isDetail ? new URLSearchParams(location.search).get('product') : null;
   function getJson(file) {
     return fetch(root + file, { cache: 'no-store' }).then(function (r) {
@@ -26,8 +28,10 @@
       if (Number(product.price_eur) !== 0 || product.kind !== 'free' || (isDetail && selected !== id)) return;
       var card = element('article', '', 'free-card');
       card.appendChild(element('h3', product.name || id));
-      card.appendChild(element('p', '€0', 'free-value'));
-      card.appendChild(element('div', '', 'free-line'));
+      if (!noPrice) {
+        card.appendChild(element('p', '€0', 'free-value'));
+        card.appendChild(element('div', '', 'free-line'));
+      }
       if (product.summary) card.appendChild(element('p', product.summary));
       if (product.formats) card.appendChild(element('p', product.formats));
       if (product.mac_beta_unsigned) card.appendChild(element('p', 'Mac beta: unsigned until signing is available.', 'small'));

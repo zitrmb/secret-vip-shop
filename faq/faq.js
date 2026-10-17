@@ -12,8 +12,8 @@
   if (params.get('lang') === 'en') language.value = 'en';
   if (params.has('q')) search.value = params.get('q').slice(0, 100);
   const ui = {
-    de: { title: 'Hilfe', intro: 'Antworten zu Installation, Lizenz, Updates und Erstattung.', language: 'Sprache', product: 'Plugin', search: 'Suche', placeholder: 'Frage oder Stichwort', contact: 'Weitere Fragen?', write: 'Schreib uns.', results: 'Antworten', empty: 'Keine passende Antwort. Schreib uns gern.', failed: 'Die Hilfe konnte nicht geladen werden. Schreib uns gern.' },
-    en: { title: 'Help', intro: 'Answers about installation, licenses, updates and refunds.', language: 'Language', product: 'Plugin', search: 'Search', placeholder: 'Question or keyword', contact: 'More questions?', write: 'Write to us.', results: 'answers', empty: 'No matching answer. Please write to us.', failed: 'Help could not be loaded. Please write to us.' }
+    de: { title: 'Hilfe', intro: 'Antworten zu Installation, Lizenz, Updates und Erstattung.', language: 'Sprache', product: 'Plugin', search: 'Suche', placeholder: 'Frage oder Stichwort', contact: 'Weitere Fragen?', write: 'Schreib uns.', lostKey: 'Schlüssel verloren?', results: 'Antworten', empty: 'Keine passende Antwort. Schreib uns gern.', failed: 'Die Hilfe konnte nicht geladen werden. Schreib uns gern.' },
+    en: { title: 'Help', intro: 'Answers about installation, licenses, updates and refunds.', language: 'Language', product: 'Plugin', search: 'Search', placeholder: 'Question or keyword', contact: 'More questions?', write: 'Write to us.', lostKey: 'Lost your key?', results: 'answers', empty: 'No matching answer. Please write to us.', failed: 'Help could not be loaded. Please write to us.' }
   };
   function render() {
     const lang = language.value;
@@ -28,6 +28,7 @@
     const contact = document.getElementById('faq-contact');
     contact.firstChild.textContent = t.contact + ' ';
     contact.querySelector('a').textContent = t.write;
+    document.querySelector('#faq-lost-key a').textContent = t.lostKey;
     const query = search.value.trim().toLocaleLowerCase(lang);
     const matches = entries.filter(item => (item.product === '*' || item.product === product.value) && (!query || [item.question[lang], item.answer[lang], ...item.terms[lang]].join(' ').toLocaleLowerCase(lang).includes(query)));
     list.replaceChildren();

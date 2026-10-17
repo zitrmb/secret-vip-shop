@@ -22,12 +22,6 @@
     } catch (_) {}
   }
   function auth(extra) { return Object.assign({ access: access, receipt: receiptMode, transaction_id: transaction }, extra || {}); }
-  try { document.documentElement.dataset.theme = localStorage.getItem('svp-theme') || ''; } catch (_) {}
-  $('theme').onclick = function () {
-    var dark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
-    document.documentElement.dataset.theme = dark ? 'light' : 'dark';
-    try { localStorage.setItem('svp-theme', dark ? 'light' : 'dark'); } catch (_) {}
-  };
   async function post(path, body) {
     var ctrl = new AbortController(), timer = setTimeout(function () { ctrl.abort(); }, 10000);
     try {
@@ -48,6 +42,8 @@
   if ($('reward')) {
     try { sessionStorage.removeItem('svp-paid-receipt'); } catch (_) {}
     var run = 0, pollTimer, delayTimer;
+    // Null-sicher: eine noch zwischengespeicherte alte Seite ohne den Link darf das Warten nie brechen.
+    function backShop(on) { var b = $('back-shop'); if (b) b.hidden = !on; }
     async function poll(myRun, started) {
       if (myRun !== run) return;
       try {
@@ -58,7 +54,7 @@
           $('result-title').textContent = result.licenses ? 'Gekauft. Gehört jetzt dir.' : 'Deine Bestellung ist da.';
           $('purchase-count').textContent = result.licenses + (result.licenses === 1 ? ' Lizenz' : ' Lizenzen');
           $('purchase-note').hidden = true; $('purchase-confirmed').hidden = false;
-          $('delay-note').hidden = true; $('retry').hidden = true;
+          $('delay-note').hidden = true; $('retry').hidden = true; backShop(false);
           $('reward').classList.add('ready');
           $('mail-note').textContent = result.mailed ? 'Schlüssel und Beleg sind per E-Mail unterwegs.' : 'Deine Lizenzen sind bereit. Die Schlüssel-Mail folgt; den Beleg schickt Paddle.';
           var link = new URL(result.collection_url);
@@ -74,7 +70,7 @@
       if (Date.now() - started >= 120000) {
         $('purchase-note').textContent = 'Die Bestätigung braucht etwas länger.';
         $('delay-note').textContent = 'Du musst nicht erneut kaufen. Prüfe deine Kauf-Mail oder fordere deinen persönlichen Link an.';
-        $('delay-note').hidden = false; $('retry').hidden = false; $('request').hidden = false;
+        $('delay-note').hidden = false; $('retry').hidden = false; $('request').hidden = false; backShop(true);
         return;
       }
       pollTimer = setTimeout(function () { poll(myRun, started); }, 3000);
@@ -87,6 +83,8 @@
       delayTimer = setTimeout(function () {
         $('delay-note').textContent = 'Die Bestätigung braucht etwas länger. Du musst nicht erneut kaufen. Deine Kauf-Mail kommt unabhängig von dieser Seite.';
         $('delay-note').hidden = false;
+        // Ohne echten Kauf (Seite direkt geoeffnet) nie endlos warten: der Weg zurueck zum Shop.
+        backShop(true);
       }, 15000);
       poll(myRun, Date.now());
     }
@@ -95,6 +93,7 @@
     else {
       $('result-title').textContent = 'Deine Kaufbestätigung.';
       $('purchase-note').textContent = 'Deine Kauf-Mail enthält deinen persönlichen Zugang. Du kannst ihn hier erneut anfordern.';
+      backShop(true);
     }
     window.addEventListener('pagehide', function () { ++run; clearTimeout(pollTimer); clearTimeout(delayTimer); });
     return;

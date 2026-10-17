@@ -45,9 +45,50 @@
       crypto.getRandomValues(bytes);
       return Array.from(bytes, function (n) { return n.toString(16).padStart(2, '0'); }).join('');
     }
+    // Paddle-Status beim Schliessen (developer.paddle.com/paddle-js/events/checkout-closed): nur
+    // "completed"/"paid" heisst bezahlt; "draft"/"ready" ohne Zahlungsversuch ist ein Abbruch.
+    var PAID = /^(completed|paid|billed)$/, OPEN = /^(draft|ready)$/;
+    var paymentTried = false, closeRun = 0, buyBox = null;
+    function goSuccess(access, transaction) {
+      navigating = true;
+      location.assign(successBase + '#access=' + encodeURIComponent(access) + '&transaction_id=' + encodeURIComponent(transaction || '') + '&closed=1');
+    }
+    // Hinweis bleibt auf der Seite, an der Stelle des Kaufknopfs; role=status liest ihn vor.
+    function note(text, access) {
+      var n = buyBox && $('.buy-note', buyBox);
+      if (!n) return;
+      n.textContent = text;
+      if (access) {
+        var a = document.createElement('a');
+        a.href = successBase + '#access=' + encodeURIComponent(access) + '&closed=1';
+        a.textContent = 'Check purchase';
+        n.appendChild(document.createTextNode(' ')); n.appendChild(a);
+      }
+    }
+    function paidOnServer(access) {
+      return fetch(LICENSE + '/v1/checkout/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ access: access, transaction_id: '' }), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' })
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .then(function (r) { return r.state === 'ready'; }, function () { return false; });
+    }
+    // Unklarer Fall (Zahlung begonnen oder Status fehlt): der Webhook kommt oft erst Sekunden spaeter,
+    // darum ein paar Sekunden nachfragen. Lieber einmal zu viel auf die Warte-Seite als ein Kauf verloren.
+    function confirmClosed(access, transaction, unclear) {
+      var run = ++closeRun, tries = unclear ? 6 : 1;
+      note(unclear ? 'Checking your payment…' : 'Checkout closed – nothing was charged.');
+      (function ask() {
+        paidOnServer(access).then(function (paid) {
+          if (run !== closeRun || navigating) return;
+          if (paid) return goSuccess(access, transaction);
+          if (--tries > 0) return setTimeout(ask, 1500);
+          if (unclear) note('Checkout closed. If a payment went through, your key arrives by email.', access);
+        });
+      })();
+    }
     function purchaseEvent(ev) {
       var data = ev.data || {};
-      if (ev.name === 'checkout.completed') {
+      if (ev.name === 'checkout.payment.initiated') paymentTried = true;
+      else if (ev.name === 'checkout.payment.failed' || ev.name === 'checkout.payment.error') paymentTried = false;
+      else if (ev.name === 'checkout.completed') {
         var access = (data.custom_data || {}).checkout_access || purchaseAccess;
         completedUrl = successBase + '#access=' + encodeURIComponent(access) + '&transaction_id=' + encodeURIComponent(data.transaction_id || '');
         // Persist only this tab's receipt, never license keys. Navigate before close emits checkout.closed.
@@ -56,11 +97,12 @@
         location.assign(completedUrl);
         try { Paddle.Checkout.close(); } catch (_) {}
       } else if (ev.name === 'checkout.closed' && !navigating) {
-        if (completedUrl) location.assign(completedUrl);
-        else if (purchaseAccess) {
-          // Handles a missed completion event: the signed webhook alone can confirm payment.
-          location.assign(successBase + '#access=' + purchaseAccess + '&closed=1');
-        }
+        if (completedUrl) return location.assign(completedUrl);
+        var closedAccess = (data.custom_data || {}).checkout_access || purchaseAccess;
+        if (!closedAccess) return;
+        // A missed completion event still reaches the waiting page; a plain abort stays here.
+        if (PAID.test(data.status)) return goSuccess(closedAccess, data.transaction_id);
+        confirmClosed(closedAccess, data.transaction_id, paymentTried || !OPEN.test(data.status));
       }
     }
     var paddleState = '', waiting = [];
@@ -92,26 +134,58 @@
     } catch (ignored) { /* Storage may be disabled. */ }
     var query = new URLSearchParams(location.search);
     // Einmalcode gilt fuer jedes Produkt im gemeinsamen Shop; ungueltige Werte werden ignoriert.
-    var discountCode = query.get('code') || '';
-    if (!/^[A-Z0-9]{1,32}$/.test(discountCode)) discountCode = '';
+    // Paddle-Codes: nur Buchstaben und Ziffern, bis 32 Zeichen, Gross/klein egal (API: create discount).
+    function cleanCode(v) { v = String(v || '').replace(/\s+/g, '').toUpperCase(); return /^[A-Z0-9]{1,32}$/.test(v) ? v : ''; }
+    var discountCode = cleanCode(query.get('code'));
     campaignKeys.forEach(function (key) {
       var value = (query.get(key) || '').trim();
       if (value && /^[A-Za-z0-9._-]{1,80}$/.test(value)) campaign[key] = value;
     });
     try { sessionStorage.setItem('svp_campaign', JSON.stringify(campaign)); }
     catch (ignored) { /* The checkout still works. */ }
+    // Stil fuer Codefeld und Hinweis lebt hier statt in style.css: dessen Cache-Marke steckt in den
+    // erzeugten Rechtsseiten (tools/legal/build_legal.py --check), der Kaufweg bleibt so in einer Datei.
+    function addBuyStyle() {
+      if ($('#buy-style')) return;
+      var st = document.createElement('style');
+      st.id = 'buy-style';
+      st.textContent = '.buy-note{flex:1 1 100%;margin:-4px 0 0;font-size:14px;line-height:1.5;color:var(--muted)}'
+        + '.buy-note:empty{margin-top:-14px}.buy-note a{color:var(--text);text-underline-offset:3px}'
+        + '.buy-code{flex:1 1 100%;display:flex}'
+        + '.buy-code-toggle{background:none;border:0;padding:6px 4px;color:var(--muted);font:14px var(--sans);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px;cursor:pointer}'
+        + '.buy-code-toggle:hover{color:var(--text)}'
+        + '.buy-code input{flex:0 1 260px;min-width:0;min-height:44px;background:var(--bg2);border:1px solid var(--line);border-radius:999px;color:var(--text);font:15px var(--sans);letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:0 20px;outline:none;transition:border-color .15s}'
+        + '.buy-code input::placeholder{color:var(--faint);letter-spacing:0;text-transform:none}.buy-code input:focus{border-color:var(--accent)}';
+      document.head.appendChild(st);
+    }
     all('[data-buy]').forEach(function (b) {
       var p = (cfg.products || {})[b.getAttribute('data-buy')];
       if (!p || !p.price_id) return;
       // Verkauf erst nach "Go Release" offen; ?kauftest=1 fuer den eigenen Test-Kauf
       if (!cfg.sale_open && !/[?&]kauftest=1\b/.test(location.search)) return;
       b.disabled = false; b.textContent = 'Buy now';
+      // Paddle zeigt "Add discount" nur ohne angewendeten Rabatt; der Start-Rabatt belegt den Platz.
+      // Darum ein ruhiges Codefeld direkt am Kaufknopf; ein Code ersetzt den Start-Rabatt.
+      addBuyStyle();
+      var box = b.parentNode, codeRow = document.createElement('div');
+      codeRow.className = 'buy-code';
+      codeRow.innerHTML = '<button type="button" class="buy-code-toggle" aria-expanded="false">Have a code?</button>'
+        + '<input type="text" hidden maxlength="32" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Discount code" placeholder="Discount code">';
+      var toggle = $('button', codeRow), input = $('input', codeRow), status = document.createElement('p');
+      status.className = 'buy-note'; status.setAttribute('role', 'status');
+      function showCode() { toggle.hidden = true; toggle.setAttribute('aria-expanded', 'true'); input.hidden = false; }
+      toggle.onclick = function () { showCode(); input.focus(); };
+      input.onkeydown = function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); b.click(); } };
+      if (discountCode) { input.value = discountCode; showCode(); }
+      box.insertBefore(status, b.nextSibling); box.appendChild(codeRow);
       b.onclick = function () {
         purchaseAccess = accessToken();
-        completedUrl = ''; navigating = false;
+        completedUrl = ''; navigating = false; paymentTried = false; closeRun++;
+        buyBox = box; status.textContent = '';
         try { sessionStorage.removeItem('svp-paid-receipt'); } catch (_) {}
-        var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', successUrl: successBase + '#access=' + purchaseAccess } };
-        if (discountCode) o.discountCode = discountCode;
+        var code = cleanCode(input.value);
+        var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', showAddDiscounts: true, allowDiscountRemoval: true, successUrl: successBase + '#access=' + purchaseAccess } };
+        if (code) o.discountCode = code;
         else if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
         var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess };
         campaignKeys.forEach(function (key) { if (campaign[key]) custom[key] = campaign[key]; });

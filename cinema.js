@@ -8,9 +8,9 @@
   var saveData = !!(navigator.connection && navigator.connection.saveData);
   var small = matchMedia('(max-width: 720px)');
 
-  // Hell / Dunkel: ohne Wahl gilt die Systemeinstellung; die Wahl teilt sich den Schlüssel mit collection.js.
+  // Hell / Dunkel: ohne Wahl ist die Seite dunkel (Standard, auch bei hellem System); die gespeicherte Wahl gilt seitenweit.
   try { var saved = localStorage.getItem('svp-theme'); if (saved === 'light' || saved === 'dark') doc.dataset.theme = saved; } catch (e) {}
-  function isDark() { return doc.dataset.theme === 'dark' || (!doc.dataset.theme && !matchMedia('(prefers-color-scheme: light)').matches); }
+  function isDark() { return doc.dataset.theme !== 'light'; }
   var icons = {
     dark: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z"/></svg>',
     light: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6L13 13M3 13l1.4-1.4M11.6 4.4L13 3"/></svg>'
