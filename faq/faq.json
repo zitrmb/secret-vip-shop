@@ -60,6 +60,30 @@
       "question": {"de": "Was bedeutet der Gehör-Hinweis beim ersten Start?", "en": "What does the hearing note on first launch mean?"},
       "answer": {"de": "Beim ersten Öffnen erinnert Secret Future EQ 2 einmal daran, leise zu starten: EQ-Anhebungen und Sättigung können den Pegel plötzlich stark erhöhen. Sobald der Hinweis angezeigt wird, wird dies gespeichert; danach erscheint er nie wieder. Die Ausgangsgrenze von -0,1 dBFS hält nur sicher, wenn eine Sättigung an ist und der Clip auf \"Post\" steht (ab Werk: Sättigung aus, Clip \"Pre\"). Sie verhindert digitales Übersteuern, schützt aber nicht deine Ohren – stell die Abhörlautstärke immer bewusst ein.", "en": "On first launch Secret Future EQ 2 reminds you once to start quietly: EQ boosts and saturation can raise the level suddenly. The note is saved when it appears and will not appear again. The -0.1 dBFS output ceiling only holds reliably when saturation is on and the clip is set to \"Post\" (default: saturation off, clip \"Pre\"). It prevents digital clipping but does not protect your ears - always set your monitoring level on purpose."},
       "terms": {"de": ["gehör-hinweis", "gehör", "zu laut", "hörschutz", "lautstärke warnung"], "en": ["hearing note", "hearing", "too loud", "hearing protection", "volume warning"]}
+    },
+    {
+      "id": "svpeq4-function", "product": "SVPEQ4", "sources": ["SVPEQ4/README.md"],
+      "question": {"de": "Was macht Secret Future EQ 2?", "en": "What does Secret Future EQ 2 do?"},
+      "answer": {"de": "Secret Future EQ 2 ist ein Match-EQ mit 26 Bändern. Er analysiert eine Audiodatei oder ein laufendes Signal und berechnet daraus eine passende EQ-Kurve.", "en": "Secret Future EQ 2 is a match EQ with 26 bands. It analyses an audio file or a live signal and calculates a matching EQ curve from it."},
+      "terms": {"de": ["was macht secret future eq 2", "was kann secret future eq 2", "match-eq", "26 bänder"], "en": ["what does secret future eq 2 do", "what can secret future eq 2 do", "match eq", "26 bands"]}
+    },
+    {
+      "id": "secretnotes-function", "product": "SecretNotes", "sources": ["SecretNotes/README.md"],
+      "question": {"de": "Was macht Secret Notes?", "en": "What does Secret Notes do?"},
+      "answer": {"de": "Secret Notes zeigt dir pro Projekt eine Notiz von notes.secret.vip direkt in der DAW. Du kannst sie dort auch bearbeiten. Dein Audio bleibt dabei unverändert.", "en": "Secret Notes shows one note from notes.secret.vip per project, right inside your DAW. You can edit it there too. Your audio stays unchanged."},
+      "terms": {"de": ["was macht secret notes", "was kann secret notes", "notiz in der daw", "projektnotiz"], "en": ["what does secret notes do", "what can secret notes do", "note in the daw", "project note"]}
+    },
+    {
+      "id": "secretnotes-requirements", "product": "SecretNotes", "sources": ["SecretNotes/CMakeLists.txt", "SecretNotes/README.md"],
+      "question": {"de": "Was brauche ich für Secret Notes?", "en": "What do I need for Secret Notes?"},
+      "answer": {"de": "Auf dem Mac brauchst du macOS 12 oder neuer. Dort läuft Secret Notes als VST3, AU und CLAP. Zum Anmelden brauchst du ein Konto bei notes.secret.vip.", "en": "On Mac you need macOS 12 or newer. There, Secret Notes runs as VST3, AU and CLAP. To sign in, you need a notes.secret.vip account."},
+      "terms": {"de": ["secret notes anforderungen", "secret notes konto", "secret notes macos", "secret notes formate"], "en": ["secret notes requirements", "secret notes account", "secret notes macos", "secret notes formats"]}
+    },
+    {
+      "id": "secretnotes-limits", "product": "SecretNotes", "sources": ["SecretNotes/README.md"],
+      "question": {"de": "Warum wählt Secret Notes die Notiz nicht von selbst?", "en": "Why does Secret Notes not pick the note by itself?"},
+      "answer": {"de": "Die Notiz folgt dem Projektnamen, sobald dein Projekt gespeichert ist. Erkennt deine DAW keinen Namen, wählst du die Notiz selbst: über das Zahnrad oder mit einem Klick ins leere Textfeld. Das passiert zum Beispiel in Logic, wenn das AU-Plugin in einem eigenen Prozess läuft.", "en": "The note follows your project name once your project is saved. If your DAW does not report a name, pick the note yourself: use the gear menu or click into the empty text field. This happens for example in Logic when the AU plugin runs in its own process."},
+      "terms": {"de": ["notiz wechselt nicht", "falsche notiz", "notiz wählen", "projektname", "logic"], "en": ["note does not change", "wrong note", "choose note", "project name", "logic"]}
     }
   ]
 }
