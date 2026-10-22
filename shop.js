@@ -10,9 +10,17 @@
   function all(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
   function json(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }); }
   var root = document.documentElement.getAttribute('data-root') || '';
+  // Page language decides texts and checkout, never the browser (Paddle's default without settings.locale).
+  // A non-English page lives under /<code>/ and says so in <html lang>; disagreement or unknown = full English.
+  var LOCALES = ['de'];
+  function pageLanguage() {
+    var lang = String(document.documentElement.lang || '').toLowerCase(), path = String(location.pathname || '');
+    return LOCALES.indexOf(lang) >= 0 && path.indexOf('/' + lang + '/') >= 0 ? lang : 'en';
+  }
+  var LANG = pageLanguage();
   // data-home = start of the page language (site/de/ on German pages): a purchase ends in the language it began in.
-  var home = document.documentElement.getAttribute('data-home') || root;
-  var T = document.documentElement.lang === 'de' ? {
+  var home = LANG === 'en' ? root : document.documentElement.getAttribute('data-home') || root;
+  var T = LANG === 'de' ? {
     check: 'Kauf prüfen', checking: 'Wir prüfen deine Zahlung…', closed: 'Kauf geschlossen – nichts wurde berechnet.',
     unclear: 'Kauf geschlossen. Falls eine Zahlung durchging, kommt dein Schlüssel per E-Mail.', buy: 'Jetzt kaufen',
     code: 'Hast du einen Code?', codeLabel: 'Rabattcode', mail: 'Bitte gib die E-Mail-Adresse deines Kaufs ein.', sending: 'Wird gesendet…',
@@ -130,7 +138,7 @@
       s.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
       s.onload = function () {
         if (cfg.paddle.environment === 'sandbox') Paddle.Environment.set('sandbox');
-        Paddle.Initialize({ token: cfg.paddle.token, eventCallback: purchaseEvent, checkout: { settings: { successUrl: successBase } } });
+        Paddle.Initialize({ token: cfg.paddle.token, eventCallback: purchaseEvent, checkout: { settings: { successUrl: successBase, locale: LANG } } });
         paddleState = 'ready';
         waiting.splice(0).forEach(function (f) { f(); });
       };
@@ -199,10 +207,10 @@
         buyBox = box; status.textContent = '';
         try { sessionStorage.removeItem('svp-paid-receipt'); } catch (_) {}
         var code = cleanCode(input.value);
-        var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', showAddDiscounts: true, allowDiscountRemoval: true, successUrl: successBase + '#access=' + purchaseAccess } };
+        var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', showAddDiscounts: true, allowDiscountRemoval: true, locale: LANG, successUrl: successBase + '#access=' + purchaseAccess } };
         if (code) o.discountCode = code;
         else if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
-        var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess };
+        var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess, locale: LANG };
         campaignKeys.forEach(function (key) { if (campaign[key]) custom[key] = campaign[key]; });
         o.customData = custom;
         withPaddle(function () { Paddle.Checkout.open(o); });

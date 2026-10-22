@@ -3,8 +3,15 @@
   'use strict';
   // Language and paths come from <html lang data-root data-home>: site/licenses/ is English, site/de/licenses/ German.
   var html = document.documentElement;
-  var API = 'https://license.secret.vip', root = html.getAttribute('data-root') || '../', home = html.getAttribute('data-home') || root;
-  var T = html.lang === 'de' ? {
+  var API = 'https://license.secret.vip', root = html.getAttribute('data-root') || '../';
+  // Same page-language rule as shop.js: /<code>/ path plus matching <html lang>, otherwise full English.
+  var LOCALES = ['de'];
+  function pageLanguage() {
+    var lang = String(html.lang || '').toLowerCase(), path = String(location.pathname || '');
+    return LOCALES.indexOf(lang) >= 0 && path.indexOf('/' + lang + '/') >= 0 ? lang : 'en';
+  }
+  var LANG = pageLanguage(), home = LANG === 'en' ? root : html.getAttribute('data-home') || root;
+  var T = LANG === 'de' ? {
     requested: 'Falls du bei uns gekauft hast, ist der Link per E-Mail unterwegs.',
     requestFailed: 'Gerade klappt der Versand nicht. Bitte versuche es gleich noch einmal oder nutze den Support.',
     bought: 'Gekauft. Gehört jetzt dir.', order: 'Deine Bestellung ist da.', license: ' Lizenz', licenses: ' Lizenzen',
@@ -101,7 +108,8 @@
           $('reward').classList.add('ready');
           $('mail-note').textContent = result.mailed ? T.mailed : T.mailLater;
           var link = new URL(result.collection_url);
-          if (link.origin === 'https://plugins.secret.vip' && link.pathname === '/licenses/') $('open-library').href = home + 'licenses/' + link.hash;
+          // The server may link either language; the buyer stays in the language of this page.
+          if (link.origin === 'https://plugins.secret.vip' && /^\/([a-z]{2}\/)?licenses\/$/.test(link.pathname)) $('open-library').href = home + 'licenses/' + link.hash;
           $('request').hidden = true;
           return;
         }

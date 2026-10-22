@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Secret Future EQ 2 - Secret VIP Plugins</title>
-<meta name="description" content="Secret Future EQ 2: Move your tone towards that track you love so much. Match the quality – keep your sound. A match EQ with 26 smart bands, your own bands, saturation and fair loudness.">
+<meta name="description" content="Secret Future EQ 2: move your track towards the tone of a record you love, in one click, and keep your own sound. Match EQ for macOS and Windows with a 14-day money-back guarantee.">
 <meta property="og:title" content="Secret Future EQ 2 - Secret VIP Plugins">
-<meta property="og:description" content="Secret Future EQ 2: Move your tone towards that track you love so much. Match the quality – keep your sound. A match EQ with 26 smart bands, your own bands, saturation and fair loudness.">
+<meta property="og:description" content="Secret Future EQ 2: move your track towards the tone of a record you love, in one click, and keep your own sound. Match EQ for macOS and Windows with a 14-day money-back guarantee.">
 <meta property="og:image" content="https://plugins.secret.vip/img/sfe2.jpg">
 <meta name="theme-color" content="#050505">
 <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 256x256" href="../../favicon.ico?v=round1016">
@@ -17,44 +17,170 @@
 <link rel="preload" as="image" href="../../media/sfe2-poster.webp" imagesrcset="../../media/sfe2-poster-720.webp 1280w, ../../media/sfe2-poster.webp 1920w" imagesizes="100vw" fetchpriority="high">
 <script>try{var t=localStorage.getItem('svp-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="../../style.css?v=c05ee9d12263">
+<style>
+/* Product page (pp-): buy first, listen, benefits, film, trust, specs, closing buy (order: Meta start plan A2).
+   Lives in the page, not in style.css: style.css carries a cache mark inside the generated legal pages
+   (tools/legal/build_legal.py --check), like the buy styles in shop.js. Other pages stay exactly as they are. */
+.pp-hero .stage-copy{padding-top:20vh}
+.pp-hero h1{margin-bottom:14px}
+.pp-hero .pp-promise{color:var(--text);font-size:clamp(19px,1.9vw,24px);line-height:1.4;max-width:34ch;margin:0 0 26px}
+.pp-buy{margin:0 0 14px;gap:12px 20px}
+.pp-buy .price .now{display:inline-block;min-width:1.7em;min-height:1em}
+.pp-buy .btn{min-height:56px;padding:0 36px;font-size:16px}
+.pp-assure{display:flex;flex-wrap:wrap;gap:4px 22px;margin:0;padding:0;list-style:none;font-size:14px;line-height:1.7;color:var(--muted)}
+.pp-assure li{white-space:nowrap}
+.pp-assure li::before,.pp-deliver li::before{content:"";display:inline-block;width:10px;height:5px;margin:0 10px 3px 1px;border-left:1.5px solid var(--good);border-bottom:1.5px solid var(--good);transform:rotate(-45deg)}
+.pp-assure a{color:var(--text)}
+
+.pp-section{padding-top:120px}
+.pp-section>h2,.pp-close h2{margin:0 0 16px}
+.pp-kicker{margin:0 0 16px;font:500 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.pp-intro{max-width:62ch;margin:0 0 36px;color:var(--muted);font-size:clamp(17px,1.5vw,19px)}
+
+/* Listening example: built by ab-player.js, hidden until the manifest is ready. */
+.pp-listen[hidden]{display:none}
+.pp-ab-list{display:grid;gap:16px}
+.pp-ab{border:1px solid var(--line);border-radius:var(--r2);background:var(--bg2);padding:clamp(20px,3vw,32px)}
+.pp-ab[hidden]{display:none}
+.pp-ab-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;margin-bottom:12px}
+.pp-ab-head h3{margin:0;font-size:22px}
+.pp-ab-level{margin:0;font:500 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.pp-ab-hint{max-width:70ch;margin:0 0 24px;color:var(--muted)}
+.pp-ab-hint b{display:block;margin-bottom:2px;color:var(--text);font-size:13px;font-weight:600}
+.pp-ab-controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
+.pp-ab-play{flex:none;display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;border:1px solid var(--text);background:var(--text);color:var(--bg);cursor:pointer;transition:opacity .15s,transform .15s}
+.pp-ab-play:hover{opacity:.86}
+.pp-ab-play:active{transform:scale(.96)}
+.pp-ab-play[disabled]{opacity:.4;cursor:default;transform:none}
+.pp-ab-switch{flex:1 1 300px;display:flex;gap:4px;min-width:0;padding:4px;border:1px solid var(--line2);border-radius:999px}
+.pp-ab-option{flex:1 1 0;min-width:0;min-height:46px;padding:6px 14px;border:0;border-radius:999px;background:transparent;color:var(--muted);font:500 14px/1.25 var(--sans);cursor:pointer;transition:background .15s,color .15s,box-shadow .15s}
+.pp-ab-option:hover{background:var(--line);color:var(--text)}
+.pp-ab-option:active{background:var(--line2)}
+.pp-ab-option[aria-checked=true]{background:var(--surface);color:var(--text);box-shadow:inset 0 0 0 1px var(--line2)}
+.pp-ab-option[aria-checked=true][data-side=wet]{box-shadow:inset 0 0 0 1px var(--accent)}
+.pp-ab-time{display:flex;align-items:center;gap:14px;margin-top:18px}
+.pp-ab-seek{flex:1;min-width:0;height:28px;margin:0;accent-color:var(--accent);cursor:pointer}
+.pp-ab-clock{flex:none;min-width:10ch;text-align:right;font:500 12px/1 var(--mono);font-variant-numeric:tabular-nums;color:var(--faint)}
+.pp-ab-note{margin:10px 0 0;font-size:14px;color:var(--muted)}
+.pp-ab-note:empty{display:none}
+
+.pp-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;margin:8px 0 0;padding:0;list-style:none;counter-reset:pp}
+.pp-benefits li{padding:28px 0 36px;border-top:1px solid var(--line);counter-increment:pp}
+.pp-benefits li::before{content:counter(pp,decimal-leading-zero);display:block;margin-bottom:18px;font:500 12px/1 var(--mono);letter-spacing:.14em;color:var(--faint)}
+.pp-benefits h3{margin:0 0 10px;font-size:clamp(22px,2.2vw,30px);font-weight:500;line-height:1.15;letter-spacing:-.025em}
+.pp-benefits p{max-width:46ch;margin:0;color:var(--muted)}
+
+.pp-film{margin:8px 0 0}
+.pp-film .film{border:1px solid var(--line);border-radius:var(--r2)}
+.pp-film figcaption{max-width:70ch;margin-top:14px;color:var(--muted);font-size:15px}
+
+.pp-trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px;margin:8px 0 0;padding:0;list-style:none}
+.pp-trust li{padding:24px 0 0;border-top:1px solid var(--line2)}
+.pp-trust p{margin:0;color:var(--muted);font-size:15px}
+.pp-trust a,.pp-specs a,.pp-deliver a{color:var(--text)}
+.pp-specs{margin-top:8px}
+
+.pp-close{padding-top:136px}
+.pp-close-box{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 64px;align-items:end;padding:clamp(28px,5vw,64px);border:1px solid var(--line);border-radius:var(--r2);background:var(--bg2)}
+.pp-close h2{font-size:clamp(40px,5.6vw,80px);font-stretch:85%;line-height:.95;letter-spacing:-.05em;margin-bottom:0}
+.pp-deliver{margin:0 0 16px;padding:0;list-style:none;color:var(--muted);font-size:15px}
+.pp-deliver li{padding:10px 0;border-top:1px solid var(--line)}
+
+@media(max-width:900px){
+  .pp-trust{grid-template-columns:1fr}
+  .pp-trust li{padding-bottom:24px}
+  .pp-close-box{grid-template-columns:1fr;align-items:start}
+}
+@media(max-width:760px){.pp-benefits{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .pp-hero .stage-copy{padding-top:8px}
+  .pp-section{padding-top:88px}
+  .pp-close{padding-top:96px}
+  .pp-buy .btn{flex:1 1 160px}
+  .pp-ab-switch{flex-basis:100%}
+}
+.pp-nowrap{white-space:nowrap}
+</style>
 <link rel="alternate" hreflang="en" href="https://plugins.secret.vip/plugins/future-eq/">
 <link rel="alternate" hreflang="de" href="https://plugins.secret.vip/de/plugins/future-eq/">
 <link rel="alternate" hreflang="x-default" href="https://plugins.secret.vip/plugins/future-eq/">
 </head>
 <body class="page-film">
-<section class="stage product" aria-labelledby="product-title">
-  <div class="film " data-film="../../media/sfe2"><img src="../../media/sfe2-poster.webp" srcset="../../media/sfe2-poster-720.webp 1280w, ../../media/sfe2-poster.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Secret Future EQ 2 rendered as studio hardware with its real interface" fetchpriority="high" decoding="async"><video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video></div>
-  <div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="../../">Secret VIP</a><div class="links"><a href="../../#family" aria-current="page">Plugins</a><a href="../../pricing/">Shop</a><a href="../../download/">Download</a><a href="../../faq/">Help</a><a href="../../licenses/">Account</a></div><div class="nav-tools"><a class="lang-switch" href="../../de/plugins/future-eq/" hreflang="de" aria-label="Deutsch">DE</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch light and dark appearance" data-light="Light" data-dark="Dark" data-aria-light="Switch to light appearance" data-aria-dark="Switch to dark appearance"><span>Light / Dark</span></button></div></nav></div>
+<section class="stage product pp-hero" aria-labelledby="product-title">
+    <div class="film " data-film="../../media/sfe2"><img src="../../media/sfe2-poster.webp" srcset="../../media/sfe2-poster-720.webp 1280w, ../../media/sfe2-poster.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Secret Future EQ 2 rendered as studio hardware with its real interface" fetchpriority="high" decoding="async"><video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="../../">Secret VIP</a><div class="links"><a href="../../#family" aria-current="page">Plugins</a><a href="../../pricing/">Shop</a><a href="../../download/">Download</a><a href="../../faq/">Help</a><a href="../../licenses/">Account</a></div><div class="nav-tools"><a class="lang-switch" href="../../de/plugins/future-eq/" hreflang="de" aria-label="Deutsch">DE</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch light and dark appearance" data-light="Light" data-dark="Dark" data-aria-light="Switch to light appearance" data-aria-dark="Switch to dark appearance"><span>Light / Dark</span></button></div></nav></div>
   <div class="wrap stage-copy">
-    <div class="eyebrow">Secret VIP <span class="status live">Available</span></div>
+    <div class="eyebrow">Secret VIP &middot; Match EQ <span class="status live">Available</span></div>
     <h1 id="product-title">Secret Future EQ 2</h1>
-    <p class="lead">Move your tone towards that track you love so much. Match the quality – keep your sound. A match EQ with 26 smart bands, your own bands, saturation and fair loudness.</p>
-    <div class="buy">
-    <div class="price" data-price="SVPEQ4"><span class="now"></span><span class="tag" hidden>LAUNCH PRICE</span></div>
-    <button class="btn" data-buy="SVPEQ4" disabled>Available soon</button>
-    <a class="btn ghost" href="../../refund/">&#10003; 14-day Money-Back Guarantee</a>
+    <p class="lead pp-promise">Move your track towards the tone of a record you love &ndash; in one click, and it still sounds like you.</p>
+    <div class="buy pp-buy">
+      <div class="price" data-price="SVPEQ4"><span class="now"></span><span class="tag" hidden>LAUNCH PRICE</span></div>
+      <button class="btn" data-buy="SVPEQ4" disabled>Available soon</button>
+    </div>
+    <ul class="pp-assure"><li><a href="../../refund/">14-day money-back guarantee</a></li><li>macOS and Windows</li><li>VST3, AU, CLAP</li><li>Price incl. VAT where it applies</li></ul>
   </div>
-  <p class="small">One license, two computers. Checkout and invoice by Paddle, our reseller &ndash; prices incl. VAT where it applies. Your statutory rights stay unaffected.</p>
-  </div>
-  <div class="wrap stage-foot"><button type="button" class="motion" style="margin-left:auto" data-motion-toggle aria-pressed="false"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1h2v8H2zM6 1h2v8H6z" fill="currentColor"/></svg><span>Pause film</span></button></div>
+    <div class="wrap stage-foot"><button type="button" class="motion" style="margin-left:auto" data-motion-toggle aria-pressed="false"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1h2v8H2zM6 1h2v8H6z" fill="currentColor"/></svg><span>Pause film</span></button></div>
 </section>
 <main>
   <div class="wrap">
-    <section data-reveal>
-      <h2>Closer.</h2>
-      <div class="zoom"><figure><img src="../../media/sfe2-still-1.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Secret Future EQ 2: output and auto-gain"><figcaption>01 &middot; Output and Auto-Gain</figcaption></figure><figure><img src="../../media/sfe2-still-2.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Secret Future EQ 2: the match curve"><figcaption>02 &middot; The match curve</figcaption></figure><figure><img src="../../media/sfe2-still-3.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Secret Future EQ 2: side view"><figcaption>03 &middot; Side view</figcaption></figure></div>
+    <section class="pp-section pp-listen" id="listen" aria-labelledby="listen-title" hidden data-ab data-ab-manifest="../../media/ab/manifest.json" data-ab-dry="Original" data-ab-wet="With Secret Future EQ 2" data-ab-play="Play" data-ab-pause="Pause" data-ab-listen="What to listen for" data-ab-level="Level-matched: both play at" data-ab-version="Version" data-ab-position="Position" data-ab-loading="Loading..." data-ab-failed="This example could not be loaded.">
+      <p class="pp-kicker">Listen</p>
+      <h2 id="listen-title">Hear the difference</h2>
+      <p class="pp-intro">The same part with the same settings, once without and once with Secret Future EQ 2. Both play at the same loudness, so you judge the tone and not the volume. Switch while it plays &ndash; it stays on the same spot.</p>
+      <div class="pp-ab-list" data-ab-list></div>
     </section>
-    <section data-reveal>
-      <h2>What it does</h2>
-      <div class="features"><div><h3>Secret Match</h3><p>Pick a reference, play your track, press one button. Strength and Smooth for taste.</p></div><div><h3>Your own bands</h3><p>Click in the graph to add a bell, shelf or cut. Drag for frequency and gain, scroll for width. On top of the match or on its own.</p></div><div><h3>Fair A / B / C</h3><p>Three sound slots. Auto-Gain evens out loudness differences between them, so you can judge the tone rather than the volume.</p></div><div><h3>Reference library</h3><p>Drop an audio file, capture any sound live, keep your favourite references one click away.</p></div><div><h3>Saturation and output</h3><p>Gentle drive before or after the EQ, a clean output stage and loudness readout.</p></div><div><h3>Calm and clear</h3><p>Rest the mouse on anything to see what it does. A short welcome tour on first launch.</p></div></div>
+    <section class="pp-section" aria-labelledby="why-title" data-reveal>
+      <p class="pp-kicker">Why producers use it</p>
+      <h2 id="why-title">What it does for your track</h2>
+      <ol class="pp-benefits">
+        <li><h3>The tone you love, on your own track</h3><p>Pick a reference, play your track, press Secret Match. Your track moves towards the reference, and two controls decide how far and how smooth.</p></li>
+        <li><h3>Decide by ear, not by volume</h3><p>Three sound slots, A, B and C. <span class="pp-nowrap">Auto-Gain</span> evens out the loudness between them, so the louder version never wins by accident.</p></li>
+        <li><h3>Your own moves on top</h3><p>Click in the graph to add a bell, shelf or cut. Drag for frequency and gain, scroll for width &ndash; on top of the match or on its own.</p></li>
+        <li><h3>References one click away</h3><p>Drop in an audio file or capture any sound live, and keep your favourite references ready for the next session.</p></li>
+      </ol>
     </section>
-    <section data-reveal>
-      <h2>Details</h2>
-      <ul class="specs"><li><b>Formats</b>VST3, AU, CLAP (64-bit)</li><li><b>Mac</b>macOS 12 or newer, Apple Silicon and Intel</li><li><b>Windows</b>Windows 10 / 11, 64-bit</li><li><b>License</b>2 computers at the same time</li><li><b>Updates</b>Free within version 2</li></ul>
+    <section class="pp-section" aria-labelledby="see-title" data-reveal>
+      <p class="pp-kicker">See it</p>
+      <h2 id="see-title">The real interface</h2>
+      <figure class="pp-film">
+        <div class="film" data-film="../../media/sfe2"><img src="../../media/sfe2-poster-720.webp" srcset="../../media/sfe2-poster-720.webp 1280w, ../../media/sfe2-poster.webp 1920w" sizes="(max-width: 1360px) 100vw, 1360px" width="1920" height="1080" loading="lazy" decoding="async" alt="Secret Future EQ 2 interface with the match curve and the output stage"><video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video></div>
+        <figcaption>What you see: a slow tour of the plugin window &ndash; the match curve, then the output fader with <span class="pp-nowrap">Auto-Gain</span>.</figcaption>
+      </figure>
+            <div class="zoom"><figure><img src="../../media/sfe2-still-1.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Secret Future EQ 2: output and auto-gain"><figcaption>01 &middot; Output and Auto-Gain</figcaption></figure><figure><img src="../../media/sfe2-still-2.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Secret Future EQ 2: the match curve"><figcaption>02 &middot; The match curve</figcaption></figure><figure><img src="../../media/sfe2-still-3.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Secret Future EQ 2: side view"><figcaption>03 &middot; Side view</figcaption></figure></div>
+    </section>
+    <section class="pp-section" aria-labelledby="trust-title" data-reveal>
+      <p class="pp-kicker">Buy without risk</p>
+      <h2 id="trust-title">Simple and fair</h2>
+      <ul class="pp-trust">
+        <li><h3>14-day money-back guarantee</h3><p>Not for you? Get the full price back within 14 days of purchase. No reason needed, even after you have installed and used it. <a href="../../refund/">Refund terms</a></p></li>
+        <li><h3>Secure checkout by Paddle</h3><p>Paddle is our reseller. It handles payment, invoice and VAT, and sends your receipt. <a href="https://www.paddle.com/legal/checkout-buyer-terms">Paddle terms of sale</a></p></li>
+        <li><h3>Free updates in version 2</h3><p>Every 2.x update is included. No subscription &ndash; the license has no time limit.</p></li>
+      </ul>
+    </section>
+    <section class="pp-section" id="specs" aria-labelledby="specs-title" data-reveal>
+      <p class="pp-kicker">Compatibility</p>
+      <h2 id="specs-title">Works in your setup</h2>
+      <ul class="specs pp-specs"><li><b>Mac</b>macOS 12 or newer, Apple Silicon and Intel</li><li><b>Windows</b>Windows 10 / 11, 64-bit</li><li><b>Formats</b>Mac: VST3, AU, CLAP. Windows: VST3, CLAP.</li><li><b>License</b>One license for two computers at the same time. <a href="../../eula/">License terms</a></li><li><b>Activation</b>With your license key; keeps working offline for several weeks</li><li><b>Updates</b>Free within version 2</li></ul>
+    </section>
+    <section class="pp-section pp-close" aria-labelledby="close-title" data-reveal>
+      <div class="pp-close-box">
+        <div>
+          <p class="pp-kicker">Secret Future EQ 2</p>
+          <h2 id="close-title">Ready when you are.</h2>
+        </div>
+        <div>
+          <div class="buy pp-buy">
+            <div class="price" data-price="SVPEQ4"><span class="now"></span><span class="tag" hidden>LAUNCH PRICE</span></div>
+            <button class="btn" data-buy="SVPEQ4" disabled>Available soon</button>
+          </div>
+          <ul class="pp-deliver"><li>Your license key by email right after purchase</li><li>Installers for Mac and Windows on the <a href="../../download/">download page</a></li><li><a href="../../refund/">14-day money-back guarantee</a></li></ul>
+          <p class="small">The total for your country, incl. VAT where it applies, is shown in the checkout before you pay. Checkout and invoice by Paddle, our reseller. Your statutory rights stay unaffected.</p>
+        </div>
+      </div>
     </section>
     <section data-reveal>
       <h2>The family</h2>
-      <ul class="family"><li><a href="../../plugins/notes/"><span class="index">02</span><span class="name">Secret Notes</span><span class="status free">Free</span></a></li><li><a href="../../plugins/parametric-eq/"><span class="index">03</span><span class="name">Secret Parametric EQ</span><span class="status dev">In development</span></a></li><li><a href="../../plugins/spectrum/"><span class="index">04</span><span class="name">Secret Spectrum</span><span class="status dev">In development</span></a></li><li><a href="../../plugins/clipper/"><span class="index">05</span><span class="name">Secret Clipper</span><span class="status dev">In development</span></a></li></ul>
+            <ul class="family"><li><a href="../../plugins/notes/"><span class="index">02</span><span class="name">Secret Notes</span><span class="status free">Free</span></a></li><li><a href="../../plugins/parametric-eq/"><span class="index">03</span><span class="name">Secret Parametric EQ</span><span class="status dev">In development</span></a></li><li><a href="../../plugins/spectrum/"><span class="index">04</span><span class="name">Secret Spectrum</span><span class="status dev">In development</span></a></li><li><a href="../../plugins/clipper/"><span class="index">05</span><span class="name">Secret Clipper</span><span class="status dev">In development</span></a></li></ul>
     </section>
   </div>
 </main>
@@ -62,7 +188,8 @@
   <span>&copy; Secret VIP &ndash; Sebastian Behrendt, Hamburg &middot; Version 2.1 &middot; 2026-09-27</span>
   <div class="links"><a href="../../faq/#support">Support</a><a href="../../imprint/">Imprint</a><a href="../../privacy/">Privacy</a><a href="../../eula/">License (EULA)</a><a href="../../refund/">Refunds</a><a href="../../third-party/">Third-party notices</a><a href="https://www.paddle.com/legal/checkout-buyer-terms">Terms of sale (Paddle)</a><a href="https://secret.vip">secret.vip</a></div>
 </footer></div>
-<script src="../../shop.js?v=5115ba01b0b0"></script>
+<script src="../../shop.js?v=5f10a9028c6c"></script>
 <script src="../../cinema.js?v=197e24f1b6f2" defer></script>
+<script src="../../ab-player.js?v=91c0eba167af" defer></script>
 </body>
 </html>
