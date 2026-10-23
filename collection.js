@@ -109,7 +109,7 @@
           $('mail-note').textContent = result.mailed ? T.mailed : T.mailLater;
           var link = new URL(result.collection_url);
           // The server may link either language; the buyer stays in the language of this page.
-          if (link.origin === 'https://plugins.secret.vip' && /^\/([a-z]{2}\/)?licenses\/$/.test(link.pathname)) $('open-library').href = home + 'licenses/' + link.hash;
+          if (['https://plugins.secret.vip', 'https://secret-audio.com', location.origin].includes(link.origin) && /^\/([a-z]{2}\/)?licenses\/$/.test(link.pathname)) $('open-library').href = home + 'licenses/' + link.hash;
           $('request').hidden = true;
           return;
         }
