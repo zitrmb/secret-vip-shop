@@ -84,7 +84,7 @@
         details.href = home + 'free/?product=' + encodeURIComponent(id);
         card.appendChild(details);
       } else {
-        document.title = (product.name || id) + ' - Secret VIP Plugins';
+        document.title = (product.name || id) + ' – Secret Audio';
         var heading = document.querySelector('h1');
         if (heading) heading.textContent = product.name || id;
       }
