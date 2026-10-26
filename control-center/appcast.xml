@@ -2,10 +2,10 @@
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel>
 <title>Secret Control Center</title><link>https://plugins.secret.vip/control-center/</link>
-<item><title>Secret Control Center 1.2.0</title><sparkle:version>10200</sparkle:version>
-<sparkle:shortVersionString>1.2.0</sparkle:shortVersionString><sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-<enclosure url="https://plugins.secret.vip/files/Secret-Control-Center-1.2.0.dmg" length="2533046" type="application/octet-stream" sparkle:edSignature="PtK/YZBKBftfFFS4fEglUeuFfUNRYaJCplmiCRgZdsJ4AqBYBwFSjyq9DZ34Js35j3LZKL0ma+BeFBPj7zaUAQ=="></enclosure>
+<item><title>Secret Control Center 1.2.1</title><sparkle:version>10201</sparkle:version>
+<sparkle:shortVersionString>1.2.1</sparkle:shortVersionString><sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+<enclosure url="https://plugins.secret.vip/files/Secret-Control-Center-1.2.1.dmg" length="2560764" type="application/octet-stream" sparkle:edSignature="g2ZgUV1vXBauMwkZmbbWxEgOkklF8W+6+AtbikLJwz+lO0DpvZcBWJqcH6OHpGKm2fmnITl26llYB3jJ7KhpCw=="></enclosure>
 </item></channel></rss><!-- sparkle-signatures:
-edSignature: NGq1ZJ/Qc2I6ldrmGgaR9eaw/sPuZmBHmzDNgO4xqqRLzmvJubdUnXLPbeWuzLKtawuM73ED+XJKi0dOfk9dCg==
+edSignature: /dJb9kETG6j5G6WaR9oFTnAkQglCqaTWHxbXwvfcX4JDsvsriBpnNJ/F3LE9zSUXiML8MTCT+kwtMllRW9JyAg==
 length: 975
 -->
