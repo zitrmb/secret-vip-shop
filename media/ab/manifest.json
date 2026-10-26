@@ -1,1 +1,56 @@
-{"ready": false, "pairs": []}
+{
+  "ready": true,
+  "pairs": [
+    {
+      "id": "less-boxy",
+      "title": "Less boxy, more open",
+      "listen_for": "The boxy build-up in the low mids clears, and the words sound more open. Setting: low cut at 80 Hz, −4 dB at 400 Hz.",
+      "dry": {
+        "m4a": "less-boxy-dry.m4a",
+        "webm": "less-boxy-dry.webm",
+        "lufs": -20.7,
+        "lufs_before": -20.0
+      },
+      "wet": {
+        "m4a": "less-boxy-wet.m4a",
+        "webm": "less-boxy-wet.webm",
+        "lufs": -20.8,
+        "lufs_before": -20.7
+      }
+    },
+    {
+      "id": "presence",
+      "title": "More presence",
+      "listen_for": "The voice steps forward and the words get easier to follow, without getting louder. Setting: +4 dB at 3 kHz, wide.",
+      "dry": {
+        "m4a": "presence-dry.m4a",
+        "webm": "presence-dry.webm",
+        "lufs": -20.0,
+        "lufs_before": -20.0
+      },
+      "wet": {
+        "m4a": "presence-wet.m4a",
+        "webm": "presence-wet.webm",
+        "lufs": -20.0,
+        "lufs_before": -19.0
+      }
+    },
+    {
+      "id": "air",
+      "title": "More air",
+      "listen_for": "Breath and shine above the voice open up, while its body stays the same. Setting: high shelf, +5 dB from 8 kHz.",
+      "dry": {
+        "m4a": "air-dry.m4a",
+        "webm": "air-dry.webm",
+        "lufs": -20.0,
+        "lufs_before": -20.0
+      },
+      "wet": {
+        "m4a": "air-wet.m4a",
+        "webm": "air-wet.webm",
+        "lufs": -20.1,
+        "lufs_before": -19.9
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "ready": true,
+  "pairs": [
+    {
+      "id": "less-boxy",
+      "title": "Weniger dumpf, mehr Klarheit",
+      "listen_for": "Der dumpfe Stau in den unteren Mitten löst sich, die Worte klingen offener. Einstellung: Hochpass bei 80 Hz, −4 dB bei 400 Hz.",
+      "dry": {
+        "m4a": "less-boxy-dry.m4a",
+        "webm": "less-boxy-dry.webm",
+        "lufs": -20.7,
+        "lufs_before": -20.0
+      },
+      "wet": {
+        "m4a": "less-boxy-wet.m4a",
+        "webm": "less-boxy-wet.webm",
+        "lufs": -20.8,
+        "lufs_before": -20.7
+      }
+    },
+    {
+      "id": "presence",
+      "title": "Mehr Präsenz",
+      "listen_for": "Die Stimme rückt nach vorn und die Worte werden deutlicher, ohne lauter zu werden. Einstellung: +4 dB bei 3 kHz, breit.",
+      "dry": {
+        "m4a": "presence-dry.m4a",
+        "webm": "presence-dry.webm",
+        "lufs": -20.0,
+        "lufs_before": -20.0
+      },
+      "wet": {
+        "m4a": "presence-wet.m4a",
+        "webm": "presence-wet.webm",
+        "lufs": -20.0,
+        "lufs_before": -19.0
+      }
+    },
+    {
+      "id": "air",
+      "title": "Mehr Luft",
+      "listen_for": "Atem und Glanz über der Stimme öffnen sich, ihr Körper bleibt gleich. Einstellung: Höhenanhebung, +5 dB ab 8 kHz.",
+      "dry": {
+        "m4a": "air-dry.m4a",
+        "webm": "air-dry.webm",
+        "lufs": -20.0,
+        "lufs_before": -20.0
+      },
+      "wet": {
+        "m4a": "air-wet.m4a",
+        "webm": "air-wet.webm",
+        "lufs": -20.1,
+        "lufs_before": -19.9
+      }
+    }
+  ]
+}
