@@ -14,8 +14,8 @@
       "discount_id": "dsc_01m3asnfmk6cdszpywxjqdn9hw",
       "license_product": "SFE2",
       "launch_active": true,
-      "expires_at": "2026-11-27T23:59:59+01:00",
-      "expires_event": "black_friday",
+      "expires_at": "2026-11-30T23:59:59+01:00",
+      "last_chance_from": "2026-11-27T00:00:00+01:00",
       "starts_at": "2026-09-25T00:48:03+02:00",
       "campaigns": [],
       "price_ids": [
@@ -60,6 +60,7 @@
     "en": {
       "launch": "LAUNCH PRICE",
       "launch_until": "Launch price until {date}",
+      "last_chance_until": "Last chance: launch price until {date}",
       "campaign_until": "Special price until {date}",
       "lowest": "Lowest price in the 30 days before this offer: {price}",
       "launch_then": "Then {price}.",
@@ -71,6 +72,7 @@
     "de": {
       "launch": "EINFÜHRUNGSPREIS",
       "launch_until": "Einführungspreis bis {date}",
+      "last_chance_until": "Letzte Chance: Einführungspreis bis {date}",
       "campaign_until": "Aktionspreis bis {date}",
       "lowest": "Niedrigster Preis in den 30 Tagen vor diesem Angebot: {price}",
       "launch_then": "Danach {price}.",

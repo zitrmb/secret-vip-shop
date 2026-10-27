@@ -158,7 +158,9 @@
           var texts = cfg.price_texts && cfg.price_texts[LANG];
           if (active && texts) {
             var date = active.expires_at && new Intl.DateTimeFormat(LANG === 'de' ? 'de-DE' : 'en-GB', {timeZone: 'Europe/Berlin', day: '2-digit', month: LANG === 'de' ? '2-digit' : 'short', year: 'numeric'}).format(new Date(active.expires_at));
-            tag.textContent = date ? texts[active.launch ? 'launch_until' : 'campaign_until'].replace('{date}', date) : texts.launch;
+            // From last_chance_from (e.g. Black Friday) until the same real end the label says "last chance".
+            var lastChance = active.launch && texts.last_chance_until && instant(p.last_chance_from) <= Date.now();
+            tag.textContent = date ? texts[lastChance ? 'last_chance_until' : active.launch ? 'launch_until' : 'campaign_until'].replace('{date}', date) : texts.launch;
           }
         }
         // A dated launch also says plainly what the price is afterwards (real deadline, no strike price).
