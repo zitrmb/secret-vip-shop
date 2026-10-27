@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de" data-root="../../" data-home="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vertrag widerrufen – Secret Audio</title>
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 256x256" href="../../favicon.ico?v=round1016"><link rel="icon" type="image/png" sizes="32x32" href="../../img/sv-icon-32-round1016.png"><link rel="icon" type="image/png" sizes="512x512" href="../../img/icon.png?v=round1016"><link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png?v=round1016">
+<script>try{var t=localStorage.getItem('svp-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../../style.css?v=ba505dfb7401">
+<link rel="alternate" hreflang="en" href="https://plugins.secret.vip/withdraw/">
+<link rel="alternate" hreflang="de" href="https://plugins.secret.vip/de/withdraw/">
+<link rel="alternate" hreflang="x-default" href="https://plugins.secret.vip/withdraw/">
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Hauptnavigation"><a class="brand" href="../../de/">Secret Audio</a><div class="links"><a href="../../de/#family">Plugins</a><a href="../../de/pricing/">Shop</a><a href="../../de/download/">Download</a><a href="../../de/faq/">Hilfe</a><a href="../../de/licenses/">Konto</a></div><div class="nav-tools"><a class="lang-switch" href="../../withdraw/" hreflang="en" aria-label="English">EN</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Hell und Dunkel wechseln" data-light="Hell" data-dark="Dunkel" data-aria-light="Zur hellen Ansicht wechseln" data-aria-dark="Zur dunklen Ansicht wechseln"><span>Hell / Dunkel</span></button></div></nav>
+<div class="page withdraw" id="withdraw">
+  <h1>Vertrag widerrufen</h1>
+  <p class="lead">Du möchtest einen Kauf widerrufen? Sag uns, um welchen es geht. Es sind zwei Schritte: Angaben eingeben, dann bestätigen.</p>
+  <noscript><p class="note">Diese Seite braucht JavaScript, um deine Nachricht vorzubereiten. Ohne schreibe an support@secret.vip mit deinem Namen, deiner Bestellnummer oder deinem Lizenzschlüssel und der E-Mail-Adresse für die Bestätigung.</p></noscript>
+  <form class="withdraw-form" novalidate>
+    <label>Dein Name<input type="text" name="name" autocomplete="name" required></label>
+    <label>Bestellnummer oder Lizenzschlüssel<input type="text" name="order" placeholder="Steht auf deinem Paddle-Beleg" autocomplete="off" required></label>
+    <label>E-Mail-Adresse für die Bestätigung<input type="email" name="email" autocomplete="email" required></label>
+    <p class="note" aria-live="polite" data-withdraw-note></p>
+    <button class="btn" type="submit">Weiter</button>
+  </form>
+  <section class="withdraw-review" hidden aria-labelledby="withdraw-review-h">
+    <h2 id="withdraw-review-h">Angaben prüfen</h2>
+    <dl>
+      <div><dt>Name</dt><dd data-w="name"></dd></div>
+      <div><dt>Bestellnummer oder Lizenzschlüssel</dt><dd data-w="order"></dd></div>
+      <div><dt>E-Mail für die Bestätigung</dt><dd data-w="email"></dd></div>
+      <div><dt>Datum und Uhrzeit</dt><dd data-w="time"></dd></div>
+    </dl>
+    <div data-withdraw-pending>
+    <p class="small">Dein Widerruf ist abgegeben, sobald du auf &bdquo;Widerruf bestätigen&ldquo; drückst. Wir schicken dir dann an die oben genannte Adresse eine Eingangsbestätigung mit Datum und Uhrzeit. Vor dem Klick wird nichts gesendet.</p>
+    <p class="note withdraw-error" role="alert" data-withdraw-error></p>
+    <div class="withdraw-actions"><button class="btn" type="button" data-withdraw-submit>Widerruf bestätigen</button><button class="btn ghost" type="button" data-withdraw-back>Zurück</button></div>
+    </div>
+    <div data-withdraw-fallback>
+    <h3>Lieber per E-Mail, oder das Senden hat nicht geklappt?</h3>
+    <p class="small">Du kannst deinen Widerruf auch per E-Mail schicken. Öffne dein E-Mail-Programm mit dem vorbereiteten Text oder kopiere den Text und schicke ihn an <b>support@secret.vip</b>. Bei dieser Möglichkeit ist dein Widerruf abgegeben, sobald du die E-Mail abschickst.</p>
+    <p><a class="btn ghost" href="#" data-withdraw-send>E-Mail-Programm öffnen</a></p>
+    <textarea readonly rows="7" data-withdraw-text aria-label="Lieber per E-Mail, oder das Senden hat nicht geklappt?"></textarea>
+    <p><button class="btn ghost" type="button" data-withdraw-copy>Text kopieren</button> <span class="note" aria-live="polite" data-withdraw-copied></span></p>
+    </div>
+    <div class="withdraw-done" hidden role="status" tabindex="-1" data-withdraw-done>
+      <h3>Widerruf eingegangen</h3>
+      <p data-withdraw-done-when></p>
+      <p class="small" data-withdraw-done-mail></p>
+    </div>
+  </section>
+  <p class="small">Käufe laufen über Paddle. Wenn du magst, kannst du auch im Paddle-Kundenportal widerrufen: Nutze den Link in deiner Bestellbestätigung oder gehe auf <a href="https://paddle.net" rel="noopener">paddle.net</a>.</p>
+  <p class="small">Deine Rechte und die Fristen stehen auf der Seite <a href="../refund/">Widerruf</a>.</p>
+  <p class="small">Wie wir mit deinen Angaben umgehen: <a href="../privacy/">Datenschutz</a>, Abschnitt &bdquo;Support per E-Mail&ldquo;.</p>
+  <script type="application/json" id="withdraw-config">{"subject": "Widerruf des Vertrags", "body_intro": "Hiermit widerrufe ich meinen Vertrag über den Kauf eines Produkts von Secret Audio.", "b_name": "Name", "b_order": "Bestellnummer oder Lizenzschlüssel", "b_email": "E-Mail für die Bestätigung", "b_time": "Gesendet am", "err_required": "Bitte fülle alle Felder aus.", "err_email": "Bitte gib eine gültige E-Mail-Adresse ein.", "copied": "Kopiert.", "to": "support@secret.vip", "endpoint": "https://license.secret.vip/v1/withdrawal", "locale": "de", "sending": "Wird gesendet…", "done_when": "Eingegangen am {when}.", "done_mail": "Wir haben eine Eingangsbestätigung an {email} geschickt.", "done_nomail": "Dein Widerruf ist bei uns eingegangen. Die Bestätigungs-E-Mail konnte gerade nicht gesendet werden; wir schicken sie dir in Kürze. Bitte behalte diese Seite oder einen Screenshot als Nachweis.", "err_send": "Das Senden hat nicht geklappt, dein Widerruf ist also noch nicht bei uns angekommen. Bitte nutze unten die E-Mail-Möglichkeit.", "err_rate": "Zu viele Versuche. Bitte warte ein paar Minuten oder nutze unten die E-Mail-Möglichkeit."}</script>
+</div>
+<footer>
+  <span>&copy; 2026 Sebastian Behrendt, Secret Audio, Hamburg &middot; Secret VIP ist eine Serie von Secret Audio.</span>
+  <div class="links"><a href="../../de/faq/#support">Support</a><a href="../../de/imprint/">Impressum</a><a href="../../de/privacy/">Datenschutz</a><a href="../../de/eula/">Lizenzvertrag (EULA)</a><a href="../../de/refund/">Widerruf</a><a href="../../de/third-party/">Drittanbieter-Hinweise</a><a href="https://www.paddle.com/legal/checkout-buyer-terms">Verkaufsbedingungen (Paddle)</a><a href="../../de/withdraw/">Vertrag widerrufen</a><a href="https://secret-audio.com">secret-audio.com</a></div>
+</footer>
+</div>
+<script src="../../withdraw.js?v=95d7e8d42861" defer></script>
+<script src="../../shop.js?v=e82a09dbe224"></script>
+<script src="../../cinema.js?v=197e24f1b6f2" defer></script>
+</body>
+</html>

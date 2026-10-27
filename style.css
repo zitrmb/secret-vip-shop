@@ -91,6 +91,26 @@ details p{color:var(--muted);margin:10px 0 0}
 form.key{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
 form.key input,.free-newsletter-form input[type=email]{flex:1 1 240px;min-height:50px;background:var(--bg2);border:1px solid var(--line);border-radius:999px;color:var(--text);font:15px var(--sans);padding:0 20px;outline:none;transition:border-color .15s}
 form.key input:focus,.free-newsletter-form input[type=email]:focus{border-color:var(--accent)}
+/* Cancel contract: always visible in the footer (Sec. 356a BGB), clearly an action, not a plain link */
+footer a[href$="withdraw/"]{color:var(--text);border:1px solid var(--line2);border-radius:999px;padding:4px 14px;margin:-5px 0}
+footer a[href$="withdraw/"]:hover,footer a[href$="withdraw/"]:focus-visible{border-color:var(--accent);color:var(--text)}
+.withdraw-form{display:flex;flex-direction:column;gap:14px;margin:22px 0;max-width:520px}
+.withdraw-form label,.withdraw-review dt{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--muted)}
+.withdraw-form input{min-height:50px;background:var(--bg2);border:1px solid var(--line);border-radius:999px;color:var(--text);font:15px var(--sans);padding:0 20px;outline:none}
+.withdraw-form input:focus{border-color:var(--accent)}
+.withdraw-form .btn{align-self:flex-start}
+.withdraw-review[hidden],.withdraw-form[hidden]{display:none}
+.withdraw-review dl{margin:18px 0;display:grid;gap:14px}
+.withdraw-review dt{display:block}
+.withdraw-review dd{margin:4px 0 0;color:var(--text);font-size:16px;overflow-wrap:anywhere}
+.withdraw-done{margin:18px 0 28px;padding:18px 20px;border:1px solid var(--accent);border-radius:14px;outline:none}
+.withdraw-done[hidden],[data-withdraw-pending][hidden],[data-withdraw-fallback][hidden]{display:none}
+.withdraw-done h3{margin:0 0 8px}
+.withdraw-error:empty{display:none}
+.withdraw-actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+.notfound-actions{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 40px}
+.withdraw-review h3{font-size:16px;margin:22px 0 6px}
+.withdraw-review textarea{width:100%;box-sizing:border-box;background:var(--bg2);border:1px solid var(--line);border-radius:14px;color:var(--text);font:14px/1.5 var(--sans);padding:14px 16px;resize:vertical}
 /* Hilfe: Sprache, Plugin und Suche als ruhige Felder in einer Reihe (faq.css bestimmt das Raster). */
 .faq-controls input,.faq-controls select{min-height:48px;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r1);color:var(--text);font:15px var(--sans);padding:0 14px}
 .faq-controls input:focus,.faq-controls select:focus{border-color:var(--accent)}
