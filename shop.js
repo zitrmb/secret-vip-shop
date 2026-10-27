@@ -34,12 +34,33 @@
     failed: 'That did not work. Please write to support@secret.vip - we help right away.'
   };
 
-  try {
-    var receipt = sessionStorage.getItem('svp-paid-receipt');
-    if (receipt && new URL(receipt).origin === location.origin && new URL(receipt).pathname.endsWith('/success/')) {
-      sessionStorage.removeItem('svp-paid-receipt'); location.replace(receipt); return;
-    }
-  } catch (_) {}
+  // ---- Kampagnen-Kennung (utm_*, ref) ----
+  // Datenschutz: nie im Browser gespeichert (kein Cookie, kein Storage). Sie wird nur aus der
+  // aktuellen Adresse gelesen, beim Klick auf "Buy now" an Paddle gegeben und an Links dieser
+  // Seite zur eigenen Website angehaengt (tools/legal/texts/privacy.*.html, Abschnitt 5).
+  var CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_content', 'utm_campaign', 'ref'];
+  function campaignFromUrl() {
+    var query = new URLSearchParams(location.search), out = {};
+    CAMPAIGN_KEYS.forEach(function (key) {
+      var value = (query.get(key) || '').trim();
+      if (value && /^[A-Za-z0-9._-]{1,80}$/.test(value)) out[key] = value;
+    });
+    return out;
+  }
+  function carryCampaign() {
+    var campaign = campaignFromUrl(), keys = Object.keys(campaign);
+    if (!keys.length) return;
+    all('a[href]').forEach(function (a) {
+      var u;
+      try { u = new URL(a.getAttribute('href'), location.href); } catch (_) { return; }
+      if (u.origin !== location.origin) return;
+      var before = u.href;
+      keys.forEach(function (key) { if (!u.searchParams.has(key)) u.searchParams.set(key, campaign[key]); });
+      if (u.href !== before) a.setAttribute('href', u.href);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', carryCampaign);
+  else carryCampaign();
 
   // ---- Kaufen (Paddle Overlay-Checkout) ----
   // Datenschutz: Paddle.js (setzt das Cookie __cf_bm und laedt ProfitWell) laedt erst beim Klick auf
@@ -114,13 +135,13 @@
       else if (ev.name === 'checkout.completed') {
         var access = (data.custom_data || {}).checkout_access || purchaseAccess;
         completedUrl = successBase + '#access=' + encodeURIComponent(access) + '&transaction_id=' + encodeURIComponent(data.transaction_id || '');
-        // Persist only this tab's receipt, never license keys. Navigate before close emits checkout.closed.
-        try { sessionStorage.setItem('svp-paid-receipt', completedUrl); } catch (_) {}
+        // Replace this page in the tab history: "back" cannot reopen a paid checkout, nothing is stored.
+        // Navigate before close emits checkout.closed.
         navigating = true;
-        location.assign(completedUrl);
+        location.replace(completedUrl);
         try { Paddle.Checkout.close(); } catch (_) {}
       } else if (ev.name === 'checkout.closed' && !navigating) {
-        if (completedUrl) return location.assign(completedUrl);
+        if (completedUrl) return location.replace(completedUrl);
         var closedAccess = (data.custom_data || {}).checkout_access || purchaseAccess;
         if (!closedAccess) return;
         // A missed completion event still reaches the waiting page; a plain abort stays here.
@@ -146,26 +167,11 @@
       document.head.appendChild(s);
     }
     if (/[?&]_ptxn=/.test(location.search)) withPaddle(function () {});
-    // Only campaign labels are kept for this browser tab; no visitor identifier or cookie.
-    var campaignKeys = ['utm_source', 'utm_medium', 'utm_content', 'utm_campaign', 'ref'];
-    var campaign = {};
-    try {
-      var saved = JSON.parse(sessionStorage.getItem('svp_campaign') || '{}');
-      campaignKeys.forEach(function (key) {
-        if (typeof saved[key] === 'string' && /^[A-Za-z0-9._-]{1,80}$/.test(saved[key])) campaign[key] = saved[key];
-      });
-    } catch (ignored) { /* Storage may be disabled. */ }
     var query = new URLSearchParams(location.search);
     // Einmalcode gilt fuer jedes Produkt im gemeinsamen Shop; ungueltige Werte werden ignoriert.
     // Paddle-Codes: nur Buchstaben und Ziffern, bis 32 Zeichen, Gross/klein egal (API: create discount).
     function cleanCode(v) { v = String(v || '').replace(/\s+/g, '').toUpperCase(); return /^[A-Z0-9]{1,32}$/.test(v) ? v : ''; }
     var discountCode = cleanCode(query.get('code'));
-    campaignKeys.forEach(function (key) {
-      var value = (query.get(key) || '').trim();
-      if (value && /^[A-Za-z0-9._-]{1,80}$/.test(value)) campaign[key] = value;
-    });
-    try { sessionStorage.setItem('svp_campaign', JSON.stringify(campaign)); }
-    catch (ignored) { /* The checkout still works. */ }
     // Stil fuer Codefeld und Hinweis lebt hier statt in style.css: dessen Cache-Marke steckt in den
     // erzeugten Rechtsseiten (tools/legal/build_legal.py --check), der Kaufweg bleibt so in einer Datei.
     function addBuyStyle() {
@@ -205,13 +211,14 @@
         purchaseAccess = accessToken();
         completedUrl = ''; navigating = false; paymentTried = false; closeRun++;
         buyBox = box; status.textContent = '';
-        try { sessionStorage.removeItem('svp-paid-receipt'); } catch (_) {}
         var code = cleanCode(input.value);
         var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', showAddDiscounts: true, allowDiscountRemoval: true, locale: LANG, successUrl: successBase + '#access=' + purchaseAccess } };
         if (code) o.discountCode = code;
         else if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
         var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess, locale: LANG };
-        campaignKeys.forEach(function (key) { if (campaign[key]) custom[key] = campaign[key]; });
+        // Read at click time from the current address only.
+        var campaign = campaignFromUrl();
+        Object.keys(campaign).forEach(function (key) { custom[key] = campaign[key]; });
         o.customData = custom;
         withPaddle(function () { Paddle.Checkout.open(o); });
       };
