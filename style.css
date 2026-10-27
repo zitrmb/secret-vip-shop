@@ -54,7 +54,8 @@ p{margin:0 0 16px}
 
 /* Kaufen und Knöpfe (Hooks data-price, data-buy, data-dl bleiben in shop.js) */
 .buy{display:flex;align-items:center;gap:14px 18px;flex-wrap:wrap;margin:10px 0 18px}
-.price{display:flex;align-items:baseline;gap:12px;margin-right:6px}
+.price{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;margin-right:6px}
+.price .price-lowest{flex-basis:100%;font-size:14px;color:var(--muted)}
 .price .now{font:500 clamp(40px,4vw,56px)/1 var(--sans);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 .price .was{color:var(--faint);text-decoration:line-through;font-size:20px}
 .price .tag{border:1px solid var(--accent);color:var(--accent-text);font:500 11px/1 var(--mono);padding:6px 9px;border-radius:999px;letter-spacing:.12em}

@@ -12,7 +12,10 @@
       "price_id": "pri_01m3asnf9p65n69ef4h3ca3wmc",
       "discount_id": "dsc_01m3asnfmk6cdszpywxjqdn9hw",
       "license_product": "SFE2",
-      "launch_active": true
+      "launch_active": true,
+      "expires_at": null,
+      "starts_at": "2026-09-24T22:48:00+02:00",
+      "campaigns": []
     },
     "SecretNotes": {
       "name": "Secret Notes",
@@ -45,5 +48,21 @@
       }
     }
   },
-  "sale_open": true
+  "sale_open": true,
+  "price_country": "DE",
+  "price_currency": "EUR",
+  "price_texts": {
+    "en": {
+      "launch": "LAUNCH PRICE",
+      "launch_until": "Launch price until {date}",
+      "campaign_until": "Special price until {date}",
+      "lowest": "Lowest price in the 30 days before this offer: {price}"
+    },
+    "de": {
+      "launch": "EINFÜHRUNGSPREIS",
+      "launch_until": "Startpreis bis {date}",
+      "campaign_until": "Aktionspreis bis {date}",
+      "lowest": "Niedrigster Preis in den 30 Tagen vor diesem Angebot: {price}"
+    }
+  }
 }

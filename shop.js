@@ -66,21 +66,105 @@
   // Datenschutz: Paddle.js (setzt das Cookie __cf_bm und laedt ProfitWell) laedt erst beim Klick auf
   // "Buy now" oder wenn ein Paddle-Zahlungslink (?_ptxn=...) auf dieser Seite landet - nie beim
   // blossen Seitenaufruf. Nur so stimmt "kein Cookie-Banner" (tools/legal/texts/privacy.*.html).
-  // Nie einen Streichpreis zeigen: der Normalpreis wurde noch nicht verlangt (UWG § 5, PAngV § 11).
+  function regularAmount(p) { return Number(p.price_amount === undefined ? p.price_eur : p.price_amount); }
+  function launchAmount(p) { return Number(p.launch_amount === undefined ? p.launch_eur : p.launch_amount); }
+  function currencyFor(p, cfg) { return p.currency || cfg.price_currency || 'EUR'; }
+  function money(amount, currency) {
+    return currency === 'EUR' ? '€' + amount : new Intl.NumberFormat(LANG, {style: 'currency', currency: currency}).format(amount);
+  }
+  function minorScale(currency) {
+    return Math.pow(10, new Intl.NumberFormat('en', {style: 'currency', currency: currency}).resolvedOptions().maximumFractionDigits);
+  }
+  function instant(value) {
+    return typeof value === 'string' && /(?:Z|[+-]\d{2}:\d{2})$/.test(value) ? Date.parse(value) : NaN;
+  }
+  function activeOffer(p, now) {
+    now = now === undefined ? Date.now() : now;
+    var campaigns = p.campaigns || [];
+    for (var i = campaigns.length - 1; i >= 0; i--) {
+      var c = campaigns[i];
+      if (c.discount_id && instant(c.starts_at) <= now && now <= instant(c.expires_at) &&
+          Number.isFinite(c.amount) && c.amount >= 0 && c.amount < regularAmount(p)) return c;
+    }
+    if (p.launch_active === false || !p.discount_id || !Number.isFinite(launchAmount(p)) ||
+        launchAmount(p) < 0 || launchAmount(p) >= regularAmount(p)) return null;
+    if (p.starts_at && !(instant(p.starts_at) <= now)) return null;
+    // The existing launch without a deadline stays exactly as displayed today.
+    if (p.expires_at !== null && p.expires_at !== undefined && !(instant(p.expires_at) >= now)) return null;
+    return {amount: launchAmount(p), discount_id: p.discount_id, starts_at: p.starts_at, expires_at: p.expires_at, launch: true};
+  }
+  function activeDiscount(p, now) { return !!activeOffer(p, now); }
+  function berlinParts(value) {
+    return new Intl.DateTimeFormat('sv-SE', {timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23'}).format(new Date(value));
+  }
+  function historyEntry(data, product, country, currency, active, now) {
+    if (!data || !Array.isArray(data.entries) || !active) return null;
+    now = now === undefined ? Date.now() : now;
+    var generated = instant(data.generated_at), end = instant(active.starts_at);
+    if (!Number.isFinite(generated) || !Number.isFinite(end) || generated < end || generated > now) return null;
+    return data.entries.find(function (r) {
+      if (!r || typeof r !== 'object') return false;
+      var observed = instant(r.observed_at), start = instant(r.window_start);
+      if (!Number.isFinite(start)) return false;
+      var endParts = berlinParts(end), startParts = berlinParts(start);
+      return r.product === product && r.country === country && r.currency === currency && r.complete === true &&
+        Number.isInteger(r.amount) && r.amount >= 0 && instant(r.reduction_start) === end &&
+        Number.isFinite(observed) && observed < end && end - observed <= 26 * 3600000 &&
+        Date.parse(endParts.slice(0, 10)) - Date.parse(startParts.slice(0, 10)) === 30 * 86400000 &&
+        endParts.slice(11) === startParts.slice(11);
+    }) || null;
+  }
   json(root + 'config.json').then(function (cfg) {
-    all('[data-price]').forEach(function (box) {
-      var p = (cfg.products || {})[box.getAttribute('data-price')];
-      if (!p) return;
-      var active = p.launch_active !== false && !!p.discount_id && Number(p.launch_eur) < Number(p.price_eur);
-      $('.now', box).textContent = '€' + (active ? p.launch_eur : p.price_eur);
-      var was = $('.was', box), tag = $('.tag', box);
-      if (was) was.hidden = true;
-      if (tag) tag.hidden = !active;
-    });
-    all('[data-price-label]').forEach(function (el) {
-      var p = (cfg.products || {})[el.getAttribute('data-price-label')];
-      if (p) el.textContent = '€' + (p.launch_active !== false && p.discount_id ? p.launch_eur : p.price_eur);
-    });
+    var history = { entries: [] };
+    // Country is explicit shop configuration, never inferred from the page language.
+    // Other markets retain the plain price until their own price surface is configured.
+    function renderPrices() {
+      all('[data-price]').forEach(function (box) {
+        var product = box.getAttribute('data-price'), p = (cfg.products || {})[product];
+        if (!p) return;
+        var active = activeOffer(p), currency = currencyFor(p, cfg), scale = minorScale(currency);
+        var nowPrice = $('.now', box), was = $('.was', box), tag = $('.tag', box);
+        if (nowPrice) nowPrice.textContent = money(active ? active.amount : regularAmount(p), currency);
+        var entry = historyEntry(history, product, p.country || cfg.price_country, currency, active);
+        var reference = active && entry && entry.amount > Math.round(active.amount * scale);
+        if (!was && reference) {
+          was = document.createElement('span'); was.className = 'was'; box.appendChild(was);
+        }
+        if (was) {
+          was.hidden = !reference;
+          if (reference) was.textContent = money(entry.amount / scale, currency);
+        }
+        var low = $('.price-lowest', box);
+        if (!low && reference) {
+          low = document.createElement('span'); low.className = 'price-lowest'; box.appendChild(low);
+        }
+        if (low) {
+          low.hidden = !reference;
+          if (reference && cfg.price_texts && cfg.price_texts[LANG]) low.textContent = cfg.price_texts[LANG].lowest.replace('{price}', money(entry.amount / scale, currency));
+        }
+        if (tag) {
+          tag.hidden = !active;
+          var texts = cfg.price_texts && cfg.price_texts[LANG];
+          if (active && texts) {
+            var date = active.expires_at && new Intl.DateTimeFormat(LANG === 'de' ? 'de-DE' : 'en-GB', {timeZone: 'Europe/Berlin', day: '2-digit', month: LANG === 'de' ? '2-digit' : 'short', year: 'numeric'}).format(new Date(active.expires_at));
+            tag.textContent = date ? texts[active.launch ? 'launch_until' : 'campaign_until'].replace('{date}', date) : texts.launch;
+          }
+        }
+      });
+      all('[data-countdown]').forEach(function (el) {
+        var p = (cfg.products || {})[el.getAttribute('data-countdown')];
+        var active = p && activeOffer(p);
+        el.hidden = !active || !active.expires_at;
+      });
+      all('[data-price-label]').forEach(function (el) {
+        var p = (cfg.products || {})[el.getAttribute('data-price-label')];
+        if (p) { var active = activeOffer(p); el.textContent = money(active ? active.amount : regularAmount(p), currencyFor(p, cfg)); }
+      });
+    }
+    renderPrices();
+    json(root + 'price-history.json').then(function (data) { history = data; renderPrices(); }, function () {});
+    // A tab left open across the deadline must also lose the campaign display.
+    if (typeof setInterval === 'function') setInterval(renderPrices, 1000);
     if (!cfg.paddle || !cfg.paddle.token) return;
     var purchaseAccess = '', completedUrl = '', navigating = false;
     var successBase = new URL(home + 'success/', location.href).href;
@@ -213,8 +297,9 @@
         buyBox = box; status.textContent = '';
         var code = cleanCode(input.value);
         var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', showAddDiscounts: true, allowDiscountRemoval: true, locale: LANG, successUrl: successBase + '#access=' + purchaseAccess } };
+        var selectedOffer = activeOffer(p);
         if (code) o.discountCode = code;
-        else if (p.launch_active !== false && p.discount_id) o.discountId = p.discount_id;
+        else if (selectedOffer) o.discountId = selectedOffer.discount_id;
         var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess, locale: LANG };
         // Read at click time from the current address only.
         var campaign = campaignFromUrl();
