@@ -10,12 +10,17 @@
       "price_eur": 129,
       "launch_eur": 39,
       "price_id": "pri_01m3asnf9p65n69ef4h3ca3wmc",
+      "launch_price_id": "pri_01m5y87gxrcy2bk0xya7qgz4m0",
       "discount_id": "dsc_01m3asnfmk6cdszpywxjqdn9hw",
       "license_product": "SFE2",
       "launch_active": true,
-      "expires_at": null,
-      "starts_at": "2026-09-24T22:48:00+02:00",
-      "campaigns": []
+      "expires_at": "2026-11-27T23:59:59+01:00",
+      "expires_event": "black_friday",
+      "starts_at": "2026-09-25T00:48:03+02:00",
+      "campaigns": [],
+      "price_ids": [
+        "pri_01m5y87gxrcy2bk0xya7qgz4m0"
+      ]
     },
     "SecretNotes": {
       "name": "Secret Notes",
@@ -56,13 +61,23 @@
       "launch": "LAUNCH PRICE",
       "launch_until": "Launch price until {date}",
       "campaign_until": "Special price until {date}",
-      "lowest": "Lowest price in the 30 days before this offer: {price}"
+      "lowest": "Lowest price in the 30 days before this offer: {price}",
+      "launch_then": "Then {price}.",
+      "launch_then_event": "Only until {event}. Then {price}.",
+      "events": {
+        "black_friday": "Black Friday"
+      }
     },
     "de": {
       "launch": "EINFÜHRUNGSPREIS",
-      "launch_until": "Startpreis bis {date}",
+      "launch_until": "Einführungspreis bis {date}",
       "campaign_until": "Aktionspreis bis {date}",
-      "lowest": "Niedrigster Preis in den 30 Tagen vor diesem Angebot: {price}"
+      "lowest": "Niedrigster Preis in den 30 Tagen vor diesem Angebot: {price}",
+      "launch_then": "Danach {price}.",
+      "launch_then_event": "Nur bis {event}. Danach {price}.",
+      "events": {
+        "black_friday": "Black Friday"
+      }
     }
   }
 }

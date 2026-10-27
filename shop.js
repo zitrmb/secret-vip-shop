@@ -70,6 +70,11 @@
   function launchAmount(p) { return Number(p.launch_amount === undefined ? p.launch_eur : p.launch_amount); }
   function currencyFor(p, cfg) { return p.currency || cfg.price_currency || 'EUR'; }
   function money(amount, currency) {
+    // German pages write euros the German way ("39 €"); whole amounts keep no decimals, as before.
+    if (currency === 'EUR' && LANG === 'de') {
+      var whole = Number.isInteger(Number(amount));
+      return new Intl.NumberFormat('de-DE', {style: 'currency', currency: 'EUR', minimumFractionDigits: whole ? 0 : 2, maximumFractionDigits: whole ? 0 : 2}).format(amount);
+    }
     return currency === 'EUR' ? '€' + amount : new Intl.NumberFormat(LANG, {style: 'currency', currency: currency}).format(amount);
   }
   function minorScale(currency) {
@@ -86,12 +91,18 @@
       if (c.discount_id && instant(c.starts_at) <= now && now <= instant(c.expires_at) &&
           Number.isFinite(c.amount) && c.amount >= 0 && c.amount < regularAmount(p)) return c;
     }
-    if (p.launch_active === false || !p.discount_id || !Number.isFinite(launchAmount(p)) ||
+    // A launch sells through its own payment price (launch_price_id), so the checkout shows only the
+    // launch amount; the older way (list price plus discount) stays as fallback while no own price exists.
+    var launchPrice = launchPriceId(p);
+    if (p.launch_active === false || !(launchPrice || p.discount_id) || !Number.isFinite(launchAmount(p)) ||
         launchAmount(p) < 0 || launchAmount(p) >= regularAmount(p)) return null;
     if (p.starts_at && !(instant(p.starts_at) <= now)) return null;
     // The existing launch without a deadline stays exactly as displayed today.
     if (p.expires_at !== null && p.expires_at !== undefined && !(instant(p.expires_at) >= now)) return null;
-    return {amount: launchAmount(p), discount_id: p.discount_id, starts_at: p.starts_at, expires_at: p.expires_at, launch: true};
+    return {amount: launchAmount(p), price_id: launchPrice, discount_id: launchPrice ? '' : p.discount_id, starts_at: p.starts_at, expires_at: p.expires_at, launch: true};
+  }
+  function launchPriceId(p) {
+    return typeof p.launch_price_id === 'string' && /^pri_[a-z0-9]{10,}$/.test(p.launch_price_id) && p.launch_price_id !== p.price_id ? p.launch_price_id : '';
   }
   function activeDiscount(p, now) { return !!activeOffer(p, now); }
   function berlinParts(value) {
@@ -148,6 +159,21 @@
           if (active && texts) {
             var date = active.expires_at && new Intl.DateTimeFormat(LANG === 'de' ? 'de-DE' : 'en-GB', {timeZone: 'Europe/Berlin', day: '2-digit', month: LANG === 'de' ? '2-digit' : 'short', year: 'numeric'}).format(new Date(active.expires_at));
             tag.textContent = date ? texts[active.launch ? 'launch_until' : 'campaign_until'].replace('{date}', date) : texts.launch;
+          }
+        }
+        // A dated launch also says plainly what the price is afterwards (real deadline, no strike price).
+        var thenTexts = cfg.price_texts && cfg.price_texts[LANG];
+        var thenShown = !!(active && active.launch && active.expires_at && thenTexts && thenTexts.launch_then);
+        var then = $('.price-then', box);
+        if (!then && thenShown) {
+          then = document.createElement('span'); then.className = 'price-then'; box.appendChild(then);
+        }
+        if (then) {
+          then.hidden = !thenShown;
+          if (thenShown) {
+            var eventName = p.expires_event && thenTexts.events && thenTexts.events[p.expires_event];
+            then.textContent = (eventName && thenTexts.launch_then_event ? thenTexts.launch_then_event.replace('{event}', eventName) : thenTexts.launch_then)
+              .replace('{price}', money(regularAmount(p), currency));
           }
         }
       });
@@ -296,10 +322,13 @@
         completedUrl = ''; navigating = false; paymentTried = false; closeRun++;
         buyBox = box; status.textContent = '';
         var code = cleanCode(input.value);
-        var o = { items: [{ priceId: p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', showAddDiscounts: true, allowDiscountRemoval: true, locale: LANG, successUrl: successBase + '#access=' + purchaseAccess } };
         var selectedOffer = activeOffer(p);
+        // Launch without a code: its own price, no discount, so the checkout shows only that amount.
+        // A personal code keeps the list price it was made for (codes are tied to that price).
+        var ownPrice = !code && selectedOffer && selectedOffer.price_id;
+        var o = { items: [{ priceId: ownPrice || p.price_id, quantity: 1 }], settings: { displayMode: 'overlay', theme: 'dark', showAddDiscounts: !ownPrice, allowDiscountRemoval: true, locale: LANG, successUrl: successBase + '#access=' + purchaseAccess } };
         if (code) o.discountCode = code;
-        else if (selectedOffer) o.discountId = selectedOffer.discount_id;
+        else if (selectedOffer && selectedOffer.discount_id) o.discountId = selectedOffer.discount_id;
         var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess, locale: LANG };
         // Read at click time from the current address only.
         var campaign = campaignFromUrl();
