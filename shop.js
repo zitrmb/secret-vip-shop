@@ -4,6 +4,19 @@
 // Ohne Paddle-Werte bleibt der Knopf "Available soon" (Seite ist trotzdem vollstaendig).
 (function () {
   'use strict';
+  // Paddle reads location.href itself (settings.sourcePage), independently of customData.
+  // Remove marketing tags before any embedded script sees them; keep payment links, codes,
+  // language, hash and existing history.state. Second case: every page using this shared shop.
+  function clearAttribution() {
+    var url = new URL(location.href), keys = [];
+    url.searchParams.forEach(function (_, name) {
+      if (/^(utm_.+|ref|gclid|dclid|fbclid|msclkid|ttclid|twclid|gbraid|wbraid|srsltid|gad_source|gad_campaignid|mc_cid|mc_eid|igshid)$/i.test(name)) keys.push(name);
+    });
+    if (!keys.length) return;
+    keys.forEach(function (name) { url.searchParams.delete(name); });
+    history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+  }
+  clearAttribution();
   var LICENSE = 'https://license.secret.vip';
 
   function $(s, r) { return (r || document).querySelector(s); }
@@ -237,6 +250,7 @@
     }
     var paddleState = '', waiting = [];
     function withPaddle(fn) {
+      clearAttribution();
       if (paddleState === 'ready') return fn();
       waiting.push(fn);
       if (paddleState) return;
