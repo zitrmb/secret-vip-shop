@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "test_only": true,
+  "release_ready": false,
+  "plugins": [
+    {
+      "product": "SVPDev",
+      "name": "SVP Dev Hub",
+      "version": "1.0.0",
+      "manufacturer": "Secret VIP Dev",
+      "line": "dev-test",
+      "platform": "mac",
+      "package": "https://plugins.secret.vip/files/dev/SVPDev/162e7518885b8f1117c619a23855f990d71ea09c9f09b9017bcb90a2d1011d53/SVPDev-1.0.0-SIGNED-DEV-TEST.pkg",
+      "sha256": "162e7518885b8f1117c619a23855f990d71ea09c9f09b9017bcb90a2d1011d53"
+    }
+  ],
+  "checkout_enabled": false
+}
