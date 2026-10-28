@@ -34,33 +34,7 @@
     failed: 'That did not work. Please write to support@secret.vip - we help right away.'
   };
 
-  // ---- Kampagnen-Kennung (utm_*, ref) ----
-  // Datenschutz: nie im Browser gespeichert (kein Cookie, kein Storage). Sie wird nur aus der
-  // aktuellen Adresse gelesen, beim Klick auf "Buy now" an Paddle gegeben und an Links dieser
-  // Seite zur eigenen Website angehaengt (tools/legal/texts/privacy.*.html, Abschnitt 5).
-  var CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_content', 'utm_campaign', 'ref'];
-  function campaignFromUrl() {
-    var query = new URLSearchParams(location.search), out = {};
-    CAMPAIGN_KEYS.forEach(function (key) {
-      var value = (query.get(key) || '').trim();
-      if (value && /^[A-Za-z0-9._-]{1,80}$/.test(value)) out[key] = value;
-    });
-    return out;
-  }
-  function carryCampaign() {
-    var campaign = campaignFromUrl(), keys = Object.keys(campaign);
-    if (!keys.length) return;
-    all('a[href]').forEach(function (a) {
-      var u;
-      try { u = new URL(a.getAttribute('href'), location.href); } catch (_) { return; }
-      if (u.origin !== location.origin) return;
-      var before = u.href;
-      keys.forEach(function (key) { if (!u.searchParams.has(key)) u.searchParams.set(key, campaign[key]); });
-      if (u.href !== before) a.setAttribute('href', u.href);
-    });
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', carryCampaign);
-  else carryCampaign();
+  // Checkout receives only purchase and delivery fields; campaign links are not propagated.
 
   // ---- Kaufen (Paddle Overlay-Checkout) ----
   // Datenschutz: Paddle.js (setzt das Cookie __cf_bm und laedt ProfitWell) laedt erst beim Klick auf
@@ -332,9 +306,6 @@
         if (code) o.discountCode = code;
         else if (selectedOffer && selectedOffer.discount_id) o.discountId = selectedOffer.discount_id;
         var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess, locale: LANG };
-        // Read at click time from the current address only.
-        var campaign = campaignFromUrl();
-        Object.keys(campaign).forEach(function (key) { custom[key] = campaign[key]; });
         o.customData = custom;
         withPaddle(function () { Paddle.Checkout.open(o); });
       };
