@@ -33,7 +33,9 @@
       "de": {
         "summary": "Projektnotizen direkt neben deiner Musik in der DAW. Zum Synchronisieren brauchst du ein Konto bei notes.secret.vip.",
         "formats": "Mac: VST3, AU, CLAP. Windows: VST3, CLAP."
-      }
+      },
+      "free_request_product": "secret-notes",
+      "page": "plugins/notes/"
     },
     "AudioNormaliser": {
       "name": "Audio Normaliser",
@@ -51,6 +53,23 @@
         "summary": "Bringt Audiodateien in einer Desktop-App auf einen einheitlichen Pegel.",
         "formats": "Mac: Desktop-App. Windows: Installer."
       }
+    },
+    "SecretAnalyser": {
+      "name": "Secret Analyser",
+      "price_eur": 0,
+      "kind": "free",
+      "free_request_product": "secret-analyser",
+      "page": "plugins/analyser/",
+      "status": "coming_soon",
+      "summary": "See your whole mix clearly. Make space for the sounds that matter.",
+      "formats": "Free plugin. Download available soon.",
+      "de": {
+        "summary": "Sieh deinen ganzen Mix klarer. Schaffe Platz für die Klänge, die zählen.",
+        "formats": "Kostenloses Plugin. Download bald verfügbar."
+      },
+      "platforms": [
+        "mac"
+      ]
     }
   },
   "sale_open": true,
@@ -81,5 +100,9 @@
         "black_friday": "Black Friday"
       }
     }
+  },
+  "free_download": {
+    "enabled": false,
+    "endpoint": "https://license.secret.vip/v1/free/request"
   }
 }

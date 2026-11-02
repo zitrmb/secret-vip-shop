@@ -1,0 +1,38 @@
+.free-download-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px;padding-block:48px;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.free-download-panel h2{margin-top:0}
+.free-download-form{width:100%;max-width:42rem;min-width:0;margin-block:16px}
+.free-download-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.free-email-label{display:flex;flex:1 1 220px;min-width:0;flex-direction:column;gap:8px;font-size:14px;color:var(--text)}
+.free-email-label input{width:100%;min-width:0;min-height:48px;padding:12px 14px;border:1px solid var(--line2);border-radius:var(--r1);font:inherit;font-size:16px;background:var(--bg2);color:var(--text)}
+.free-email-label input:hover{border-color:var(--muted)}
+.free-email-label input[aria-invalid="true"]{border-color:var(--accent)}
+.free-email-label input:read-only{opacity:.7}
+.free-download-controls .btn{min-height:48px;white-space:normal;text-align:center;line-height:1.4;padding:12px 18px}
+.free-download-controls .btn:active{transform:translateY(1px)}
+.free-download-controls .btn:disabled{cursor:wait;opacity:.6}
+.free-newsletter-choice{display:flex;align-items:flex-start;gap:12px;margin-top:24px;font-size:14px;line-height:1.6;cursor:pointer;color:var(--text)}
+.free-newsletter-choice input{flex:0 0 18px;width:18px;height:18px;margin:3px 0 0;accent-color:var(--accent)}
+.free-newsletter-choice span{min-width:0}
+.free-download-form .free-newsletter-help{margin:8px 0 16px;font-size:14px;color:var(--muted)}
+.free-download-form .free-download-privacy{margin:0 0 12px;font-size:14px;color:var(--muted)}
+.free-download-status{min-height:1.6em;margin:12px 0 0;font-size:15px;line-height:1.6;color:var(--text)}
+.free-download-form[data-state="success"] .free-download-status{color:var(--good)}
+.free-download-panel [hidden],.free-card [hidden]{display:none!important}
+.free-card .free-download-controls .btn{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.free-card .free-download-controls .btn:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.free-card .free-download-form{margin-bottom:24px}
+@media(max-width:760px){.free-download-panel{grid-template-columns:minmax(0,1fr);gap:8px}.free-download-controls .btn{flex:1 1 180px}.free-download-panel{padding-block:32px}}
+.free-product-photo{display:block;width:100%;height:auto;max-width:100%}.locale-links{display:flex;flex-wrap:wrap;gap:12px;font-size:14px;padding-bottom:20px}.free-download-form h3{font-size:20px;line-height:1.4;overflow-wrap:break-word}
+.btn{word-spacing:.1em}
+.free-download-privacy a{white-space:nowrap}
+.free-download-offer{width:100%;max-width:42rem;min-width:0}
+.free-download-offer>h3{margin:0 0 16px;font-size:20px;line-height:1.4;overflow-wrap:break-word}
+.free-download-direct [data-free-download-fallback]{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:0}
+.free-download-direct .btn{min-height:48px}
+.free-download-offer .free-download-note{margin:12px 0 0;font-size:14px;color:var(--muted)}
+.free-download-offer .free-download-form{margin:28px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.free-download-form h4{margin:0 0 16px;font-size:16px;line-height:1.4;font-weight:600;overflow-wrap:break-word}
+.free-download-controls+.free-download-privacy{margin-top:12px}
+.free-newsletter-choice+.free-newsletter-help{margin-left:30px}
+body{-webkit-user-select:none;user-select:none}
+input,textarea,select{-webkit-user-select:text;user-select:text}

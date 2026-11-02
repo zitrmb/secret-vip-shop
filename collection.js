@@ -191,7 +191,8 @@
       group.active = true; group.downloads.replaceChildren();
       [['mac', T.mac], ['win', T.win]].forEach(function (pair) {
         var url = safeDownload(download[pair[0]]); if (!url) return;
-        var a = el('a', pair[1], 'button'); a.href = url; group.downloads.appendChild(a);
+        var version = download[pair[0] + '_version'] || download.version;
+        var a = el('a', pair[1] + (version ? ' ' + version : ''), 'button'); a.href = url; group.downloads.appendChild(a);
       });
       if (!group.downloads.children.length) group.downloads.appendChild(el('p', T.soon, 'quiet'));
     } else if (!group.active && !group.downloads.children.length) group.downloads.appendChild(el('p', T.inactive, 'quiet'));

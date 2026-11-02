@@ -38,7 +38,7 @@
     fetch(root + 'faq/faq.json').then(response => { if (!response.ok) throw Error('faq'); return response.json(); })
   ]).then(([catalog, knowledge]) => {
     entries = knowledge.entries || [];
-    for (const [id, item] of Object.entries(catalog.products || {})) {
+    for (const [id, item] of Object.entries({ ...(catalog.products || {}), ...(knowledge.products || {}) })) {
       const option = document.createElement('option');
       option.value = id;
       option.textContent = item.name || id;

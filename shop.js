@@ -333,8 +333,18 @@
       var url = e && e[parts[1]];
       if (!url) return;
       a.href = url; a.removeAttribute('aria-disabled'); a.classList.remove('off');
-      var v = $('[data-ver="' + parts[0] + '"]');
-      if (v) v.textContent = 'Version ' + e.version + (e.date ? ' - ' + e.date : '');
+      var version = e[parts[1] + '_version'] || e.version;
+      if (version) a.textContent += ' ' + version;
+    });
+    all('[data-ver]').forEach(function (v) {
+      var e = (d.plugins || {})[v.getAttribute('data-ver')];
+      if (!e) return;
+      var versions = [['mac', 'Mac'], ['win', 'Windows']].filter(function (pair) {
+        return e[pair[0]] && (e[pair[0] + '_version'] || e.version);
+      }).map(function (pair) {
+        return pair[1] + ' ' + (e[pair[0] + '_version'] || e.version);
+      });
+      if (versions.length) v.textContent = versions.join(' · ') + (e.date ? ' - ' + e.date : '');
     });
   }).catch(function () {});
 

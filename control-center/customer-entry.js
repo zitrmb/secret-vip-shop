@@ -16,7 +16,7 @@
     const config = (await response.json()).control_center;
     if (!config || config.enabled !== true || typeof config.mac !== 'string') return;
     const url = new URL(config.mac, location.href);
-    if (url.protocol !== 'https:' || !['plugins.secret.vip', 'github.com'].includes(url.hostname) || url.username || url.password || !url.pathname.endsWith('.dmg')) return;
+    if (url.protocol !== 'https:' || !['secret-audio.com', 'plugins.secret.vip', 'github.com'].includes(url.hostname) || url.username || url.password || !url.pathname.endsWith('.dmg')) return;
     if (document.getElementById('control-center-entry')) return;
     const footer = document.querySelector('footer');
     if (footer) { footer.style.display = 'flex'; footer.style.flexWrap = 'wrap'; footer.style.gap = '5px'; }

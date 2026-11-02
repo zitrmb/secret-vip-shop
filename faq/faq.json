@@ -2,88 +2,1305 @@
   "version": 1,
   "entries": [
     {
-      "id": "install-mac", "product": "SVPEQ4", "sources": ["site/download/index.html"],
-      "question": {"de": "Wie installiere ich das Plugin auf dem Mac?", "en": "How do I install the plugin on Mac?"},
-      "answer": {"de": "Lade die Mac-Version auf https://plugins.secret.vip/download/ herunter, öffne die .pkg-Datei und folge den Schritten. Starte danach deine DAW neu oder suche erneut nach Plugins.", "en": "Download the Mac version at https://plugins.secret.vip/download/, open the .pkg file and follow the steps. Then restart your DAW or rescan plugins."},
-      "terms": {"de": ["mac installieren", "installation mac", "plugin auf dem mac"], "en": ["install on mac", "mac installation", "plugin on mac"]}
+      "id": "install-mac",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/download/index.html"
+      ],
+      "question": {
+        "de": "Wie installiere ich das Plugin auf dem Mac?",
+        "en": "How do I install the plugin on Mac?"
+      },
+      "answer": {
+        "de": "Lade die Mac-Version auf https://plugins.secret.vip/download/ herunter, öffne die .pkg-Datei und folge den Schritten. Starte danach deine DAW neu oder suche erneut nach Plugins.",
+        "en": "Download the Mac version at https://plugins.secret.vip/download/, open the .pkg file and follow the steps. Then restart your DAW or rescan plugins."
+      },
+      "terms": {
+        "de": [
+          "mac installieren",
+          "installation mac",
+          "plugin auf dem mac"
+        ],
+        "en": [
+          "install on mac",
+          "mac installation",
+          "plugin on mac"
+        ]
+      }
     },
     {
-      "id": "install-windows", "product": "SVPEQ4", "sources": ["site/download/index.html"],
-      "question": {"de": "Wie installiere ich das Plugin unter Windows?", "en": "How do I install the plugin on Windows?"},
-      "answer": {"de": "Lade die Windows-Version auf https://plugins.secret.vip/download/ herunter und entpacke sie. Kopiere VST3\\SecretFutureEQ2.vst3 nach C:\\Program Files\\Common Files\\VST3 und CLAP\\SecretFutureEQ2.clap nach C:\\Program Files\\Common Files\\CLAP. Starte danach deine DAW neu oder suche erneut nach Plugins.", "en": "Download the Windows version at https://plugins.secret.vip/download/ and unzip it. Copy VST3\\SecretFutureEQ2.vst3 to C:\\Program Files\\Common Files\\VST3 and CLAP\\SecretFutureEQ2.clap to C:\\Program Files\\Common Files\\CLAP. Then restart your DAW or rescan plugins."},
-      "terms": {"de": ["windows installieren", "installation windows", "plugin unter windows"], "en": ["install on windows", "windows installation", "plugin on windows"]}
+      "id": "install-windows",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/download/index.html"
+      ],
+      "question": {
+        "de": "Wie installiere ich das Plugin unter Windows?",
+        "en": "How do I install the plugin on Windows?"
+      },
+      "answer": {
+        "de": "Lade die Windows-Version auf https://plugins.secret.vip/download/ herunter und entpacke sie. Kopiere VST3\\SecretFutureEQ2.vst3 nach C:\\Program Files\\Common Files\\VST3 und CLAP\\SecretFutureEQ2.clap nach C:\\Program Files\\Common Files\\CLAP. Starte danach deine DAW neu oder suche erneut nach Plugins.",
+        "en": "Download the Windows version at https://plugins.secret.vip/download/ and unzip it. Copy VST3\\SecretFutureEQ2.vst3 to C:\\Program Files\\Common Files\\VST3 and CLAP\\SecretFutureEQ2.clap to C:\\Program Files\\Common Files\\CLAP. Then restart your DAW or rescan plugins."
+      },
+      "terms": {
+        "de": [
+          "windows installieren",
+          "installation windows",
+          "plugin unter windows"
+        ],
+        "en": [
+          "install on windows",
+          "windows installation",
+          "plugin on windows"
+        ]
+      }
     },
     {
-      "id": "activate", "product": "*", "sources": ["site/download/index.html", "site/index.html"],
-      "question": {"de": "Wie aktiviere ich meine Lizenz?", "en": "How do I activate my license?"},
-      "answer": {"de": "Öffne das Plugin, füge den Lizenzschlüssel aus der Kauf-E-Mail ein und klicke auf Activate. Du brauchst kein Konto.", "en": "Open the plugin, paste the license key from your purchase email and click Activate. You do not need an account."},
-      "terms": {"de": ["lizenz aktivieren", "aktivierung", "aktivieren", "schlüssel eingeben"], "en": ["activate my license", "activation", "activate", "paste my key"]}
+      "id": "activate",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/download/index.html",
+        "site/index.html"
+      ],
+      "question": {
+        "de": "Wie aktiviere ich meine Lizenz?",
+        "en": "How do I activate my license?"
+      },
+      "answer": {
+        "de": "Öffne das Plugin, füge den Lizenzschlüssel aus der Kauf-E-Mail ein und klicke auf Activate. Du brauchst kein Konto.",
+        "en": "Open the plugin, paste the license key from your purchase email and click Activate. You do not need an account."
+      },
+      "terms": {
+        "de": [
+          "lizenz aktivieren",
+          "aktivierung",
+          "aktivieren",
+          "schlüssel eingeben"
+        ],
+        "en": [
+          "activate my license",
+          "activation",
+          "activate",
+          "paste my key"
+        ]
+      }
     },
     {
-      "id": "move-computer", "product": "*", "sources": ["site/index.html", "site/eula/index.html"],
-      "question": {"de": "Wie wechsle ich den Rechner?", "en": "How do I move to a new computer?"},
-      "answer": {"de": "Du kannst die Lizenz gleichzeitig auf zwei Rechnern nutzen. Auf dem bisherigen Rechner: Zahnrad → License → Deactivate this computer. Aktiviere sie dann auf dem neuen Rechner mit deinem Schlüssel.", "en": "You can use the license on two computers at the same time. On the old computer: gear icon → License → Deactivate this computer. Then activate it on the new computer with your key."},
-      "terms": {"de": ["rechner wechseln", "neuer rechner", "computer wechseln", "deaktivieren"], "en": ["move to a new computer", "new computer", "change computers", "deactivate"]}
+      "id": "move-computer",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/index.html",
+        "site/eula/index.html"
+      ],
+      "question": {
+        "de": "Wie wechsle ich den Rechner?",
+        "en": "How do I move to a new computer?"
+      },
+      "answer": {
+        "de": "Du kannst die Lizenz gleichzeitig auf zwei Rechnern nutzen. Auf dem bisherigen Rechner: Zahnrad → License → Deactivate this computer. Aktiviere sie dann auf dem neuen Rechner mit deinem Schlüssel.",
+        "en": "You can use the license on two computers at the same time. On the old computer: gear icon → License → Deactivate this computer. Then activate it on the new computer with your key."
+      },
+      "terms": {
+        "de": [
+          "rechner wechseln",
+          "neuer rechner",
+          "computer wechseln",
+          "deaktivieren"
+        ],
+        "en": [
+          "move to a new computer",
+          "new computer",
+          "change computers",
+          "deactivate"
+        ]
+      }
     },
     {
-      "id": "update", "product": "*", "sources": ["site/changelog/index.html", "site/eula/index.html", "docs/CONVENTIONS.md"],
-      "question": {"de": "Wo finde ich Updates?", "en": "Where can I find updates?"},
-      "answer": {"de": "Die aktuelle Version findest du auf https://plugins.secret.vip/download/. Änderungen stehen auf https://plugins.secret.vip/changelog/. Updates innerhalb derselben Hauptversion sind kostenlos.", "en": "Find the current version at https://plugins.secret.vip/download/. Changes are listed at https://plugins.secret.vip/changelog/. Updates within the same major version are free."},
-      "terms": {"de": ["updates", "aktuelle version", "neue version"], "en": ["updates", "latest version", "new version"]}
+      "id": "update",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/changelog/index.html",
+        "site/eula/index.html",
+        "docs/CONVENTIONS.md"
+      ],
+      "question": {
+        "de": "Wo finde ich Updates?",
+        "en": "Where can I find updates?"
+      },
+      "answer": {
+        "de": "Die aktuelle Version findest du auf https://plugins.secret.vip/download/. Änderungen stehen auf https://plugins.secret.vip/changelog/. Updates innerhalb derselben Hauptversion sind kostenlos.",
+        "en": "Find the current version at https://plugins.secret.vip/download/. Changes are listed at https://plugins.secret.vip/changelog/. Updates within the same major version are free."
+      },
+      "terms": {
+        "de": [
+          "updates",
+          "aktuelle version",
+          "neue version"
+        ],
+        "en": [
+          "updates",
+          "latest version",
+          "new version"
+        ]
+      }
     },
     {
-      "id": "refund", "product": "*", "sources": ["site/refund/index.html"],
-      "question": {"de": "Wie bekomme ich eine Erstattung?", "en": "How do I request a refund?"},
-      "answer": {"de": "Bitte beantrage innerhalb von 14 Tagen nach dem Kauf die volle Erstattung. Antworte auf die Paddle-Beleg-E-Mail, nutze den Link darin oder schreibe mit deiner Bestellnummer an support@secret.vip. Paddle erstattet auf das ursprüngliche Zahlungsmittel; danach wird der Lizenzschlüssel deaktiviert.", "en": "Request a full refund within 14 days of purchase. Reply to your Paddle receipt email, use its link, or write to support@secret.vip with your order number. Paddle refunds your original payment method; the license key is then deactivated."},
-      "terms": {"de": ["erstattung", "geld zurück", "rückerstattung"], "en": ["refund", "money back", "return my purchase"]}
+      "id": "refund",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/refund/index.html"
+      ],
+      "question": {
+        "de": "Wie bekomme ich eine Erstattung?",
+        "en": "How do I request a refund?"
+      },
+      "answer": {
+        "de": "Bitte beantrage innerhalb von 14 Tagen nach dem Kauf die volle Erstattung. Antworte auf die Paddle-Beleg-E-Mail, nutze den Link darin oder schreibe mit deiner Bestellnummer an support@secret.vip. Paddle erstattet auf das ursprüngliche Zahlungsmittel; danach wird der Lizenzschlüssel deaktiviert.",
+        "en": "Request a full refund within 14 days of purchase. Reply to your Paddle receipt email, use its link, or write to support@secret.vip with your order number. Paddle refunds your original payment method; the license key is then deactivated."
+      },
+      "terms": {
+        "de": [
+          "erstattung",
+          "geld zurück",
+          "rückerstattung"
+        ],
+        "en": [
+          "refund",
+          "money back",
+          "return my purchase"
+        ]
+      }
     },
     {
-      "id": "requirements", "product": "SVPEQ4", "sources": ["site/index.html", "site/download/index.html"],
-      "question": {"de": "Welche Systemanforderungen gelten?", "en": "What are the system requirements?"},
-      "answer": {"de": "Secret Future EQ 2: macOS 12 oder neuer auf Apple Silicon oder Intel (VST3, AU, CLAP) oder Windows 10/11 mit 64 Bit (VST3, CLAP).", "en": "Secret Future EQ 2: macOS 12 or newer on Apple Silicon or Intel (VST3, AU, CLAP), or 64-bit Windows 10/11 (VST3, CLAP)."},
-      "terms": {"de": ["systemanforderungen", "macos version", "windows version", "kompatibel"], "en": ["system requirements", "macos version", "windows version", "compatible"]}
+      "id": "requirements",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/index.html",
+        "site/download/index.html"
+      ],
+      "question": {
+        "de": "Welche Systemanforderungen gelten?",
+        "en": "What are the system requirements?"
+      },
+      "answer": {
+        "de": "Secret Future EQ 2: macOS 12 oder neuer auf Apple Silicon oder Intel (VST3, AU, CLAP) oder Windows 10/11 mit 64 Bit (VST3, CLAP).",
+        "en": "Secret Future EQ 2: macOS 12 or newer on Apple Silicon or Intel (VST3, AU, CLAP), or 64-bit Windows 10/11 (VST3, CLAP)."
+      },
+      "terms": {
+        "de": [
+          "systemanforderungen",
+          "macos version",
+          "windows version",
+          "kompatibel"
+        ],
+        "en": [
+          "system requirements",
+          "macos version",
+          "windows version",
+          "compatible"
+        ]
+      }
     },
     {
-      "id": "common-errors", "product": "*", "sources": ["site/download/index.html", "site/key/index.html"],
-      "question": {"de": "Das Plugin oder die Lizenz-E-Mail fehlt. Was kann ich prüfen?", "en": "The plugin or license email is missing. What can I check?"},
-      "answer": {"de": "Wenn das Plugin in der DAW fehlt, starte die DAW neu oder suche erneut nach Plugins. Fehlt die Lizenz-E-Mail, prüfe den Spam-Ordner. Auf https://plugins.secret.vip/key/ kannst du den Schlüssel erneut an die Kaufadresse senden lassen. Wenn das nicht hilft, schreibe an support@secret.vip.", "en": "If the plugin is missing from your DAW, restart the DAW or rescan plugins. If the license email is missing, check your spam folder. At https://plugins.secret.vip/key/ you can have the key resent to your purchase address. If that does not help, write to support@secret.vip."},
-      "terms": {"de": ["plugin fehlt", "lizenz-email fehlt", "lizenz-e-mail fehlt", "keine e-mail", "fehler"], "en": ["plugin missing", "license email missing", "no email", "error"]}
+      "id": "common-errors",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/download/index.html",
+        "site/key/index.html"
+      ],
+      "question": {
+        "de": "Das Plugin oder die Lizenz-E-Mail fehlt. Was kann ich prüfen?",
+        "en": "The plugin or license email is missing. What can I check?"
+      },
+      "answer": {
+        "de": "Wenn das Plugin in der DAW fehlt, starte die DAW neu oder suche erneut nach Plugins. Fehlt die Lizenz-E-Mail, prüfe den Spam-Ordner. Auf https://plugins.secret.vip/key/ kannst du den Schlüssel erneut an die Kaufadresse senden lassen. Wenn das nicht hilft, schreibe an support@secret.vip.",
+        "en": "If the plugin is missing from your DAW, restart the DAW or rescan plugins. If the license email is missing, check your spam folder. At https://plugins.secret.vip/key/ you can have the key resent to your purchase address. If that does not help, write to support@secret.vip."
+      },
+      "terms": {
+        "de": [
+          "plugin fehlt",
+          "lizenz-email fehlt",
+          "lizenz-e-mail fehlt",
+          "keine e-mail",
+          "fehler"
+        ],
+        "en": [
+          "plugin missing",
+          "license email missing",
+          "no email",
+          "error"
+        ]
+      }
     },
     {
-      "id": "lost-key", "product": "*", "sources": ["site/key/index.html"],
-      "question": {"de": "Ich habe meinen Lizenzschlüssel verloren. Was nun?", "en": "I lost my license key. What now?"},
-      "answer": {"de": "Gib auf https://plugins.secret.vip/key/ deine Kauf-E-Mail-Adresse ein. Der Lizenzschlüssel und die Download-Links werden an diese Adresse erneut gesendet.", "en": "Enter your purchase email address at https://plugins.secret.vip/key/. Your license key and download links will be resent to that address."},
-      "terms": {"de": ["lizenzschlüssel verloren", "schlüssel verloren", "key verloren"], "en": ["lost my license key", "lost my key", "key lost"]}
+      "id": "lost-key",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/key/index.html"
+      ],
+      "question": {
+        "de": "Ich habe meinen Lizenzschlüssel verloren. Was nun?",
+        "en": "I lost my license key. What now?"
+      },
+      "answer": {
+        "de": "Gib auf https://plugins.secret.vip/key/ deine Kauf-E-Mail-Adresse ein. Der Lizenzschlüssel und die Download-Links werden an diese Adresse erneut gesendet.",
+        "en": "Enter your purchase email address at https://plugins.secret.vip/key/. Your license key and download links will be resent to that address."
+      },
+      "terms": {
+        "de": [
+          "lizenzschlüssel verloren",
+          "schlüssel verloren",
+          "key verloren"
+        ],
+        "en": [
+          "lost my license key",
+          "lost my key",
+          "key lost"
+        ]
+      }
     },
     {
-      "id": "hearing-notice", "product": "SVPEQ4", "sources": ["shared/web/svp-hearing-notice.js", "SVPEQ4/dsp/main.dsp"],
-      "question": {"de": "Was bedeutet der Gehör-Hinweis beim ersten Start?", "en": "What does the hearing note on first launch mean?"},
-      "answer": {"de": "Beim ersten Öffnen erinnert Secret Future EQ 2 einmal daran, leise zu starten: EQ-Anhebungen und Sättigung können den Pegel plötzlich stark erhöhen. Sobald der Hinweis angezeigt wird, wird dies gespeichert; danach erscheint er nie wieder. Die Ausgangsgrenze von -0,1 dBFS hält nur sicher, wenn eine Sättigung an ist und der Clip auf \"Post\" steht (ab Werk: Sättigung aus, Clip \"Pre\"). Sie verhindert digitales Übersteuern, schützt aber nicht deine Ohren – stell die Abhörlautstärke immer bewusst ein.", "en": "On first launch Secret Future EQ 2 reminds you once to start quietly: EQ boosts and saturation can raise the level suddenly. The note is saved when it appears and will not appear again. The -0.1 dBFS output ceiling only holds reliably when saturation is on and the clip is set to \"Post\" (default: saturation off, clip \"Pre\"). It prevents digital clipping but does not protect your ears - always set your monitoring level on purpose."},
-      "terms": {"de": ["gehör-hinweis", "gehör", "zu laut", "hörschutz", "lautstärke warnung"], "en": ["hearing note", "hearing", "too loud", "hearing protection", "volume warning"]}
+      "id": "hearing-notice",
+      "product": "SVPEQ4",
+      "sources": [
+        "shared/web/svp-hearing-notice.js",
+        "SVPEQ4/dsp/main.dsp"
+      ],
+      "question": {
+        "de": "Was bedeutet der Gehör-Hinweis beim ersten Start?",
+        "en": "What does the hearing note on first launch mean?"
+      },
+      "answer": {
+        "de": "Starte mit leiser Abhörlautstärke. Änderungen im Plugin können den Klang plötzlich deutlich lauter machen. Verlass dich zum Schutz deiner Ohren nicht auf eine Ausgangsbegrenzung. Stelle deine Abhörlautstärke immer bewusst ein.",
+        "en": "Start with a low monitoring volume. Changes in the plugin can make the sound much louder suddenly. Do not rely on output protection to protect your ears. Always set your monitoring volume deliberately."
+      },
+      "terms": {
+        "de": [
+          "gehör-hinweis",
+          "gehör",
+          "zu laut",
+          "hörschutz",
+          "lautstärke warnung"
+        ],
+        "en": [
+          "hearing note",
+          "hearing",
+          "too loud",
+          "hearing protection",
+          "volume warning"
+        ]
+      }
     },
     {
-      "id": "svpeq4-function", "product": "SVPEQ4", "sources": ["SVPEQ4/README.md"],
-      "question": {"de": "Was macht Secret Future EQ 2?", "en": "What does Secret Future EQ 2 do?"},
-      "answer": {"de": "Secret Future EQ 2 ist ein Match-EQ mit 26 Bändern. Er analysiert eine Audiodatei oder ein laufendes Signal und berechnet daraus eine passende EQ-Kurve.", "en": "Secret Future EQ 2 is a match EQ with 26 bands. It analyses an audio file or a live signal and calculates a matching EQ curve from it."},
-      "terms": {"de": ["was macht secret future eq 2", "was kann secret future eq 2", "match-eq", "26 bänder"], "en": ["what does secret future eq 2 do", "what can secret future eq 2 do", "match eq", "26 bands"]}
+      "id": "svpeq4-function",
+      "product": "SVPEQ4",
+      "sources": [
+        "SVPEQ4/README.md"
+      ],
+      "question": {
+        "de": "Was macht Secret Future EQ 2?",
+        "en": "What does Secret Future EQ 2 do?"
+      },
+      "answer": {
+        "de": "Secret Future EQ 2 hilft dir, den Klang deiner Musik schnell an eine gewünschte Richtung anzupassen. Du kannst mit einer Audiodatei oder mit laufendem Audio arbeiten. Höre das Ergebnis an und passe es nach deinem Geschmack an.",
+        "en": "Secret Future EQ 2 helps you quickly shape the sound of your music in the direction you want. You can work with an audio file or live audio. Listen to the result and adjust it to your taste."
+      },
+      "terms": {
+        "de": [
+          "was macht secret future eq 2",
+          "was kann secret future eq 2",
+          "klang anpassen"
+        ],
+        "en": [
+          "what does secret future eq 2 do",
+          "what can secret future eq 2 do",
+          "shape sound"
+        ]
+      }
     },
     {
-      "id": "secretnotes-function", "product": "SecretNotes", "sources": ["SecretNotes/README.md"],
-      "question": {"de": "Was macht Secret Notes?", "en": "What does Secret Notes do?"},
-      "answer": {"de": "Secret Notes zeigt dir pro Projekt eine Notiz von notes.secret.vip direkt in der DAW. Du kannst sie dort auch bearbeiten. Dein Audio bleibt dabei unverändert.", "en": "Secret Notes shows one note from notes.secret.vip per project, right inside your DAW. You can edit it there too. Your audio stays unchanged."},
-      "terms": {"de": ["was macht secret notes", "was kann secret notes", "notiz in der daw", "projektnotiz"], "en": ["what does secret notes do", "what can secret notes do", "note in the daw", "project note"]}
+      "id": "secretnotes-function",
+      "product": "SecretNotes",
+      "sources": [
+        "SecretNotes/README.md"
+      ],
+      "question": {
+        "de": "Was macht Secret Notes?",
+        "en": "What does Secret Notes do?"
+      },
+      "answer": {
+        "de": "Secret Notes zeigt dir pro Projekt eine Notiz von notes.secret.vip direkt in der DAW. Du kannst sie dort auch bearbeiten. Dein Audio bleibt dabei unverändert.",
+        "en": "Secret Notes shows one note from notes.secret.vip per project, right inside your DAW. You can edit it there too. Your audio stays unchanged."
+      },
+      "terms": {
+        "de": [
+          "was macht secret notes",
+          "was kann secret notes",
+          "notiz in der daw",
+          "projektnotiz"
+        ],
+        "en": [
+          "what does secret notes do",
+          "what can secret notes do",
+          "note in the daw",
+          "project note"
+        ]
+      }
     },
     {
-      "id": "secretnotes-requirements", "product": "SecretNotes", "sources": ["SecretNotes/CMakeLists.txt", "SecretNotes/README.md"],
-      "question": {"de": "Was brauche ich für Secret Notes?", "en": "What do I need for Secret Notes?"},
-      "answer": {"de": "Auf dem Mac brauchst du macOS 12 oder neuer. Dort läuft Secret Notes als VST3, AU und CLAP. Zum Anmelden brauchst du ein Konto bei notes.secret.vip.", "en": "On Mac you need macOS 12 or newer. There, Secret Notes runs as VST3, AU and CLAP. To sign in, you need a notes.secret.vip account."},
-      "terms": {"de": ["secret notes anforderungen", "secret notes konto", "secret notes macos", "secret notes formate"], "en": ["secret notes requirements", "secret notes account", "secret notes macos", "secret notes formats"]}
+      "id": "secretnotes-requirements",
+      "product": "SecretNotes",
+      "sources": [
+        "SecretNotes/CMakeLists.txt",
+        "SecretNotes/README.md"
+      ],
+      "question": {
+        "de": "Was brauche ich für Secret Notes?",
+        "en": "What do I need for Secret Notes?"
+      },
+      "answer": {
+        "de": "Auf dem Mac brauchst du macOS 12 oder neuer auf Apple Silicon oder Intel und eine DAW für VST3, AU oder CLAP. Das Windows-Paket enthält VST3 und CLAP für 64-Bit-Rechner; die Oberfläche benötigt Microsoft Edge WebView2. Zum Anmelden brauchst du ein Konto bei notes.secret.vip. Die kleinste unterstützte Windows-Version ist für dieses Downloadpaket noch nicht bestätigt.",
+        "en": "On Mac you need macOS 12 or later on Apple Silicon or Intel and a DAW supporting VST3, AU or CLAP. The Windows package contains 64-bit VST3 and CLAP plugins; the interface requires Microsoft Edge WebView2. To sign in, you need a notes.secret.vip account. The minimum supported Windows version has not yet been confirmed for this download package."
+      },
+      "terms": {
+        "de": [
+          "secret notes anforderungen",
+          "secret notes konto",
+          "secret notes macos",
+          "secret notes formate"
+        ],
+        "en": [
+          "secret notes requirements",
+          "secret notes account",
+          "secret notes macos",
+          "secret notes formats"
+        ]
+      }
     },
     {
-      "id": "secretnotes-limits", "product": "SecretNotes", "sources": ["SecretNotes/README.md"],
-      "question": {"de": "Warum wählt Secret Notes die Notiz nicht von selbst?", "en": "Why does Secret Notes not pick the note by itself?"},
-      "answer": {"de": "Die Notiz folgt dem Projektnamen, sobald dein Projekt gespeichert ist. Erkennt deine DAW keinen Namen, wählst du die Notiz selbst: über das Zahnrad oder mit einem Klick ins leere Textfeld. Das passiert zum Beispiel in Logic, wenn das AU-Plugin in einem eigenen Prozess läuft.", "en": "The note follows your project name once your project is saved. If your DAW does not report a name, pick the note yourself: use the gear menu or click into the empty text field. This happens for example in Logic when the AU plugin runs in its own process."},
-      "terms": {"de": ["notiz wechselt nicht", "falsche notiz", "notiz wählen", "projektname", "logic"], "en": ["note does not change", "wrong note", "choose note", "project name", "logic"]}
+      "id": "secretnotes-limits",
+      "product": "SecretNotes",
+      "sources": [
+        "SecretNotes/README.md"
+      ],
+      "question": {
+        "de": "Warum wählt Secret Notes die Notiz nicht von selbst?",
+        "en": "Why does Secret Notes not pick the note by itself?"
+      },
+      "answer": {
+        "de": "Die Notiz folgt dem Projektnamen, sobald dein Projekt gespeichert ist. Erkennt deine DAW keinen Namen, wählst du die Notiz selbst: über das Zahnrad oder mit einem Klick ins leere Textfeld. Das passiert zum Beispiel in Logic, wenn das AU-Plugin in einem eigenen Prozess läuft.",
+        "en": "The note follows your project name once your project is saved. If your DAW does not report a name, pick the note yourself: use the gear menu or click into the empty text field. This happens for example in Logic when the AU plugin runs in its own process."
+      },
+      "terms": {
+        "de": [
+          "notiz wechselt nicht",
+          "falsche notiz",
+          "notiz wählen",
+          "projektname",
+          "logic"
+        ],
+        "en": [
+          "note does not change",
+          "wrong note",
+          "choose note",
+          "project name",
+          "logic"
+        ]
+      }
+    },
+    {
+      "id": "audio-normaliser-function",
+      "product": "AudioNormaliser",
+      "sources": [
+        "site/config.json",
+        "AudioNormaliser/README.md"
+      ],
+      "question": {
+        "de": "Was macht Secret Audio Normaliser mit meinen Dateien?",
+        "en": "What does Secret Audio Normaliser do to my files?"
+      },
+      "answer": {
+        "de": "Deine Audiodateien bekommen eine einheitlichere Lautstärke. So lassen sich verschiedene Aufnahmen angenehmer zusammen anhören.",
+        "en": "Your audio files get a more consistent loudness, making different recordings more comfortable to listen to together."
+      },
+      "terms": {
+        "de": [
+          "normaliser lautstärke",
+          "normaliser audiodateien"
+        ],
+        "en": [
+          "normaliser loudness",
+          "normaliser audio files"
+        ]
+      }
+    },
+    {
+      "id": "audio-normaliser-app",
+      "product": "AudioNormaliser",
+      "sources": [
+        "site/config.json",
+        "AudioNormaliser/README.md"
+      ],
+      "question": {
+        "de": "Ist das ein Plugin für mein Musikprogramm?",
+        "en": "Is it a plugin for my music software?"
+      },
+      "answer": {
+        "de": "Nein. Es ist eine eigene Anwendung für Audiodateien.",
+        "en": "No. It is a separate application for audio files."
+      },
+      "terms": {
+        "de": [
+          "normaliser plugin",
+          "normaliser anwendung"
+        ],
+        "en": [
+          "normaliser plugin",
+          "normaliser application"
+        ]
+      }
+    },
+    {
+      "id": "notes-download-account",
+      "product": "SecretNotes",
+      "sources": [
+        "site/plugins/notes/index.html",
+        "site/download/index.html"
+      ],
+      "question": {
+        "de": "Brauche ich einen Kauf, einen Lizenzschlüssel oder ein Konto?",
+        "en": "Do I need a purchase, a license key or an account?"
+      },
+      "answer": {
+        "de": "Secret Notes ist kostenlos. Für den Download brauchst du keinen Kauf und keinen Lizenzschlüssel. Zum Synchronisieren deiner Notizen brauchst du ein Konto bei notes.secret.vip.",
+        "en": "Secret Notes is free. No purchase or license key is needed to download it. You need a notes.secret.vip account to sync your notes."
+      },
+      "terms": {
+        "de": [
+          "notes kostenlos",
+          "notes konto",
+          "notes lizenz"
+        ],
+        "en": [
+          "notes free",
+          "notes account",
+          "notes license"
+        ]
+      }
+    },
+    {
+      "id": "notes-platform-install",
+      "product": "SecretNotes",
+      "sources": [
+        "site/config.json",
+        "site/downloads.json",
+        "SecretNotes/README.md"
+      ],
+      "question": {
+        "de": "Wie installiere ich Secret Notes auf Mac oder Windows?",
+        "en": "How do I install Secret Notes on Mac or Windows?"
+      },
+      "answer": {
+        "de": "Mac: Öffne das heruntergeladene Installationspaket und folge seinen Schritten. Windows: Entpacke das ZIP. Kopiere den vollständigen Ordner VST3\\SecretNotes.vst3 nach C:\\Program Files\\Common Files\\VST3 und die Datei CLAP\\SecretNotes.clap nach C:\\Program Files\\Common Files\\CLAP. Starte deine DAW neu und suche nach Secret Notes. Lass deine Schutzfunktionen eingeschaltet.",
+        "en": "Mac: Open the downloaded installer package and follow its steps. Windows: Unzip the download. Copy the complete VST3\\SecretNotes.vst3 folder to C:\\Program Files\\Common Files\\VST3 and the CLAP\\SecretNotes.clap file to C:\\Program Files\\Common Files\\CLAP. Restart your DAW and look for Secret Notes. Keep security protection enabled."
+      },
+      "terms": {
+        "de": [
+          "notes installieren",
+          "notes windows",
+          "notes mac"
+        ],
+        "en": [
+          "install notes",
+          "notes windows",
+          "notes mac"
+        ]
+      }
+    },
+    {
+      "id": "normaliser-install",
+      "product": "AudioNormaliser",
+      "sources": [
+        "site/config.json",
+        "site/downloads.json",
+        "AudioNormaliser/README.md"
+      ],
+      "question": {
+        "de": "Wo lade und installiere ich Audio Normaliser?",
+        "en": "Where do I download and install Audio Normaliser?"
+      },
+      "answer": {
+        "de": "Mac: Entpacke das ZIP und verschiebe die enthaltene App in Programme. Windows: Entpacke das ZIP und öffne das enthaltene Installationsprogramm. Folge seinen Schritten und öffne danach Audio Normaliser. Die App wird direkt geöffnet; eine Suche nach Plugins in der DAW ist nicht nötig. Lass deine Schutzfunktionen eingeschaltet.",
+        "en": "Mac: Unzip the download and move the included app to Applications. Windows: Unzip the download and open the included installer. Follow its steps, then open Audio Normaliser. Open the app directly; you do not need to scan for plugins in your DAW. Keep security protection enabled."
+      },
+      "terms": {
+        "de": [
+          "normaliser installieren",
+          "normaliser download"
+        ],
+        "en": [
+          "install normaliser",
+          "normaliser download"
+        ]
+      }
+    },
+    {
+      "id": "normaliser-free",
+      "product": "AudioNormaliser",
+      "sources": [
+        "site/config.json",
+        "site/download/index.html"
+      ],
+      "question": {
+        "de": "Brauche ich einen Kauf oder Lizenzschlüssel für Audio Normaliser?",
+        "en": "Do I need a purchase or license key for Audio Normaliser?"
+      },
+      "answer": {
+        "de": "Nein. Audio Normaliser wird kostenlos angeboten. Den Download findest du direkt auf unserer Downloadseite; du brauchst dafür keinen Kauf und keinen Lizenzschlüssel.",
+        "en": "No. Audio Normaliser is offered free of charge. Get it directly from our download page; no purchase or license key is needed."
+      },
+      "terms": {
+        "de": [
+          "normaliser kostenlos",
+          "normaliser lizenz"
+        ],
+        "en": [
+          "normaliser free",
+          "normaliser license"
+        ]
+      }
+    },
+    {
+      "id": "normaliser-files",
+      "product": "AudioNormaliser",
+      "sources": [
+        "AudioNormaliser/src/index.html",
+        "AudioNormaliser/src-tauri/src/main.rs"
+      ],
+      "question": {
+        "de": "Wie wähle ich Dateien und den Ausgabeordner?",
+        "en": "How do I choose files and the output folder?"
+      },
+      "answer": {
+        "de": "Ziehe einen Ordner oder Audiodateien in die App. Prüfe vor dem Start den gewählten Ausgabeordner. Du kannst ihn in der App ändern. Wenn du bereits bearbeitete Dateien erneut bearbeitest, können vorhandene Ergebnisse ersetzt werden. Sichere wichtige Dateien vorher.",
+        "en": "Drag a folder or audio files into the app. Check the selected output folder before starting. You can change it in the app. Reprocessing files can replace existing results. Back up important files first."
+      },
+      "terms": {
+        "de": [
+          "normaliser dateien",
+          "normaliser ausgabe",
+          "normaliser ordner"
+        ],
+        "en": [
+          "normaliser files",
+          "normaliser output",
+          "normaliser folder"
+        ]
+      }
+    },
+    {
+      "id": "normaliser-help-update",
+      "product": "AudioNormaliser",
+      "sources": [
+        "site/downloads.json",
+        "site/faq/faq.json"
+      ],
+      "question": {
+        "de": "Wie aktualisiere ich Audio Normaliser und melde ein Problem?",
+        "en": "How do I update Audio Normaliser and report a problem?"
+      },
+      "answer": {
+        "de": "Hole neue Pakete auf unserer Downloadseite. Bei einem Fehler beschreibe dem Support, was du tun wolltest und welche Meldung die App zeigt. Nenne Mac oder Windows und die verwendete Version. Schicke keinen Lizenzschlüssel, kein Passwort und keine privaten Audiodateien mit.",
+        "en": "Get new packages from our download page. If something goes wrong, tell support what you were trying to do and what message the app shows. Include whether you use Mac or Windows and the version you used. Do not include license keys, passwords or private audio files."
+      },
+      "terms": {
+        "de": [
+          "normaliser aktualisieren",
+          "normaliser problem",
+          "normaliser hilfe"
+        ],
+        "en": [
+          "update normaliser",
+          "normaliser problem",
+          "normaliser help"
+        ]
+      }
+    },
+    {
+      "id": "notes-help-update",
+      "product": "SecretNotes",
+      "sources": [
+        "site/downloads.json",
+        "SecretNotes/README.md"
+      ],
+      "question": {
+        "de": "Wie aktualisiere ich Secret Notes und bekomme Hilfe?",
+        "en": "How do I update Secret Notes and get help?"
+      },
+      "answer": {
+        "de": "Neue Pakete findest du auf unserer Downloadseite. Installiere das passende Paket für deinen Rechner. Bei Problemen nenne dem Support dein Betriebssystem, deine DAW und die verwendete Version. Schicke keine Passwörter, Zugangsdaten oder privaten Notizen mit. Die Fragen zu Kauf-Lizenzschlüsseln betreffen die kostenpflichtigen Plugins.",
+        "en": "Get new packages from our download page. Install the package for your computer. If you need help, tell support your operating system, DAW and the version you use. Do not send passwords, sign-in details or private notes. Purchase license-key questions apply to the paid plugins."
+      },
+      "terms": {
+        "de": [
+          "notes aktualisieren",
+          "notes hilfe"
+        ],
+        "en": [
+          "notes update",
+          "notes help"
+        ]
+      }
+    },
+    {
+      "id": "normaliser-requirements",
+      "product": "AudioNormaliser",
+      "sources": [
+        "AudioNormaliser/README.md",
+        "site/downloads.json"
+      ],
+      "question": {
+        "de": "Welche Voraussetzungen braucht Audio Normaliser?",
+        "en": "What does Audio Normaliser require?"
+      },
+      "answer": {
+        "de": "Das hier geprüfte Mac-Paket benötigt macOS 12 oder neuer und einen Mac mit Apple Silicon. Dieses Paket enthält keine Intel-Version. Das Windows-Paket enthält eine App für 64-Bit-Rechner. Audio Normaliser ist eine eigene App; du brauchst dafür keine DAW. Die kleinste unterstützte Windows-Version ist für dieses Downloadpaket noch nicht bestätigt. Unter Windows werden Microsoft Edge WebView2 und Windows-Laufzeitbestandteile benötigt.",
+        "en": "The Mac package reviewed here requires macOS 12 or later and a Mac with Apple Silicon. This package does not contain an Intel version. The Windows package contains a 64-bit app. Audio Normaliser is a separate app; you do not need a DAW. The minimum supported Windows version has not yet been confirmed for this download package. Windows requires Microsoft Edge WebView2 and Windows runtime components."
+      },
+      "terms": {
+        "de": [
+          "normaliser voraussetzungen",
+          "normaliser intel"
+        ],
+        "en": [
+          "normaliser requirements",
+          "normaliser intel"
+        ]
+      }
+    },
+    {
+      "id": "secretparametriceq-purpose",
+      "product": "SecretParametricEQ",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-parametric-eq.md",
+        "SecretParametricEQ/SecretParametricEQ.h"
+      ],
+      "question": {
+        "de": "Was macht Secret Parametric EQ?",
+        "en": "What does Secret Parametric EQ do?"
+      },
+      "answer": {
+        "de": "Damit kannst du den Klang deiner Spuren mit einem Equalizer formen.",
+        "en": "It lets you shape the sound of your tracks with an equalizer."
+      },
+      "terms": {
+        "de": [
+          "was macht secret parametric eq?"
+        ],
+        "en": [
+          "what does secret parametric eq do?"
+        ]
+      }
+    },
+    {
+      "id": "secretparametriceq-install",
+      "product": "SecretParametricEQ",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-parametric-eq.md",
+        "SecretParametricEQ/SecretParametricEQ.h"
+      ],
+      "question": {
+        "de": "Wie installiere ich Secret Parametric EQ?",
+        "en": "How do I install Secret Parametric EQ?"
+      },
+      "answer": {
+        "de": "Die Update-Liste führt das Produkt, verlinkt aber kein eigenes Installationspaket. Frage den Support nach dem passenden Paket. Die Liste allein bestätigt keinen verfügbaren Download.",
+        "en": "The update list includes the product but does not link to a dedicated installer. Ask support for the appropriate package. The listing alone does not confirm an available download."
+      },
+      "terms": {
+        "de": [
+          "wie installiere ich secret parametric eq?"
+        ],
+        "en": [
+          "how do i install secret parametric eq?"
+        ]
+      }
+    },
+    {
+      "id": "secretparametriceq-activation",
+      "product": "SecretParametricEQ",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-parametric-eq.md",
+        "SecretParametricEQ/SecretParametricEQ.h"
+      ],
+      "question": {
+        "de": "Welche Lizenz brauche ich für Secret Parametric EQ?",
+        "en": "What license do I need for Secret Parametric EQ?"
+      },
+      "answer": {
+        "de": "Ein Eintrag in der Update-Liste ist keine Freischaltung. Eine nutzbare Aktivierung ist für den hier dokumentierten Stand nicht bestätigt. Frage den Support, bevor du dich auf das Plugin verlässt.",
+        "en": "An entry in the update list does not activate the plugin. A usable activation is not confirmed for the version documented here. Ask support before relying on the plugin."
+      },
+      "terms": {
+        "de": [
+          "welche lizenz brauche ich für secret parametric eq?"
+        ],
+        "en": [
+          "what license do i need for secret parametric eq?"
+        ]
+      }
+    },
+    {
+      "id": "secretparametriceq-update",
+      "product": "SecretParametricEQ",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-parametric-eq.md",
+        "SecretParametricEQ/SecretParametricEQ.h"
+      ],
+      "question": {
+        "de": "Wie aktualisiere ich Secret Parametric EQ?",
+        "en": "How do I update Secret Parametric EQ?"
+      },
+      "answer": {
+        "de": "Die Update-Liste führt das Produkt ohne eigenes Installationspaket. Frage den Support nach einem freigegebenen Update; der Listeneintrag allein reicht nicht zum Installieren.",
+        "en": "The update list includes the product without a dedicated installer. Ask support for a released update; the listing alone is not enough to install it."
+      },
+      "terms": {
+        "de": [
+          "wie aktualisiere ich secret parametric eq?"
+        ],
+        "en": [
+          "how do i update secret parametric eq?"
+        ]
+      }
+    },
+    {
+      "id": "secretparametriceq-report",
+      "product": "SecretParametricEQ",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-parametric-eq.md",
+        "SecretParametricEQ/SecretParametricEQ.h",
+        "site/faq/faq.json"
+      ],
+      "question": {
+        "de": "Wie melde ich ein Problem mit Secret Parametric EQ?",
+        "en": "How do I report a problem with Secret Parametric EQ?"
+      },
+      "answer": {
+        "de": "Melde dich bei unserem Support unter support@secret.vip. Nenne Secret Parametric EQ, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Contact our support at support@secret.vip. Include Secret Parametric EQ, the version, your operating system and what happened. Do not include license keys, passwords or private audio files."
+      },
+      "terms": {
+        "de": [
+          "wie melde ich ein problem mit secret parametric eq?"
+        ],
+        "en": [
+          "how do i report a problem with secret parametric eq?"
+        ]
+      }
+    },
+    {
+      "id": "secretparametriceq-requirements",
+      "product": "SecretParametricEQ",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-parametric-eq.md",
+        "SecretParametricEQ/SecretParametricEQ.h"
+      ],
+      "question": {
+        "de": "Welche Voraussetzungen gelten für Secret Parametric EQ?",
+        "en": "What does Secret Parametric EQ require?"
+      },
+      "answer": {
+        "de": "Die Produktdokumentation nennt macOS ab Version 12. Ein öffentliches Installationspaket und Windows-Mindestanforderungen sind hier nicht bestätigt. Lass dir vor der Installation das passende Paket bestätigen.",
+        "en": "The product documentation specifies macOS 12 or later. A public installer and minimum Windows requirements are not confirmed here. Confirm the appropriate package before installing."
+      },
+      "terms": {
+        "de": [
+          "welche voraussetzungen gelten für secret parametric eq?"
+        ],
+        "en": [
+          "what does secret parametric eq require?"
+        ]
+      }
+    },
+    {
+      "id": "secretanalyserbeta-purpose",
+      "product": "SecretAnalyserBeta",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-analyser.md"
+      ],
+      "question": {
+        "de": "Was macht Secret Analyser Beta?",
+        "en": "What does Secret Analyser Beta do?"
+      },
+      "answer": {
+        "de": "Es hilft dir, deinen Mix zu beurteilen und die Spuren übersichtlich zu vergleichen. Diese Hilfe gilt für die Beta, nicht für das angekündigte neue Gratis-Plugin.",
+        "en": "It helps you assess your mix and compare tracks clearly. This help covers the beta, not the announced new free plugin."
+      },
+      "terms": {
+        "de": [
+          "was macht secret analyser beta?"
+        ],
+        "en": [
+          "what does secret analyser beta do?"
+        ]
+      }
+    },
+    {
+      "id": "secretanalyserbeta-install",
+      "product": "SecretAnalyserBeta",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-analyser.md"
+      ],
+      "question": {
+        "de": "Wie installiere ich Secret Analyser Beta?",
+        "en": "How do I install Secret Analyser Beta?"
+      },
+      "answer": {
+        "de": "Öffne das Mac-Installationspaket aus dem Update-Hinweis für Secret Analyser Beta. Beende dein Musikprogramm vor der Installation und starte es danach neu.",
+        "en": "Open the Mac installer from the Secret Analyser Beta update notice. Close your music software before installation and restart it afterwards."
+      },
+      "terms": {
+        "de": [
+          "wie installiere ich secret analyser beta?"
+        ],
+        "en": [
+          "how do i install secret analyser beta?"
+        ]
+      }
+    },
+    {
+      "id": "secretanalyserbeta-activation",
+      "product": "SecretAnalyserBeta",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-analyser.md"
+      ],
+      "question": {
+        "de": "Welche Lizenz brauche ich für Secret Analyser Beta?",
+        "en": "What license do I need for Secret Analyser Beta?"
+      },
+      "answer": {
+        "de": "Die öffentliche Gratis-Seite ist keine Zusage für die Beta. Eine eindeutige Aktivierungsanleitung für das ausgelieferte Beta-Paket ist hier nicht belegt. Frage den Support, wenn das Paket eine Freischaltung verlangt.",
+        "en": "The public free-product page does not make a promise about the beta. Activation instructions for the shipped beta package are not confirmed here. Ask support if the package requests activation."
+      },
+      "terms": {
+        "de": [
+          "welche lizenz brauche ich für secret analyser beta?"
+        ],
+        "en": [
+          "what license do i need for secret analyser beta?"
+        ]
+      }
+    },
+    {
+      "id": "secretanalyserbeta-update",
+      "product": "SecretAnalyserBeta",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-analyser.md"
+      ],
+      "question": {
+        "de": "Wie aktualisiere ich Secret Analyser Beta?",
+        "en": "How do I update Secret Analyser Beta?"
+      },
+      "answer": {
+        "de": "Nutze den Update-Hinweis der Beta. Installiere das dort angebotene Paket und starte dein Musikprogramm neu.",
+        "en": "Use the beta update notice. Install the package it offers and restart your music software."
+      },
+      "terms": {
+        "de": [
+          "wie aktualisiere ich secret analyser beta?"
+        ],
+        "en": [
+          "how do i update secret analyser beta?"
+        ]
+      }
+    },
+    {
+      "id": "secretanalyserbeta-report",
+      "product": "SecretAnalyserBeta",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-analyser.md",
+        "site/faq/faq.json"
+      ],
+      "question": {
+        "de": "Wie melde ich ein Problem mit Secret Analyser Beta?",
+        "en": "How do I report a problem with Secret Analyser Beta?"
+      },
+      "answer": {
+        "de": "Melde dich bei unserem Support unter support@secret.vip. Nenne Secret Analyser Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Contact our support at support@secret.vip. Include Secret Analyser Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files."
+      },
+      "terms": {
+        "de": [
+          "wie melde ich ein problem mit secret analyser beta?"
+        ],
+        "en": [
+          "how do i report a problem with secret analyser beta?"
+        ]
+      }
+    },
+    {
+      "id": "secretanalyserbeta-requirements",
+      "product": "SecretAnalyserBeta",
+      "sources": [
+        "updates/plugins.json",
+        "wissen/plugins/secret-analyser.md"
+      ],
+      "question": {
+        "de": "Welche Voraussetzungen gelten für Secret Analyser Beta?",
+        "en": "What does Secret Analyser Beta require?"
+      },
+      "answer": {
+        "de": "Die Produktdokumentation nennt ein Mac-Plugin als AU und VST3 für Apple Silicon und Intel. Die Update-Liste bietet ein Mac-Paket. Eine genaue Mindestversion des Betriebssystems und Windows-Unterstützung dieses Pakets sind hier nicht bestätigt.",
+        "en": "The product documentation describes a Mac plugin in AU and VST3 formats for Apple Silicon and Intel. The update list offers a Mac package. The exact minimum operating system version and Windows support for this package are not confirmed here."
+      },
+      "terms": {
+        "de": [
+          "welche voraussetzungen gelten für secret analyser beta?"
+        ],
+        "en": [
+          "what does secret analyser beta require?"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4beta-purpose",
+      "product": "SVPEQ4Beta",
+      "sources": [
+        "updates/beta.json",
+        "tools/license-server/plugin-updates.json",
+        "wissen/plugins/secret-future-eq-2.md"
+      ],
+      "question": {
+        "de": "Was macht Secret Future EQ 2 Beta?",
+        "en": "What does Secret Future EQ 2 Beta do?"
+      },
+      "answer": {
+        "de": "Damit kannst du den Klang deiner Musik formen. Es ist eine eigene Testversion von Secret Future EQ 2.",
+        "en": "It lets you shape the sound of your music. It is a separate test version of Secret Future EQ 2."
+      },
+      "terms": {
+        "de": [
+          "was macht secret future eq 2 beta?"
+        ],
+        "en": [
+          "what does secret future eq 2 beta do?"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4beta-install",
+      "product": "SVPEQ4Beta",
+      "sources": [
+        "updates/beta.json",
+        "tools/license-server/plugin-updates.json",
+        "wissen/plugins/secret-future-eq-2.md"
+      ],
+      "question": {
+        "de": "Wie installiere ich Secret Future EQ 2 Beta?",
+        "en": "How do I install Secret Future EQ 2 Beta?"
+      },
+      "answer": {
+        "de": "Nutze das Mac-Paket aus deinem Beta-Update-Hinweis. Beende dein Musikprogramm vor der Installation und starte es danach neu. Wähle danach die Beta, wenn du sie testen möchtest.",
+        "en": "Use the Mac package from your beta update notice. Close your music software before installing and restart it afterwards. Select the beta when you want to test it."
+      },
+      "terms": {
+        "de": [
+          "wie installiere ich secret future eq 2 beta?"
+        ],
+        "en": [
+          "how do i install secret future eq 2 beta?"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4beta-activation",
+      "product": "SVPEQ4Beta",
+      "sources": [
+        "updates/beta.json",
+        "tools/license-server/plugin-updates.json",
+        "wissen/plugins/secret-future-eq-2.md"
+      ],
+      "question": {
+        "de": "Welche Lizenz brauche ich für Secret Future EQ 2 Beta?",
+        "en": "What license do I need for Secret Future EQ 2 Beta?"
+      },
+      "answer": {
+        "de": "Die Tester-Auslieferung gehört zu Secret Future EQ 2. Folge der Aktivierung im erhaltenen Paket mit deiner dafür gültigen Lizenz. Teile deinen Lizenzschlüssel nicht in einer Problemmeldung.",
+        "en": "The tester release belongs to Secret Future EQ 2. Follow the activation in the package you received using your valid license for that product. Do not include your license key in a problem report."
+      },
+      "terms": {
+        "de": [
+          "welche lizenz brauche ich für secret future eq 2 beta?"
+        ],
+        "en": [
+          "what license do i need for secret future eq 2 beta?"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4beta-update",
+      "product": "SVPEQ4Beta",
+      "sources": [
+        "updates/beta.json",
+        "tools/license-server/plugin-updates.json",
+        "wissen/plugins/secret-future-eq-2.md"
+      ],
+      "question": {
+        "de": "Wie aktualisiere ich Secret Future EQ 2 Beta?",
+        "en": "How do I update Secret Future EQ 2 Beta?"
+      },
+      "answer": {
+        "de": "Nutze den Update-Hinweis der Beta. Das Beta-Paket und die reguläre Verkaufsversion sind getrennte Linien. Installiere das passende Beta-Paket und starte dein Musikprogramm neu.",
+        "en": "Use the beta update notice. The beta package and the regular release are separate versions. Install the appropriate beta package and restart your music software."
+      },
+      "terms": {
+        "de": [
+          "wie aktualisiere ich secret future eq 2 beta?"
+        ],
+        "en": [
+          "how do i update secret future eq 2 beta?"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4beta-report",
+      "product": "SVPEQ4Beta",
+      "sources": [
+        "updates/beta.json",
+        "tools/license-server/plugin-updates.json",
+        "wissen/plugins/secret-future-eq-2.md",
+        "site/faq/faq.json"
+      ],
+      "question": {
+        "de": "Wie melde ich ein Problem mit Secret Future EQ 2 Beta?",
+        "en": "How do I report a problem with Secret Future EQ 2 Beta?"
+      },
+      "answer": {
+        "de": "Melde dich bei unserem Support unter support@secret.vip. Nenne Secret Future EQ 2 Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Contact our support at support@secret.vip. Include Secret Future EQ 2 Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files."
+      },
+      "terms": {
+        "de": [
+          "wie melde ich ein problem mit secret future eq 2 beta?"
+        ],
+        "en": [
+          "how do i report a problem with secret future eq 2 beta?"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4beta-requirements",
+      "product": "SVPEQ4Beta",
+      "sources": [
+        "updates/beta.json",
+        "tools/license-server/plugin-updates.json",
+        "wissen/plugins/secret-future-eq-2.md"
+      ],
+      "question": {
+        "de": "Welche Voraussetzungen gelten für Secret Future EQ 2 Beta?",
+        "en": "What does Secret Future EQ 2 Beta require?"
+      },
+      "answer": {
+        "de": "Der Beta-Feed führt ein Mac-Installationspaket. Die genaue Mindestversion von macOS, die unterstützten Prozessoren und Windows-Unterstützung dieses Beta-Pakets sind hier nicht bestätigt. Prüfe die Angaben beim erhaltenen Paket oder frage den Support.",
+        "en": "The beta feed lists a Mac installer. The exact minimum macOS version, supported processors and Windows support for this beta package are not confirmed here. Check the information supplied with your package or ask support."
+      },
+      "terms": {
+        "de": [
+          "welche voraussetzungen gelten für secret future eq 2 beta?"
+        ],
+        "en": [
+          "what does secret future eq 2 beta require?"
+        ]
+      }
+    },
+    {
+      "id": "secretfutureeq3beta-purpose",
+      "product": "SecretFutureEQ3Beta",
+      "sources": [
+        "tools/license-server/plugin-updates.json"
+      ],
+      "question": {
+        "de": "Was macht Secret Future EQ 3 Beta?",
+        "en": "What does Secret Future EQ 3 Beta do?"
+      },
+      "answer": {
+        "de": "Dies ist die eigene Tester-Version von Secret Future EQ 3. Sie ist nicht die reguläre Verkaufsversion von Secret Future EQ 2.",
+        "en": "This is the separate tester version of Secret Future EQ 3. It is not the regular release of Secret Future EQ 2."
+      },
+      "terms": {
+        "de": [
+          "was macht secret future eq 3 beta?"
+        ],
+        "en": [
+          "what does secret future eq 3 beta do?"
+        ]
+      }
+    },
+    {
+      "id": "secretfutureeq3beta-install",
+      "product": "SecretFutureEQ3Beta",
+      "sources": [
+        "tools/license-server/plugin-updates.json"
+      ],
+      "question": {
+        "de": "Wie installiere ich Secret Future EQ 3 Beta?",
+        "en": "How do I install Secret Future EQ 3 Beta?"
+      },
+      "answer": {
+        "de": "Nutze nur das für dich bereitgestellte Mac-Testpaket. Der Tester-Feed ist kein allgemeines Downloadangebot. Beende dein Musikprogramm vor der Installation und starte es danach neu.",
+        "en": "Use only the Mac test package provided to you. The tester feed is not a general download offer. Close your music software before installing and restart it afterwards."
+      },
+      "terms": {
+        "de": [
+          "wie installiere ich secret future eq 3 beta?"
+        ],
+        "en": [
+          "how do i install secret future eq 3 beta?"
+        ]
+      }
+    },
+    {
+      "id": "secretfutureeq3beta-activation",
+      "product": "SecretFutureEQ3Beta",
+      "sources": [
+        "tools/license-server/plugin-updates.json"
+      ],
+      "question": {
+        "de": "Welche Lizenz brauche ich für Secret Future EQ 3 Beta?",
+        "en": "What license do I need for Secret Future EQ 3 Beta?"
+      },
+      "answer": {
+        "de": "Der Tester-Feed nennt eine Lizenz für Secret Future EQ 2 als Voraussetzung. Nutze die Aktivierung deines Testpakets. Wenn du keinen Tester-Zugang hast, frage den Support; diese FAQ vergibt keinen Zugang.",
+        "en": "The tester feed requires a Secret Future EQ 2 license. Use the activation supplied with your test package. If you do not have tester access, ask support; this FAQ does not grant access."
+      },
+      "terms": {
+        "de": [
+          "welche lizenz brauche ich für secret future eq 3 beta?"
+        ],
+        "en": [
+          "what license do i need for secret future eq 3 beta?"
+        ]
+      }
+    },
+    {
+      "id": "secretfutureeq3beta-update",
+      "product": "SecretFutureEQ3Beta",
+      "sources": [
+        "tools/license-server/plugin-updates.json"
+      ],
+      "question": {
+        "de": "Wie aktualisiere ich Secret Future EQ 3 Beta?",
+        "en": "How do I update Secret Future EQ 3 Beta?"
+      },
+      "answer": {
+        "de": "Nutze das neue Paket, das dir über den Tester-Zugang bereitgestellt wird. Eine Versionsnummer im Feed allein bestätigt keinen allgemeinen Download.",
+        "en": "Use the new package provided through your tester access. A version number in the feed alone does not confirm a public download."
+      },
+      "terms": {
+        "de": [
+          "wie aktualisiere ich secret future eq 3 beta?"
+        ],
+        "en": [
+          "how do i update secret future eq 3 beta?"
+        ]
+      }
+    },
+    {
+      "id": "secretfutureeq3beta-report",
+      "product": "SecretFutureEQ3Beta",
+      "sources": [
+        "tools/license-server/plugin-updates.json",
+        "site/faq/faq.json"
+      ],
+      "question": {
+        "de": "Wie melde ich ein Problem mit Secret Future EQ 3 Beta?",
+        "en": "How do I report a problem with Secret Future EQ 3 Beta?"
+      },
+      "answer": {
+        "de": "Melde dich bei unserem Support unter support@secret.vip. Nenne Secret Future EQ 3 Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Contact our support at support@secret.vip. Include Secret Future EQ 3 Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files."
+      },
+      "terms": {
+        "de": [
+          "wie melde ich ein problem mit secret future eq 3 beta?"
+        ],
+        "en": [
+          "how do i report a problem with secret future eq 3 beta?"
+        ]
+      }
+    },
+    {
+      "id": "secretfutureeq3beta-requirements",
+      "product": "SecretFutureEQ3Beta",
+      "sources": [
+        "tools/license-server/plugin-updates.json"
+      ],
+      "question": {
+        "de": "Welche Voraussetzungen gelten für Secret Future EQ 3 Beta?",
+        "en": "What does Secret Future EQ 3 Beta require?"
+      },
+      "answer": {
+        "de": "Der Tester-Feed führt ein Mac-Installationspaket und setzt eine Lizenz für Secret Future EQ 2 voraus. Betriebssystem-Mindestversion, unterstützte Prozessoren und Windows-Unterstützung des Testpakets sind hier nicht bestätigt. Frage vor der Installation nach den Angaben zu deinem Paket.",
+        "en": "The tester feed lists a Mac installer and requires a Secret Future EQ 2 license. The minimum operating system version, supported processors and Windows support for the test package are not confirmed here. Ask for the requirements of your package before installing."
+      },
+      "terms": {
+        "de": [
+          "welche voraussetzungen gelten für secret future eq 3 beta?"
+        ],
+        "en": [
+          "what does secret future eq 3 beta require?"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4-report",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/faq/faq.json",
+        "shared/feedback/README.md"
+      ],
+      "question": {
+        "de": "Wie melde ich ein Problem mit Secret Future EQ 2?",
+        "en": "How do I report a problem with Secret Future EQ 2?"
+      },
+      "answer": {
+        "de": "Nutze „Problem melden“ im Plugin, wenn deine Version diesen Punkt anbietet. Du kannst auch an support@secret.vip schreiben. Nenne Version, Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Use “Report problem” in the plugin if your version offers it. You can also write to support@secret.vip. Include the version, operating system and what happened. Do not include license keys, passwords or private audio files."
+      },
+      "terms": {
+        "de": [
+          "problem melden secret future eq 2"
+        ],
+        "en": [
+          "report a problem secret future eq 2"
+        ]
+      }
     }
-  ]
+  ],
+  "products": {
+    "SecretParametricEQ": {
+      "name": "Secret Parametric EQ"
+    },
+    "SecretAnalyserBeta": {
+      "name": "Secret Analyser Beta"
+    },
+    "SVPEQ4Beta": {
+      "name": "Secret Future EQ 2 Beta"
+    },
+    "SecretFutureEQ3Beta": {
+      "name": "Secret Future EQ 3 Beta"
+    }
+  }
 }

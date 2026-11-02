@@ -2,21 +2,19 @@
   "plugins": {
     "SVPEQ4": {
       "name": "Secret Future EQ 2",
-      "version": "2.0.1",
+      "version": "2.0.4",
       "groups": {
-        "Neu": [
-          "Feedback button to report a bug or request a feature."
-        ],
         "Behoben": [
-          "Audio Unit now reports version 2.0.1."
+          "Dragging an EQ point no longer crashes Ableton Live 12 (Audio Unit).",
+          "After resizing, clicks land on the band you point at.",
+          "Auto-Gain starts fresh when you turn it on or change the output level."
         ]
       },
       "groups_de": {
-        "Neu": [
-          "Feedback-Knopf, um einen Fehler zu melden oder eine Funktion zu wünschen."
-        ],
         "Behoben": [
-          "Die Audio Unit meldet jetzt Version 2.0.1."
+          "Beim Ziehen eines EQ-Punkts stürzt Ableton Live 12 (Audio Unit) nicht mehr ab.",
+          "Nach dem Ändern der Fenstergröße treffen Klicks das gewählte Band.",
+          "Auto-Gain startet beim Einschalten oder Ändern des Ausgangspegels frisch."
         ]
       }
     }

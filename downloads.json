@@ -12,9 +12,9 @@
     },
     "SecretNotes": {
       "name": "Secret Notes",
-      "version": "1.0.0",
-      "mac": "files/SecretNotes-1.0.0-Mac.pkg",
-      "win": "files/SecretNotes-1.0.0-Windows.zip"
+      "version": "1.2.1",
+      "mac": "files/SecretNotes-1.2.1-Mac.pkg",
+      "win": "files/SecretNotes-1.2.1-Windows.zip"
     },
     "AudioNormaliser": {
       "name": "Audio Normaliser",
