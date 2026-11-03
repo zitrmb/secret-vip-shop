@@ -653,6 +653,35 @@
       }
     },
     {
+      "id": "notes-uninstall",
+      "product": "SecretNotes",
+      "sources": [
+        ".github/workflows/build-mac.yml",
+        "SecretNotes/config.h",
+        "SecretNotes/README.md"
+      ],
+      "question": {
+        "de": "Wie entferne ich Secret Notes wieder?",
+        "en": "How do I uninstall Secret Notes?"
+      },
+      "answer": {
+        "de": "Schließe deine DAW und lösche die Plugin-Dateien SecretNotes. Mac: Öffne im Finder deine Festplatte und dann Library → Audio → Plug-Ins; die Dateien liegen in den Ordnern VST3, Components und CLAP. Windows: in C:\\Program Files\\Common Files\\VST3 und C:\\Program Files\\Common Files\\CLAP. Deine Notizen im Konto bleiben erhalten.",
+        "en": "Close your DAW and delete the SecretNotes plugin files. Mac: In the Finder, open your hard drive, then Library → Audio → Plug-Ins; the files are in the VST3, Components and CLAP folders. Windows: in C:\\Program Files\\Common Files\\VST3 and C:\\Program Files\\Common Files\\CLAP. The notes in your account stay."
+      },
+      "terms": {
+        "de": [
+          "deinstallieren",
+          "entfernen",
+          "löschen"
+        ],
+        "en": [
+          "uninstall",
+          "remove",
+          "delete"
+        ]
+      }
+    },
+    {
       "id": "normaliser-requirements",
       "product": "AudioNormaliser",
       "sources": [
@@ -675,6 +704,34 @@
         "en": [
           "normaliser requirements",
           "normaliser intel"
+        ]
+      }
+    },
+    {
+      "id": "normaliser-uninstall",
+      "product": "AudioNormaliser",
+      "sources": [
+        ".github/workflows/build-audio-normaliser.yml",
+        "AudioNormaliser/README.md"
+      ],
+      "question": {
+        "de": "Wie entferne ich Audio Normaliser wieder?",
+        "en": "How do I uninstall Audio Normaliser?"
+      },
+      "answer": {
+        "de": "Mac: Beende die App und ziehe Audio Normaliser aus dem Ordner Programme in den Papierkorb. Windows: Öffne Einstellungen → Apps, wähle Audio Normaliser und klicke auf Deinstallieren. Deine Audiodateien bleiben dabei unverändert.",
+        "en": "Mac: Quit the app and drag Audio Normaliser from the Applications folder to the Trash. Windows: Open Settings → Apps, select Audio Normaliser and click Uninstall. Your audio files stay unchanged."
+      },
+      "terms": {
+        "de": [
+          "deinstallieren",
+          "entfernen",
+          "löschen"
+        ],
+        "en": [
+          "uninstall",
+          "remove",
+          "delete"
         ]
       }
     },
@@ -1285,6 +1342,451 @@
         ],
         "en": [
           "report a problem secret future eq 2"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4-trial",
+      "product": "SVPEQ4",
+      "sources": [
+        "shared/web/svp-trial-offer.js",
+        "site/pricing/index.html"
+      ],
+      "question": {
+        "de": "Gibt es eine Testversion?",
+        "en": "Is there a trial version?"
+      },
+      "answer": {
+        "de": "Wenn im Plugin der Knopf für den kostenlosen Test erscheint, kannst du Secret Future EQ 2 ohne Lizenzschlüssel ausprobieren. Ohne diesen Knopf gibt es gerade keine Testversion. Jeder Kauf hat 14 Tage Geld-zurück-Garantie.",
+        "en": "If the plugin shows the button for a free trial, you can try Secret Future EQ 2 without a license key. Without that button there is no trial right now. Every purchase comes with a 14-day money-back guarantee."
+      },
+      "terms": {
+        "de": [
+          "testversion",
+          "kostenlos testen",
+          "ausprobieren"
+        ],
+        "en": [
+          "trial version",
+          "free trial",
+          "try before buying"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4-offline",
+      "product": "SVPEQ4",
+      "sources": [
+        "tools/license-server/server.py",
+        "site/eula/index.html"
+      ],
+      "question": {
+        "de": "Funktioniert das Plugin ohne Internet?",
+        "en": "Does the plugin work without internet?"
+      },
+      "answer": {
+        "de": "Ja. Zum Aktivieren brauchst du einmal kurz Internet. Danach bestätigt das Plugin deine Lizenz etwa alle 30 Tage online. Klappt das gerade nicht, läuft es noch 14 Tage ohne Verbindung weiter. Verbinde dich in dieser Zeit einmal mit dem Internet und öffne das Plugin.",
+        "en": "Yes. You need internet once, briefly, to activate. After that the plugin confirms your license online about every 30 days. If that is not possible, it keeps working for 14 more days without a connection. Connect to the internet once during that time and open the plugin."
+      },
+      "terms": {
+        "de": [
+          "offline",
+          "ohne internet",
+          "14 tage"
+        ],
+        "en": [
+          "offline",
+          "without internet",
+          "14 days"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4-uninstall",
+      "product": "SVPEQ4",
+      "sources": [
+        ".github/workflows/build-mac.yml",
+        "SVPEQ4/config.h",
+        "site/download/index.html"
+      ],
+      "question": {
+        "de": "Wie entferne ich Secret Future EQ 2 wieder?",
+        "en": "How do I uninstall Secret Future EQ 2?"
+      },
+      "answer": {
+        "de": "Gib zuerst den Rechner frei: Zahnrad → License → Deactivate this computer. Schließe dann deine DAW und lösche die Plugin-Dateien SecretFutureEQ2. Mac: Öffne im Finder deine Festplatte und dann Library → Audio → Plug-Ins; die Dateien liegen in den Ordnern VST3, Components und CLAP. Windows: in C:\\Program Files\\Common Files\\VST3 und C:\\Program Files\\Common Files\\CLAP.",
+        "en": "First free up the computer: gear icon → License → Deactivate this computer. Then close your DAW and delete the SecretFutureEQ2 plugin files. Mac: In the Finder, open your hard drive, then Library → Audio → Plug-Ins; the files are in the VST3, Components and CLAP folders. Windows: in C:\\Program Files\\Common Files\\VST3 and C:\\Program Files\\Common Files\\CLAP."
+      },
+      "terms": {
+        "de": [
+          "deinstallieren",
+          "entfernen",
+          "löschen"
+        ],
+        "en": [
+          "uninstall",
+          "remove",
+          "delete"
+        ]
+      }
+    },
+    {
+      "id": "analyser-function",
+      "product": "SecretAnalyser",
+      "sources": [
+        "site/plugins/analyser/index.html",
+        "site/config.json"
+      ],
+      "question": {
+        "de": "Was macht Secret Analyser?",
+        "en": "What does Secret Analyser do?"
+      },
+      "answer": {
+        "de": "Secret Analyser zeigt dir deinen ganzen Mix auf einen Blick. Du siehst deine Spuren gemeinsam, erkennst, wo sie sich gegenseitig Platz wegnehmen, und kannst einen Lieblingssong zum Vergleich danebenlegen. So triffst du deine nächste Entscheidung mit mehr Sicherheit.",
+        "en": "Secret Analyser shows your whole mix at a glance. You see your tracks together, spot where they crowd each other and can keep a favourite song beside your mix for comparison. That way you make your next move with more confidence."
+      },
+      "terms": {
+        "de": [
+          "was macht secret analyser",
+          "analyser funktion",
+          "mix überblick"
+        ],
+        "en": [
+          "what does secret analyser do",
+          "analyser function",
+          "mix overview"
+        ]
+      }
+    },
+    {
+      "id": "analyser-free-download",
+      "product": "SecretAnalyser",
+      "sources": [
+        "site/config.json",
+        "site/free-download-texts.json"
+      ],
+      "question": {
+        "de": "Kostet Secret Analyser etwas und wie bekomme ich es?",
+        "en": "Is Secret Analyser free, and how do I get it?"
+      },
+      "answer": {
+        "de": "Secret Analyser ist kostenlos. Du brauchst keinen Kauf und keinen Lizenzschlüssel. Sobald der Download auf der Produktseite freigeschaltet ist, forderst du dort den Download-Link per E-Mail an. Den Newsletter brauchst du dafür nicht.",
+        "en": "Secret Analyser is free. No purchase or license key is needed. As soon as the download is open on the product page, request the download link by email there. You do not need to subscribe to the newsletter."
+      },
+      "terms": {
+        "de": [
+          "analyser kostenlos",
+          "analyser download",
+          "analyser lizenz",
+          "analyser herunterladen"
+        ],
+        "en": [
+          "analyser free",
+          "analyser download",
+          "analyser license"
+        ]
+      }
+    },
+    {
+      "id": "analyser-requirements",
+      "product": "SecretAnalyser",
+      "sources": [
+        "SecretAnalyser/CMakeLists.txt",
+        "site/config.json",
+        "wissen/plugins/secret-analyser.md"
+      ],
+      "question": {
+        "de": "Was brauche ich für Secret Analyser?",
+        "en": "What do I need for Secret Analyser?"
+      },
+      "answer": {
+        "de": "Du brauchst einen Mac mit macOS 12 oder neuer, mit Apple Silicon oder Intel, und ein Musikprogramm für AU oder VST3. Für Windows gibt es Secret Analyser noch nicht.",
+        "en": "You need a Mac with macOS 12 or later on Apple Silicon or Intel, and music software that supports AU or VST3. Secret Analyser is not yet available for Windows."
+      },
+      "terms": {
+        "de": [
+          "analyser anforderungen",
+          "analyser macos",
+          "analyser windows",
+          "analyser formate"
+        ],
+        "en": [
+          "analyser requirements",
+          "analyser macos",
+          "analyser windows",
+          "analyser formats"
+        ]
+      }
+    },
+    {
+      "id": "analyser-setup",
+      "product": "SecretAnalyser",
+      "sources": [
+        "SecretAnalyser/resources/web/index.html",
+        "SecretSpectrum/README.md"
+      ],
+      "question": {
+        "de": "Wie richte ich Secret Analyser in meinem Projekt ein?",
+        "en": "How do I set up Secret Analyser in my project?"
+      },
+      "answer": {
+        "de": "Lege Secret Analyser auf jede Spur, die du sehen willst, und wähle dort Sender. Lege eine weitere Instanz ganz ans Ende deiner Master-Spur und wähle dort Analyser. Dort siehst du alle Spuren zusammen.",
+        "en": "Put Secret Analyser on every track you want to see and choose Sender there. Put one more instance at the very end of your master track and choose Analyser there. That is where you see all tracks together."
+      },
+      "terms": {
+        "de": [
+          "analyser einrichten",
+          "sender",
+          "master-spur",
+          "analyser einstellen"
+        ],
+        "en": [
+          "set up analyser",
+          "sender",
+          "master track",
+          "analyser setup"
+        ]
+      }
+    },
+    {
+      "id": "analyser-fader",
+      "product": "SecretAnalyser",
+      "sources": [
+        "SecretAnalyser/resources/web/index.html",
+        "SecretSpectrum/README.md"
+      ],
+      "question": {
+        "de": "Warum ändern sich die Werte nicht, wenn ich den Spur-Fader bewege?",
+        "en": "Why do the values not change when I move the track fader?"
+      },
+      "answer": {
+        "de": "Der Spur-Fader ändert diese Werte nicht. Ändere die Lautstärke lieber vor dem Sender, zum Beispiel mit einem einfachen Lautstärke-Plugin davor. Dann stimmen die Werte.",
+        "en": "The track fader does not change these values. Change the volume before the Sender instead, for example with a simple gain plugin in front of it. Then the values stay right."
+      },
+      "terms": {
+        "de": [
+          "fader",
+          "werte ändern sich nicht",
+          "lautstärke spur"
+        ],
+        "en": [
+          "fader",
+          "values do not change",
+          "track volume"
+        ]
+      }
+    },
+    {
+      "id": "analyser-missing-track",
+      "product": "SecretAnalyser",
+      "sources": [
+        "SecretSpectrum/README.md"
+      ],
+      "question": {
+        "de": "Eine Spur erscheint nicht im Analyser. Was kann ich prüfen?",
+        "en": "A track does not show up in the Analyser. What can I check?"
+      },
+      "answer": {
+        "de": "Nutze überall dasselbe Format: entweder überall VST3 oder überall AU. Prüfe, ob der Sender auf dieser Spur eingeschaltet ist. Lässt dein Musikprogramm jedes Plugin getrennt laufen, zum Beispiel Bitwig, sehen sich die Spuren derzeit noch nicht.",
+        "en": "Use the same format everywhere: either VST3 everywhere or AU everywhere. Check that the Sender on that track is switched on. If your music software runs each plugin separately, for example Bitwig, the tracks cannot see each other yet."
+      },
+      "terms": {
+        "de": [
+          "spur fehlt",
+          "spur erscheint nicht",
+          "keine spur",
+          "bitwig"
+        ],
+        "en": [
+          "track missing",
+          "track does not show",
+          "no track",
+          "bitwig"
+        ]
+      }
+    },
+    {
+      "id": "analyser-solo",
+      "product": "SecretAnalyser",
+      "sources": [
+        "SecretAnalyser/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Wie sehe ich nur eine Gruppe, zum Beispiel den Gesang?",
+        "en": "How do I see only one group, for example the vocals?"
+      },
+      "answer": {
+        "de": "Schalte die Gruppe in deinem Musikprogramm solo und wähle sie im Analyser aus. Dann zeigen die Werte nur diese Gruppe, so wie sie am Ende klingt.",
+        "en": "Solo the group in your music software and pick it in the Analyser. The values then show only that group, the way it finally sounds."
+      },
+      "terms": {
+        "de": [
+          "solo",
+          "nur gesang",
+          "eine gruppe"
+        ],
+        "en": [
+          "solo",
+          "only vocals",
+          "one group"
+        ]
+      }
+    },
+    {
+      "id": "analyser-report",
+      "product": "SecretAnalyser",
+      "sources": [
+        "shared/web/report-problem-plugins.json",
+        "SecretAnalyser/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Wie melde ich ein Problem mit Secret Analyser?",
+        "en": "How do I report a problem with Secret Analyser?"
+      },
+      "answer": {
+        "de": "Öffne im Plugin das Menü Ansicht und wähle Problem melden oder Fehler melden / Wunsch. Du kannst auch direkt an support@secret.vip schreiben. Nenne die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Open the View menu in the plugin and choose Report a problem or Report bug / Wish. You can also write to support@secret.vip directly. Include the version, your operating system and what happened. Do not include license keys, passwords or private audio files."
+      },
+      "terms": {
+        "de": [
+          "problem melden analyser",
+          "fehler analyser",
+          "wunsch analyser"
+        ],
+        "en": [
+          "report a problem analyser",
+          "analyser bug",
+          "analyser wish"
+        ]
+      }
+    },
+    {
+      "id": "analyser-install",
+      "product": "SecretAnalyser",
+      "sources": [
+        "site/config.json",
+        "site/free-download-texts.json"
+      ],
+      "question": {
+        "de": "Wie installiere ich Secret Analyser?",
+        "en": "How do I install Secret Analyser?"
+      },
+      "answer": {
+        "de": "Secret Analyser ist ein kostenloses Mac-Plugin und noch nicht zum Download freigegeben. Sobald es verfügbar ist, steht der Download auf der Produktseite.",
+        "en": "Secret Analyser is a free Mac plugin and is not released for download yet. Once it is available, the download will be on the product page."
+      },
+      "terms": {
+        "de": [
+          "analyser installieren",
+          "analyser installation"
+        ],
+        "en": [
+          "install analyser",
+          "analyser installation"
+        ]
+      }
+    },
+    {
+      "id": "analyser-activation",
+      "product": "SecretAnalyser",
+      "sources": [
+        "site/config.json",
+        "site/free-download-texts.json"
+      ],
+      "question": {
+        "de": "Muss ich Secret Analyser aktivieren?",
+        "en": "Do I need to activate Secret Analyser?"
+      },
+      "answer": {
+        "de": "Secret Analyser ist kostenlos. Für den Download brauchst du keinen Kauf.",
+        "en": "Secret Analyser is free. No purchase is needed to download it."
+      },
+      "terms": {
+        "de": [
+          "analyser aktivieren",
+          "analyser aktivierung"
+        ],
+        "en": [
+          "activate analyser",
+          "analyser activation"
+        ]
+      }
+    },
+    {
+      "id": "analyser-trial",
+      "product": "SecretAnalyser",
+      "sources": [
+        "site/config.json",
+        "site/free-download-texts.json"
+      ],
+      "question": {
+        "de": "Ist Secret Analyser eine Testversion?",
+        "en": "Is Secret Analyser a trial version?"
+      },
+      "answer": {
+        "de": "Das ist ein kostenloses Angebot, keine zeitlich begrenzte Testversion.",
+        "en": "This is a free offer, not a time-limited trial."
+      },
+      "terms": {
+        "de": [
+          "analyser testversion",
+          "analyser probezeit"
+        ],
+        "en": [
+          "analyser trial",
+          "analyser trial version"
+        ]
+      }
+    },
+    {
+      "id": "analyser-uninstall",
+      "product": "SecretAnalyser",
+      "sources": [
+        "site/config.json",
+        "site/free-download-texts.json"
+      ],
+      "question": {
+        "de": "Wie entferne ich Secret Analyser wieder?",
+        "en": "How do I remove Secret Analyser?"
+      },
+      "answer": {
+        "de": "Schließe dein Musikprogramm und entferne das Plugin aus deinen Plugin-Ordnern.",
+        "en": "Close your music software and remove the plugin from your plugin folders."
+      },
+      "terms": {
+        "de": [
+          "analyser deinstallieren",
+          "analyser entfernen"
+        ],
+        "en": [
+          "uninstall analyser",
+          "remove analyser"
+        ]
+      }
+    },
+    {
+      "id": "analyser-beta-note",
+      "product": "SecretAnalyser",
+      "sources": [
+        "site/config.json",
+        "site/free-download-texts.json"
+      ],
+      "question": {
+        "de": "Was ist der Unterschied zu Secret Analyser Beta?",
+        "en": "What is the difference to Secret Analyser Beta?"
+      },
+      "answer": {
+        "de": "„Secret Analyser Beta“ ist eine eigene Version mit eigenen Antworten in der Hilfe. Bitte wähle in der Produktliste das passende Plugin.",
+        "en": "“Secret Analyser Beta” is a separate version with its own answers in the help. Please pick the matching plugin in the product list."
+      },
+      "terms": {
+        "de": [
+          "analyser beta unterschied",
+          "analyser beta version"
+        ],
+        "en": [
+          "analyser beta difference",
+          "analyser beta version"
         ]
       }
     }

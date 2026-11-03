@@ -46,7 +46,7 @@ if (product.windows_beta_unsigned && product.status !== 'source_missing') fallba
 var actions = element('div', '', 'free-actions');
 var files = ((downloads || {}).plugins || {})[id] || {};
 ['mac', 'win'].forEach(function (platform) {
-var link = files[platform]; if (typeof link !== 'string') return;
+var link = files[platform]; if (product.free_request_product || typeof link !== 'string') return;
 var resolved;
 try { resolved = new URL(/^(?:[a-z][a-z0-9+.-]*:|\/)/i.test(link) ? link : root + link, location.href); } catch (error) { return; }
 if (resolved.protocol !== 'https:' && resolved.origin !== location.origin) return;

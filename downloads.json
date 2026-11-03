@@ -21,6 +21,14 @@
       "version": "1.9.0",
       "mac": "files/Secret-Audio-Normaliser-1.9.0-Mac.zip",
       "win": "files/Secret-Audio-Normaliser-1.9.0-Windows.zip"
+    },
+    "SecretAnalyser": {
+      "name": "Secret Analyser",
+      "version": "1.0.0",
+      "mac": "files/SecretAnalyser-a6021b7f.pkg",
+      "mac_sha256": "0b1a3058765fcb8a1ebcdd9782266550090829273ebe63241787c08ea75ef24c",
+      "mac_source_commit": "a6021b7f2d131905bfaec49363e3119d251de47f",
+      "mac_build_run": "41405418402"
     }
   },
   "control_center": {

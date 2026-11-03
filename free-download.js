@@ -74,31 +74,14 @@ var endpoint;
 try { endpoint = new URL(config.free_download.endpoint); } catch (error) { return false; }
 if (endpoint.protocol !== 'https:' && endpoint.origin !== location.origin) return false;
 var fallbackNodes = host.querySelectorAll('[data-free-download-fallback]');
-var files = ((data.downloads || {}).plugins || {})[id] || {};
-var directLinks = [];
-['mac', 'win'].forEach(function (platform) {
-if (typeof files[platform] !== 'string') return;
-try {
-var url = new URL(files[platform], location.origin);
-if (url.protocol !== 'https:' && url.origin !== location.origin) return;
-var link = node('a', text.download + (platform === 'mac' ? 'Mac' : 'Windows'), 'btn');
-link.href = url.href; directLinks.push(link);
-} catch (error) {  }
-});
-if (directLinks.length) fallbackNodes.forEach(function (fallback) {
-fallback.textContent = '';
-directLinks.forEach(function (link) { fallback.appendChild(link.cloneNode(true)); });
-});
+fallbackNodes.forEach(function (fallback) { fallback.textContent = text.pending; });
 if (!config.free_download || config.free_download.enabled !== true) return false;
 var approved = text.approved.form;
+var verification = text.verification;
 var offer = node('div', '', 'free-download-offer');
-offer.appendChild(node('h3', approved.title.replace('{{product}}', product.name)));
-var direct = node('div', '', 'free-download-direct');
-fallbackNodes.forEach(function (fallback) { fallback.hidden = false; direct.appendChild(fallback); });
-offer.appendChild(direct);
-offer.appendChild(node('p', approved.direct_note, 'small free-download-note'));
+offer.appendChild(node('h3', approved.title.replace('Secret Analyser 1.0', product.name)));
+fallbackNodes.forEach(function (fallback) { fallback.hidden = true; });
 var form = node('form', '', 'free-download-form');
-form.appendChild(node('h4', approved.mail_title));
 form.setAttribute('aria-label', product.name + ' — ' + text.submit);
 form.noValidate = true;
 var address = node('input');
@@ -109,7 +92,7 @@ emailLabel.appendChild(address);
 var button = node('button', text.submit, 'btn'); button.type = 'submit';
 var controls = node('div', '', 'free-download-controls');
 controls.appendChild(emailLabel); controls.appendChild(button);
-var notice = node('p', approved.mail_notice, 'small free-download-privacy');
+var notice = node('p', verification.notice, 'small free-download-privacy');
 var newsletter = node('input');
 newsletter.type = 'checkbox'; newsletter.name = 'newsletter'; newsletter.checked = false; newsletter.defaultChecked = false;
 newsletter.id = 'free-newsletter-' + id; newsletter.setAttribute('aria-describedby', newsletter.id + '-help');

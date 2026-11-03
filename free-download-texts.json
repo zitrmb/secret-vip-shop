@@ -82,6 +82,14 @@
         "privacy": "[Datenschutz]({{privacy_url}})",
         "footer": "Secret Audio · Sebastian Behrendt · {{sender_address}} · [Impressum]({{imprint_url}})"
       }
+    },
+    "verification": {
+      "subject": "Bestätige deine E-Mail-Adresse für deinen Download",
+      "intro": "Bestätige deine E-Mail-Adresse über den folgenden Link. Danach schicken wir dir deinen Download-Link.",
+      "button": "[E-Mail-Adresse bestätigen]({{download_url}})",
+      "notice": "Bestätige zuerst deine E-Mail-Adresse. Deinen Download-Link erhältst du danach in einer gesonderten E-Mail.",
+      "success": "Deine E-Mail-Adresse ist bestätigt. Schau für deinen Download-Link in dein Postfach.",
+      "invalid": "Dieser Bestätigungslink ist ungültig oder abgelaufen. Bitte fordere einen neuen an."
     }
   },
   "en": {
@@ -167,6 +175,14 @@
         "privacy": "[Privacy Policy]({{privacy_url}})",
         "footer": "Secret Audio · Sebastian Behrendt · {{sender_address}} · [Legal Notice]({{imprint_url}})"
       }
+    },
+    "verification": {
+      "subject": "Confirm your email for your download",
+      "intro": "Confirm your email address using the link below. We will then email your download link.",
+      "button": "[Confirm email address]({{download_url}})",
+      "notice": "First confirm your email address. Your download link will arrive in a separate email.",
+      "success": "Your email address is confirmed. Check your inbox for the download link.",
+      "invalid": "This confirmation link is invalid or has expired. Please request a new one."
     }
   },
   "fr": {
@@ -252,7 +268,15 @@
     "notFound": "Plugin gratuit introuvable.",
     "failed": "Impossible de charger les plugins gratuits.",
     "version": "Version ",
-    "loading": "Chargement des plugins gratuits…"
+    "loading": "Chargement des plugins gratuits…",
+    "verification": {
+      "subject": "Confirmez votre adresse e-mail pour votre téléchargement",
+      "intro": "Confirmez votre adresse e-mail avec le lien ci-dessous. Nous vous enverrons ensuite votre lien de téléchargement.",
+      "button": "[Confirmer mon adresse e-mail]({{download_url}})",
+      "notice": "Confirmez d’abord votre adresse e-mail. Vous recevrez ensuite votre lien de téléchargement dans un autre e-mail.",
+      "success": "Votre adresse e-mail est confirmée. Consultez votre boîte de réception pour le lien de téléchargement.",
+      "invalid": "Ce lien de confirmation est invalide ou a expiré. Veuillez en demander un nouveau."
+    }
   },
   "es": {
     "email": "Dirección de correo electrónico",
@@ -337,7 +361,15 @@
     "notFound": "No se encontró el plugin gratuito.",
     "failed": "No se pueden cargar los plugins gratuitos.",
     "version": "Versión ",
-    "loading": "Cargando plugins gratuitos…"
+    "loading": "Cargando plugins gratuitos…",
+    "verification": {
+      "subject": "Confirma tu correo electrónico para descargar",
+      "intro": "Confirma tu dirección de correo electrónico con el siguiente enlace. Después te enviaremos el enlace de descarga.",
+      "button": "[Confirmar mi correo electrónico]({{download_url}})",
+      "notice": "Primero confirma tu correo electrónico. Después recibirás el enlace de descarga en otro mensaje.",
+      "success": "Tu correo electrónico está confirmado. Busca el enlace de descarga en tu bandeja de entrada.",
+      "invalid": "Este enlace de confirmación no es válido o ha caducado. Solicita uno nuevo."
+    }
   },
   "ja": {
     "email": "メールアドレス",
@@ -422,7 +454,15 @@
     "notFound": "無料プラグインが見つかりません。",
     "failed": "無料プラグインを読み込めません。",
     "version": "バージョン ",
-    "loading": "無料プラグインを読み込み中…"
+    "loading": "無料プラグインを読み込み中…",
+    "verification": {
+      "subject": "ダウンロード用のメールアドレスを確認してください",
+      "intro": "以下のリンクからメールアドレスを確認してください。その後、ダウンロードリンクをメールでお送りします。",
+      "button": "[メールアドレスを確認する]({{download_url}})",
+      "notice": "まずメールアドレスを確認してください。その後、別のメールでダウンロードリンクをお送りします。",
+      "success": "メールアドレスの確認が完了しました。受信トレイでダウンロードリンクをご確認ください。",
+      "invalid": "この確認リンクは無効か、有効期限が切れています。新しいリンクをリクエストしてください。"
+    }
   },
   "pt-BR": {
     "email": "Endereço de e-mail",
@@ -507,7 +547,15 @@
     "notFound": "Plugin gratuito não encontrado.",
     "failed": "Não foi possível carregar os plugins gratuitos.",
     "version": "Versão ",
-    "loading": "Carregando plugins gratuitos…"
+    "loading": "Carregando plugins gratuitos…",
+    "verification": {
+      "subject": "Confirme seu e-mail para fazer o download",
+      "intro": "Confirme seu endereço de e-mail pelo link abaixo. Depois enviaremos seu link de download.",
+      "button": "[Confirmar meu e-mail]({{download_url}})",
+      "notice": "Primeiro confirme seu e-mail. Depois você receberá o link de download em outra mensagem.",
+      "success": "Seu e-mail foi confirmado. Confira sua caixa de entrada para encontrar o link de download.",
+      "invalid": "Este link de confirmação é inválido ou expirou. Solicite um novo link."
+    }
   },
   "zh-CN": {
     "email": "电子邮箱地址",
@@ -592,6 +640,14 @@
     "notFound": "未找到免费插件。",
     "failed": "暂时无法加载免费插件。",
     "version": "版本 ",
-    "loading": "正在加载免费插件…"
+    "loading": "正在加载免费插件…",
+    "verification": {
+      "subject": "请确认您的下载邮箱",
+      "intro": "请通过下方链接确认您的电子邮箱。之后我们会通过邮件发送下载链接。",
+      "button": "[确认电子邮箱]({{download_url}})",
+      "notice": "请先确认您的电子邮箱。之后您会收到另一封包含下载链接的邮件。",
+      "success": "您的电子邮箱已确认。请前往收件箱查看下载链接。",
+      "invalid": "此确认链接无效或已过期。请重新申请链接。"
+    }
   }
 }
