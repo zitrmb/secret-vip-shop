@@ -29,6 +29,14 @@
       "mac_sha256": "0b1a3058765fcb8a1ebcdd9782266550090829273ebe63241787c08ea75ef24c",
       "mac_source_commit": "a6021b7f2d131905bfaec49363e3119d251de47f",
       "mac_build_run": "41405418402"
+    },
+    "SecretDynamicsRelease": {
+      "name": "Secret Dynamics",
+      "version": "1.0.1",
+      "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/secret-dynamics-1.0.1/Secret-Dynamics-1.0.1-Mac.pkg",
+      "mac_version": "1.0.1",
+      "mac_sha256": "d09681a9a16ce78ed6123b5bc4808fb2f27a50d11b0f20ebf7f05ee3374dad9d",
+      "license_product": "SDYN"
     }
   },
   "control_center": {
