@@ -12,7 +12,7 @@
         "en": "How do I install the plugin on Mac?"
       },
       "answer": {
-        "de": "Lade die Mac-Version auf https://plugins.secret.vip/download/ herunter, öffne die .pkg-Datei und folge den Schritten. Starte danach deine DAW neu oder suche erneut nach Plugins.",
+        "de": "Lade die Mac-Version auf https://plugins.secret.vip/de/download/ herunter, öffne die .pkg-Datei und folge den Schritten. Starte danach deine DAW neu oder suche erneut nach Plugins.",
         "en": "Download the Mac version at https://plugins.secret.vip/download/, open the .pkg file and follow the steps. Then restart your DAW or rescan plugins."
       },
       "terms": {
@@ -39,7 +39,7 @@
         "en": "How do I install the plugin on Windows?"
       },
       "answer": {
-        "de": "Lade die Windows-Version auf https://plugins.secret.vip/download/ herunter und entpacke sie. Kopiere VST3\\SecretFutureEQ2.vst3 nach C:\\Program Files\\Common Files\\VST3 und CLAP\\SecretFutureEQ2.clap nach C:\\Program Files\\Common Files\\CLAP. Starte danach deine DAW neu oder suche erneut nach Plugins.",
+        "de": "Lade die Windows-Version auf https://plugins.secret.vip/de/download/ herunter und entpacke sie. Kopiere VST3\\SecretFutureEQ2.vst3 nach C:\\Program Files\\Common Files\\VST3 und CLAP\\SecretFutureEQ2.clap nach C:\\Program Files\\Common Files\\CLAP. Starte danach deine DAW neu oder suche erneut nach Plugins.",
         "en": "Download the Windows version at https://plugins.secret.vip/download/ and unzip it. Copy VST3\\SecretFutureEQ2.vst3 to C:\\Program Files\\Common Files\\VST3 and CLAP\\SecretFutureEQ2.clap to C:\\Program Files\\Common Files\\CLAP. Then restart your DAW or rescan plugins."
       },
       "terms": {
@@ -67,7 +67,7 @@
         "en": "How do I activate my license?"
       },
       "answer": {
-        "de": "Öffne das Plugin, füge den Lizenzschlüssel aus der Kauf-E-Mail ein und klicke auf Activate. Du brauchst kein Konto.",
+        "de": "Öffne das Plugin, füge den Lizenzschlüssel aus der Kauf-E-Mail ein und bestätige die Aktivierung. Du brauchst kein Konto.",
         "en": "Open the plugin, paste the license key from your purchase email and click Activate. You do not need an account."
       },
       "terms": {
@@ -128,7 +128,7 @@
         "en": "Where can I find updates?"
       },
       "answer": {
-        "de": "Die aktuelle Version findest du auf https://plugins.secret.vip/download/. Änderungen stehen auf https://plugins.secret.vip/changelog/. Updates innerhalb derselben Hauptversion sind kostenlos.",
+        "de": "Die aktuelle Version findest du auf https://plugins.secret.vip/de/download/. Änderungen stehen auf https://plugins.secret.vip/changelog/. Updates innerhalb derselben Hauptversion sind kostenlos.",
         "en": "Find the current version at https://plugins.secret.vip/download/. Changes are listed at https://plugins.secret.vip/changelog/. Updates within the same major version are free."
       },
       "terms": {
@@ -472,8 +472,8 @@
         "en": "Do I need a purchase, a license key or an account?"
       },
       "answer": {
-        "de": "Secret Notes ist kostenlos. Für den Download brauchst du keinen Kauf und keinen Lizenzschlüssel. Zum Synchronisieren deiner Notizen brauchst du ein Konto bei notes.secret.vip.",
-        "en": "Secret Notes is free. No purchase or license key is needed to download it. You need a notes.secret.vip account to sync your notes."
+        "de": "Secret Notes ist kostenlos. Für den Download brauchst du keinen Kauf und keinen Lizenzschlüssel. Zum Synchronisieren deiner Notizen brauchst du ein Konto bei notes.secret.vip. Download: https://plugins.secret.vip/de/download/",
+        "en": "Secret Notes is free. No purchase or license key is needed to download it. You need a notes.secret.vip account to sync your notes. Download: https://plugins.secret.vip/download/"
       },
       "terms": {
         "de": [
@@ -501,8 +501,8 @@
         "en": "How do I install Secret Notes on Mac or Windows?"
       },
       "answer": {
-        "de": "Mac: Öffne das heruntergeladene Installationspaket und folge seinen Schritten. Windows: Entpacke das ZIP. Kopiere den vollständigen Ordner VST3\\SecretNotes.vst3 nach C:\\Program Files\\Common Files\\VST3 und die Datei CLAP\\SecretNotes.clap nach C:\\Program Files\\Common Files\\CLAP. Starte deine DAW neu und suche nach Secret Notes. Lass deine Schutzfunktionen eingeschaltet.",
-        "en": "Mac: Open the downloaded installer package and follow its steps. Windows: Unzip the download. Copy the complete VST3\\SecretNotes.vst3 folder to C:\\Program Files\\Common Files\\VST3 and the CLAP\\SecretNotes.clap file to C:\\Program Files\\Common Files\\CLAP. Restart your DAW and look for Secret Notes. Keep security protection enabled."
+        "de": "Mac: Öffne das heruntergeladene Installationspaket und folge seinen Schritten. Windows: Entpacke das ZIP. Kopiere den vollständigen Ordner VST3\\SecretNotes.vst3 nach C:\\Program Files\\Common Files\\VST3 und die Datei CLAP\\SecretNotes.clap nach C:\\Program Files\\Common Files\\CLAP. Starte deine DAW neu und suche nach Secret Notes. Lass deine Schutzfunktionen eingeschaltet. Download: https://plugins.secret.vip/de/download/",
+        "en": "Mac: Open the downloaded installer package and follow its steps. Windows: Unzip the download. Copy the complete VST3\\SecretNotes.vst3 folder to C:\\Program Files\\Common Files\\VST3 and the CLAP\\SecretNotes.clap file to C:\\Program Files\\Common Files\\CLAP. Restart your DAW and look for Secret Notes. Keep security protection enabled. Download: https://plugins.secret.vip/download/"
       },
       "terms": {
         "de": [
@@ -530,8 +530,8 @@
         "en": "Where do I download and install Audio Normaliser?"
       },
       "answer": {
-        "de": "Mac: Entpacke das ZIP und verschiebe die enthaltene App in Programme. Windows: Entpacke das ZIP und öffne das enthaltene Installationsprogramm. Folge seinen Schritten und öffne danach Audio Normaliser. Die App wird direkt geöffnet; eine Suche nach Plugins in der DAW ist nicht nötig. Lass deine Schutzfunktionen eingeschaltet.",
-        "en": "Mac: Unzip the download and move the included app to Applications. Windows: Unzip the download and open the included installer. Follow its steps, then open Audio Normaliser. Open the app directly; you do not need to scan for plugins in your DAW. Keep security protection enabled."
+        "de": "Mac: Entpacke das ZIP und verschiebe die enthaltene App in Programme. Windows: Entpacke das ZIP und öffne das enthaltene Installationsprogramm. Folge seinen Schritten und öffne danach Audio Normaliser. Die App wird direkt geöffnet; eine Suche nach Plugins in der DAW ist nicht nötig. Lass deine Schutzfunktionen eingeschaltet. Download: https://plugins.secret.vip/de/download/",
+        "en": "Mac: Unzip the download and move the included app to Applications. Windows: Unzip the download and open the included installer. Follow its steps, then open Audio Normaliser. Open the app directly; you do not need to scan for plugins in your DAW. Keep security protection enabled. Download: https://plugins.secret.vip/download/"
       },
       "terms": {
         "de": [
@@ -556,8 +556,8 @@
         "en": "Do I need a purchase or license key for Audio Normaliser?"
       },
       "answer": {
-        "de": "Nein. Audio Normaliser wird kostenlos angeboten. Den Download findest du direkt auf unserer Downloadseite; du brauchst dafür keinen Kauf und keinen Lizenzschlüssel.",
-        "en": "No. Audio Normaliser is offered free of charge. Get it directly from our download page; no purchase or license key is needed."
+        "de": "Nein. Audio Normaliser wird kostenlos angeboten. Den Download findest du direkt auf unserer Downloadseite; du brauchst dafür keinen Kauf und keinen Lizenzschlüssel. Download: https://plugins.secret.vip/de/download/",
+        "en": "No. Audio Normaliser is offered free of charge. Get it directly from our download page; no purchase or license key is needed. Download: https://plugins.secret.vip/download/"
       },
       "terms": {
         "de": [
@@ -610,8 +610,8 @@
         "en": "How do I update Audio Normaliser and report a problem?"
       },
       "answer": {
-        "de": "Hole neue Pakete auf unserer Downloadseite. Bei einem Fehler beschreibe dem Support, was du tun wolltest und welche Meldung die App zeigt. Nenne Mac oder Windows und die verwendete Version. Schicke keinen Lizenzschlüssel, kein Passwort und keine privaten Audiodateien mit.",
-        "en": "Get new packages from our download page. If something goes wrong, tell support what you were trying to do and what message the app shows. Include whether you use Mac or Windows and the version you used. Do not include license keys, passwords or private audio files."
+        "de": "Hole neue Pakete auf unserer Downloadseite. Bei einem Fehler beschreibe dem Support, was du tun wolltest und welche Meldung die App zeigt. Nenne Mac oder Windows und die verwendete Version. Schicke keinen Lizenzschlüssel, kein Passwort und keine privaten Audiodateien mit. Download: https://plugins.secret.vip/de/download/",
+        "en": "Get new packages from our download page. If something goes wrong, tell support what you were trying to do and what message the app shows. Include whether you use Mac or Windows and the version you used. Do not include license keys, passwords or private audio files. Download: https://plugins.secret.vip/download/"
       },
       "terms": {
         "de": [
@@ -638,8 +638,8 @@
         "en": "How do I update Secret Notes and get help?"
       },
       "answer": {
-        "de": "Neue Pakete findest du auf unserer Downloadseite. Installiere das passende Paket für deinen Rechner. Bei Problemen nenne dem Support dein Betriebssystem, deine DAW und die verwendete Version. Schicke keine Passwörter, Zugangsdaten oder privaten Notizen mit. Die Fragen zu Kauf-Lizenzschlüsseln betreffen die kostenpflichtigen Plugins.",
-        "en": "Get new packages from our download page. Install the package for your computer. If you need help, tell support your operating system, DAW and the version you use. Do not send passwords, sign-in details or private notes. Purchase license-key questions apply to the paid plugins."
+        "de": "Neue Pakete findest du auf unserer Downloadseite. Installiere das passende Paket für deinen Rechner. Bei Problemen nenne dem Support dein Betriebssystem, deine DAW und die verwendete Version. Schicke keine Passwörter, Zugangsdaten oder privaten Notizen mit. Die Fragen zu Kauf-Lizenzschlüsseln betreffen die kostenpflichtigen Plugins. Download: https://plugins.secret.vip/de/download/",
+        "en": "Get new packages from our download page. Install the package for your computer. If you need help, tell support your operating system, DAW and the version you use. Do not send passwords, sign-in details or private notes. Purchase license-key questions apply to the paid plugins. Download: https://plugins.secret.vip/download/"
       },
       "terms": {
         "de": [
@@ -1787,6 +1787,81 @@
         "en": [
           "analyser beta difference",
           "analyser beta version"
+        ]
+      }
+    },
+    {
+      "id": "svpeq4-current-version",
+      "product": "SVPEQ4",
+      "sources": [
+        "site/downloads.json"
+      ],
+      "question": {
+        "de": "Welche Version von Secret Future EQ 2 wird angeboten?",
+        "en": "Which version of Secret Future EQ 2 is available?"
+      },
+      "answer": {
+        "de": "Am 4. November 2026 wird Secret Future EQ 2 in diesen Versionen angeboten: Mac: 2.0.4; Windows: 2.0.1. Das ist die Version des angebotenen Downloads, nicht automatisch die Version auf deinem Rechner. Den jeweils aktuellen Download findest du auf https://plugins.secret.vip/de/download/.",
+        "en": "As of 4 November 2026, Secret Future EQ 2 is offered in these versions: Mac: 2.0.4; Windows: 2.0.1. This is the version of the offered download and may differ from the version installed on your computer. Find the latest available download at https://plugins.secret.vip/download/."
+      },
+      "terms": {
+        "de": [
+          "aktuelle version",
+          "angebotene version"
+        ],
+        "en": [
+          "current version",
+          "available version"
+        ]
+      }
+    },
+    {
+      "id": "notes-current-version",
+      "product": "SecretNotes",
+      "sources": [
+        "site/downloads.json"
+      ],
+      "question": {
+        "de": "Welche Version von Secret Notes wird angeboten?",
+        "en": "Which version of Secret Notes is available?"
+      },
+      "answer": {
+        "de": "Am 4. November 2026 wird Secret Notes in diesen Versionen angeboten: Mac: 1.2.1; Windows: 1.2.1. Das ist die Version des angebotenen Downloads, nicht automatisch die Version auf deinem Rechner. Den jeweils aktuellen Download findest du auf https://plugins.secret.vip/de/download/.",
+        "en": "As of 4 November 2026, Secret Notes is offered in these versions: Mac: 1.2.1; Windows: 1.2.1. This is the version of the offered download and may differ from the version installed on your computer. Find the latest available download at https://plugins.secret.vip/download/."
+      },
+      "terms": {
+        "de": [
+          "aktuelle version",
+          "angebotene version"
+        ],
+        "en": [
+          "current version",
+          "available version"
+        ]
+      }
+    },
+    {
+      "id": "normaliser-current-version",
+      "product": "AudioNormaliser",
+      "sources": [
+        "site/downloads.json"
+      ],
+      "question": {
+        "de": "Welche Version von Audio Normaliser wird angeboten?",
+        "en": "Which version of Audio Normaliser is available?"
+      },
+      "answer": {
+        "de": "Am 4. November 2026 wird Audio Normaliser in diesen Versionen angeboten: Mac: 1.9.0; Windows: 1.9.0. Das ist die Version des angebotenen Downloads, nicht automatisch die Version auf deinem Rechner. Den jeweils aktuellen Download findest du auf https://plugins.secret.vip/de/download/.",
+        "en": "As of 4 November 2026, Audio Normaliser is offered in these versions: Mac: 1.9.0; Windows: 1.9.0. This is the version of the offered download and may differ from the version installed on your computer. Find the latest available download at https://plugins.secret.vip/download/."
+      },
+      "terms": {
+        "de": [
+          "aktuelle version",
+          "angebotene version"
+        ],
+        "en": [
+          "current version",
+          "available version"
         ]
       }
     }
