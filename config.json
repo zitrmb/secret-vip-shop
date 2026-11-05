@@ -70,6 +70,20 @@
       "platforms": [
         "mac"
       ]
+    },
+    "SecretDynamicsRelease": {
+      "name": "Secret Dynamics",
+      "price_eur": 129,
+      "launch_eur": 39,
+      "price_id": "pri_01m68ck575rgms0qg6xjtr4kzg",
+      "launch_price_id": "pri_01m68ck5bv77pm1846xvvntyz3",
+      "discount_id": "",
+      "license_product": "SDYN",
+      "launch_active": true,
+      "expires_at": "2026-11-30T23:59:59+01:00",
+      "last_chance_from": "2026-11-27T00:00:00+01:00",
+      "campaigns": [],
+      "page": "plugins/dynamics/"
     }
   },
   "sale_open": true,
