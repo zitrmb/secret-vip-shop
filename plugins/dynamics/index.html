@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Secret Dynamics – Secret Audio</title>
+<meta name="description" content="Secret Dynamics: More punch. A steady level. Keep the life in your music. One point sets the sound, one field sets the tempo, and your ears decide.">
+<meta property="og:title" content="Secret Dynamics – Secret Audio">
+<meta property="og:description" content="Secret Dynamics: More punch. A steady level. Keep the life in your music. One point sets the sound, one field sets the tempo, and your ears decide.">
+<meta property="og:image" content="https://plugins.secret.vip/media/dynamics-poster.webp">
+<meta name="theme-color" content="#050505">
+<!--live-icons-->
+<link rel="preload" href="../../fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="../../media/dynamics-poster.webp" imagesrcset="../../media/dynamics-poster-720.webp 1280w, ../../media/dynamics-poster.webp 1920w" imagesizes="(max-width: 900px) 100vw, 58vw" fetchpriority="high">
+<script>try{var t=localStorage.getItem('svp-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../../style.css?v=85a25333b2b7">
+<style>
+body{-webkit-user-select:none;user-select:none}
+input,textarea{-webkit-user-select:text;user-select:text}
+.pp-hero .stage-copy{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:center;margin:auto 0;padding-top:clamp(32px,7vh,72px);padding-bottom:clamp(40px,8vh,88px)}
+.stage.product.pp-hero h1{margin-bottom:14px;font-size:clamp(48px,6.4vw,104px)}
+.pp-hero .pp-promise{color:var(--text);font-size:clamp(19px,1.9vw,24px);line-height:1.4;max-width:34ch;margin:0 0 26px}
+.pp-shot{margin:0;min-width:0}
+.pp-shot img{display:block;width:100%;height:auto;background:#050505}
+.pp-buy{margin:0 0 14px;gap:12px 20px}
+.pp-buy .price .now{display:inline-block;min-width:1.7em;min-height:1em}
+.pp-buy .btn{min-height:56px;padding:0 36px;font-size:16px}
+.pp-assure{display:flex;flex-wrap:wrap;gap:4px 22px;margin:0;padding:0;list-style:none;font-size:14px;line-height:1.7;color:var(--muted)}
+.pp-assure li::before,.pp-deliver li::before{content:"";display:inline-block;width:10px;height:5px;margin:0 10px 3px 1px;border-left:1.5px solid var(--good);border-bottom:1.5px solid var(--good);transform:rotate(-45deg)}
+.pp-assure a{color:var(--text)}
+.pp-section{padding-top:120px}
+.pp-section>h2,.pp-close h2{margin:0 0 16px}
+.pp-kicker{margin:0 0 16px;font:500 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.pp-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;margin:8px 0 0;padding:0;list-style:none;counter-reset:pp}
+.pp-benefits li{padding:28px 0 36px;border-top:1px solid var(--line);counter-increment:pp}
+.pp-benefits li::before{content:counter(pp,decimal-leading-zero);display:block;margin-bottom:18px;font:500 12px/1 var(--mono);letter-spacing:.14em;color:var(--faint)}
+.pp-benefits h3{margin:0 0 10px;font-size:clamp(22px,2.2vw,30px);font-weight:500;line-height:1.15;letter-spacing:-.025em}
+.pp-benefits p{max-width:46ch;margin:0;color:var(--muted)}
+.pp-picture{margin:8px 0 0}
+.pp-picture img{display:block;width:100%;height:auto;border-radius:var(--r2);background:#050505}
+.pp-picture figcaption{max-width:70ch;margin-top:14px;color:var(--muted);font-size:15px}
+.pp-trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px;margin:8px 0 0;padding:0;list-style:none}
+.pp-trust li{padding:24px 0 0;border-top:1px solid var(--line2)}
+.pp-trust p{margin:0;color:var(--muted);font-size:15px}
+.pp-trust a,.pp-specs a,.pp-deliver a{color:var(--text)}
+.pp-specs{margin-top:8px}
+.pp-close{padding-top:136px}
+.pp-close-box{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 64px;align-items:end;padding:clamp(28px,5vw,64px);border:1px solid var(--line);border-radius:var(--r2);background:var(--bg2)}
+.pp-close h2{font-size:clamp(40px,5.6vw,80px);font-stretch:85%;line-height:.95;letter-spacing:-.05em;margin-bottom:0}
+.pp-deliver{margin:0 0 16px;padding:0;list-style:none;color:var(--muted);font-size:15px}
+.pp-deliver li{padding:10px 0;border-top:1px solid var(--line)}
+@media(max-width:900px){
+  .stage.product.pp-hero{min-height:0}
+  .pp-hero .stage-copy{grid-template-columns:minmax(0,1fr)}
+  .pp-trust{grid-template-columns:1fr}
+  .pp-trust li{padding-bottom:24px}
+  .pp-close-box{grid-template-columns:1fr;align-items:start}
+}
+@media(max-width:760px){.pp-benefits{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .pp-section{padding-top:88px}
+  .pp-close{padding-top:96px}
+  .pp-buy .btn{flex:1 1 160px}
+}
+</style>
+<link rel="alternate" hreflang="en" href="https://plugins.secret.vip/plugins/dynamics/">
+<link rel="alternate" hreflang="de" href="https://plugins.secret.vip/de/plugins/dynamics/">
+<link rel="alternate" hreflang="x-default" href="https://plugins.secret.vip/plugins/dynamics/">
+</head>
+<body class="page-film">
+<section class="stage product pp-hero" aria-labelledby="product-title">
+  <div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="../../">Secret Audio</a><div class="links"><a href="../../#family" aria-current="page">Plugins</a><a href="../../pricing/">Shop</a><a href="../../download/">Download</a><a href="../../faq/">Help</a><a href="../../licenses/">Account</a></div><div class="nav-tools"><a class="lang-switch" href="../../de/plugins/dynamics/" hreflang="de" aria-label="Deutsch">DE</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch light and dark appearance" data-light="Light" data-dark="Dark" data-aria-light="Switch to light appearance" data-aria-dark="Switch to dark appearance"><span>Light / Dark</span></button></div></nav></div>
+  <div class="wrap stage-copy">
+    <div>
+      <div class="eyebrow">Secret Audio &middot; Dynamics <span class="status live">Available</span></div>
+      <h1 id="product-title">Secret Dynamics</h1>
+      <p class="lead pp-promise">More punch. A steady level. Keep the life in your music.</p>
+      <div class="buy pp-buy"><div class="price" data-price="SecretDynamicsRelease"><span class="now"></span><span class="tag" hidden>LAUNCH PRICE</span></div><button class="btn" data-buy="SecretDynamicsRelease" disabled>Available soon</button></div>
+      <ul class="pp-assure"><li>For Mac and Windows</li><li>A steady level</li><li>Keep the life in your music</li></ul>
+    </div>
+    <figure class="pp-shot"><img src="../../media/dynamics-poster-720.webp" srcset="../../media/dynamics-poster-720.webp 1280w, ../../media/dynamics-poster.webp 1920w" sizes="(max-width: 900px) 100vw, 58vw" width="1920" height="1080" alt="Secret Dynamics plugin window with the sound field set to Hard and dense" fetchpriority="high" decoding="async"></figure>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <section class="pp-section" aria-labelledby="why-title" data-reveal>
+      <p class="pp-kicker">What you get</p>
+      <h2 id="why-title">What it does for your track</h2>
+      <ol class="pp-benefits"><li><h3>Feel the groove</h3><p>Bring out the movement that makes you want to listen again.</p></li><li><h3>Find your character</h3><p>From round and warm to firm and bold, follow your ears.</p></li><li><h3>Keep your music alive</h3><p>Bring the sound together while keeping its energy.</p></li></ol>
+    </section>
+    <section class="pp-section" aria-labelledby="see-title" data-reveal>
+      <p class="pp-kicker">See it</p>
+      <h2 id="see-title">See your sound</h2>
+      <figure class="pp-picture"><img src="../../media/dynamics-poster-720.webp" srcset="../../media/dynamics-poster-720.webp 1280w, ../../media/dynamics-poster.webp 1920w" sizes="(max-width: 1360px) 100vw, 1360px" width="1920" height="1080" alt="Secret Dynamics plugin window with the sound field set to Hard and dense" loading="lazy" decoding="async"><figcaption>Secret Dynamics, with music playing.</figcaption></figure>
+      <div class="zoom"><figure><img src="../../media/dynamics-still-1.webp" width="800" height="450" loading="lazy" decoding="async" alt="Secret Dynamics: Shape your sound"><figcaption>01 &middot; Shape your sound</figcaption></figure><figure><img src="../../media/dynamics-still-2.webp" width="800" height="450" loading="lazy" decoding="async" alt="Secret Dynamics: Feel the movement"><figcaption>02 &middot; Feel the movement</figcaption></figure><figure><img src="../../media/dynamics-still-3.webp" width="800" height="450" loading="lazy" decoding="async" alt="Secret Dynamics: Make it yours"><figcaption>03 &middot; Make it yours</figcaption></figure></div>
+    </section>
+    <section class="pp-section" aria-labelledby="trust-title" data-reveal>
+      <p class="pp-kicker">Buy without risk</p>
+      <h2 id="trust-title">Simple and fair</h2>
+      <ul class="pp-trust"><li><h3>14-day money-back guarantee</h3><p>Not for you? Get the full price back within 14 days of purchase. No reason needed, even after you have installed and used it. <a href="../../refund/">Refund terms</a></p></li><li><h3>Secure checkout by Paddle</h3><p>Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns. It handles payment, invoice and VAT, and sends your receipt. <a href="https://www.paddle.com/legal/checkout-buyer-terms">Paddle terms of sale</a></p></li><li><h3>Free updates in version 1</h3><p>Every 1.x update is included. No subscription &ndash; the license has no time limit.</p></li></ul>
+    </section>
+    <section class="pp-section" id="specs" aria-labelledby="specs-title" data-reveal>
+      <p class="pp-kicker">Compatibility</p>
+      <h2 id="specs-title">Works in your setup</h2>
+      <ul class="specs pp-specs"><li><b>Computer</b>Mac and Windows</li><li><b>Your music</b>More punch, a steady level, and room to breathe</li></ul>
+    </section>
+    <section class="pp-section pp-close" aria-labelledby="close-title" data-reveal>
+      <div class="pp-close-box">
+        <div>
+          <p class="pp-kicker">Secret Dynamics</p>
+          <h2 id="close-title">Ready when you are.</h2>
+        </div>
+        <div>
+          <div class="buy pp-buy"><div class="price" data-price="SecretDynamicsRelease"><span class="now"></span><span class="tag" hidden>LAUNCH PRICE</span></div><button class="btn" data-buy="SecretDynamicsRelease" disabled>Available soon</button></div>
+          <ul class="pp-deliver"><li>Your license key by email right after purchase</li><li>Your download on the <a href="../../download/">download page</a></li><li><a href="../../refund/">14-day money-back guarantee</a></li></ul>
+          <p class="small">The total for your country, incl. VAT where it applies, is shown in the checkout before you pay. Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns. Your statutory rights stay unaffected. <a href="../../eula/">License (EULA)</a> &middot; <a href="../../refund/">Refunds</a> &middot; <a href="../../privacy/">Privacy</a></p>
+        </div>
+      </div>
+    </section>
+    <section data-reveal>
+      <h2>The family</h2>
+      <ul class="family"><li><a href="../../plugins/future-eq/"><span class="index">01</span><span class="name">Secret Future EQ 2</span><span class="status live">Available</span></a></li><li><a href="../../plugins/notes/"><span class="index">03</span><span class="name">Secret Notes</span><span class="status free">Free</span></a></li><li><a href="../../plugins/parametric-eq/"><span class="index">04</span><span class="name">Secret Parametric EQ</span><span class="status dev">In development</span></a></li><li><a href="../../plugins/spectrum/"><span class="index">05</span><span class="name">Secret Spectrum</span><span class="status dev">In development</span></a></li><li><a href="../../plugins/clipper/"><span class="index">06</span><span class="name">Secret Clipper</span><span class="status dev">In development</span></a></li></ul>
+    </section>
+  </div>
+</main>
+<div class="wrap"><footer>
+  <span>&copy; 2026 Sebastian Behrendt, Secret Audio, Hamburg, Germany &middot; Secret VIP is a series by Secret Audio.</span>
+  <div class="links"><a href="../../faq/#support">Support</a><a href="../../imprint/">Imprint</a><a href="../../privacy/">Privacy</a><a href="../../eula/">License (EULA)</a><a href="../../refund/">Refunds</a><a href="../../third-party/">Third-party notices</a><a href="https://www.paddle.com/legal/checkout-buyer-terms">Terms of sale (Paddle)</a><a href="../../withdraw/">Cancel contract</a><a href="https://secret-audio.com">secret-audio.com</a></div>
+</footer></div>
+<script src="../../shop.js?v=4a2100de3ebe"></script>
+<script src="../../cinema.js?v=197e24f1b6f2" defer></script>
+</body>
+</html>
