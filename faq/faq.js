@@ -10,10 +10,9 @@
   const list = document.getElementById('faq-list');
   const count = document.getElementById('faq-count');
   const error = document.getElementById('faq-error');
-  // Own help page per plugin; faq/help-pages.json (build_help_pages.py) is the only map. Missing map: hub works without links.
+  // Own help page per plugin; faq/help-pages.json (build_help_pages.py) is the only map. Missing map: static hub links remain available.
   const helpLine = document.getElementById('product-help-line');
   const helpLink = document.getElementById('product-help');
-  const helpList = document.getElementById('faq-plugin-links');
   let helpPages = new Map();
   let entries = [];
   const params = new URLSearchParams(window.location.search);
@@ -73,30 +72,23 @@
     fetch(root + 'faq/help-pages.json').then(response => response.ok ? response.json() : {}).catch(() => ({}))
   ]).then(([catalog, knowledge, help]) => {
     entries = knowledge.entries || [];
-    for (const [id, item] of Object.entries({ ...(catalog.products || {}), ...(knowledge.products || {}) })) {
+    const products = { ...(catalog.products || {}), ...(knowledge.products || {}) };
+    // The same generated availability list drives every hub. A private ?product=
+    // link may still open its existing answers without advertising it in the list.
+    const wanted = params.get('product');
+    const choices = Object.keys(help.listed || {});
+    if (wanted && products[wanted] && (help.pages || {})[wanted] && !choices.includes(wanted)) choices.push(wanted);
+    for (const id of choices) {
       const option = document.createElement('option');
       option.value = id;
-      option.textContent = item.name || id;
+      option.textContent = (products[id] || {}).name || id;
       product.append(option);
     }
     if (!product.options.length) throw Error('products');
-    // Same order and names as the selection; only products with their own page get a link.
-    if (helpList) {
-      for (const option of product.options) {
-        const href = (help.pages || {})[option.value];
-        if (typeof href !== 'string' || !/^[a-z0-9-]+\/$/.test(href)) continue;
-        helpPages.set(option.value, href);
-        const item = document.createElement('li');
-        const link = document.createElement('a');
-        link.href = href;
-        link.textContent = option.textContent;
-        item.append(link);
-        helpList.append(item);
-      }
-      document.getElementById('faq-plugins').hidden = !helpPages.size;
+    for (const [id, href] of Object.entries(help.pages || {})) {
+      if (typeof href === 'string' && /^[a-z0-9-]+\/$/.test(href)) helpPages.set(id, href);
     }
-    // ?product=<id> opens the help of one plugin directly (link from a plugin or a mail); unknown ids keep the first entry.
-    const wanted = params.get('product');
+    // Unknown ids keep the first public entry.
     if (wanted && Array.from(product.options).some(option => option.value === wanted)) product.value = wanted;
     render();
   }).catch(() => {

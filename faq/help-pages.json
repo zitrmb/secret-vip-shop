@@ -10,5 +10,11 @@
     "SVPEQ4Beta": "secret-future-eq-2-beta/",
     "SecretFutureEQ3Beta": "secret-future-eq-3-beta/",
     "SecretDynamicsRelease": "secret-dynamics/"
+  },
+  "listed": {
+    "SVPEQ4": "secret-future-eq-2/",
+    "SecretNotes": "secret-notes/",
+    "AudioNormaliser": "audio-normaliser/",
+    "SecretAnalyser": "secret-analyser/"
   }
 }
