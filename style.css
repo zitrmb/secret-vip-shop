@@ -269,3 +269,6 @@ details p a[href^="http"]{display:inline-block;max-width:100%;overflow:hidden;te
   .offer .buy .btn{flex:1 1 100%}
   footer{margin-top:80px}
 }
+
+/* Language names in the help index stay whole on narrow screens. */
+.faq-more a[hreflang] { white-space: nowrap; }
