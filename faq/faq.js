@@ -22,6 +22,29 @@
     de: { results: 'Antworten', open: 'Hilfe-Seite für {name}', empty: 'Keine passende Antwort. Schreib uns gern.', failed: 'Die Hilfe konnte nicht geladen werden. Schreib uns gern.' },
     en: { results: 'answers', open: 'Help page for {name}', empty: 'No matching answer. Please write to us.', failed: 'Help could not be loaded. Please write to us.' }
   }[lang];
+  // A web address stays one block (span.faq-url, faq.css) that moves to the next line as a whole; only if it is wider
+  // than the line it wraps after each run of slashes and before each dot (<wbr>, the text stays the same) instead of
+  // cutting a word. The block is the whole word around the address. build_help_pages.py builds the help pages the same way.
+  const urlPattern = /(\S*?)(https?:\/\/\S+?)([.,;:!?)]*)(?=\s|$)/g;
+  function answerNodes(text) {
+    const nodes = [];
+    let at = 0;
+    for (const match of text.matchAll(urlPattern)) {
+      if (match.index > at) nodes.push(text.slice(at, match.index));
+      const block = document.createElement('span');
+      block.className = 'faq-url';
+      if (match[1]) block.append(match[1]);
+      match[2].replace(/\/+(?=[^\/])/g, '$&\0').replace(/\./g, '\0.').split('\0').filter(Boolean).forEach((part, i) => {
+        if (i) block.append(document.createElement('wbr'));
+        block.append(part);
+      });
+      if (match[3]) block.append(match[3]);
+      nodes.push(block);
+      at = match.index + match[0].length;
+    }
+    if (at < text.length) nodes.push(text.slice(at));
+    return nodes;
+  }
   function render() {
     const query = search.value.trim().toLocaleLowerCase(lang);
     const matches = entries.filter(item => (item.product === '*' || item.product === product.value) && (!query || [item.question[lang], item.answer[lang], ...item.terms[lang]].join(' ').toLocaleLowerCase(lang).includes(query)));
@@ -31,7 +54,7 @@
       const summary = document.createElement('summary');
       const answer = document.createElement('p');
       summary.textContent = item.question[lang];
-      answer.textContent = item.answer[lang];
+      answer.append(...answerNodes(item.answer[lang]));
       details.append(summary, answer);
       list.append(details);
     }
