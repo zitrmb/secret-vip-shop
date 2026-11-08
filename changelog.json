@@ -17,6 +17,22 @@
           "Auto-Gain startet beim Einschalten oder Ändern des Ausgangspegels frisch."
         ]
       }
+    },
+    "SecretDynamicsRelease": {
+      "name": "Secret Dynamics",
+      "version": "1.0",
+      "groups": {
+        "Neu": [
+          "Meet Secret Dynamics 1.0: give your music more punch, warmth and presence."
+        ]
+      },
+      "groups_de": {
+        "Neu": [
+          "Entdecke Secret Dynamics 1.0: Gib deiner Musik mehr Druck, Wärme und Präsenz."
+        ]
+      },
+      "url": "/plugins/dynamics/",
+      "url_de": "/de/plugins/dynamics/"
     }
   }
 }
