@@ -39,6 +39,11 @@
           article.appendChild(list);
         });
       }
+      var target = de ? (data.url_de || data.url) : data.url;
+      if (target && /^(https:\/\/|\/(?!\/))/.test(target)) {
+        var action = el('p'), shop = el('a', de ? 'Zum Plugin' : 'Explore the plugin');
+        shop.href = target; action.appendChild(shop); article.appendChild(action);
+      }
       box.appendChild(article);
     });
   }).catch(function () { box.textContent = T.none; });
