@@ -19,8 +19,10 @@
     "AudioNormaliser": {
       "name": "Audio Normaliser",
       "version": "1.9.0",
-      "mac": "files/Secret-Audio-Normaliser-1.9.0-Mac.zip",
-      "win": "files/Secret-Audio-Normaliser-1.9.0-Windows.zip"
+      "mac": "files/Secret-Audio-Normaliser-1.10.0-Mac.zip",
+      "win": "files/Secret-Audio-Normaliser-1.9.0-Windows.zip",
+      "mac_version": "1.10.0",
+      "mac_sha256": "a85173373930736066e603fa7f139dfd0e653dd152835da9d005495dd8d19ffe"
     },
     "SecretAnalyser": {
       "name": "Secret Analyser",

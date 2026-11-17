@@ -45,7 +45,7 @@
       "formats": "Mac: desktop app. Windows: installer.",
       "status": "available",
       "windows_beta_unsigned": true,
-      "mac_beta_unsigned": true,
+      "mac_beta_unsigned": false,
       "release_type": "app",
       "release_workflow": "build-audio-normaliser.yml",
       "release_artifact_prefix": "AudioNormaliser",

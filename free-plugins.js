@@ -57,7 +57,7 @@ button.rel = 'noopener noreferrer'; actions.appendChild(button);
 });
 if (actions.childNodes.length) {
 fallback.appendChild(actions);
-if (files.version) fallback.appendChild(element('p', text.version + files.version, 'small'));
+if (files.version) fallback.appendChild(element('p', text.version + (files.mac_version || files.win_version ? 'Mac ' + (files.mac_version || files.version) + ' / Windows ' + (files.win_version || files.version) : files.version), 'small'));
 } else {
 fallback.appendChild(element('p', product.status === 'source_missing' ? text.missing :
 product.status === 'release_pending' ? text.pending : text.building, 'small'));
