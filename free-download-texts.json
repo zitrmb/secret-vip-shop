@@ -90,7 +90,9 @@
       "notice": "Bestätige zuerst deine E-Mail-Adresse. Deinen Download-Link erhältst du danach in einer gesonderten E-Mail.",
       "success": "Deine E-Mail-Adresse ist bestätigt. Schau für deinen Download-Link in dein Postfach.",
       "invalid": "Dieser Bestätigungslink ist ungültig oder abgelaufen. Bitte fordere einen neuen an."
-    }
+    },
+    "winSmartScreen": "Zeigt Windows „Der Computer wurde durch Windows geschützt“, klicke auf „Weitere Informationen“ und dann auf „Trotzdem ausführen“.",
+    "winInstallationHelp": "Hilfe zur Installation"
   },
   "en": {
     "email": "Email address",
@@ -183,7 +185,9 @@
       "notice": "First confirm your email address. Your download link will arrive in a separate email.",
       "success": "Your email address is confirmed. Check your inbox for the download link.",
       "invalid": "This confirmation link is invalid or has expired. Please request a new one."
-    }
+    },
+    "winSmartScreen": "If Windows shows “Windows protected your PC”, click “More info”, then “Run anyway”.",
+    "winInstallationHelp": "Installation help"
   },
   "fr": {
     "email": "Adresse e-mail",
@@ -276,7 +280,9 @@
       "notice": "Confirmez d’abord votre adresse e-mail. Vous recevrez ensuite votre lien de téléchargement dans un autre e-mail.",
       "success": "Votre adresse e-mail est confirmée. Consultez votre boîte de réception pour le lien de téléchargement.",
       "invalid": "Ce lien de confirmation est invalide ou a expiré. Veuillez en demander un nouveau."
-    }
+    },
+    "winSmartScreen": "Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur « Informations complémentaires », puis sur « Exécuter quand même ».",
+    "winInstallationHelp": "Aide à l’installation"
   },
   "es": {
     "email": "Dirección de correo electrónico",
@@ -369,7 +375,9 @@
       "notice": "Primero confirma tu correo electrónico. Después recibirás el enlace de descarga en otro mensaje.",
       "success": "Tu correo electrónico está confirmado. Busca el enlace de descarga en tu bandeja de entrada.",
       "invalid": "Este enlace de confirmación no es válido o ha caducado. Solicita uno nuevo."
-    }
+    },
+    "winSmartScreen": "Si Windows muestra «Windows protegió su PC», haz clic en «Más información» y luego en «Ejecutar de todas formas».",
+    "winInstallationHelp": "Ayuda de instalación"
   },
   "ja": {
     "email": "メールアドレス",
@@ -462,7 +470,9 @@
       "notice": "まずメールアドレスを確認してください。その後、別のメールでダウンロードリンクをお送りします。",
       "success": "メールアドレスの確認が完了しました。受信トレイでダウンロードリンクをご確認ください。",
       "invalid": "この確認リンクは無効か、有効期限が切れています。新しいリンクをリクエストしてください。"
-    }
+    },
+    "winSmartScreen": "「WindowsによってPCが保護されました」と表示されたら、「詳細情報」をクリックし、「実行」をクリックしてください。",
+    "winInstallationHelp": "インストールのヘルプ"
   },
   "pt-BR": {
     "email": "Endereço de e-mail",
@@ -555,7 +565,9 @@
       "notice": "Primeiro confirme seu e-mail. Depois você receberá o link de download em outra mensagem.",
       "success": "Seu e-mail foi confirmado. Confira sua caixa de entrada para encontrar o link de download.",
       "invalid": "Este link de confirmação é inválido ou expirou. Solicite um novo link."
-    }
+    },
+    "winSmartScreen": "Se o Windows mostrar “O Windows protegeu o computador”, clique em “Mais informações” e depois em “Executar assim mesmo”.",
+    "winInstallationHelp": "Ajuda de instalação"
   },
   "zh-CN": {
     "email": "电子邮箱地址",
@@ -648,6 +660,8 @@
       "notice": "请先确认您的电子邮箱。之后您会收到另一封包含下载链接的邮件。",
       "success": "您的电子邮箱已确认。请前往收件箱查看下载链接。",
       "invalid": "此确认链接无效或已过期。请重新申请链接。"
-    }
+    },
+    "winSmartScreen": "如果 Windows 显示“Windows 已保护你的电脑”，请点击“更多信息”，然后点击“仍要运行”。",
+    "winInstallationHelp": "安装帮助"
   }
 }

@@ -42,16 +42,17 @@
       "price_eur": 0,
       "kind": "free",
       "summary": "Normalise audio files to a consistent level in a desktop app.",
-      "formats": "Mac: desktop app. Windows: installer.",
+      "formats": "Mac: desktop app. Windows: installer (.exe).",
       "status": "available",
-      "windows_beta_unsigned": true,
+      "windows_beta_unsigned": false,
+      "windows_smartscreen": "faq/audio-normaliser/",
       "mac_beta_unsigned": false,
       "release_type": "app",
       "release_workflow": "build-audio-normaliser.yml",
       "release_artifact_prefix": "AudioNormaliser",
       "de": {
         "summary": "Bringt Audiodateien in einer Desktop-App auf einen einheitlichen Pegel.",
-        "formats": "Mac: Desktop-App. Windows: Installer."
+        "formats": "Mac: Desktop-App. Windows: Installationsprogramm (.exe)."
       }
     },
     "SecretAnalyser": {

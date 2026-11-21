@@ -43,7 +43,7 @@ if (words && words[key]) card.appendChild(element('p', words[key]));
 var fallback = element('div'); fallback.setAttribute('data-free-download-fallback', '');
 if (product.mac_beta_unsigned) fallback.appendChild(element('p', text.macBeta, 'small'));
 if (product.windows_beta_unsigned && product.status !== 'source_missing') fallback.appendChild(element('p', text.winBeta, 'small'));
-var actions = element('div', '', 'free-actions');
+var actions = element('div', '', 'free-actions'), windowsDownload = false;
 var files = ((downloads || {}).plugins || {})[id] || {};
 ['mac', 'win'].forEach(function (platform) {
 var link = files[platform]; if (product.free_request_product || typeof link !== 'string') return;
@@ -54,9 +54,17 @@ var button = element('a', text.download + (platform === 'mac' ? 'Mac' : 'Windows
 button.href = resolved.href;
 if (resolved.origin === location.origin) button.setAttribute('download', '');
 button.rel = 'noopener noreferrer'; actions.appendChild(button);
+if (platform === 'win') windowsDownload = true;
 });
 if (actions.childNodes.length) {
 fallback.appendChild(actions);
+if (product.windows_smartscreen && windowsDownload) {
+var notice = element('p', text.winSmartScreen + ' ', 'small');
+var help = element('a', text.winInstallationHelp);
+help.href = home + product.windows_smartscreen;
+notice.appendChild(help);
+fallback.appendChild(notice);
+}
 if (files.version) fallback.appendChild(element('p', text.version + (files.mac_version || files.win_version ? 'Mac ' + (files.mac_version || files.version) + ' / Windows ' + (files.win_version || files.version) : files.version), 'small'));
 } else {
 fallback.appendChild(element('p', product.status === 'source_missing' ? text.missing :

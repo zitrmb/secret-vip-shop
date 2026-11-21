@@ -4051,6 +4051,69 @@
       }
     },
     {
+      "id": "normaliser-windows-smartscreen",
+      "product": "AudioNormaliser",
+      "sources": [
+        "site/downloads.json",
+        "site/free-download-texts.json"
+      ],
+      "question": {
+        "de": "Windows zeigt beim Start des Audio-Normaliser-Installers „Der Computer wurde durch Windows geschützt“. Was tue ich?",
+        "en": "Windows shows “Windows protected your PC” when I start the Audio Normaliser installer. What do I do?",
+        "fr": "Windows affiche « Windows a protégé votre ordinateur » au lancement du programme d’installation d’Audio Normaliser. Que faire ?",
+        "es": "Windows muestra «Windows protegió su PC» al iniciar el instalador de Audio Normaliser. ¿Qué hago?",
+        "ja": "Audio Normaliserのインストーラーを起動すると「WindowsによってPCが保護されました」と表示されます。どうすればよいですか？",
+        "pt-BR": "O Windows mostra “O Windows protegeu o computador” ao abrir o instalador do Audio Normaliser. O que faço?",
+        "zh-CN": "启动 Audio Normaliser 安装程序时，Windows 显示“Windows 已保护你的电脑”。该怎么办？"
+      },
+      "answer": {
+        "de": "Zeigt Windows „Der Computer wurde durch Windows geschützt“, klicke auf „Weitere Informationen“ und dann auf „Trotzdem ausführen“. Fahre nur mit der Datei fort, die du von der offiziellen Download-Seite für Audio Normaliser geladen hast.",
+        "en": "If Windows shows “Windows protected your PC”, click “More info”, then “Run anyway”. Only continue with the file you downloaded from the official Audio Normaliser download page.",
+        "fr": "Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur « Informations complémentaires », puis sur « Exécuter quand même ». Continuez uniquement avec le fichier téléchargé depuis la page officielle d’Audio Normaliser.",
+        "es": "Si Windows muestra «Windows protegió su PC», haz clic en «Más información» y luego en «Ejecutar de todas formas». Continúa solo con el archivo que descargaste de la página oficial de Audio Normaliser.",
+        "ja": "「WindowsによってPCが保護されました」と表示されたら、「詳細情報」をクリックし、「実行」をクリックしてください。Audio Normaliserの公式ダウンロードページから入手したファイルの場合だけ続行してください。",
+        "pt-BR": "Se o Windows mostrar “O Windows protegeu o computador”, clique em “Mais informações” e depois em “Executar assim mesmo”. Só continue com o arquivo baixado na página oficial do Audio Normaliser.",
+        "zh-CN": "如果 Windows 显示“Windows 已保护你的电脑”，请点击“更多信息”，然后点击“仍要运行”。请仅在文件来自 Audio Normaliser 官方下载页面时继续。"
+      },
+      "terms": {
+        "de": [
+          "Der Computer wurde durch Windows geschützt",
+          "SmartScreen",
+          "Trotzdem ausführen"
+        ],
+        "en": [
+          "Windows protected your PC",
+          "SmartScreen",
+          "Run anyway"
+        ],
+        "fr": [
+          "Windows a protégé votre ordinateur",
+          "SmartScreen",
+          "Exécuter quand même"
+        ],
+        "es": [
+          "Windows protegió su PC",
+          "SmartScreen",
+          "Ejecutar de todas formas"
+        ],
+        "ja": [
+          "WindowsによってPCが保護されました",
+          "SmartScreen",
+          "実行"
+        ],
+        "pt-BR": [
+          "O Windows protegeu o computador",
+          "SmartScreen",
+          "Executar assim mesmo"
+        ],
+        "zh-CN": [
+          "Windows 已保护你的电脑",
+          "SmartScreen",
+          "仍要运行"
+        ]
+      }
+    },
+    {
       "id": "dynamics-install",
       "product": "SecretDynamics3Dev",
       "sources": [
