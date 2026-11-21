@@ -65,7 +65,12 @@ help.href = home + product.windows_smartscreen;
 notice.appendChild(help);
 fallback.appendChild(notice);
 }
-if (files.version) fallback.appendChild(element('p', text.version + (files.mac_version || files.win_version ? 'Mac ' + (files.mac_version || files.version) + ' / Windows ' + (files.win_version || files.version) : files.version), 'small'));
+if (files.version) {
+var shown = [];
+if (typeof files.mac === 'string') shown.push('Mac ' + (files.mac_version || files.version));
+if (typeof files.win === 'string') shown.push('Windows ' + (files.win_version || files.version));
+fallback.appendChild(element('p', text.version + ((files.mac_version || files.win_version) && shown.length ? shown.join(' / ') : files.version), 'small'));
+}
 } else {
 fallback.appendChild(element('p', product.status === 'source_missing' ? text.missing :
 product.status === 'release_pending' ? text.pending : text.building, 'small'));
