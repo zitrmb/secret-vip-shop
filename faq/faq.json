@@ -3175,13 +3175,13 @@
         "zh-CN": "Secret Analyser 免费吗？如何获取？"
       },
       "answer": {
-        "de": "Secret Analyser ist kostenlos. Du brauchst keinen Kauf und keinen Lizenzschlüssel. Sobald der Download auf der Produktseite freigeschaltet ist, forderst du dort den Download-Link per E-Mail an. Den Newsletter brauchst du dafür nicht.",
-        "en": "Secret Analyser is free. No purchase or license key is needed. As soon as the download is open on the product page, request the download link by email there. You do not need to subscribe to the newsletter.",
-        "fr": "Secret Analyser est gratuit. Aucun achat ni clé de licence n'est nécessaire. Dès que le téléchargement sera ouvert sur la page du produit, tu pourras y demander le lien par e-mail. L'inscription à la newsletter n'est pas obligatoire.",
-        "es": "Secret Analyser es gratis. No necesitas comprarlo ni tener una clave de licencia. Cuando se abra la descarga en la página del producto, podrás solicitar allí el enlace por correo. No hace falta suscribirse al boletín.",
-        "ja": "無料です。購入やライセンスキーは必要ありません。製品ページでダウンロードの受付が始まったら、そこからメールでリンクを申し込めます。ニュースレターへの登録は不要です。",
-        "pt-BR": "O Secret Analyser é grátis. Não é preciso comprar nem ter uma chave de licença. Quando o download estiver aberto na página do produto, peça o link por e-mail ali. Não é preciso assinar a newsletter.",
-        "zh-CN": "Secret Analyser 免费，无需购买或许可证密钥。产品页开放下载后，你可以在那里申请通过邮件接收下载链接，无需订阅简报。"
+        "de": "Secret Analyser ist kostenlos und nur für Mac erhältlich. Du brauchst keinen Lizenzschlüssel. Du kannst ihn direkt auf der Produktseite oder auf der Download-Seite herunterladen.",
+        "en": "Secret Analyser is free and available for Mac only. No license key is needed. Download it directly from the product page or the Downloads page.",
+        "fr": "Secret Analyser est gratuit et disponible uniquement sur Mac. Aucune clé de licence n’est nécessaire. Télécharge-le directement depuis la page du produit ou la page de téléchargement.",
+        "es": "Secret Analyser es gratis y solo está disponible para Mac. No necesitas una clave de licencia. Descárgalo directamente desde la página del producto o la página de descargas.",
+        "ja": "Secret AnalyserはMac専用の無料プラグインです。ライセンスキーは不要です。製品ページまたはダウンロードページから直接入手できます。",
+        "pt-BR": "O Secret Analyser é grátis e está disponível apenas para Mac. Não é preciso ter uma chave de licença. Baixe diretamente na página do produto ou na página de downloads.",
+        "zh-CN": "Secret Analyser 是仅支持 Mac 的免费插件，无需许可证密钥。你可以在产品页或下载页直接下载。"
       },
       "terms": {
         "de": [
@@ -3230,13 +3230,13 @@
         "zh-CN": "使用 Secret Analyser 需要什么？"
       },
       "answer": {
-        "de": "Du brauchst einen Mac mit macOS 12 oder neuer, mit Apple Silicon oder Intel, und ein Musikprogramm für AU oder VST3. Für Windows gibt es Secret Analyser noch nicht.",
-        "en": "You need a Mac with macOS 12 or later on Apple Silicon or Intel, and music software that supports AU or VST3. Secret Analyser is not yet available for Windows.",
-        "fr": "Il te faut un Mac sous macOS 12 ou ultérieur, avec Apple Silicon ou Intel, et un logiciel de musique compatible AU ou VST3. Secret Analyser n'est pas encore disponible pour Windows.",
-        "es": "Necesitas un Mac con macOS 12 o posterior, Apple Silicon o Intel, y un programa de música compatible con AU o VST3. Secret Analyser aún no está disponible para Windows.",
-        "ja": "macOS 12以降のApple SiliconまたはIntel搭載Macと、AUまたはVST3に対応する音楽制作ソフトが必要です。Windows版はまだ提供していません。",
-        "pt-BR": "Você precisa de um Mac com macOS 12 ou posterior, Apple Silicon ou Intel, e um programa de música compatível com AU ou VST3. O Secret Analyser ainda não está disponível para Windows.",
-        "zh-CN": "需要搭载 Apple Silicon 或 Intel 的 Mac，运行 macOS 12 或更高版本，以及支持 AU 或 VST3 的音乐制作软件。目前尚无 Windows 版。"
+        "de": "Du brauchst einen Mac mit Apple Silicon oder Intel und macOS 12 oder neuer. Deine Musiksoftware muss VST3, AU oder CLAP unterstützen.",
+        "en": "You need a Mac with Apple Silicon or Intel and macOS 12 or later. Your music software must support VST3, AU or CLAP.",
+        "fr": "Il te faut un Mac avec Apple Silicon ou Intel et macOS 12 ou une version ultérieure. Ton logiciel de musique doit prendre en charge VST3, AU ou CLAP.",
+        "es": "Necesitas un Mac con Apple Silicon o Intel y macOS 12 o posterior. Tu programa de música debe ser compatible con VST3, AU o CLAP.",
+        "ja": "Apple SiliconまたはIntel搭載のMacで、macOS 12以降が必要です。音楽制作ソフトはVST3、AU、CLAPのいずれかに対応している必要があります。",
+        "pt-BR": "Você precisa de um Mac com Apple Silicon ou Intel e macOS 12 ou posterior. Seu software de música deve ser compatível com VST3, AU ou CLAP.",
+        "zh-CN": "你需要一台搭载 Apple 芯片或 Intel 处理器的 Mac，运行 macOS 12 或更新版本。音乐制作软件需支持 VST3、AU 或 CLAP。"
       },
       "terms": {
         "de": [
@@ -3552,13 +3552,13 @@
         "zh-CN": "如何安装 Secret Analyser？"
       },
       "answer": {
-        "de": "Secret Analyser ist ein kostenloses Mac-Plugin und noch nicht zum Download freigegeben. Sobald es verfügbar ist, steht der Download auf der Produktseite.",
-        "en": "Secret Analyser is a free Mac plugin and is not released for download yet. Once it is available, the download will be on the product page.",
-        "fr": "Secret Analyser est un plugin Mac gratuit dont le téléchargement n'est pas encore ouvert. Une fois disponible, il sera proposé sur la page du produit.",
-        "es": "Secret Analyser es un plugin gratuito para Mac cuya descarga aún no está abierta. Cuando esté disponible, lo encontrarás en la página del producto.",
-        "ja": "Secret AnalyserはMac用の無料プラグインです。ダウンロードはまだ公開していません。提供が始まると製品ページから入手できます。",
-        "pt-BR": "O Secret Analyser é um plugin gratuito para Mac cujo download ainda não foi liberado. Quando estiver disponível, você o encontrará na página do produto.",
-        "zh-CN": "Secret Analyser 是免费的 Mac 插件，目前尚未开放下载。开放后可在产品页面获取。"
+        "de": "Lade das kostenlose Mac-Installationspaket direkt von der Produktseite oder der Download-Seite herunter. Öffne das Paket und folge den Schritten. Du brauchst keinen Lizenzschlüssel.",
+        "en": "Download the free Mac installer directly from the product page or the Downloads page. Open the package and follow the steps. No license key is needed.",
+        "fr": "Télécharge le programme d’installation gratuit pour Mac directement depuis la page du produit ou la page de téléchargement. Ouvre le paquet et suis les étapes. Aucune clé de licence n’est nécessaire.",
+        "es": "Descarga el instalador gratuito para Mac directamente desde la página del producto o la página de descargas. Abre el paquete y sigue los pasos. No necesitas una clave de licencia.",
+        "ja": "製品ページまたはダウンロードページからMac用の無料インストーラーを直接ダウンロードします。パッケージを開き、手順に従ってください。ライセンスキーは不要です。",
+        "pt-BR": "Baixe o instalador gratuito para Mac diretamente na página do produto ou na página de downloads. Abra o pacote e siga as etapas. Não é preciso ter uma chave de licença.",
+        "zh-CN": "在产品页或下载页直接下载免费的 Mac 安装包。打开安装包并按提示操作。无需许可证密钥。"
       },
       "terms": {
         "de": [
@@ -3705,13 +3705,13 @@
         "zh-CN": "可以在另一台电脑上使用 Secret Analyser 吗？"
       },
       "answer": {
-        "de": "Secret Analyser ist kostenlos und braucht keine Aktivierung. Die Grenze von zwei Rechnern gilt nur für gekaufte Lizenzen. Sobald der Download freigeschaltet ist, findest du ihn auf der Produktseite.",
-        "en": "Secret Analyser is free and does not need activation. The two-computer limit only applies to purchased licenses. Once the download is open, you will find it on the product page.",
-        "fr": "Secret Analyser est gratuit et ne nécessite pas d'activation. La limite de deux ordinateurs concerne uniquement les licences achetées. Dès l'ouverture du téléchargement, tu le trouveras sur la page du produit.",
-        "es": "Secret Analyser es gratis y no necesita activación. El límite de dos ordenadores solo corresponde a licencias compradas. Cuando se abra la descarga, estará en la página del producto.",
-        "ja": "無料で、有効化は不要です。パソコン2台までという制限は、購入したライセンスだけに適用されます。ダウンロードの受付が始まると製品ページから入手できます。",
-        "pt-BR": "O Secret Analyser é grátis e não precisa de ativação. O limite de dois computadores vale apenas para licenças compradas. Quando o download for liberado, ele estará na página do produto.",
-        "zh-CN": "Secret Analyser 免费，无需激活。两台电脑的限制只适用于购买的许可证。下载开放后可在产品页面获取。"
+        "de": "Ja. Secret Analyser ist kostenlos und braucht keine Aktivierung. Lade ihn auf dem zweiten Mac direkt von der Produktseite oder der Download-Seite herunter.",
+        "en": "Yes. Secret Analyser is free and needs no activation. On your second Mac, download it directly from the product page or the Downloads page.",
+        "fr": "Oui. Secret Analyser est gratuit et ne nécessite aucune activation. Sur ton deuxième Mac, télécharge-le directement depuis la page du produit ou la page de téléchargement.",
+        "es": "Sí. Secret Analyser es gratis y no requiere activación. En tu segundo Mac, descárgalo directamente desde la página del producto o la página de descargas.",
+        "ja": "はい。Secret Analyserは無料で、アクティベーションは不要です。2台目のMacでも、製品ページまたはダウンロードページから直接入手できます。",
+        "pt-BR": "Sim. O Secret Analyser é grátis e não precisa de ativação. No seu segundo Mac, baixe diretamente na página do produto ou na página de downloads.",
+        "zh-CN": "可以。Secret Analyser 免费且无需激活。你可以在第二台 Mac 上从产品页或下载页直接下载。"
       },
       "terms": {
         "de": [

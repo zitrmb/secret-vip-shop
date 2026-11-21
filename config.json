@@ -59,14 +59,13 @@
       "name": "Secret Analyser",
       "price_eur": 0,
       "kind": "free",
-      "free_request_product": "secret-analyser",
       "page": "plugins/analyser/",
-      "status": "coming_soon",
+      "status": "available",
       "summary": "See your whole mix clearly. Make space for the sounds that matter.",
-      "formats": "Free plugin. Download available soon.",
+      "formats": "Mac: VST3, AU and CLAP plugin (macOS 12+).",
       "de": {
         "summary": "Sieh deinen ganzen Mix klarer. Schaffe Platz für die Klänge, die zählen.",
-        "formats": "Kostenloses Plugin. Download bald verfügbar."
+        "formats": "Mac: Plugin für VST3, AU und CLAP (macOS 12+)."
       },
       "platforms": [
         "mac"
