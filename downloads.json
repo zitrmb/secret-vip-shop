@@ -31,6 +31,20 @@
       "mac_sha256": "0b1a3058765fcb8a1ebcdd9782266550090829273ebe63241787c08ea75ef24c",
       "mac_source_commit": "a6021b7f2d131905bfaec49363e3119d251de47f",
       "mac_build_run": "41405418402"
+    },
+    "SecretDynamicsRelease": {
+      "name": "Secret Dynamics",
+      "version": "1.0.2",
+      "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/secret-dynamics-1.0.2/Secret-Dynamics-1.0.2-Mac.pkg",
+      "mac_version": "1.0.2",
+      "mac_sha256": "5fe8009053c63aa683eac167ec0ec47bdb351120f9111a4cd587a718e11bc418",
+      "mac_source_commit": "cad8d7632358a2056041b53eeea44560e141a291",
+      "mac_build_run": "44882738530",
+      "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/secret-dynamics-1.0.2/Secret-Dynamics-1.0.2-Windows.exe",
+      "win_sha256": "b5b0d65af70dab290499254a1cf5cd68ca7abd1d758f1626456e75ac65e7da5d",
+      "win_source_commit": "cad8d7632358a2056041b53eeea44560e141a291",
+      "win_build_run": "44883202825",
+      "license_product": "SDYN"
     }
   },
   "control_center": {

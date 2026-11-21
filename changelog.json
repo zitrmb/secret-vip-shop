@@ -17,6 +17,24 @@
           "Auto-Gain startet beim Einschalten oder Ändern des Ausgangspegels frisch."
         ]
       }
+    },
+    "SecretDynamicsRelease": {
+      "name": "Secret Dynamics",
+      "version": "1.0.2",
+      "groups": {
+        "Neu": [
+          "Give your music more punch, warmth and presence.",
+          "Available for Mac (VST3, AU, CLAP) and Windows (VST3, CLAP)."
+        ]
+      },
+      "groups_de": {
+        "Neu": [
+          "Gib deiner Musik mehr Druck, Wärme und Präsenz.",
+          "Erhältlich für Mac (VST3, AU, CLAP) und Windows (VST3, CLAP)."
+        ]
+      },
+      "url": "/plugins/dynamics/",
+      "url_de": "/de/plugins/dynamics/"
     }
   }
 }
