@@ -8,12 +8,15 @@
     "SecretParametricEQ": "secret-parametric-eq/",
     "SecretAnalyserBeta": "secret-analyser-beta/",
     "SVPEQ4Beta": "secret-future-eq-2-beta/",
-    "SecretFutureEQ3Beta": "secret-future-eq-3-beta/"
+    "SecretFutureEQ3Beta": "secret-future-eq-3-beta/",
+    "SecretDynamicsRelease": "secret-dynamics/",
+    "SecretDynamics3Dev": "secret-dynamics/"
   },
   "listed": {
     "SVPEQ4": "secret-future-eq-2/",
     "SecretNotes": "secret-notes/",
     "AudioNormaliser": "audio-normaliser/",
-    "SecretAnalyser": "secret-analyser/"
+    "SecretAnalyser": "secret-analyser/",
+    "SecretDynamics3Dev": "secret-dynamics/"
   }
 }

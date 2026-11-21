@@ -4049,6 +4049,756 @@
           "目前提供哪个版本的 Audio Normaliser？"
         ]
       }
+    },
+    {
+      "id": "dynamics-install",
+      "product": "SecretDynamics3Dev",
+      "sources": [
+        "wissen/plugins/secret-dynamics.md",
+        "SecretDynamics3Dev/resources/web/index.html"
+      ],
+      "question": {
+        "en": "How do I install Secret Dynamics?",
+        "de": "Wie installiere ich Secret Dynamics?",
+        "fr": "Comment installer Secret Dynamics ?",
+        "es": "¿Cómo instalo Secret Dynamics?",
+        "ja": "Secret Dynamicsをインストールするには？",
+        "pt-BR": "Como instalo o Secret Dynamics?",
+        "zh-CN": "如何安装 Secret Dynamics？"
+      },
+      "answer": {
+        "en": "Open the download supplied for Secret Dynamics and follow its installation instructions. Close your DAW first, then reopen it and rescan plugins if needed.",
+        "de": "Öffne den für Secret Dynamics bereitgestellten Download und folge der beiliegenden Installationsanleitung. Schließe vorher deine DAW. Öffne sie danach wieder und suche bei Bedarf erneut nach Plugins.",
+        "fr": "Ouvrez le téléchargement fourni pour Secret Dynamics et suivez les instructions d’installation jointes. Fermez d’abord votre station audionumérique, puis rouvrez-la et relancez la recherche de plugins si nécessaire.",
+        "es": "Abre la descarga facilitada para Secret Dynamics y sigue las instrucciones de instalación incluidas. Cierra primero tu estación de trabajo de audio, vuelve a abrirla y busca los plugins de nuevo si es necesario.",
+        "ja": "Secret Dynamics用に提供されたダウンロードを開き、付属のインストール手順に従ってください。先にDAWを終了し、インストール後に開き直してください。必要に応じてプラグインを再スキャンしてください。",
+        "pt-BR": "Abra o download fornecido para o Secret Dynamics e siga as instruções de instalação incluídas. Feche sua estação de áudio primeiro, abra-a novamente depois e faça uma nova busca por plugins se necessário.",
+        "zh-CN": "打开为 Secret Dynamics 提供的下载文件，并按照附带的安装说明操作。请先关闭音频工作站，安装后重新打开，必要时重新扫描插件。"
+      },
+      "terms": {
+        "en": [
+          "How do I install Secret Dynamics?"
+        ],
+        "de": [
+          "Wie installiere ich Secret Dynamics?"
+        ],
+        "fr": [
+          "Comment installer Secret Dynamics ?"
+        ],
+        "es": [
+          "¿Cómo instalo Secret Dynamics?"
+        ],
+        "ja": [
+          "Secret Dynamicsをインストールするには？"
+        ],
+        "pt-BR": [
+          "Como instalo o Secret Dynamics?"
+        ],
+        "zh-CN": [
+          "如何安装 Secret Dynamics？"
+        ]
+      }
+    },
+    {
+      "id": "dynamics-windows-smartscreen",
+      "product": "SecretDynamics3Dev",
+      "sources": [
+        "docs/freigaben/SecretDynamics-1.0.2.md"
+      ],
+      "question": {
+        "en": "Windows shows “Windows protected your PC” when I start the Secret Dynamics installer. What do I do?",
+        "de": "Windows zeigt beim Start des Secret-Dynamics-Installers „Der Computer wurde durch Windows geschützt“. Was tue ich?",
+        "fr": "Windows affiche « Windows a protégé votre ordinateur » au lancement du programme d’installation de Secret Dynamics. Que faire ?",
+        "es": "Windows muestra «Windows protegió su PC» al iniciar el instalador de Secret Dynamics. ¿Qué hago?",
+        "ja": "Secret Dynamicsのインストーラーを起動すると「WindowsによってPCが保護されました」と表示されます。どうすればよいですか？",
+        "pt-BR": "O Windows mostra “O Windows protegeu o computador” ao abrir o instalador do Secret Dynamics. O que faço?",
+        "zh-CN": "启动 Secret Dynamics 安装程序时，Windows 显示“Windows 已保护你的电脑”。该怎么办？"
+      },
+      "answer": {
+        "en": "The Windows installer does not have a code signature yet, so Windows SmartScreen asks first. Click “More info”, check that the app name starts with SecretDynamicsRelease, then click “Run anyway”. Only do this with the file from your purchase download.",
+        "de": "Der Windows-Installer hat noch keine Code-Signatur, darum fragt Windows SmartScreen zuerst nach. Klicke auf „Weitere Informationen“, prüfe, dass der App-Name mit SecretDynamicsRelease beginnt, und klicke dann auf „Trotzdem ausführen“. Mach das nur mit der Datei aus deinem Kauf-Download.",
+        "fr": "Le programme d’installation Windows n’a pas encore de signature de code, c’est pourquoi Windows SmartScreen demande d’abord une confirmation. Cliquez sur « Informations complémentaires », vérifiez que le nom de l’application commence par SecretDynamicsRelease, puis cliquez sur « Exécuter quand même ». Faites-le uniquement avec le fichier de votre téléchargement d’achat.",
+        "es": "El instalador de Windows todavía no tiene firma de código, por eso Windows SmartScreen pregunta primero. Haz clic en «Más información», comprueba que el nombre de la aplicación empieza por SecretDynamicsRelease y luego haz clic en «Ejecutar de todas formas». Hazlo solo con el archivo de tu descarga de compra.",
+        "ja": "Windows版インストーラーにはまだコード署名がないため、Windows SmartScreenが確認を求めます。「詳細情報」をクリックし、アプリ名がSecretDynamicsReleaseで始まることを確認してから「実行」をクリックしてください。購入時のダウンロードで受け取ったファイルの場合だけ実行してください。",
+        "pt-BR": "O instalador para Windows ainda não tem assinatura de código, por isso o Windows SmartScreen pergunta primeiro. Clique em “Mais informações”, confira se o nome do aplicativo começa com SecretDynamicsRelease e depois clique em “Executar assim mesmo”. Faça isso apenas com o arquivo do download da sua compra.",
+        "zh-CN": "Windows 安装程序目前还没有代码签名，因此 Windows SmartScreen 会先询问。点击“更多信息”，确认应用名称以 SecretDynamicsRelease 开头，然后点击“仍要运行”。仅对购买下载中的文件这样操作。"
+      },
+      "terms": {
+        "en": [
+          "Windows protected your PC",
+          "SmartScreen",
+          "Run anyway",
+          "installer blocked on Windows"
+        ],
+        "de": [
+          "Der Computer wurde durch Windows geschützt",
+          "SmartScreen",
+          "Trotzdem ausführen",
+          "Installer unter Windows blockiert"
+        ],
+        "fr": [
+          "Windows a protégé votre ordinateur",
+          "SmartScreen",
+          "Exécuter quand même"
+        ],
+        "es": [
+          "Windows protegió su PC",
+          "SmartScreen",
+          "Ejecutar de todas formas"
+        ],
+        "ja": [
+          "WindowsによってPCが保護されました",
+          "SmartScreen",
+          "実行"
+        ],
+        "pt-BR": [
+          "O Windows protegeu o computador",
+          "SmartScreen",
+          "Executar assim mesmo"
+        ],
+        "zh-CN": [
+          "Windows 已保护你的电脑",
+          "SmartScreen",
+          "仍要运行"
+        ]
+      }
+    },
+    {
+      "id": "dynamics-requirements",
+      "product": "SecretDynamics3Dev",
+      "sources": [
+        "wissen/plugins/secret-dynamics.md",
+        "SecretDynamics3Dev/resources/web/index.html"
+      ],
+      "question": {
+        "en": "Which systems does Secret Dynamics support?",
+        "de": "Welche Systeme unterstützt Secret Dynamics?",
+        "fr": "Quels systèmes Secret Dynamics prend-il en charge ?",
+        "es": "¿Qué sistemas admite Secret Dynamics?",
+        "ja": "Secret Dynamicsの対応システムは？",
+        "pt-BR": "Quais sistemas o Secret Dynamics suporta?",
+        "zh-CN": "Secret Dynamics 支持哪些系统？"
+      },
+      "answer": {
+        "en": "Use the system and plugin format listed with your Secret Dynamics download. Requirements can differ between releases. If your system is not listed, ask support before installing.",
+        "de": "Nutze das System und Pluginformat, das bei deinem Secret-Dynamics-Download angegeben ist. Die Anforderungen können je nach Version abweichen. Ist dein System nicht genannt, frage vor der Installation den Support.",
+        "fr": "Utilisez le système et le format de plugin indiqués avec votre téléchargement de Secret Dynamics. Les exigences peuvent varier selon la version. Si votre système ne figure pas dans la liste, contactez l’assistance avant l’installation.",
+        "es": "Utiliza el sistema y el formato de plugin indicados junto a tu descarga de Secret Dynamics. Los requisitos pueden variar entre versiones. Si tu sistema no aparece, consulta con soporte antes de instalar.",
+        "ja": "Secret Dynamicsのダウンロードに記載されたシステムとプラグイン形式をご利用ください。必要条件はバージョンによって異なる場合があります。お使いのシステムが記載されていない場合は、インストール前にサポートにお問い合わせください。",
+        "pt-BR": "Use o sistema e o formato de plugin indicados no download do Secret Dynamics. Os requisitos podem variar entre versões. Se seu sistema não estiver listado, consulte o suporte antes de instalar.",
+        "zh-CN": "请使用 Secret Dynamics 下载说明中列出的系统和插件格式。不同版本的要求可能不同。如果未列出您的系统，请在安装前联系支持人员。"
+      },
+      "terms": {
+        "en": [
+          "Which systems does Secret Dynamics support?"
+        ],
+        "de": [
+          "Welche Systeme unterstützt Secret Dynamics?"
+        ],
+        "fr": [
+          "Quels systèmes Secret Dynamics prend-il en charge ?"
+        ],
+        "es": [
+          "¿Qué sistemas admite Secret Dynamics?"
+        ],
+        "ja": [
+          "Secret Dynamicsの対応システムは？"
+        ],
+        "pt-BR": [
+          "Quais sistemas o Secret Dynamics suporta?"
+        ],
+        "zh-CN": [
+          "Secret Dynamics 支持哪些系统？"
+        ]
+      }
+    },
+    {
+      "id": "dynamics-update",
+      "product": "SecretDynamics3Dev",
+      "sources": [
+        "wissen/plugins/secret-dynamics.md",
+        "SecretDynamics3Dev/resources/web/index.html"
+      ],
+      "question": {
+        "en": "How do I update Secret Dynamics?",
+        "de": "Wie aktualisiere ich Secret Dynamics?",
+        "fr": "Comment mettre à jour Secret Dynamics ?",
+        "es": "¿Cómo actualizo Secret Dynamics?",
+        "ja": "Secret Dynamicsを更新するには？",
+        "pt-BR": "Como atualizo o Secret Dynamics?",
+        "zh-CN": "如何更新 Secret Dynamics？"
+      },
+      "answer": {
+        "en": "Use the update notice in Secret Dynamics or the download link supplied with your release. Close your DAW before installing the update, then reopen it.",
+        "de": "Nutze den Update-Hinweis in Secret Dynamics oder den Download-Link deiner Version. Schließe vor der Installation deine DAW und öffne sie danach wieder.",
+        "fr": "Utilisez l’avis de mise à jour dans Secret Dynamics ou le lien de téléchargement fourni avec votre version. Fermez votre station audionumérique avant l’installation, puis rouvrez-la.",
+        "es": "Utiliza el aviso de actualización de Secret Dynamics o el enlace de descarga de tu versión. Cierra tu estación de trabajo de audio antes de instalar y vuelve a abrirla después.",
+        "ja": "Secret Dynamicsの更新通知、またはお使いのバージョンに付属するダウンロードリンクをご利用ください。インストール前にDAWを終了し、完了後に開き直してください。",
+        "pt-BR": "Use o aviso de atualização no Secret Dynamics ou o link de download fornecido com sua versão. Feche sua estação de áudio antes de instalar e abra-a novamente depois.",
+        "zh-CN": "请使用 Secret Dynamics 中的更新通知，或随当前版本提供的下载链接。安装前请关闭音频工作站，完成后重新打开。"
+      },
+      "terms": {
+        "en": [
+          "How do I update Secret Dynamics?"
+        ],
+        "de": [
+          "Wie aktualisiere ich Secret Dynamics?"
+        ],
+        "fr": [
+          "Comment mettre à jour Secret Dynamics ?"
+        ],
+        "es": [
+          "¿Cómo actualizo Secret Dynamics?"
+        ],
+        "ja": [
+          "Secret Dynamicsを更新するには？"
+        ],
+        "pt-BR": [
+          "Como atualizo o Secret Dynamics?"
+        ],
+        "zh-CN": [
+          "如何更新 Secret Dynamics？"
+        ]
+      }
+    },
+    {
+      "id": "dynamics-report",
+      "product": "SecretDynamics3Dev",
+      "sources": [
+        "wissen/plugins/secret-dynamics.md",
+        "SecretDynamics3Dev/resources/web/index.html"
+      ],
+      "question": {
+        "en": "How do I report a problem with Secret Dynamics?",
+        "de": "Wie melde ich ein Problem mit Secret Dynamics?",
+        "fr": "Comment signaler un problème avec Secret Dynamics ?",
+        "es": "¿Cómo comunico un problema con Secret Dynamics?",
+        "ja": "Secret Dynamicsの問題を報告するには？",
+        "pt-BR": "Como relato um problema com o Secret Dynamics?",
+        "zh-CN": "如何报告 Secret Dynamics 的问题？"
+      },
+      "answer": {
+        "en": "Open Settings in Secret Dynamics and choose Report bug / Wish. Describe what happened, what you expected and how to repeat it. Include your plugin version, system and DAW.",
+        "de": "Öffne die Einstellungen in Secret Dynamics und wähle die Funktion zum Melden von Fehlern und Wünschen. Beschreibe, was passiert ist, was du erwartet hast und wie es sich wiederholen lässt. Nenne Pluginversion, System und DAW.",
+        "fr": "Ouvrez les réglages de Secret Dynamics et choisissez la fonction de signalement de problèmes et de suggestions. Décrivez ce qui s’est passé, le résultat attendu et les étapes pour le reproduire. Indiquez la version du plugin, votre système et votre station audionumérique.",
+        "es": "Abre los ajustes de Secret Dynamics y elige la función para comunicar errores y sugerencias. Describe qué ocurrió, qué esperabas y cómo reproducirlo. Incluye la versión del plugin, tu sistema y tu estación de trabajo de audio.",
+        "ja": "Secret Dynamicsの設定を開き、不具合や要望を送る機能を選択してください。起きたこと、期待した結果、再現手順を説明し、プラグインのバージョン、システム、DAWを記載してください。",
+        "pt-BR": "Abra as configurações do Secret Dynamics e escolha a função para relatar problemas e sugestões. Descreva o que aconteceu, o que você esperava e como reproduzir o problema. Inclua a versão do plugin, seu sistema e sua estação de áudio.",
+        "zh-CN": "打开 Secret Dynamics 的设置，选择报告问题和建议的功能。请说明发生了什么、预期结果以及重现步骤，并提供插件版本、系统和音频工作站信息。"
+      },
+      "terms": {
+        "en": [
+          "How do I report a problem with Secret Dynamics?"
+        ],
+        "de": [
+          "Wie melde ich ein Problem mit Secret Dynamics?"
+        ],
+        "fr": [
+          "Comment signaler un problème avec Secret Dynamics ?"
+        ],
+        "es": [
+          "¿Cómo comunico un problema con Secret Dynamics?"
+        ],
+        "ja": [
+          "Secret Dynamicsの問題を報告するには？"
+        ],
+        "pt-BR": [
+          "Como relato um problema com o Secret Dynamics?"
+        ],
+        "zh-CN": [
+          "如何报告 Secret Dynamics 的问题？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-function",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsBeta/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Was kann Secret Dynamics am Klang verändern?",
+        "en": "What can Secret Dynamics change about the sound?",
+        "fr": "Que peut changer Secret Dynamics dans le son ?",
+        "es": "¿Qué puede cambiar Secret Dynamics en el sonido?",
+        "ja": "Secret Dynamicsで音をどう変えられますか？",
+        "pt-BR": "O que o Secret Dynamics pode mudar no som?",
+        "zh-CN": "Secret Dynamics 能怎样改变声音？"
+      },
+      "answer": {
+        "de": "Dein Klang kann runder und weicher oder härter und dichter wirken. Du bestimmst, wie deutlich die Veränderung hörbar wird.",
+        "en": "Your sound can feel rounder and softer or harder and denser. You choose how noticeable the change is.",
+        "fr": "Ton son peut devenir plus rond et doux, ou plus dur et dense. Tu choisis à quel point le changement s'entend.",
+        "es": "Tu sonido puede sentirse más redondo y suave, o más duro y denso. Tú eliges cuánto se nota el cambio.",
+        "ja": "丸く柔らかな音にも、硬く密度のある音にもできます。変化をどのくらい目立たせるかは自分で選べます。",
+        "pt-BR": "Seu som pode ficar mais redondo e suave ou mais duro e denso. Você escolhe o quanto a mudança fica perceptível.",
+        "zh-CN": "声音可以变得更圆润柔和，也可以更硬朗紧密。你可以自行选择变化的明显程度。"
+      },
+      "terms": {
+        "de": [
+          "Was kann Secret Dynamics am Klang verändern"
+        ],
+        "en": [
+          "What can Secret Dynamics change about the sound"
+        ],
+        "fr": [
+          "Que peut changer Secret Dynamics dans le son ?"
+        ],
+        "es": [
+          "¿Qué puede cambiar Secret Dynamics en el sonido?"
+        ],
+        "ja": [
+          "Secret Dynamicsで音をどう変えられますか？"
+        ],
+        "pt-BR": [
+          "O que o Secret Dynamics pode mudar no som?"
+        ],
+        "zh-CN": [
+          "Secret Dynamics 能怎样改变声音？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-gentle",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsBeta/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Kann die Wirkung dezent bleiben?",
+        "en": "Can the effect stay subtle?",
+        "fr": "L'effet peut-il rester discret ?",
+        "es": "¿Puede ser sutil el efecto?",
+        "ja": "効果を控えめにできますか？",
+        "pt-BR": "O efeito pode ser sutil?",
+        "zh-CN": "效果可以很轻微吗？"
+      },
+      "answer": {
+        "de": "Ja. Die Stärke ist veränderbar. Du kannst die Wirkung zurücknehmen, wenn du nur eine kleine Veränderung möchtest.",
+        "en": "Yes. The strength is adjustable. You can ease back when you only want a small change.",
+        "fr": "Oui. Son intensité est réglable. Tu peux la réduire si tu souhaites seulement une petite retouche.",
+        "es": "Sí. Puedes ajustar su intensidad y reducirla cuando solo quieras un pequeño cambio.",
+        "ja": "はい。強さを調節できます。少しだけ変えたいときは、効果を弱めてください。",
+        "pt-BR": "Sim. A intensidade é ajustável. Você pode diminuí-la quando quiser apenas uma pequena mudança.",
+        "zh-CN": "可以。效果强度可以调节。只想稍作改变时，可以把强度调低。"
+      },
+      "terms": {
+        "de": [
+          "Kann die Wirkung dezent bleiben"
+        ],
+        "en": [
+          "Can the effect stay subtle"
+        ],
+        "fr": [
+          "L'effet peut-il rester discret ?"
+        ],
+        "es": [
+          "¿Puede ser sutil el efecto?"
+        ],
+        "ja": [
+          "効果を控えめにできますか？"
+        ],
+        "pt-BR": [
+          "O efeito pode ser sutil?"
+        ],
+        "zh-CN": [
+          "效果可以很轻微吗？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-round",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsBeta/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Kann mein Klang weicher wirken?",
+        "en": "Can my sound feel softer?",
+        "fr": "Mon son peut-il devenir plus doux ?",
+        "es": "¿Puede sonar más suave?",
+        "ja": "音を柔らかくできますか？",
+        "pt-BR": "Meu som pode ficar mais suave?",
+        "zh-CN": "声音可以更柔和吗？"
+      },
+      "answer": {
+        "de": "Ja. Ein runder und weicher Charakter gehört zu den Klangmöglichkeiten. Wie deutlich du ihn hörst, hängt auch von der Stärke der Wirkung ab.",
+        "en": "Yes. A round and soft character is one of the sound choices. How clearly you hear it also depends on the strength of the effect.",
+        "fr": "Oui. Un caractère rond et doux fait partie des choix. L'intensité de l'effet détermine aussi à quel point tu l'entends.",
+        "es": "Sí. Uno de los caracteres disponibles es redondo y suave. Cuánto se nota también depende de la intensidad del efecto.",
+        "ja": "はい。丸く柔らかな音のキャラクターを選べます。どのくらい変化が聞こえるかは、効果の強さによっても変わります。",
+        "pt-BR": "Sim. Um caráter redondo e suave é uma das opções. O quanto você percebe também depende da intensidade do efeito.",
+        "zh-CN": "可以。圆润柔和是可选的声音风格之一。变化有多明显，也取决于效果强度。"
+      },
+      "terms": {
+        "de": [
+          "Kann mein Klang weicher wirken"
+        ],
+        "en": [
+          "Can my sound feel softer"
+        ],
+        "fr": [
+          "Mon son peut-il devenir plus doux ?"
+        ],
+        "es": [
+          "¿Puede sonar más suave?"
+        ],
+        "ja": [
+          "音を柔らかくできますか？"
+        ],
+        "pt-BR": [
+          "Meu som pode ficar mais suave?"
+        ],
+        "zh-CN": [
+          "声音可以更柔和吗？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-hard",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsBeta/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Kann mein Klang härter und dichter wirken?",
+        "en": "Can my sound feel harder and denser?",
+        "fr": "Mon son peut-il devenir plus dur et dense ?",
+        "es": "¿Puede sonar más duro y denso?",
+        "ja": "音を硬く、密度のある感じにできますか？",
+        "pt-BR": "Meu som pode ficar mais duro e denso?",
+        "zh-CN": "声音可以更硬朗、更紧密吗？"
+      },
+      "answer": {
+        "de": "Ja. Du kannst einen härteren und dichteren Charakter wählen und die Wirkung nach Gehör dosieren.",
+        "en": "Yes. You can choose a harder and denser character and adjust its strength by ear.",
+        "fr": "Oui. Tu peux choisir un caractère plus dur et dense et régler son intensité à l'oreille.",
+        "es": "Sí. Puedes elegir un carácter más duro y denso y ajustar su intensidad de oído.",
+        "ja": "はい。硬く密度のあるキャラクターを選び、耳で確かめながら強さを調節できます。",
+        "pt-BR": "Sim. Você pode escolher um caráter mais duro e denso e ajustar a intensidade de ouvido.",
+        "zh-CN": "可以。你可以选择更硬朗紧密的风格，并边听边调节强度。"
+      },
+      "terms": {
+        "de": [
+          "Kann mein Klang härter und dichter wirken"
+        ],
+        "en": [
+          "Can my sound feel harder and denser"
+        ],
+        "fr": [
+          "Mon son peut-il devenir plus dur et dense ?"
+        ],
+        "es": [
+          "¿Puede sonar más duro y denso?"
+        ],
+        "ja": [
+          "音を硬く、密度のある感じにできますか？"
+        ],
+        "pt-BR": [
+          "Meu som pode ficar mais duro e denso?"
+        ],
+        "zh-CN": [
+          "声音可以更硬朗、更紧密吗？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-clean",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsBeta/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Gibt es auch einen klaren Klangcharakter?",
+        "en": "Is there a clear sound character too?",
+        "fr": "Y a-t-il aussi un caractère clair ?",
+        "es": "¿Hay también un carácter claro?",
+        "ja": "クリアなキャラクターもありますか？",
+        "pt-BR": "Também há um caráter limpo?",
+        "zh-CN": "也有清晰的声音风格吗？"
+      },
+      "answer": {
+        "de": "Ja. Neben rund und weich sowie hart und dicht gibt es auch einen lauten und klaren Klangcharakter.",
+        "en": "Yes. Alongside round and soft and hard and dense, there is also a loud and clean sound character.",
+        "fr": "Oui. En plus des caractères rond et doux ou dur et dense, un caractère fort et clair est proposé.",
+        "es": "Sí. Además de redondo y suave o duro y denso, hay un carácter potente y claro.",
+        "ja": "はい。丸く柔らかな音や硬く密度のある音に加え、大きくクリアに感じるキャラクターもあります。",
+        "pt-BR": "Sim. Além dos caracteres redondo e suave ou duro e denso, há um caráter forte e limpo.",
+        "zh-CN": "有。除了圆润柔和、硬朗紧密的风格，还有响亮清晰的风格。"
+      },
+      "terms": {
+        "de": [
+          "Gibt es auch einen klaren Klangcharakter"
+        ],
+        "en": [
+          "Is there a clear sound character too"
+        ],
+        "fr": [
+          "Y a-t-il aussi un caractère clair ?"
+        ],
+        "es": [
+          "¿Hay también un carácter claro?"
+        ],
+        "ja": [
+          "クリアなキャラクターもありますか？"
+        ],
+        "pt-BR": [
+          "Também há um caráter limpo?"
+        ],
+        "zh-CN": [
+          "也有清晰的声音风格吗？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-compare",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsBeta/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Kann ich die Klangwirkung bei ähnlicher Lautstärke beurteilen?",
+        "en": "Can I judge the sound at a similar volume?",
+        "fr": "Puis-je comparer à un volume similaire ?",
+        "es": "¿Puedo comparar a un volumen parecido?",
+        "ja": "同じくらいの音量で比較できますか？",
+        "pt-BR": "Posso comparar em um volume parecido?",
+        "zh-CN": "可以在相近的音量下比较吗？"
+      },
+      "answer": {
+        "de": "Ja. Der automatische Lautstärkeausgleich hilft dir beim Vergleichen. So kannst du auf die Klangwirkung achten.",
+        "en": "Yes. Automatic volume matching helps you compare. This lets you focus on the change in sound.",
+        "fr": "Oui. L'ajustement automatique du volume aide à comparer. Tu peux ainsi te concentrer sur le changement de son.",
+        "es": "Sí. El ajuste automático de volumen te ayuda a comparar y centrarte en el cambio de sonido.",
+        "ja": "はい。自動音量調整が比較を助けます。音そのものの変化に集中できます。",
+        "pt-BR": "Sim. O ajuste automático de volume ajuda na comparação. Assim você se concentra na mudança do som.",
+        "zh-CN": "可以。自动音量匹配能帮助你比较，让你专注于声音本身的变化。"
+      },
+      "terms": {
+        "de": [
+          "Kann ich die Klangwirkung bei ähnlicher Lautstärke beurteilen"
+        ],
+        "en": [
+          "Can I judge the sound at a similar volume"
+        ],
+        "fr": [
+          "Puis-je comparer à un volume similaire ?"
+        ],
+        "es": [
+          "¿Puedo comparar a un volumen parecido?"
+        ],
+        "ja": [
+          "同じくらいの音量で比較できますか？"
+        ],
+        "pt-BR": [
+          "Posso comparar em um volume parecido?"
+        ],
+        "zh-CN": [
+          "可以在相近的音量下比较吗？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-original",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsBeta/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Kann ich den unveränderten Klang wieder hören?",
+        "en": "Can I hear the unchanged sound again?",
+        "fr": "Puis-je réécouter le son d'origine ?",
+        "es": "¿Puedo volver a escuchar el sonido original?",
+        "ja": "元の音をもう一度聞けますか？",
+        "pt-BR": "Posso ouvir o som original de novo?",
+        "zh-CN": "可以再听到原来的声音吗？"
+      },
+      "answer": {
+        "de": "Ja. Du kannst die Wirkung ausschalten und den unveränderten Klang hören.",
+        "en": "Yes. You can turn the effect off and hear the unchanged sound.",
+        "fr": "Oui. Tu peux désactiver l'effet pour entendre le son inchangé.",
+        "es": "Sí. Puedes desactivar el efecto y escuchar el sonido sin cambios.",
+        "ja": "はい。効果をオフにすると、変化を加えていない音を聞けます。",
+        "pt-BR": "Sim. Você pode desligar o efeito e ouvir o som sem alterações.",
+        "zh-CN": "可以。关闭效果后，就能听到未经改变的声音。"
+      },
+      "terms": {
+        "de": [
+          "Kann ich den unveränderten Klang wieder hören"
+        ],
+        "en": [
+          "Can I hear the unchanged sound again"
+        ],
+        "fr": [
+          "Puis-je réécouter le son d'origine ?"
+        ],
+        "es": [
+          "¿Puedo volver a escuchar el sonido original?"
+        ],
+        "ja": [
+          "元の音をもう一度聞けますか？"
+        ],
+        "pt-BR": [
+          "Posso ouvir o som original de novo?"
+        ],
+        "zh-CN": [
+          "可以再听到原来的声音吗？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-warm",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsBeta/resources/web/index.html"
+      ],
+      "question": {
+        "de": "Kann der Klang auch wärmer wirken?",
+        "en": "Can the sound feel warmer too?",
+        "fr": "Le son peut-il aussi devenir plus chaleureux ?",
+        "es": "¿Puede sonar también más cálido?",
+        "ja": "音に温かみも加えられますか？",
+        "pt-BR": "O som também pode ficar mais quente?",
+        "zh-CN": "声音也能更温暖吗？"
+      },
+      "answer": {
+        "de": "Ja. Ein runderer Klang mit Wärme gehört zu den angebotenen Klangcharakteren.",
+        "en": "Yes. A rounder sound with warmth is one of the available characters.",
+        "fr": "Oui. Un son plus rond et chaleureux fait partie des caractères disponibles.",
+        "es": "Sí. Uno de los caracteres disponibles ofrece un sonido más redondo y cálido.",
+        "ja": "はい。丸く温かみのある音も、選べるキャラクターの一つです。",
+        "pt-BR": "Sim. Um som mais redondo e quente é um dos caracteres disponíveis.",
+        "zh-CN": "可以。更圆润、温暖的声音也是可选风格之一。"
+      },
+      "terms": {
+        "de": [
+          "Kann der Klang auch wärmer wirken"
+        ],
+        "en": [
+          "Can the sound feel warmer too"
+        ],
+        "fr": [
+          "Le son peut-il aussi devenir plus chaleureux ?"
+        ],
+        "es": [
+          "¿Puede sonar también más cálido?"
+        ],
+        "ja": [
+          "音に温かみも加えられますか？"
+        ],
+        "pt-BR": [
+          "O som também pode ficar mais quente?"
+        ],
+        "zh-CN": [
+          "声音也能更温暖吗？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-snap",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsRelease/release-line/make_release_line_ui.py"
+      ],
+      "question": {
+        "de": "Kann der Klang sanft oder kräftig zupacken?",
+        "en": "Can the sound feel gentle or strong?",
+        "fr": "L'effet peut-il être doux ou marqué ?",
+        "es": "¿Puede sentirse suave o intenso?",
+        "ja": "穏やかな効果と強い効果を選べますか？",
+        "pt-BR": "O efeito pode ser suave ou forte?",
+        "zh-CN": "效果可以柔和，也可以强烈吗？"
+      },
+      "answer": {
+        "de": "Ja. Du kannst bestimmen, ob der Klang sanft oder kräftig zupackt.",
+        "en": "Yes. You can choose a gentle or strong feel.",
+        "fr": "Oui. Tu peux choisir un effet doux ou plus marqué.",
+        "es": "Sí. Puedes elegir una sensación suave o intensa.",
+        "ja": "はい。穏やかな感じにも、強く感じる効果にもできます。",
+        "pt-BR": "Sim. Você pode escolher uma sensação suave ou forte.",
+        "zh-CN": "可以。你可以选择柔和或强烈的感觉。"
+      },
+      "terms": {
+        "de": [
+          "Kann der Klang sanft oder kräftig zupacken"
+        ],
+        "en": [
+          "Can the sound feel gentle or strong"
+        ],
+        "fr": [
+          "L'effet peut-il être doux ou marqué ?"
+        ],
+        "es": [
+          "¿Puede sentirse suave o intenso?"
+        ],
+        "ja": [
+          "穏やかな効果と強い効果を選べますか？"
+        ],
+        "pt-BR": [
+          "O efeito pode ser suave ou forte?"
+        ],
+        "zh-CN": [
+          "效果可以柔和，也可以强烈吗？"
+        ]
+      }
+    },
+    {
+      "id": "secretdynamicsrelease-breath",
+      "product": "SecretDynamicsRelease",
+      "sources": [
+        "SecretDynamicsRelease/README.md",
+        "SecretDynamicsRelease/release-line/make_release_line_ui.py"
+      ],
+      "question": {
+        "de": "Kann die Wirkung schnell oder allmählich nachlassen?",
+        "en": "Can the effect ease off quickly or more gradually?",
+        "fr": "L'effet peut-il s'estomper vite ou progressivement ?",
+        "es": "¿Puede desaparecer el efecto rápido o poco a poco?",
+        "ja": "効果の引き方を速くしたり、緩やかにしたりできますか？",
+        "pt-BR": "O efeito pode desaparecer rápido ou aos poucos?",
+        "zh-CN": "效果可以快速或逐渐消退吗？"
+      },
+      "answer": {
+        "de": "Ja. Die Wirkung kann schnell oder allmählich nachlassen. Du wählst das Gefühl, das zu deiner Musik passt.",
+        "en": "Yes. The effect can ease off quickly or more gradually. You choose the feel that suits your music.",
+        "fr": "Oui. L'effet peut s'estomper rapidement ou plus progressivement. Choisis ce qui convient à ta musique.",
+        "es": "Sí. El efecto puede desaparecer rápido o de forma más gradual. Elige lo que encaje con tu música.",
+        "ja": "はい。効果がすぐに引く感じにも、徐々に引く感じにもできます。音楽に合うものを選んでください。",
+        "pt-BR": "Sim. O efeito pode desaparecer rapidamente ou de forma mais gradual. Escolha o que combina com sua música.",
+        "zh-CN": "可以。效果既可以快速消退，也可以更缓慢地消退。请选择适合音乐的感觉。"
+      },
+      "terms": {
+        "de": [
+          "Kann die Wirkung schnell oder allmählich nachlassen"
+        ],
+        "en": [
+          "Can the effect ease off quickly or more gradually"
+        ],
+        "fr": [
+          "L'effet peut-il s'estomper vite ou progressivement ?"
+        ],
+        "es": [
+          "¿Puede desaparecer el efecto rápido o poco a poco?"
+        ],
+        "ja": [
+          "効果の引き方を速くしたり、緩やかにしたりできますか？"
+        ],
+        "pt-BR": [
+          "O efeito pode desaparecer rápido ou aos poucos?"
+        ],
+        "zh-CN": [
+          "效果可以快速或逐渐消退吗？"
+        ]
+      }
     }
   ],
   "products": {
@@ -4063,6 +4813,17 @@
     },
     "SecretFutureEQ3Beta": {
       "name": "Secret Future EQ 3 Beta"
+    },
+    "SecretDynamics3Dev": {
+      "name": "Secret Dynamics",
+      "aliases": [
+        "SDYN",
+        "SecretDynamicsRelease"
+      ],
+      "help_listed": true
+    },
+    "SecretDynamicsRelease": {
+      "name": "Secret Dynamics"
     }
   }
 }
