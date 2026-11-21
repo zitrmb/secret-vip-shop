@@ -18,11 +18,15 @@
     },
     "AudioNormaliser": {
       "name": "Audio Normaliser",
-      "version": "1.9.0",
-      "mac": "files/Secret-Audio-Normaliser-1.10.0-Mac.zip",
-      "win": "files/Secret-Audio-Normaliser-1.9.0-Windows.zip",
+      "version": "1.10.0",
+      "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/audio-normaliser-1.10.0/Secret-Audio-Normaliser-1.10.0-Mac.zip",
       "mac_version": "1.10.0",
-      "mac_sha256": "a85173373930736066e603fa7f139dfd0e653dd152835da9d005495dd8d19ffe"
+      "mac_sha256": "a85173373930736066e603fa7f139dfd0e653dd152835da9d005495dd8d19ffe",
+      "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/audio-normaliser-1.10.0/Secret-Audio-Normaliser-1.10.0-Windows.exe",
+      "win_version": "1.10.0",
+      "win_sha256": "378c8bdbf8b31da3b49930068bf3352ed8e22c875336809d18671a8fa0969194",
+      "win_source_commit": "d6514f2f7e07f2d76f38bf51acc0459fefa9f12d",
+      "win_build_run": "44916456903"
     },
     "SecretAnalyser": {
       "name": "Secret Analyser",
