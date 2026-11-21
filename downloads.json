@@ -30,11 +30,12 @@
     },
     "SecretAnalyser": {
       "name": "Secret Analyser",
-      "version": "1.0.0",
-      "mac": "files/SecretAnalyser-a6021b7f.pkg",
-      "mac_sha256": "0b1a3058765fcb8a1ebcdd9782266550090829273ebe63241787c08ea75ef24c",
-      "mac_source_commit": "a6021b7f2d131905bfaec49363e3119d251de47f",
-      "mac_build_run": "41405418402"
+      "version": "1.0.3",
+      "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/secret-analyser-1.0.3/SecretAnalyser-d3c6165c.pkg",
+      "mac_version": "1.0.3",
+      "mac_sha256": "54703b7d5b199e7f2eb105e38edb1eacd3a1edac206c5e682fc92d24b3d0ca8c",
+      "mac_source_commit": "d3c6165c36a39473b6369947811c95c2910c7e68",
+      "mac_build_run": "44721551819"
     },
     "SecretDynamicsRelease": {
       "name": "Secret Dynamics",
