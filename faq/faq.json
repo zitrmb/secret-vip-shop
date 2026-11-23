@@ -285,13 +285,13 @@
         "zh-CN": "如何申请退款？"
       },
       "answer": {
-        "de": "Bitte beantrage innerhalb von 14 Tagen nach dem Kauf die volle Erstattung. Antworte auf die Paddle-Beleg-E-Mail, nutze den Link darin oder schreibe mit deiner Bestellnummer an support@secret.vip. Paddle erstattet auf das ursprüngliche Zahlungsmittel; danach wird der Lizenzschlüssel deaktiviert.",
-        "en": "Request a full refund within 14 days of purchase. Reply to your Paddle receipt email, use its link, or write to support@secret.vip with your order number. Paddle refunds your original payment method; the license key is then deactivated.",
-        "fr": "Vous pouvez demander un remboursement intégral dans les 14 jours suivant l'achat. Répondez au reçu Paddle, utilisez son lien ou écrivez à support@secret.vip avec votre numéro de commande. Paddle rembourse le moyen de paiement d'origine ; la clé de licence est alors désactivée.",
-        "es": "Puedes solicitar el reembolso completo en los 14 días posteriores a la compra. Responde al recibo de Paddle, usa su enlace o escribe a support@secret.vip con tu número de pedido. Paddle devuelve el dinero al medio de pago original y la clave queda desactivada.",
-        "ja": "購入から14日以内は全額返金を申し込めます。Paddleの領収書メールに返信するか、そのリンクを使うか、注文番号を添えてsupport@secret.vipへご連絡ください。Paddleが元のお支払い方法へ返金し、ライセンスキーは無効になります。",
-        "pt-BR": "Você pode pedir o reembolso integral em até 14 dias após a compra. Responda ao recibo da Paddle, use o link nele ou escreva para support@secret.vip com o número do pedido. A Paddle devolve o valor ao meio de pagamento original e a chave é desativada.",
-        "zh-CN": "购买后14天内可申请全额退款。回复Paddle收据邮件、使用其中的链接，或将订单号发至support@secret.vip。Paddle将款项退回原支付方式，许可证密钥随之停用。"
+        "de": "Bitte beantrage innerhalb von 14 Tagen nach dem Kauf die volle Erstattung. Antworte auf die Paddle-Beleg-E-Mail, nutze den Link darin oder schreibe mit deiner Bestellnummer an support@secret-audio.com. Paddle erstattet auf das ursprüngliche Zahlungsmittel; danach wird der Lizenzschlüssel deaktiviert.",
+        "en": "Request a full refund within 14 days of purchase. Reply to your Paddle receipt email, use its link, or write to support@secret-audio.com with your order number. Paddle refunds your original payment method; the license key is then deactivated.",
+        "fr": "Vous pouvez demander un remboursement intégral dans les 14 jours suivant l'achat. Répondez au reçu Paddle, utilisez son lien ou écrivez à support@secret-audio.com avec votre numéro de commande. Paddle rembourse le moyen de paiement d'origine ; la clé de licence est alors désactivée.",
+        "es": "Puedes solicitar el reembolso completo en los 14 días posteriores a la compra. Responde al recibo de Paddle, usa su enlace o escribe a support@secret-audio.com con tu número de pedido. Paddle devuelve el dinero al medio de pago original y la clave queda desactivada.",
+        "ja": "購入から14日以内は全額返金を申し込めます。Paddleの領収書メールに返信するか、そのリンクを使うか、注文番号を添えてsupport@secret-audio.comへご連絡ください。Paddleが元のお支払い方法へ返金し、ライセンスキーは無効になります。",
+        "pt-BR": "Você pode pedir o reembolso integral em até 14 dias após a compra. Responda ao recibo da Paddle, use o link nele ou escreva para support@secret-audio.com com o número do pedido. A Paddle devolve o valor ao meio de pagamento original e a chave é desativada.",
+        "zh-CN": "购买后14天内可申请全额退款。回复Paddle收据邮件、使用其中的链接，或将订单号发至support@secret-audio.com。Paddle将款项退回原支付方式，许可证密钥随之停用。"
       },
       "terms": {
         "de": [
@@ -393,13 +393,13 @@
         "zh-CN": "找不到插件或许可证邮件，怎么办？"
       },
       "answer": {
-        "de": "Wenn das Plugin in der DAW fehlt, starte die DAW neu oder suche erneut nach Plugins. Fehlt die Lizenz-E-Mail, prüfe den Spam-Ordner. Auf https://plugins.secret.vip/key/ kannst du den Schlüssel erneut an die Kaufadresse senden lassen. Wenn das nicht hilft, schreibe an support@secret.vip.",
-        "en": "If the plugin is missing from your DAW, restart the DAW or rescan plugins. If the license email is missing, check your spam folder. At https://plugins.secret.vip/key/ you can have the key resent to your purchase address. If that does not help, write to support@secret.vip.",
-        "fr": "Si le plug-in n'apparaît pas, redémarrez votre logiciel de musique ou relancez sa recherche de plug-ins. Si le courriel manque, vérifiez les indésirables. Sur https://plugins.secret.vip/key/, vous pouvez demander un nouvel envoi à votre adresse d'achat. Si cela ne suffit pas, écrivez à support@secret.vip.",
-        "es": "Si no aparece el complemento, reinicia tu programa de música o vuelve a buscar complementos. Si falta el correo, mira la carpeta de correo no deseado. En https://plugins.secret.vip/key/ puedes pedir otro envío a tu dirección de compra. Si no se resuelve, escribe a support@secret.vip.",
-        "ja": "プラグインが表示されない場合は、音楽ソフトを再起動するか、プラグインを再スキャンしてください。メールがない場合は迷惑メールを確認してください。https://plugins.secret.vip/key/ から購入時のメールアドレスへ再送できます。解決しない場合はsupport@secret.vipへご連絡ください。",
-        "pt-BR": "Se o plugin não aparece, reinicie seu programa de música ou faça uma nova busca de plugins. Se o e-mail não chegou, veja a pasta de spam. Em https://plugins.secret.vip/key/ você pode pedir o reenvio para o endereço da compra. Se não resolver, escreva para support@secret.vip.",
-        "zh-CN": "如果音乐软件中没有插件，请重启软件或重新扫描插件。如果没有收到邮件，请检查垃圾邮件文件夹。可在 https://plugins.secret.vip/key/ 请求重新发送到购买时的邮箱。如果仍未解决，请联系support@secret.vip。"
+        "de": "Wenn das Plugin in der DAW fehlt, starte die DAW neu oder suche erneut nach Plugins. Fehlt die Lizenz-E-Mail, prüfe den Spam-Ordner. Auf https://plugins.secret.vip/key/ kannst du den Schlüssel erneut an die Kaufadresse senden lassen. Wenn das nicht hilft, schreibe an support@secret-audio.com.",
+        "en": "If the plugin is missing from your DAW, restart the DAW or rescan plugins. If the license email is missing, check your spam folder. At https://plugins.secret.vip/key/ you can have the key resent to your purchase address. If that does not help, write to support@secret-audio.com.",
+        "fr": "Si le plug-in n'apparaît pas, redémarrez votre logiciel de musique ou relancez sa recherche de plug-ins. Si le courriel manque, vérifiez les indésirables. Sur https://plugins.secret.vip/key/, vous pouvez demander un nouvel envoi à votre adresse d'achat. Si cela ne suffit pas, écrivez à support@secret-audio.com.",
+        "es": "Si no aparece el complemento, reinicia tu programa de música o vuelve a buscar complementos. Si falta el correo, mira la carpeta de correo no deseado. En https://plugins.secret.vip/key/ puedes pedir otro envío a tu dirección de compra. Si no se resuelve, escribe a support@secret-audio.com.",
+        "ja": "プラグインが表示されない場合は、音楽ソフトを再起動するか、プラグインを再スキャンしてください。メールがない場合は迷惑メールを確認してください。https://plugins.secret.vip/key/ から購入時のメールアドレスへ再送できます。解決しない場合はsupport@secret-audio.comへご連絡ください。",
+        "pt-BR": "Se o plugin não aparece, reinicie seu programa de música ou faça uma nova busca de plugins. Se o e-mail não chegou, veja a pasta de spam. Em https://plugins.secret.vip/key/ você pode pedir o reenvio para o endereço da compra. Se não resolver, escreva para support@secret-audio.com.",
+        "zh-CN": "如果音乐软件中没有插件，请重启软件或重新扫描插件。如果没有收到邮件，请检查垃圾邮件文件夹。可在 https://plugins.secret.vip/key/ 请求重新发送到购买时的邮箱。如果仍未解决，请联系support@secret-audio.com。"
       },
       "terms": {
         "de": [
@@ -1929,13 +1929,13 @@
         "zh-CN": "如何报告Secret Parametric EQ的问题？"
       },
       "answer": {
-        "de": "Melde dich bei unserem Support unter support@secret.vip. Nenne Secret Parametric EQ, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
-        "en": "Contact our support at support@secret.vip. Include Secret Parametric EQ, the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
-        "fr": "Écrivez à support@secret.vip. Indiquez Secret Parametric EQ, la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
-        "es": "Escribe a support@secret.vip. Indica Secret Parametric EQ, la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
-        "ja": "support@secret.vipへご連絡ください。Secret Parametric EQ、バージョン、お使いのシステム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
-        "pt-BR": "Escreva para support@secret.vip. Informe Secret Parametric EQ, a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
-        "zh-CN": "请联系support@secret.vip，说明Secret Parametric EQ、版本、所用系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
+        "de": "Melde dich bei unserem Support unter support@secret-audio.com. Nenne Secret Parametric EQ, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Contact our support at support@secret-audio.com. Include Secret Parametric EQ, the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
+        "fr": "Écrivez à support@secret-audio.com. Indiquez Secret Parametric EQ, la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
+        "es": "Escribe a support@secret-audio.com. Indica Secret Parametric EQ, la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
+        "ja": "support@secret-audio.comへご連絡ください。Secret Parametric EQ、バージョン、お使いのシステム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
+        "pt-BR": "Escreva para support@secret-audio.com. Informe Secret Parametric EQ, a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
+        "zh-CN": "请联系support@secret-audio.com，说明Secret Parametric EQ、版本、所用系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
       },
       "terms": {
         "de": [
@@ -2225,13 +2225,13 @@
         "zh-CN": "如何报告Secret Analyser Beta的问题？"
       },
       "answer": {
-        "de": "Melde dich bei unserem Support unter support@secret.vip. Nenne Secret Analyser Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
-        "en": "Contact our support at support@secret.vip. Include Secret Analyser Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
-        "fr": "Écrivez à support@secret.vip. Indiquez Secret Analyser Beta, la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
-        "es": "Escribe a support@secret.vip. Indica Secret Analyser Beta, la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
-        "ja": "support@secret.vipへご連絡ください。Secret Analyser Beta、バージョン、お使いのシステム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
-        "pt-BR": "Escreva para support@secret.vip. Informe Secret Analyser Beta, a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
-        "zh-CN": "请联系support@secret.vip，说明Secret Analyser Beta、版本、所用系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
+        "de": "Melde dich bei unserem Support unter support@secret-audio.com. Nenne Secret Analyser Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Contact our support at support@secret-audio.com. Include Secret Analyser Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
+        "fr": "Écrivez à support@secret-audio.com. Indiquez Secret Analyser Beta, la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
+        "es": "Escribe a support@secret-audio.com. Indica Secret Analyser Beta, la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
+        "ja": "support@secret-audio.comへご連絡ください。Secret Analyser Beta、バージョン、お使いのシステム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
+        "pt-BR": "Escreva para support@secret-audio.com. Informe Secret Analyser Beta, a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
+        "zh-CN": "请联系support@secret-audio.com，说明Secret Analyser Beta、版本、所用系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
       },
       "terms": {
         "de": [
@@ -2525,13 +2525,13 @@
         "zh-CN": "如何报告Secret Future EQ 2 Beta的问题？"
       },
       "answer": {
-        "de": "Melde dich bei unserem Support unter support@secret.vip. Nenne Secret Future EQ 2 Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
-        "en": "Contact our support at support@secret.vip. Include Secret Future EQ 2 Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
-        "fr": "Écrivez à support@secret.vip. Indiquez Secret Future EQ 2 Beta, la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
-        "es": "Escribe a support@secret.vip. Indica Secret Future EQ 2 Beta, la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
-        "ja": "support@secret.vipへご連絡ください。Secret Future EQ 2 Beta、バージョン、お使いのシステム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
-        "pt-BR": "Escreva para support@secret.vip. Informe Secret Future EQ 2 Beta, a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
-        "zh-CN": "请联系support@secret.vip，说明Secret Future EQ 2 Beta、版本、所用系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
+        "de": "Melde dich bei unserem Support unter support@secret-audio.com. Nenne Secret Future EQ 2 Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Contact our support at support@secret-audio.com. Include Secret Future EQ 2 Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
+        "fr": "Écrivez à support@secret-audio.com. Indiquez Secret Future EQ 2 Beta, la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
+        "es": "Escribe a support@secret-audio.com. Indica Secret Future EQ 2 Beta, la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
+        "ja": "support@secret-audio.comへご連絡ください。Secret Future EQ 2 Beta、バージョン、お使いのシステム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
+        "pt-BR": "Escreva para support@secret-audio.com. Informe Secret Future EQ 2 Beta, a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
+        "zh-CN": "请联系support@secret-audio.com，说明Secret Future EQ 2 Beta、版本、所用系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
       },
       "terms": {
         "de": [
@@ -2816,13 +2816,13 @@
         "zh-CN": "如何报告Secret Future EQ 3 Beta的问题？"
       },
       "answer": {
-        "de": "Melde dich bei unserem Support unter support@secret.vip. Nenne Secret Future EQ 3 Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
-        "en": "Contact our support at support@secret.vip. Include Secret Future EQ 3 Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
-        "fr": "Écrivez à support@secret.vip. Indiquez Secret Future EQ 3 Beta, la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
-        "es": "Escribe a support@secret.vip. Indica Secret Future EQ 3 Beta, la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
-        "ja": "support@secret.vipへご連絡ください。Secret Future EQ 3 Beta、バージョン、お使いのシステム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
-        "pt-BR": "Escreva para support@secret.vip. Informe Secret Future EQ 3 Beta, a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
-        "zh-CN": "请联系support@secret.vip，说明Secret Future EQ 3 Beta、版本、所用系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
+        "de": "Melde dich bei unserem Support unter support@secret-audio.com. Nenne Secret Future EQ 3 Beta, die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Contact our support at support@secret-audio.com. Include Secret Future EQ 3 Beta, the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
+        "fr": "Écrivez à support@secret-audio.com. Indiquez Secret Future EQ 3 Beta, la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
+        "es": "Escribe a support@secret-audio.com. Indica Secret Future EQ 3 Beta, la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
+        "ja": "support@secret-audio.comへご連絡ください。Secret Future EQ 3 Beta、バージョン、お使いのシステム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
+        "pt-BR": "Escreva para support@secret-audio.com. Informe Secret Future EQ 3 Beta, a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
+        "zh-CN": "请联系support@secret-audio.com，说明Secret Future EQ 3 Beta、版本、所用系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
       },
       "terms": {
         "de": [
@@ -2913,13 +2913,13 @@
         "zh-CN": "如何报告Secret Future EQ 2的问题？"
       },
       "answer": {
-        "de": "Nutze „Problem melden“ im Plugin, wenn deine Version diesen Punkt anbietet. Du kannst auch an support@secret.vip schreiben. Nenne Version, Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
-        "en": "Use “Report problem” in the plugin if your version offers it. You can also write to support@secret.vip. Include the version, operating system and what happened. Do not include license keys, passwords or private audio files.",
-        "fr": "Utilisez le bouton de signalement dans le plug-in si votre version le propose. Vous pouvez aussi écrire à support@secret.vip. Indiquez la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
-        "es": "Usa el botón para informar de problemas del complemento si tu versión lo ofrece. También puedes escribir a support@secret.vip. Indica la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
-        "ja": "お使いの版に問題報告ボタンがあれば利用してください。support@secret.vipへの連絡も可能です。バージョン、システム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
-        "pt-BR": "Use o botão para relatar problemas no plugin, se sua versão oferecer essa opção. Você também pode escrever para support@secret.vip. Informe a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
-        "zh-CN": "如果所用版本提供问题报告按钮，可直接使用。也可联系support@secret.vip。请说明版本、系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
+        "de": "Nutze „Problem melden“ im Plugin, wenn deine Version diesen Punkt anbietet. Du kannst auch an support@secret-audio.com schreiben. Nenne Version, Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Use “Report problem” in the plugin if your version offers it. You can also write to support@secret-audio.com. Include the version, operating system and what happened. Do not include license keys, passwords or private audio files.",
+        "fr": "Utilisez le bouton de signalement dans le plug-in si votre version le propose. Vous pouvez aussi écrire à support@secret-audio.com. Indiquez la version, votre système et ce qui s'est passé. N'envoyez ni clé de licence, ni mot de passe, ni fichier audio privé.",
+        "es": "Usa el botón para informar de problemas del complemento si tu versión lo ofrece. También puedes escribir a support@secret-audio.com. Indica la versión, tu sistema y lo que ocurrió. No envíes claves de licencia, contraseñas ni archivos de audio privados.",
+        "ja": "お使いの版に問題報告ボタンがあれば利用してください。support@secret-audio.comへの連絡も可能です。バージョン、システム、起きたことをお知らせください。ライセンスキー、パスワード、私的な音声ファイルは送らないでください。",
+        "pt-BR": "Use o botão para relatar problemas no plugin, se sua versão oferecer essa opção. Você também pode escrever para support@secret-audio.com. Informe a versão, seu sistema e o que aconteceu. Não envie chaves de licença, senhas nem arquivos de áudio privados.",
+        "zh-CN": "如果所用版本提供问题报告按钮，可直接使用。也可联系support@secret-audio.com。请说明版本、系统和发生的情况。不要发送许可证密钥、密码或私人音频文件。"
       },
       "terms": {
         "de": [
@@ -3499,13 +3499,13 @@
         "zh-CN": "如何报告 Secret Analyser 的问题？"
       },
       "answer": {
-        "de": "Öffne im Plugin das Menü Ansicht und wähle Problem melden oder Fehler melden / Wunsch. Du kannst auch direkt an support@secret.vip schreiben. Nenne die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
-        "en": "Open the View menu in the plugin and choose Report a problem or Report bug / Wish. You can also write to support@secret.vip directly. Include the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
-        "fr": "Ouvre le menu « View » du plugin et choisis « Report a problem » ou « Report bug / Wish ». Tu peux aussi écrire à support@secret.vip. Indique la version, ton système et ce qui s'est passé. N'envoie ni clé de licence, ni mot de passe, ni fichier audio privé.",
-        "es": "Abre el menú «View» del plugin y elige «Report a problem» o «Report bug / Wish». También puedes escribir a support@secret.vip. Indica la versión, tu sistema operativo y qué ha pasado. No incluyas claves de licencia, contraseñas ni archivos de audio privados.",
-        "ja": "プラグインの「View」メニューから「Report a problem」または「Report bug / Wish」を選びます。support@secret.vipへの連絡も可能です。バージョン、OS、起きたことを書いてください。ライセンスキー、パスワード、非公開の音声ファイルは送らないでください。",
-        "pt-BR": "Abra o menu “View” no plugin e escolha “Report a problem” ou “Report bug / Wish”. Você também pode escrever para support@secret.vip. Informe a versão, seu sistema operacional e o que aconteceu. Não inclua chaves de licença, senhas nem arquivos de áudio privados.",
-        "zh-CN": "打开插件的“View”菜单，选择“Report a problem”或“Report bug / Wish”。也可以直接联系 support@secret.vip。请说明版本、操作系统及发生的情况。不要发送许可证密钥、密码或私人音频文件。"
+        "de": "Öffne im Plugin das Menü Ansicht und wähle Problem melden oder Fehler melden / Wunsch. Du kannst auch direkt an support@secret-audio.com schreiben. Nenne die Version, dein Betriebssystem und was passiert ist. Schicke keine Lizenzschlüssel, Passwörter oder privaten Audiodateien mit.",
+        "en": "Open the View menu in the plugin and choose Report a problem or Report bug / Wish. You can also write to support@secret-audio.com directly. Include the version, your operating system and what happened. Do not include license keys, passwords or private audio files.",
+        "fr": "Ouvre le menu « View » du plugin et choisis « Report a problem » ou « Report bug / Wish ». Tu peux aussi écrire à support@secret-audio.com. Indique la version, ton système et ce qui s'est passé. N'envoie ni clé de licence, ni mot de passe, ni fichier audio privé.",
+        "es": "Abre el menú «View» del plugin y elige «Report a problem» o «Report bug / Wish». También puedes escribir a support@secret-audio.com. Indica la versión, tu sistema operativo y qué ha pasado. No incluyas claves de licencia, contraseñas ni archivos de audio privados.",
+        "ja": "プラグインの「View」メニューから「Report a problem」または「Report bug / Wish」を選びます。support@secret-audio.comへの連絡も可能です。バージョン、OS、起きたことを書いてください。ライセンスキー、パスワード、非公開の音声ファイルは送らないでください。",
+        "pt-BR": "Abra o menu “View” no plugin e escolha “Report a problem” ou “Report bug / Wish”. Você também pode escrever para support@secret-audio.com. Informe a versão, seu sistema operacional e o que aconteceu. Não inclua chaves de licença, senhas nem arquivos de áudio privados.",
+        "zh-CN": "打开插件的“View”菜单，选择“Report a problem”或“Report bug / Wish”。也可以直接联系 support@secret-audio.com。请说明版本、操作系统及发生的情况。不要发送许可证密钥、密码或私人音频文件。"
       },
       "terms": {
         "de": [

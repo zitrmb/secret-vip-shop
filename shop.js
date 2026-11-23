@@ -38,13 +38,13 @@
     unclear: 'Kauf geschlossen. Falls eine Zahlung durchging, kommt dein Schlüssel per E-Mail.', buy: 'Jetzt kaufen',
     code: 'Hast du einen Code?', codeLabel: 'Rabattcode', mail: 'Bitte gib die E-Mail-Adresse deines Kaufs ein.', sending: 'Wird gesendet…',
     sent: 'Erledigt. Falls mit dieser Adresse ein Plugin gekauft wurde, ist der Schlüssel unterwegs. Schau auch im Spam-Ordner nach.',
-    failed: 'Das hat nicht geklappt. Bitte schreib an support@secret.vip – wir helfen sofort.'
+    failed: 'Das hat nicht geklappt. Bitte schreib an support@secret-audio.com – wir helfen sofort.'
   } : {
     check: 'Check purchase', checking: 'Checking your payment…', closed: 'Checkout closed – nothing was charged.',
     unclear: 'Checkout closed. If a payment went through, your key arrives by email.', buy: 'Buy now',
     code: 'Have a code?', codeLabel: 'Discount code', mail: 'Please enter the email address you used for the purchase.', sending: 'Sending...',
     sent: 'Done. If this address bought a plugin, the key is on its way. Check your spam folder too.',
-    failed: 'That did not work. Please write to support@secret.vip - we help right away.'
+    failed: 'That did not work. Please write to support@secret-audio.com - we help right away.'
   };
 
   // Checkout receives only purchase and delivery fields; campaign links are not propagated.

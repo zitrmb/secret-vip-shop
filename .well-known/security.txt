@@ -1,4 +1,4 @@
-Contact: mailto:support@secret.vip
+Contact: mailto:support@secret-audio.com
 Expires: 2027-10-01T00:00:00.000Z
 Preferred-Languages: en, de
 Canonical: https://secret-audio.com/.well-known/security.txt
