@@ -20,17 +20,29 @@
     },
     "SecretDynamicsRelease": {
       "name": "Secret Dynamics",
-      "version": "1.0.2",
+      "version": "3.0.1",
       "groups": {
         "Neu": [
-          "Give your music more punch, warmth and presence.",
-          "Available for Mac (VST3, AU, CLAP) and Windows (VST3, CLAP)."
+          "A new final touch adds loudness and keeps your punch. It is on from the start.",
+          "Hold keeps your loudness steady, and Learn sets it from your track."
+        ],
+        "Besser": [
+          "A cleaner layout with a bigger tempo field."
+        ],
+        "Behoben": [
+          "The output level no longer jumps when a loop starts again."
         ]
       },
       "groups_de": {
         "Neu": [
-          "Gib deiner Musik mehr Druck, Wärme und Präsenz.",
-          "Erhältlich für Mac (VST3, AU, CLAP) und Windows (VST3, CLAP)."
+          "Ein neuer letzter Schliff bringt mehr Lautheit, und der Druck bleibt. Er ist von Anfang an aktiv.",
+          "Halten hält deine Lautheit gleichmäßig, Lernen stellt sie nach deinem Track ein."
+        ],
+        "Besser": [
+          "Eine aufgeräumtere Oberfläche mit einem größeren Tempo-Feld."
+        ],
+        "Behoben": [
+          "Der Ausgangspegel springt nicht mehr, wenn ein Loop neu beginnt."
         ]
       },
       "url": "/plugins/dynamics/",
