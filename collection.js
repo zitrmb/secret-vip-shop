@@ -24,6 +24,7 @@
     confirmation: 'Deine Kaufbestätigung.', viaMail: 'Deine Kauf-Mail enthält deinen persönlichen Zugang. Du kannst ihn hier erneut anfordern.',
     show: 'anzeigen', hide: 'verbergen', copy: 'kopieren', copied: 'kopiert', showFirst: 'Bitte anzeigen', showFor: 'Schlüssel anzeigen für ',
     keyFailed: 'Bitte nutze deine Kauf-Mail oder versuche es erneut.', partOf: 'Gehört zu deiner Sammlung',
+    upgrade: ['Dein Schlüssel schaltet ', ' frei. Gratis für alle, die ', ' haben.'], earlier: 'Frühere Version: ',
     mac: 'Für Mac laden', win: 'Für Windows laden', soon: 'Der Download kommt in Kürze.', inactive: 'Diese Lizenz ist nicht mehr aktiv.',
     computer: ' Computer gleichzeitig', computers: ' Computer gleichzeitig',
     receipt: 'Dein neuer Kauf ist hier. Alle früheren Käufe findest du mit dem persönlichen Link aus deiner Kauf-Mail.',
@@ -44,6 +45,7 @@
     confirmation: 'Your purchase confirmation.', viaMail: 'Your purchase email contains your personal access. You can request it again here.',
     show: 'show', hide: 'hide', copy: 'copy', copied: 'copied', showFirst: 'Show it first', showFor: 'Show key for ',
     keyFailed: 'Please use your purchase email or try again.', partOf: 'Part of your collection',
+    upgrade: ['Your key unlocks ', '. Free for everyone who owns ', '.'], earlier: 'Earlier version: ',
     mac: 'Download for Mac', win: 'Download for Windows', soon: 'The download is coming soon.', inactive: 'This license is no longer active.',
     computer: ' computer at a time', computers: ' computers at the same time',
     receipt: 'Your new purchase is here. You find all earlier purchases with the personal link from your purchase email.',
@@ -158,6 +160,11 @@
     } catch (_) {}
     return '';
   }
+  function newerFirst(a, b) {
+    var x = String(a.version || '').split('.'), y = String(b.version || '').split('.');
+    for (var i = 0; i < Math.max(x.length, y.length); i++) { var d = (Number(y[i]) || 0) - (Number(x[i]) || 0); if (d) return d; }
+    return 0;
+  }
   function el(tag, text, className) {
     var node = document.createElement(tag); if (text) node.textContent = text; if (className) node.className = className; return node;
   }
@@ -171,8 +178,9 @@
   }
   function card(license) {
     var entries = downloadData.plugins || {};
-    var entry = Object.keys(entries).find(function (name) { return (entries[name].license_product || name) === license.product; });
-    var download = entries[entry] || {};
+    var matches = Object.keys(entries).filter(function (name) { return (entries[name].license_product || name) === license.product; })
+      .map(function (name) { return entries[name]; }).sort(newerFirst);
+    var download = matches[0] || {};
     var group = groups[license.product];
     if (!group) {
       var article = el('article', '', 'plugin');
@@ -180,7 +188,7 @@
       if (image) { var img = el('img'); img.src = image; img.alt = license.title; article.appendChild(img); }
       else { var art = el('div', '◇', 'number'); art.setAttribute('aria-hidden', 'true'); article.appendChild(art); }
       article.appendChild(el('span', T.partOf, 'eyebrow'));
-      article.appendChild(el('h3', license.title));
+      article.appendChild(el('h3', matches.length > 1 && download.name ? download.name : license.title));
       var counter = el('p', '', 'quiet'), downloads = el('div', '', 'downloads');
       article.append(counter, downloads); $('plugins').appendChild(article);
       group = groups[license.product] = { article: article, downloads: downloads, counter: counter, count: 0, active: false };
@@ -195,6 +203,16 @@
         var a = el('a', pair[1] + (version ? ' ' + version : ''), 'button'); a.href = url; group.downloads.appendChild(a);
       });
       if (!group.downloads.children.length) group.downloads.appendChild(el('p', T.soon, 'quiet'));
+      if (matches.length > 1 && download.name && matches[1].name) group.downloads.appendChild(el('p', T.upgrade[0] + download.name + T.upgrade[1] + matches[1].name + T.upgrade[2], 'quiet'));
+      matches.slice(1).forEach(function (older) {
+        var line = el('p', T.earlier + (older.name || license.title), 'quiet');
+        [['mac', 'Mac'], ['win', 'Windows']].forEach(function (pair) {
+          var url = safeDownload(older[pair[0]]); if (!url) return;
+          var a = el('a', pair[1] + ' ' + (older[pair[0] + '_version'] || older.version || '')); a.href = url;
+          line.append(' · ', a);
+        });
+        group.downloads.appendChild(line);
+      });
     } else if (!group.active && !group.downloads.children.length) group.downloads.appendChild(el('p', T.inactive, 'quiet'));
     var row = el('div', '', 'license');
     row.appendChild(el('p', license.machines + (license.machines === 1 ? T.computer : T.computers), 'quiet'));

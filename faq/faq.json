@@ -4118,7 +4118,7 @@
       "product": "SecretDynamics3Dev",
       "sources": [
         "wissen/plugins/secret-dynamics.md",
-        "SecretDynamics3Dev/resources/web/index.html"
+        "SecretDynamicsBeta/resources/web/index.html"
       ],
       "question": {
         "en": "How do I install Secret Dynamics?",
@@ -4231,7 +4231,7 @@
       "product": "SecretDynamics3Dev",
       "sources": [
         "wissen/plugins/secret-dynamics.md",
-        "SecretDynamics3Dev/resources/web/index.html"
+        "SecretDynamicsBeta/resources/web/index.html"
       ],
       "question": {
         "en": "Which systems does Secret Dynamics support?",
@@ -4280,7 +4280,7 @@
       "product": "SecretDynamics3Dev",
       "sources": [
         "wissen/plugins/secret-dynamics.md",
-        "SecretDynamics3Dev/resources/web/index.html"
+        "SecretDynamicsBeta/resources/web/index.html"
       ],
       "question": {
         "en": "How do I update Secret Dynamics?",
@@ -4329,7 +4329,7 @@
       "product": "SecretDynamics3Dev",
       "sources": [
         "wissen/plugins/secret-dynamics.md",
-        "SecretDynamics3Dev/resources/web/index.html"
+        "SecretDynamicsBeta/resources/web/index.html"
       ],
       "question": {
         "en": "How do I report a problem with Secret Dynamics?",
@@ -4370,6 +4370,295 @@
         ],
         "zh-CN": [
           "如何报告 Secret Dynamics 的问题？"
+        ]
+      }
+    },
+    {
+      "id": "sfe4-function",
+      "product": "SecretFutureEQ4",
+      "sources": [
+        "site/plugins/future-eq-4/index.html"
+      ],
+      "question": {
+        "de": "Was macht Secret Future EQ 4?",
+        "en": "What does Secret Future EQ 4 do?",
+        "es": "¿Qué hace Secret Future EQ 4?",
+        "fr": "Que fait Secret Future EQ 4 ?",
+        "ja": "Secret Future EQ 4では何ができますか？",
+        "pt-BR": "O que o Secret Future EQ 4 faz?",
+        "zh-CN": "Secret Future EQ 4 能做什么？"
+      },
+      "answer": {
+        "de": "Es bringt deinen Klang näher an eine Referenz, die du wählst. Referenz wählen, Track abspielen und Secret Match drücken: 26 Bänder passen deinen Klang an. Die Stärke bestimmt, wie weit es geht, Match % zeigt, wie nah du bist. Eigene Bänder kannst du zusätzlich setzen.",
+        "en": "It moves your sound towards a reference you choose. Pick a reference, play your track and press Secret Match: 26 bands adjust your sound. Amount sets how far it goes, Match % shows how close you are. You can add your own bands on top.",
+        "es": "Acerca tu sonido a una referencia que tú eliges. Elige una referencia, reproduce tu pista y pulsa Secret Match: 26 bandas ajustan tu sonido. Amount define hasta dónde llega y Match % muestra lo cerca que estás. Además puedes añadir tus propias bandas.",
+        "fr": "Il rapproche ton son d’une référence que tu choisis. Choisis une référence, lance ton morceau et appuie sur Secret Match : 26 bandes ajustent ton son. Amount règle jusqu’où aller, Match % montre à quel point tu es proche. Tu peux ajouter tes propres bandes en plus.",
+        "ja": "選んだリファレンスに音を近づけます。リファレンスを選び、トラックを再生して Secret Match を押すと、26 のバンドが音を調整します。Amount で効きの強さを決め、Match % でどれだけ近いかが分かります。自分のバンドを追加することもできます。",
+        "pt-BR": "Ele aproxima seu som de uma referência que você escolhe. Escolha uma referência, toque sua faixa e aperte Secret Match: 26 bandas ajustam seu som. Amount define até onde vai, e Match % mostra o quanto você está perto. Você também pode adicionar suas próprias bandas.",
+        "zh-CN": "它让你的声音靠近你选择的参考。选择参考，播放你的音轨，按下 Secret Match：26 个频段会调整你的声音。Amount 决定调整的程度，Match % 显示你有多接近。你还可以额外添加自己的频段。"
+      },
+      "terms": {
+        "de": [
+          "Was macht Secret Future EQ 4?"
+        ],
+        "en": [
+          "What does Secret Future EQ 4 do"
+        ],
+        "es": [
+          "¿Qué hace Secret Future EQ 4?"
+        ],
+        "fr": [
+          "Que fait Secret Future EQ 4 ?"
+        ],
+        "ja": [
+          "Secret Future EQ 4では何ができますか？"
+        ],
+        "pt-BR": [
+          "O que o Secret Future EQ 4 faz?"
+        ],
+        "zh-CN": [
+          "Secret Future EQ 4 能做什么？"
+        ]
+      }
+    },
+    {
+      "id": "sfe4-reference",
+      "product": "SecretFutureEQ4",
+      "sources": [
+        "site/plugins/future-eq-4/index.html"
+      ],
+      "question": {
+        "de": "Welche Referenzen kann ich in Secret Future EQ 4 nutzen?",
+        "en": "Which references can I use in Secret Future EQ 4?",
+        "es": "¿Qué referencias puedo usar en Secret Future EQ 4?",
+        "fr": "Quelles références puis-je utiliser dans Secret Future EQ 4 ?",
+        "ja": "Secret Future EQ 4ではどんなリファレンスを使えますか？",
+        "pt-BR": "Quais referências posso usar no Secret Future EQ 4?",
+        "zh-CN": "Secret Future EQ 4 可以使用哪些参考？"
+      },
+      "answer": {
+        "de": "Die eingebaute Secret Curve, eine Audiodatei, die du lädst oder auf die Grafik ziehst, oder einen Klang, den du aufnimmst, während er spielt. Eigene Referenzen speicherst du in Meine Kurven.",
+        "en": "The built-in Secret Curve, an audio file you load or drop on the graph, or a sound you capture while it plays. Save your own references in My Curves.",
+        "es": "La Secret Curve integrada, un archivo de audio que cargas o sueltas sobre el gráfico, o un sonido que capturas mientras suena. Guarda tus propias referencias en My Curves.",
+        "fr": "La Secret Curve intégrée, un fichier audio que tu charges ou déposes sur le graphique, ou un son que tu captures pendant qu’il joue. Enregistre tes propres références dans My Curves.",
+        "ja": "内蔵の Secret Curve、読み込むかグラフにドロップしたオーディオファイル、または再生中にキャプチャした音を使えます。自分のリファレンスは My Curves に保存できます。",
+        "pt-BR": "A Secret Curve integrada, um arquivo de áudio que você carrega ou solta no gráfico, ou um som que você captura enquanto toca. Salve suas próprias referências em My Curves.",
+        "zh-CN": "内置的 Secret Curve、你载入或拖到图表上的音频文件，或在播放时捕获的声音。你自己的参考可以保存在 My Curves 中。"
+      },
+      "terms": {
+        "de": [
+          "Welche Referenzen kann ich in Secret Future EQ 4 nutzen?"
+        ],
+        "en": [
+          "Which references can I use in Secret Future EQ 4"
+        ],
+        "es": [
+          "¿Qué referencias puedo usar en Secret Future EQ 4?"
+        ],
+        "fr": [
+          "Quelles références puis-je utiliser dans Secret Future EQ 4 ?"
+        ],
+        "ja": [
+          "Secret Future EQ 4ではどんなリファレンスを使えますか？"
+        ],
+        "pt-BR": [
+          "Quais referências posso usar no Secret Future EQ 4?"
+        ],
+        "zh-CN": [
+          "Secret Future EQ 4 可以使用哪些参考？"
+        ]
+      }
+    },
+    {
+      "id": "sfe4-dynamic",
+      "product": "SecretFutureEQ4",
+      "sources": [
+        "site/plugins/future-eq-4/index.html"
+      ],
+      "question": {
+        "de": "Was macht der dynamische Abgleich in Secret Future EQ 4?",
+        "en": "What does Dynamic Match do in Secret Future EQ 4?",
+        "es": "¿Qué hace Dynamic Match en Secret Future EQ 4?",
+        "fr": "Que fait Dynamic Match dans Secret Future EQ 4 ?",
+        "ja": "Secret Future EQ 4のDynamic Matchは何をしますか？",
+        "pt-BR": "O que o Dynamic Match faz no Secret Future EQ 4?",
+        "zh-CN": "Secret Future EQ 4 中的 Dynamic Match 有什么作用？"
+      },
+      "answer": {
+        "de": "Er hält deinen Klang nah an der Referenz, während die Musik läuft. Du stellst Stärke, Bereich und Tempo ein und kannst ihn auf einen Frequenzbereich begrenzen, zum Beispiel um scharfe S-Laute zu zähmen. Look-ahead erzeugt nur Latenz, solange der dynamische Abgleich an ist.",
+        "en": "It keeps your sound close to the reference while the music plays. You set amount, range and speed, and you can limit it to a frequency area, for example to tame harsh S sounds. Look-ahead adds latency only while Dynamic Match is on.",
+        "es": "Mantiene tu sonido cerca de la referencia mientras suena la música. Ajustas cantidad, rango y velocidad, y puedes limitarlo a una zona de frecuencias, por ejemplo para suavizar eses ásperas. Look-ahead solo añade latencia mientras Dynamic Match está activo.",
+        "fr": "Il garde ton son proche de la référence pendant que la musique joue. Tu règles la quantité, la plage et la vitesse, et tu peux le limiter à une zone de fréquences, par exemple pour adoucir des S agressifs. Look-ahead n’ajoute de la latence que lorsque Dynamic Match est actif.",
+        "ja": "音楽の再生中も、音をリファレンスに近い状態に保ちます。量、範囲、速さを設定でき、たとえば耳障りな S の音を抑えるために周波数範囲を限定することもできます。Look-ahead によるレイテンシーは Dynamic Match がオンのときだけです。",
+        "pt-BR": "Ele mantém seu som perto da referência enquanto a música toca. Você ajusta quantidade, faixa e velocidade, e pode limitá-lo a uma região de frequências, por exemplo para suavizar sons de S ásperos. O Look-ahead só adiciona latência enquanto o Dynamic Match está ligado.",
+        "zh-CN": "在音乐播放时让你的声音保持接近参考。你可以设置量、范围和速度，也可以把它限制在某个频率区域，例如驯服刺耳的齿音。只有在 Dynamic Match 开启时，Look-ahead 才会增加延迟。"
+      },
+      "terms": {
+        "de": [
+          "Was macht der dynamische Abgleich in Secret Future EQ 4?"
+        ],
+        "en": [
+          "What does Dynamic Match do in Secret Future EQ 4"
+        ],
+        "es": [
+          "¿Qué hace Dynamic Match en Secret Future EQ 4?"
+        ],
+        "fr": [
+          "Que fait Dynamic Match dans Secret Future EQ 4 ?"
+        ],
+        "ja": [
+          "Secret Future EQ 4のDynamic Matchは何をしますか？"
+        ],
+        "pt-BR": [
+          "O que o Dynamic Match faz no Secret Future EQ 4?"
+        ],
+        "zh-CN": [
+          "Secret Future EQ 4 中的 Dynamic Match 有什么作用？"
+        ]
+      }
+    },
+    {
+      "id": "sfe4-compare",
+      "product": "SecretFutureEQ4",
+      "sources": [
+        "site/plugins/future-eq-4/index.html"
+      ],
+      "question": {
+        "de": "Wie vergleiche ich fair in Secret Future EQ 4?",
+        "en": "How do I compare fairly in Secret Future EQ 4?",
+        "es": "¿Cómo comparo de forma justa en Secret Future EQ 4?",
+        "fr": "Comment comparer équitablement dans Secret Future EQ 4 ?",
+        "ja": "Secret Future EQ 4で公平に比較するには？",
+        "pt-BR": "Como comparo de forma justa no Secret Future EQ 4?",
+        "zh-CN": "如何在 Secret Future EQ 4 中公平地比较？"
+      },
+      "answer": {
+        "de": "Auto-Gain hält die Lautheit gleich dem Eingang. So vergleicht Bypass den Klang und nicht die Lautstärke. Drei Speicher A, B und C halten verschiedene Einstellungen bereit, mit Rückgängig und Wiederholen.",
+        "en": "Auto-Gain keeps the loudness equal to the input, so bypass compares the tone, not the volume. Three slots A, B and C keep different settings, with undo and redo.",
+        "es": "Auto-Gain mantiene la sonoridad igual a la entrada, así el bypass compara el tono y no el volumen. Tres memorias A, B y C guardan ajustes distintos, con deshacer y rehacer.",
+        "fr": "Auto-Gain garde la sonie égale à l’entrée, ainsi le bypass compare le timbre et non le volume. Trois emplacements A, B et C gardent des réglages différents, avec annuler et rétablir.",
+        "ja": "Auto-Gain がラウドネスを入力と同じに保つので、バイパスでは音量ではなく音色を比べられます。A、B、C の 3 つのスロットに別々の設定を保存でき、取り消しとやり直しも使えます。",
+        "pt-BR": "O Auto-Gain mantém a loudness igual à da entrada, então o bypass compara o timbre, não o volume. Três memórias A, B e C guardam ajustes diferentes, com desfazer e refazer.",
+        "zh-CN": "Auto-Gain 让响度与输入保持一致，因此旁通比较的是音色而不是音量。A、B、C 三个槽位可保存不同设置，并支持撤销和重做。"
+      },
+      "terms": {
+        "de": [
+          "Wie vergleiche ich fair in Secret Future EQ 4?"
+        ],
+        "en": [
+          "How do I compare fairly in Secret Future EQ 4"
+        ],
+        "es": [
+          "¿Cómo comparo de forma justa en Secret Future EQ 4?"
+        ],
+        "fr": [
+          "Comment comparer équitablement dans Secret Future EQ 4 ?"
+        ],
+        "ja": [
+          "Secret Future EQ 4で公平に比較するには？"
+        ],
+        "pt-BR": [
+          "Como comparo de forma justa no Secret Future EQ 4?"
+        ],
+        "zh-CN": [
+          "如何在 Secret Future EQ 4 中公平地比较？"
+        ]
+      }
+    },
+    {
+      "id": "sfe4-formats",
+      "product": "SecretFutureEQ4",
+      "sources": [
+        "site/plugins/future-eq-4/index.html"
+      ],
+      "question": {
+        "de": "Welche Formate und Systeme unterstützt Secret Future EQ 4?",
+        "en": "Which formats and systems does Secret Future EQ 4 support?",
+        "es": "¿Qué formatos y sistemas admite Secret Future EQ 4?",
+        "fr": "Quels formats et systèmes Secret Future EQ 4 prend-il en charge ?",
+        "ja": "Secret Future EQ 4の対応フォーマットとシステムは？",
+        "pt-BR": "Quais formatos e sistemas o Secret Future EQ 4 suporta?",
+        "zh-CN": "Secret Future EQ 4 支持哪些格式和系统？"
+      },
+      "answer": {
+        "de": "Mac: VST3, AU und CLAP, macOS 12 oder neuer, Apple Silicon und Intel. Windows: VST3 und CLAP, Windows 10 und 11, 64 Bit.",
+        "en": "Mac: VST3, AU and CLAP, macOS 12 or newer, Apple Silicon and Intel. Windows: VST3 and CLAP, Windows 10 and 11, 64-bit.",
+        "es": "Mac: VST3, AU y CLAP, macOS 12 o posterior, Apple Silicon e Intel. Windows: VST3 y CLAP, Windows 10 y 11, 64 bits.",
+        "fr": "Mac : VST3, AU et CLAP, macOS 12 ou plus récent, Apple Silicon et Intel. Windows : VST3 et CLAP, Windows 10 et 11, 64 bits.",
+        "ja": "Mac：VST3、AU、CLAP、macOS 12 以降、Apple Silicon と Intel。Windows：VST3、CLAP、Windows 10 と 11（64 ビット）。",
+        "pt-BR": "Mac: VST3, AU e CLAP, macOS 12 ou mais recente, Apple Silicon e Intel. Windows: VST3 e CLAP, Windows 10 e 11, 64 bits.",
+        "zh-CN": "Mac：VST3、AU 和 CLAP，macOS 12 或更新版本，Apple Silicon 和 Intel。Windows：VST3 和 CLAP，Windows 10 和 11，64 位。"
+      },
+      "terms": {
+        "de": [
+          "Welche Formate und Systeme unterstützt Secret Future EQ 4?"
+        ],
+        "en": [
+          "Which formats and systems does Secret Future EQ 4 support"
+        ],
+        "es": [
+          "¿Qué formatos y sistemas admite Secret Future EQ 4?"
+        ],
+        "fr": [
+          "Quels formats et systèmes Secret Future EQ 4 prend-il en charge ?"
+        ],
+        "ja": [
+          "Secret Future EQ 4の対応フォーマットとシステムは？"
+        ],
+        "pt-BR": [
+          "Quais formatos e sistemas o Secret Future EQ 4 suporta?"
+        ],
+        "zh-CN": [
+          "Secret Future EQ 4 支持哪些格式和系统？"
+        ]
+      }
+    },
+    {
+      "id": "sfe4-computers",
+      "product": "SecretFutureEQ4",
+      "sources": [
+        "site/plugins/future-eq-4/index.html",
+        "site/eula/index.html"
+      ],
+      "question": {
+        "de": "Auf wie vielen Computern kann ich Secret Future EQ 4 nutzen?",
+        "en": "On how many computers can I use Secret Future EQ 4?",
+        "es": "¿En cuántos ordenadores puedo usar Secret Future EQ 4?",
+        "fr": "Sur combien d’ordinateurs puis-je utiliser Secret Future EQ 4 ?",
+        "ja": "Secret Future EQ 4は何台のコンピューターで使えますか？",
+        "pt-BR": "Em quantos computadores posso usar o Secret Future EQ 4?",
+        "zh-CN": "Secret Future EQ 4 可以在几台电脑上使用？"
+      },
+      "answer": {
+        "de": "Eine Lizenz gilt für zwei Computer gleichzeitig. Für einen neuen Computer deaktivierst du sie auf dem alten und aktivierst sie auf dem neuen.",
+        "en": "One license works on two computers at the same time. To move to a new computer, deactivate it on the old one and activate it on the new one.",
+        "es": "Una licencia sirve para dos ordenadores a la vez. Para pasar a un ordenador nuevo, desactívala en el antiguo y actívala en el nuevo.",
+        "fr": "Une licence fonctionne sur deux ordinateurs en même temps. Pour passer à un nouvel ordinateur, désactive-la sur l’ancien et active-la sur le nouveau.",
+        "ja": "1 つのライセンスで 2 台のコンピューターを同時に使えます。新しいコンピューターに移すときは、古い方で無効化してから新しい方で有効化してください。",
+        "pt-BR": "Uma licença vale para dois computadores ao mesmo tempo. Para mudar para um computador novo, desative no antigo e ative no novo.",
+        "zh-CN": "一个许可证可同时用于两台电脑。换到新电脑时，先在旧电脑上停用，再在新电脑上激活。"
+      },
+      "terms": {
+        "de": [
+          "Auf wie vielen Computern kann ich Secret Future EQ 4 nutzen?"
+        ],
+        "en": [
+          "On how many computers can I use Secret Future EQ 4"
+        ],
+        "es": [
+          "¿En cuántos ordenadores puedo usar Secret Future EQ 4?"
+        ],
+        "fr": [
+          "Sur combien d’ordinateurs puis-je utiliser Secret Future EQ 4 ?"
+        ],
+        "ja": [
+          "Secret Future EQ 4は何台のコンピューターで使えますか？"
+        ],
+        "pt-BR": [
+          "Em quantos computadores posso usar o Secret Future EQ 4?"
+        ],
+        "zh-CN": [
+          "Secret Future EQ 4 可以在几台电脑上使用？"
         ]
       }
     },
@@ -4887,6 +5176,9 @@
     },
     "SecretDynamicsRelease": {
       "name": "Secret Dynamics"
+    },
+    "SecretFutureEQ4": {
+      "name": "Secret Future EQ 4"
     }
   }
 }
