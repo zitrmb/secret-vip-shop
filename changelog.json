@@ -50,13 +50,21 @@
     },
     "SecretFutureEQ4": {
       "name": "Secret Future EQ 4",
-      "version": "4.0.0",
+      "version": "4.0.1",
       "groups": {
         "Neu": [
           "Free for everyone who owns Secret Future EQ 2: your key unlocks it.",
           "Dynamic Match keeps your sound close to the reference while the music plays.",
           "Any reference you like: the built-in Secret Curve, an audio file, or a sound you capture while it plays.",
           "Your own bands can be dynamic, soloed, or work on left, right, mid or side."
+        ],
+        "Besser": [
+          "A cleaner view: the band controls appear only when you select a band.",
+          "Outside the range lines the automatic EQ now stays off.",
+          "Clearer buttons, help texts that are easier to read and many small touches to the layout."
+        ],
+        "Behoben": [
+          "Improved stability when opening the window."
         ]
       },
       "groups_de": {
@@ -65,6 +73,14 @@
           "Der dynamische Abgleich hält deinen Klang nah an der Referenz, während die Musik läuft.",
           "Jede Referenz, die du magst: die eingebaute Secret Curve, eine Audiodatei oder ein Klang, den du aufnimmst, während er spielt.",
           "Eigene Bänder können dynamisch arbeiten, solo laufen oder nur links, rechts, in der Mitte oder auf den Seiten wirken."
+        ],
+        "Besser": [
+          "Aufgeräumtere Ansicht: Die Band-Regler erscheinen erst, wenn du ein Band auswählst.",
+          "Außerhalb der Bereichslinien bleibt der automatische EQ jetzt aus.",
+          "Klarere Knöpfe, besser lesbare Hilfetexte und viele kleine Feinheiten an der Oberfläche."
+        ],
+        "Behoben": [
+          "Stabilität beim Öffnen des Fensters verbessert."
         ]
       },
       "url": "/plugins/future-eq-4/",
