@@ -3,12 +3,16 @@
   "plugins": {
     "SVPEQ4": {
       "name": "Secret Future EQ 2",
-      "version": "2.0.1",
+      "version": "2.0.4",
       "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.4/Secret-Future-EQ-2-2.0.4-Mac.pkg",
-      "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.1/Secret-Future-EQ-2-2.0.1-Windows.zip",
+      "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe2-2.0.4/Secret-Future-EQ-2-2.0.4-Windows.exe",
       "license_product": "SFE2",
       "image": "img/sfe2.jpg",
-      "mac_version": "2.0.4"
+      "mac_version": "2.0.4",
+      "win_version": "2.0.4",
+      "win_sha256": "d3f36426407c9616ac262db41d545e76de2d272f1d42e84b6155ff904de6fce5",
+      "win_source_commit": "f5f0bea1e4cb5b116842eb7f0450dfff7ee8776e",
+      "win_build_run": "45320423486"
     },
     "SecretNotes": {
       "name": "Secret Notes",
