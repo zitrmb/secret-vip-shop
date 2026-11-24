@@ -54,6 +54,22 @@
       "win_source_commit": "96e81da56666371d08bb78172228caa55b206416",
       "win_build_run": "45389754047",
       "license_product": "SDYN"
+    },
+    "SecretFutureEQ4": {
+      "name": "Secret Future EQ 4",
+      "version": "4.0.0",
+      "mac": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe4-4.0.0/Secret-Future-EQ-4-4.0.0-Mac.pkg",
+      "mac_version": "4.0.0",
+      "mac_sha256": "772514afb48a3ca26a6c5012c066a7c63594007817989efe0376e6932dcc75cd",
+      "mac_source_commit": "93f8fb5a965890e0edb4ba7db9f7837ecc07dba1",
+      "mac_build_run": "45451668986",
+      "win": "https://github.com/zitrmb/secret-vip-updates/releases/download/sfe4-4.0.0/Secret-Future-EQ-4-4.0.0-Windows.exe",
+      "win_version": "4.0.0",
+      "win_sha256": "c556fcd9a11aa8570efac6280d79f1e50c9ec8f8e56b28b53003c5118d9b7dd0",
+      "win_source_commit": "93f8fb5a965890e0edb4ba7db9f7837ecc07dba1",
+      "win_build_run": "45450612891",
+      "license_product": "SFE2",
+      "image": "media/sfe4-poster-720.webp"
     }
   },
   "control_center": {
