@@ -20,7 +20,7 @@
     },
     "SecretDynamicsRelease": {
       "name": "Secret Dynamics",
-      "version": "3.0.1",
+      "version": "3.0.2",
       "groups": {
         "Neu": [
           "A new final touch adds loudness and keeps your punch. It is on from the start.",
@@ -30,6 +30,7 @@
           "A cleaner layout with a bigger tempo field."
         ],
         "Behoben": [
+          "On Mac, switches such as Auto now react to the first click.",
           "The output level no longer jumps when a loop starts again."
         ]
       },
@@ -42,6 +43,7 @@
           "Eine aufgeräumtere Oberfläche mit einem größeren Tempo-Feld."
         ],
         "Behoben": [
+          "Auf dem Mac reagieren Schalter wie Auto jetzt schon auf den ersten Klick.",
           "Der Ausgangspegel springt nicht mehr, wenn ein Loop neu beginnt."
         ]
       },
