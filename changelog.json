@@ -52,7 +52,7 @@
     },
     "SecretFutureEQ4": {
       "name": "Secret Future EQ 4",
-      "version": "4.0.2",
+      "version": "4.0.3",
       "groups": {
         "Neu": [
           "Free for everyone who owns Secret Future EQ 2: your key unlocks it.",
@@ -61,12 +61,14 @@
           "Your own bands can be dynamic, soloed, or work on left, right, mid or side."
         ],
         "Besser": [
+          "Capture runs until you click Stop and shows the running time.",
           "More room for the graph: the lower bar shrinks while no band is selected.",
           "Dragging a range line now takes effect right away.",
           "The band button shows on and off with a green or grey dot.",
           "Calmer colours in the graph."
         ],
         "Behoben": [
+          "Capture no longer ends silently: without sound you see a hint to play your track.",
           "At the smallest window size, the undo arrow no longer sits on top of the A / B / C buttons.",
           "The help window now shows the curve colours you really see in the graph.",
           "Improved stability when opening the window."
@@ -80,12 +82,14 @@
           "Eigene Bänder können dynamisch arbeiten, solo laufen oder nur links, rechts, in der Mitte oder auf den Seiten wirken."
         ],
         "Besser": [
+          "Die Aufnahme läuft, bis du auf Stopp klickst, und zeigt die laufende Zeit.",
           "Mehr Platz für den Graph: Die untere Leiste wird schmal, solange kein Band gewählt ist.",
           "Das Ziehen einer Bereichslinie wirkt jetzt sofort.",
           "Der Band-Knopf zeigt An und Aus mit einem grünen oder grauen Punkt.",
           "Ruhigere Farben im Graph."
         ],
         "Behoben": [
+          "Die Aufnahme endet nicht mehr still: Ohne Ton siehst du den Hinweis, deinen Track abzuspielen.",
           "Bei der kleinsten Fenstergröße liegt der Rückgängig-Pfeil nicht mehr über den Knöpfen A / B / C.",
           "Das Hilfe-Fenster zeigt jetzt die Kurvenfarben, die du im Graph wirklich siehst.",
           "Stabilität beim Öffnen des Fensters verbessert."
