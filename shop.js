@@ -7,8 +7,17 @@
   // Paddle reads location.href itself (settings.sourcePage), independently of customData.
   // Remove marketing tags before any embedded script sees them; keep payment links, codes,
   // language, hash and existing history.state. Second case: every page using this shared shop.
-  function clearAttribution() {
+  var campaignSource;
+  function clearAttribution(captureSource) {
     var url = new URL(location.href), keys = [];
+    if (captureSource) {
+      var ref = url.searchParams.get('ref');
+      var source = url.searchParams.get('utm_source');
+      var campaign = url.searchParams.get('utm_campaign');
+      var candidate = ref !== null ? ref : source;
+      if (ref === null && source && campaign) candidate += '-' + campaign;
+      if (candidate && /^[a-z0-9-]{1,40}$/.test(candidate)) campaignSource = candidate;
+    }
     url.searchParams.forEach(function (_, name) {
       if (/^(utm_.+|ref|gclid|dclid|fbclid|msclkid|ttclid|twclid|gbraid|wbraid|srsltid|gad_source|gad_campaignid|mc_cid|mc_eid|igshid)$/i.test(name)) keys.push(name);
     });
@@ -16,7 +25,7 @@
     keys.forEach(function (name) { url.searchParams.delete(name); });
     history.replaceState(history.state, '', url.pathname + url.search + url.hash);
   }
-  clearAttribution();
+  clearAttribution(true);
   var LICENSE = 'https://license.secret.vip';
 
   function $(s, r) { return (r || document).querySelector(s); }
@@ -47,7 +56,7 @@
     failed: 'That did not work. Please write to support@secret-audio.com - we help right away.'
   };
 
-  // Checkout receives only purchase and delivery fields; campaign links are not propagated.
+  // An optional campaign code stays in page memory and travels only as checkout customData.source.
 
   // ---- Kaufen (Paddle Overlay-Checkout) ----
   // Datenschutz: Paddle.js (setzt das Cookie __cf_bm und laedt ProfitWell) laedt erst beim Klick auf
@@ -320,6 +329,7 @@
         if (code) o.discountCode = code;
         else if (selectedOffer && selectedOffer.discount_id) o.discountId = selectedOffer.discount_id;
         var custom = { product: p.license_product || b.getAttribute('data-buy'), checkout_access: purchaseAccess, locale: LANG };
+        if (campaignSource) custom.source = campaignSource;
         o.customData = custom;
         withPaddle(function () { Paddle.Checkout.open(o); });
       };
