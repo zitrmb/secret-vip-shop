@@ -14,8 +14,8 @@
       "discount_id": "",
       "license_product": "SFE2",
       "launch_active": true,
-      "expires_at": "2026-11-30T23:59:59+01:00",
-      "last_chance_from": "2026-11-27T00:00:00+01:00",
+      "expires_at": "2026-12-27T23:59:59+01:00",
+      "last_chance_from": "2026-12-24T00:00:00+01:00",
       "campaigns": [],
       "platforms": [
         "mac",
@@ -99,8 +99,8 @@
       "discount_id": "",
       "license_product": "SDYN",
       "launch_active": true,
-      "expires_at": "2026-11-30T23:59:59+01:00",
-      "last_chance_from": "2026-11-27T00:00:00+01:00",
+      "expires_at": "2026-12-27T23:59:59+01:00",
+      "last_chance_from": "2026-12-24T00:00:00+01:00",
       "campaigns": [],
       "page": "plugins/dynamics/",
       "platforms": [
