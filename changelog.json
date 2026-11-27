@@ -52,9 +52,10 @@
     },
     "SecretFutureEQ4": {
       "name": "Secret Future EQ 4",
-      "version": "4.0.3",
+      "version": "4.0.4",
       "groups": {
         "Neu": [
+          "Try it free for 14 days, with no account and no payment details. After the trial the sound passes through unchanged and your settings stay.",
           "Free for everyone who owns Secret Future EQ 2: your key unlocks it.",
           "Dynamic Match keeps your sound close to the reference while the music plays.",
           "Any reference you like: the built-in Secret Curve, an audio file, or a sound you capture while it plays.",
@@ -76,6 +77,7 @@
       },
       "groups_de": {
         "Neu": [
+          "14 Tage kostenlos testen, ohne Konto und ohne Zahlungsdaten. Nach der Testzeit läuft der Ton unverändert durch, deine Einstellungen bleiben.",
           "Gratis für alle, die Secret Future EQ 2 haben: Dein Schlüssel schaltet es frei.",
           "Der dynamische Abgleich hält deinen Klang nah an der Referenz, während die Musik läuft.",
           "Jede Referenz, die du magst: die eingebaute Secret Curve, eine Audiodatei oder ein Klang, den du aufnimmst, während er spielt.",
