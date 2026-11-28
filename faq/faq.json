@@ -4533,13 +4533,13 @@
         "zh-CN": "如何在 Secret Future EQ 4 中公平地比较？"
       },
       "answer": {
-        "de": "Auto-Gain hält die Lautheit gleich dem Eingang. So vergleicht Bypass den Klang und nicht die Lautstärke. Drei Speicher A, B und C halten verschiedene Einstellungen bereit, mit Rückgängig und Wiederholen.",
-        "en": "Auto-Gain keeps the loudness equal to the input, so bypass compares the tone, not the volume. Three slots A, B and C keep different settings, with undo and redo.",
-        "es": "Auto-Gain mantiene la sonoridad igual a la entrada, así el bypass compara el tono y no el volumen. Tres memorias A, B y C guardan ajustes distintos, con deshacer y rehacer.",
-        "fr": "Auto-Gain garde la sonie égale à l’entrée, ainsi le bypass compare le timbre et non le volume. Trois emplacements A, B et C gardent des réglages différents, avec annuler et rétablir.",
-        "ja": "Auto-Gain がラウドネスを入力と同じに保つので、バイパスでは音量ではなく音色を比べられます。A、B、C の 3 つのスロットに別々の設定を保存でき、取り消しとやり直しも使えます。",
-        "pt-BR": "O Auto-Gain mantém a loudness igual à da entrada, então o bypass compara o timbre, não o volume. Três memórias A, B e C guardam ajustes diferentes, com desfazer e refazer.",
-        "zh-CN": "Auto-Gain 让响度与输入保持一致，因此旁通比较的是音色而不是音量。A、B、C 三个槽位可保存不同设置，并支持撤销和重做。"
+        "de": "Auto-Gain gleicht Lautheitsunterschiede aus, so wird Bypass zum fairen Vergleich. Drei Speicher A, B und C halten verschiedene Einstellungen bereit, mit Rückgängig und Wiederholen.",
+        "en": "Auto-Gain compensates for loudness changes, so bypass becomes a fair comparison. Three slots A, B and C keep different settings, with undo and redo.",
+        "es": "Auto-Gain compensa los cambios de sonoridad, así el bypass se convierte en una comparación justa. Tres memorias A, B y C guardan ajustes distintos, con deshacer y rehacer.",
+        "fr": "Auto-Gain compense les variations de sonie, ainsi le bypass devient une comparaison équitable. Trois emplacements A, B et C gardent des réglages différents, avec annuler et rétablir.",
+        "ja": "Auto-Gain がラウドネスの変化を補正するので、バイパスとの比較が公平になります。A、B、C の 3 つのスロットに別々の設定を保存でき、取り消しとやり直しも使えます。",
+        "pt-BR": "O Auto-Gain compensa as mudanças de loudness, então o bypass vira uma comparação justa. Três memórias A, B e C guardam ajustes diferentes, com desfazer e refazer.",
+        "zh-CN": "Auto-Gain 会补偿响度变化，因此旁通成为一次公平的比较。A、B、C 三个槽位可保存不同设置，并支持撤销和重做。"
       },
       "terms": {
         "de": [
