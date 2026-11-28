@@ -352,7 +352,7 @@
       var parts = a.getAttribute('data-dl').split(':'), e = (d.plugins || {})[parts[0]];
       var url = e && e[parts[1]];
       if (!url) return;
-      if (parts[0] === 'SecretFutureEQ4' && campaignSource) {
+      if (parts[0] === 'SecretFutureEQ4' && campaignSource && location.hostname === 'secret-audio.com') {
         url = '/get/' + parts[0] + '/' + parts[1] + '?ref=' + campaignSource;
       }
       a.href = url; a.removeAttribute('aria-disabled'); a.classList.remove('off');
