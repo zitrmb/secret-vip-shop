@@ -31,6 +31,11 @@ input,textarea{-webkit-user-select:text;user-select:text}
 .pp-trial{max-width:46ch;margin:0 0 12px;color:var(--text);font-size:15px;line-height:1.55}
 .pp-buy .buy-note,.pp-buy .buy-code{order:1}
 .pp-buy .btn{flex:1 1 auto}
+/* Until shop.js has filled the box, hold the room its content will take, so nothing below or beside jumps (CLS). */
+.pp-buy .price[data-hold] > .now:empty::before{content:attr(data-hold);visibility:hidden}
+.pp-buy .price[data-hold]:has(> .now:empty) > .tag[hidden]{display:inline-block;visibility:hidden}
+.pp-buy .price[data-hold]:has(> .now:empty)::after{content:attr(data-hold);visibility:hidden;flex-basis:100%;font-size:14px;height:1.6em}
+.pp-buy:not(:has(> .buy-code))::after{content:"";order:1;flex:1 1 100%;height:42px}
 .pp-section{padding-top:120px}
 .pp-section>h2,.pp-close h2{margin:0 0 16px}
 .pp-kicker{margin:0 0 16px;font:500 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
@@ -78,7 +83,7 @@ input,textarea{-webkit-user-select:text;user-select:text}
       <div class="eyebrow">Secret Audio &middot; Match-EQ <span class="status live">Erhältlich</span></div>
       <h1 id="product-title">Secret Future EQ 4</h1>
       <p class="lead pp-promise">Bring deinen Klang näher an den Track, den du liebst. Behalte, was ihn zu deinem macht.</p>
-      <div class="buy pp-buy"><div class="price" data-price="SecretFutureEQ4"><span class="now"></span><span class="tag" hidden>EINFÜHRUNGSPREIS</span></div><button class="btn" data-buy="SecretFutureEQ4" disabled>Bald erhältlich</button><a class="btn ghost" href="../../download/">Kostenlos testen</a></div>
+      <div class="buy pp-buy"><div class="price" data-price="SecretFutureEQ4" data-hold="Danach 149 €."><span class="now" data-hold="59 €"></span><span class="tag" hidden>Einführungspreis bis 27/12/2026</span></div><button class="btn" data-buy="SecretFutureEQ4" disabled>Bald erhältlich</button><a class="btn ghost" href="../../download/">Kostenlos testen</a></div>
       <p class="pp-trial">14 Tage kostenlos testen, ohne Konto und ohne Zahlungsdaten. Nach der Testzeit läuft der Ton unverändert durch, deine Einstellungen bleiben.</p>
       <ul class="pp-assure"><li>14-tägige Geld-zurück-Garantie</li><li>Für Mac und Windows</li><li>VST3 und CLAP, dazu AU auf dem Mac</li><li>Preis inkl. MwSt., wo sie anfällt</li></ul>
     </div>
@@ -115,7 +120,7 @@ input,textarea{-webkit-user-select:text;user-select:text}
           <h2 id="close-title">Bereit, wenn du es bist.</h2>
         </div>
         <div>
-          <div class="buy pp-buy"><div class="price" data-price="SecretFutureEQ4"><span class="now"></span><span class="tag" hidden>EINFÜHRUNGSPREIS</span></div><button class="btn" data-buy="SecretFutureEQ4" disabled>Bald erhältlich</button><a class="btn ghost" href="../../download/">Kostenlos testen</a></div>
+          <div class="buy pp-buy"><div class="price" data-price="SecretFutureEQ4" data-hold="Danach 149 €."><span class="now" data-hold="59 €"></span><span class="tag" hidden>Einführungspreis bis 27/12/2026</span></div><button class="btn" data-buy="SecretFutureEQ4" disabled>Bald erhältlich</button><a class="btn ghost" href="../../download/">Kostenlos testen</a></div>
           <ul class="pp-deliver"><li>Dein Lizenzschlüssel per E-Mail direkt nach dem Kauf</li><li>Die Installer für Mac und Windows auf der <a href="../../download/">Download-Seite</a></li><li><a href="../../refund/">14-tägige Geld-zurück-Garantie</a></li></ul>
           <p class="small">Den Gesamtpreis für dein Land, inkl. MwSt., wo sie anfällt, siehst du vor dem Bezahlen im Bestellfenster. Unser Bestellvorgang wird von unserem Online-Wiederverkäufer Paddle.com abgewickelt. Paddle.com ist der Merchant of Record für alle unsere Bestellungen. Paddle beantwortet alle Kundenanfragen und wickelt Rückgaben ab. Deine gesetzlichen Rechte bleiben unberührt. <a href="../../eula/">Lizenzvertrag (EULA)</a> &middot; <a href="../../refund/">Widerruf</a> &middot; <a href="../../privacy/">Datenschutz</a></p>
         </div>
