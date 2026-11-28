@@ -4539,7 +4539,7 @@
         "fr": "Auto-Gain compense les variations de sonie, ainsi le bypass devient une comparaison équitable. Trois emplacements A, B et C gardent des réglages différents, avec annuler et rétablir.",
         "ja": "Auto-Gain がラウドネスの変化を補正するので、バイパスとの比較が公平になります。A、B、C の 3 つのスロットに別々の設定を保存でき、取り消しとやり直しも使えます。",
         "pt-BR": "O Auto-Gain compensa as mudanças de loudness, então o bypass vira uma comparação justa. Três memórias A, B e C guardam ajustes diferentes, com desfazer e refazer.",
-        "zh-CN": "Auto-Gain 会补偿响度变化，因此旁通成为一次公平的比较。A、B、C 三个槽位可保存不同设置，并支持撤销和重做。"
+        "zh-CN": "Auto-Gain 会补偿响度变化，让旁通对比更公平。A、B、C 三个槽位可保存不同设置，并支持撤销和重做。"
       },
       "terms": {
         "de": [
