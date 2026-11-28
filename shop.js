@@ -30,6 +30,16 @@
 
   function $(s, r) { return (r || document).querySelector(s); }
   function all(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
+  if (campaignSource) {
+    all('a[href]').forEach(function (a) {
+      var url;
+      try { url = new URL(a.getAttribute('href'), document.baseURI); }
+      catch (_) { return; }
+      if (url.origin !== location.origin || !url.pathname.endsWith('/download/')) return;
+      url.searchParams.set('ref', campaignSource);
+      a.setAttribute('href', url.href);
+    });
+  }
   function json(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }); }
   var root = document.documentElement.getAttribute('data-root') || '';
   // Page language decides texts and checkout, never the browser (Paddle's default without settings.locale).
@@ -342,6 +352,9 @@
       var parts = a.getAttribute('data-dl').split(':'), e = (d.plugins || {})[parts[0]];
       var url = e && e[parts[1]];
       if (!url) return;
+      if (parts[0] === 'SecretFutureEQ4' && campaignSource) {
+        url = '/get/' + parts[0] + '/' + parts[1] + '?ref=' + campaignSource;
+      }
       a.href = url; a.removeAttribute('aria-disabled'); a.classList.remove('off');
       var version = e[parts[1] + '_version'] || e.version;
       if (version) a.textContent += ' ' + version;
